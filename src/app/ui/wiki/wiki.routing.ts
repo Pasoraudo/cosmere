@@ -1,7 +1,7 @@
 import { Route } from '@angular/router';
-import { HomeComponent } from 'app/ui/home/home.component';
+import { HomeComponent } from 'app/ui/wiki/home/home.component';
 
-export const homeRoutes: Route[] = [
+export const wikiRoutes: Route[] = [
     {
         path     : '',
         component: HomeComponent

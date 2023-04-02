@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
-import {DataSet, Network} from 'vis-network';
 import {BasePage} from '../../page/base.page';
+import {DataSet, Network} from 'vis';
 
 @Component({
     selector     : 'graph',

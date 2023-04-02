@@ -12,7 +12,7 @@ const routes: Routes = [
   {
     path: 'home',
     component: LayoutComponent,
-    loadChildren: () => import('./ui/home/home.module').then(m => m.HomeModule)
+    loadChildren: () => import('./ui/wiki/wiki.module').then(m => m.WikiModule)
   },
 ];
 
