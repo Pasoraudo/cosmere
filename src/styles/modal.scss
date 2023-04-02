@@ -1,0 +1,152 @@
+
+.custom-modal::part(content) {
+  --border-radius: 20px;
+  overflow-y: auto;
+}
+
+.custom-modal-create-certificate::part(content) {
+  --border-radius: 20px;
+  max-height: 650px;
+}
+
+.custom-modal-test-point::part(content) {
+  --border-radius: 20px;
+  --height: auto;
+  border: 1px solid #ccc;
+}
+
+.custom-modal-xl::part(content) {
+  --border-radius: 20px;
+  --width: 75%;
+  --height: 90%;
+  max-width: 950px;
+  overflow-y: auto;
+}
+
+.custom-modal-xl.modal-height-auto::part(content) {
+  --height: auto;
+  max-height: 90%;
+}
+
+.custom-modal-xxl::part(content) {
+  --border-radius: 20px;
+  --width: 90%;
+  max-width: 1550px;
+  overflow-y: auto;
+}
+
+.custom-modal-m::part(content) {
+  --border-radius: 20px;
+  --width: 50rem;
+  max-height: 90%;
+  overflow-y: auto;
+}
+
+.custom-modal-l::part(content) {
+  --border-radius: 20px;
+  --width: 70rem;
+  max-height: 90%;
+  overflow-y: auto;
+}
+
+.custom-modal-2l::part(content) {
+  --border-radius: 20px;
+  --width: 80rem;
+  max-height: 90%;
+  overflow-y: auto;
+}
+
+.custom-modal-3l::part(content) {
+  --border-radius: 20px;
+  --width: 100rem;
+  overflow-y: auto;
+}
+
+.custom-modal-img-lightbox::part(content) {
+  --width: auto;
+  --height: auto;
+  max-width: 95vw;
+  max-height: 95vh
+}
+
+
+.custom-modal-user::part(content) {
+  --border-radius: 20px;
+  --width: 70rem;
+}
+
+.custom-modal-cart::part(content) {
+  --border-radius: 20px;
+  --width: 70rem;
+  max-height: 90%;
+  overflow-y: auto;
+}
+
+.custom-modal-work-equipment-type::part(content) {
+  --border-radius: 20px;
+  --width: 45rem;
+}
+
+ion-modal.auto-height {
+  &.bottom {
+    align-items: flex-end;
+  }
+
+  --height: auto;
+
+  .ion-page {
+    position: relative;
+    display: block;
+    contain: content;
+
+    .inner-content {
+      max-height: 85vh;
+      overflow: auto;
+      padding: 10px;
+    }
+  }
+}
+
+
+//Alert Styles
+
+.custom-alert .alert-wrapper {
+  padding: 30px;
+  border-radius: 20px !important;
+  justify-content: center;
+
+  .alert-head.sc-ion-alert-md {
+    text-align: start;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .alert-message.sc-ion-alert-md {
+    text-align: start;
+    padding: 0;
+    margin-bottom: 35px;
+  }
+
+  .alert-button-group.sc-ion-alert-md {
+    justify-content: space-between;
+    padding: 0;
+
+    .alert-button.sc-ion-alert-md {
+      text-align: start;
+      margin-inline-end: 0px;
+    }
+  }
+}
+
+.custom-alert-size {
+  //--height: 250px;
+  padding: 50px;
+  --min-width: 500px;
+}
+
+//Loading Styles
+
+.custom-loading .loading-wrapper {
+  border-radius: 20px !important;
+}
+

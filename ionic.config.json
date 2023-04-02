@@ -1,0 +1,7 @@
+{
+  "name": "cosmere",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
