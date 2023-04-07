@@ -3,7 +3,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {Subject, takeUntil} from 'rxjs';
 import {FuseMediaWatcherService} from '@fuse/services/media-watcher';
 import {FuseNavigationItem, FuseNavigationService, FuseVerticalNavigationComponent} from '@fuse/components/navigation';
-import {userNavigation} from '../../../../mock-api/common/navigation/user-navigation';
+import {wikiNavigation} from '../../../../mock-api/common/navigation/wiki-navigation';
 
 @Component({
   selector: 'classic-layout',
@@ -12,7 +12,7 @@ import {userNavigation} from '../../../../mock-api/common/navigation/user-naviga
 })
 export class ClassicLayoutComponent implements OnInit, OnDestroy {
   isScreenSmall: boolean;
-  navigation: FuseNavigationItem[] = userNavigation;
+  navigation: FuseNavigationItem[] = wikiNavigation;
   private _unsubscribeAll: Subject<any> = new Subject<any>();
 
   /**

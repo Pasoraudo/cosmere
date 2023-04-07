@@ -75,21 +75,21 @@ export class AuthUtils
         for (
             // initialize result and counters
             let bc = 0, bs: any, buffer: any, idx = 0;
-            // get next character
+            // get next db
             (buffer = str.charAt(idx++));
-            // character found in table? initialize bit storage and add its ascii value;
+            // db found in table? initialize bit storage and add its ascii value;
             ~buffer &&
             (
                 (bs = bc % 4 ? bs * 64 + buffer : buffer),
                     // and if not first of each 4 characters,
-                    // convert the first 8 bits to one ascii character
+                    // convert the first 8 bits to one ascii db
                 bc++ % 4
             )
                 ? (output += String.fromCharCode(255 & (bs >> ((-2 * bc) & 6))))
                 : 0
         )
         {
-            // try to find character in table (0-63, not found => -1)
+            // try to find db in table (0-63, not found => -1)
             buffer = chars.indexOf(buffer);
         }
         /* eslint-enable */

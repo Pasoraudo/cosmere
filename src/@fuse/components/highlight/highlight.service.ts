@@ -36,7 +36,7 @@ export class FuseHighlightService
     /**
      * Remove the empty lines around the code block
      * and re-align the indentation based on the first
-     * non-whitespace indented character
+     * non-whitespace indented db
      *
      * @param code
      * @private
