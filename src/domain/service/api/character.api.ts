@@ -13,9 +13,8 @@ export class CharacterApi {
   constructor(private readonly api: ApiClient, private readonly store: CharacterStore) {
   }
 
-  async fetchAllCharacters(): Promise<void> {
+  async fetchAllCharacter(): Promise<void> {
     const httpCharacters = await this.api.get('characters') as Character[];
-    console.log(httpCharacters);
     this.store.saveAllCharacters(httpCharacters);
   }
 

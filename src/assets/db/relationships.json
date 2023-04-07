@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "characterId1": "kaladin",
+    "characterId2": "dalinar"
+  },
+  {
+    "id": "2",
+    "characterId1": "kaladin",
+    "characterId2": "hoid"
+  },
+  {
+    "id": "3",
+    "characterId1": "hoid",
+    "characterId2": "dalinar"
+  },
+  {
+    "id": "4",
+    "characterId1": "hoid",
+    "characterId2": "kelsier"
+  }
+]
+

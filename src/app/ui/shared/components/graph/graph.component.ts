@@ -1,30 +1,43 @@
 import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {DataSet, Network} from 'vis';
-import {CharacterApi} from '../../../../../domain/service/api/character.api';
 import {BaseComponent} from '../base.component';
 import {Character} from '../../../../../domain/model/character';
-import {charactersToNodes} from '../../../../../domain/function/network.helper';
+import {Relationship} from '../../../../../domain/model/relationship';
+import {charactersToNodes, relationshipsToEdges} from '../../../../../domain/function/network.helper';
+import {CharacterApi} from '../../../../../domain/service/api/character.api';
+import {RelationshipApi} from '../../../../../domain/service/api/relationship.api';
+import {defer} from 'lodash';
 
 @Component({
-    selector     : 'relationship',
-    template: '<div #network></div>'
+  selector: 'characters-relationships-graph',
+  template: '<div #network></div>'
 })
-export class GraphComponent extends BaseComponent implements OnInit, AfterViewInit
-{
+export class GraphComponent extends BaseComponent implements OnInit, AfterViewInit {
   @ViewChild('network') el: ElementRef;
-  private networkInstance: any;
 
+  networkInstance: any;
   container: any;
   characters: Character[];
-  constructor(private characterApi: CharacterApi) {
+  relationships: Relationship[];
+
+  constructor(private characterApi: CharacterApi, private relationshipApi: RelationshipApi) {
     super();
   }
 
   async ngOnInit() {
-    await this.characterApi.fetchAllCharacters();
     this.subscribe(this.characterApi.allCharacters(), characters => {
       this.characters = characters;
       this.updateGraph();
+    });
+    this.subscribe(this.relationshipApi.allRelationship(), relationships => {
+      console.log(relationships);
+      this.relationships = relationships;
+      this.updateGraph();
+    });
+
+    defer(() => {
+      this.characterApi.fetchAllCharacter();
+      this.relationshipApi.fetchAllRelationship();
     });
   }
 
@@ -34,13 +47,7 @@ export class GraphComponent extends BaseComponent implements OnInit, AfterViewIn
 
   updateGraph() {
     const nodes = new DataSet<any>(charactersToNodes(this.characters));
-    const edges = new DataSet<any>([
-      {from: 1, to: 3},
-      {from: 1, to: 2},
-      {from: 2, to: 4},
-      {from: 2, to: 5}
-    ]);
+    const edges = new DataSet<any>(relationshipsToEdges(this.relationships));
     this.networkInstance = new Network(this.container, {nodes, edges}, {});
-
   }
 }

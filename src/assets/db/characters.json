@@ -1,15 +1,19 @@
 [
   {
-    "id": "99587359835",
+    "id": "kaladin",
     "name": "kaladin"
   },
   {
-    "id": "3897358",
+    "id": "dalinar",
     "name": "dalinar"
   },
   {
-    "id": "47394",
+    "id": "hoid",
     "name": "hoid"
+  },
+  {
+    "id": "kelsier",
+    "name": "kelsier"
   }
 ]
 

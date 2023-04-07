@@ -1,5 +1,3 @@
-import {Book} from './book';
-
 export interface Character {
   id: string;
 
