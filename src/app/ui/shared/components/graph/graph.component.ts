@@ -6,7 +6,7 @@ import {Character} from '../../../../../domain/model/character';
 import {charactersToNodes} from '../../../../../domain/function/network.helper';
 
 @Component({
-    selector     : 'graph',
+    selector     : 'relationship',
     template: '<div #network></div>'
 })
 export class GraphComponent extends BaseComponent implements OnInit, AfterViewInit

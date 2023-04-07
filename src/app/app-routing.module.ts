@@ -6,13 +6,15 @@ import {LayoutComponent} from './layout/layout.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'wiki',
     pathMatch: 'full'
   },
   {
-    path: 'home',
+    path: 'wiki',
     component: LayoutComponent,
-    loadChildren: () => import('./ui/wiki/wiki.module').then(m => m.WikiModule)
+    children: [
+      {path: '', loadChildren: () => import('./ui/wiki/wiki.module').then(m => m.WikiModule)},
+    ]
   },
 ];
 

@@ -1,9 +1,17 @@
-import { Route } from '@angular/router';
-import { HomeComponent } from 'app/ui/wiki/home/home.component';
+import {Route} from '@angular/router';
 
-export const wikiRoutes: Route[] = [
-    {
-        path     : '',
-        component: HomeComponent
-    }
+export const wikiRouting: Route[] = [
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
+    path: 'home',
+    loadChildren: (): any => import('app/ui/wiki/page/home/home.module').then((m: any) => m.HomeModule)
+  },
+  {
+    path: 'relationship',
+    loadChildren: (): any => import('app/ui/wiki/page/relationship/relationship.module').then((m: any) => m.RelationshipModule)
+  },
 ];
