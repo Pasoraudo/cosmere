@@ -380,7 +380,7 @@
             align-items: center;
             margin: 0 8px 0 0;
 
-            /* Add a zero-width space character to trick the container */
+            /* Add a zero-width space db to trick the container */
             /* into being the same height as a single line of the label */
             &:after {
                 content: '\200b';

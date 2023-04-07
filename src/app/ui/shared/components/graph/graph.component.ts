@@ -1,34 +1,45 @@
-import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
-import {BasePage} from '../../page/base.page';
+import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {DataSet, Network} from 'vis';
+import {CharacterApi} from '../../../../../domain/service/api/character.api';
+import {BaseComponent} from '../base.component';
+import {Character} from '../../../../../domain/model/character';
 
 @Component({
     selector     : 'graph',
     template: '<div #network></div>'
 })
-export class GraphComponent extends BasePage implements AfterViewInit
+export class GraphComponent extends BaseComponent implements OnInit, AfterViewInit
 {
   @ViewChild('network') el: ElementRef;
   private networkInstance: any;
 
-  ngAfterViewInit() {
-    const container = this.el.nativeElement;
-    const nodes = new DataSet<any>([
-      {id: 1, label: 'Node 1'},
-      {id: 2, label: 'Node 2'},
-      {id: 3, label: 'Node 3'},
-      {id: 4, label: 'Node 4'},
-      {id: 5, label: 'Node 5'}
-    ]);
+  container: any;
+  characters: Character[];
+  constructor(private characterApi: CharacterApi) {
+    super();
+  }
 
+  async ngOnInit() {
+    await this.characterApi.fetchAllCharacters();
+    this.subscribe(this.characterApi.allCharacters(), characters => {
+      this.characters = characters;
+      this.updateGraph();
+    });
+  }
+
+  ngAfterViewInit() {
+    this.container = this.el.nativeElement;
+  }
+
+  updateGraph() {
+    const nodes = new DataSet<any>(this.characters);
     const edges = new DataSet<any>([
       {from: 1, to: 3},
       {from: 1, to: 2},
       {from: 2, to: 4},
       {from: 2, to: 5}
     ]);
-    const data = { nodes, edges };
+    this.networkInstance = new Network(this.container, {nodes, edges}, {});
 
-    this.networkInstance = new Network(container, data, {});
   }
 }
