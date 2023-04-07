@@ -3,6 +3,7 @@ import {DataSet, Network} from 'vis';
 import {CharacterApi} from '../../../../../domain/service/api/character.api';
 import {BaseComponent} from '../base.component';
 import {Character} from '../../../../../domain/model/character';
+import {charactersToNodes} from '../../../../../domain/function/network.helper';
 
 @Component({
     selector     : 'graph',
@@ -32,7 +33,7 @@ export class GraphComponent extends BaseComponent implements OnInit, AfterViewIn
   }
 
   updateGraph() {
-    const nodes = new DataSet<any>(this.characters);
+    const nodes = new DataSet<any>(charactersToNodes(this.characters));
     const edges = new DataSet<any>([
       {from: 1, to: 3},
       {from: 1, to: 2},

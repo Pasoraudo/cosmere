@@ -528,7 +528,7 @@ Major releases (contain breaking changes):
 
 ### BREAKING CHANGES
 
-* Upgraded minimal versions of Node to `8.0.0` and npm to `5.7.1`. See: [ckeditor/ckeditor5#1507](https://github.com/ckeditor/ckeditor5/issues/1507). ([612ea3c](https://github.com/ckeditor/ckeditor5-cloud-services/commit/612ea3c))
+* Upgraded minimal versions of Network to `8.0.0` and npm to `5.7.1`. See: [ckeditor/ckeditor5#1507](https://github.com/ckeditor/ckeditor5/issues/1507). ([612ea3c](https://github.com/ckeditor/ckeditor5-cloud-services/commit/612ea3c))
 
 
 ## [11.2.0](https://github.com/ckeditor/ckeditor5-build-classic/compare/v11.1.1...v11.2.0) (2018-12-05)
