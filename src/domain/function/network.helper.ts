@@ -1,11 +1,11 @@
 import {GraphEdge, GraphNode} from '../model/network';
-import {Relationship} from '../model/relationship';
 
 export const charactersToNodes = (characters): GraphNode[] => {
   return characters.map(character => {
     return {
       id: character.id,
-      label: character.name
+      label: character.name,
+      group: character.planet
     }
   });
 };

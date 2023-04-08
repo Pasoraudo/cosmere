@@ -3,7 +3,11 @@ export interface Character {
 
   name: string;
 
-  href: string;
+  href?: string;
 
-  bookId: string;
+  bookIds: string[];
+
+  planet?: string;
+
+  description?: string;
 }

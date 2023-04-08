@@ -1,19 +1,27 @@
 [
   {
     "id": "kaladin",
-    "name": "kaladin"
+    "name": "kaladin",
+    "bookIds": ["Storm archive"],
+    "planet": "Roshar"
   },
   {
     "id": "dalinar",
-    "name": "dalinar"
+    "name": "dalinar",
+    "bookIds": ["Storm archive"],
+    "planet": "Roshar"
   },
   {
     "id": "hoid",
-    "name": "hoid"
+    "name": "hoid",
+    "bookIds": ["Mistborn", "Storm archive"],
+    "planet": "Yolen"
   },
   {
     "id": "kelsier",
-    "name": "kelsier"
+    "name": "kelsier",
+    "bookIds": ["Mistborn"],
+    "planet": "Scadrial"
   }
 ]
 
