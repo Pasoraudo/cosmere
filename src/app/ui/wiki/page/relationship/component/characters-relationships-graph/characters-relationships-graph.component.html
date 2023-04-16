@@ -3,7 +3,7 @@
     <form [formGroup]="form">
       <mat-form-field class="w-full ">
         <mat-label>{{"books" | trans | titlecase}}</mat-label>
-        <mat-select formControlName="bookFilter" multiple>
+        <mat-select formControlName="bookFilter" multiple [(ngModel)]="selectedBooks" (selectionChange)="applyFilters()">
           <mat-option *ngFor="let book of books" [value]="book.title">
             {{book.title | trans | uppercase}}
           </mat-option>
@@ -12,14 +12,13 @@
 
       <mat-form-field class="w-full ">
         <mat-label>{{"planets" | trans | titlecase}}</mat-label>
-        <mat-select formControlName="planetFilter" multiple>
-          <mat-option *ngFor="let planet of planets" [value]="planet">
-            {{planet | trans | uppercase}}
+        <mat-select formControlName="planetFilter" multiple [(ngModel)]="selectedPlanets" (selectionChange)="applyFilters()">
+          <mat-option *ngFor="let planet of planets" [value]="planet.name">
+            {{planet.name | trans | uppercase}}
           </mat-option>
         </mat-select>
       </mat-form-field>
-      <button class="mat-flat-button" (click)="onClick()">aaaaaaaaaaaaa</button>
     </form>
   </fuse-card>
-  <graph class="flex flex-col w-60" [nodes$]="nodes$" [edges$]="edges$"></graph>
+  <graph class="flex flex-col w-60" [nodes]="nodes" [edges]="edges"></graph>
 </div>

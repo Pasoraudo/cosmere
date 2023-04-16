@@ -1,20 +1,29 @@
-import {AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+  ViewChild,
+  ViewEncapsulation
+} from '@angular/core';
 import {BaseComponent} from './base.component';
 import {DataSet, Network} from 'vis';
 import {GraphEdge, GraphNode} from '../../../../domain/model/network';
-import {Observable} from 'rxjs';
 
 @Component({
   selector: 'graph',
   template: '<div #network></div>',
   encapsulation: ViewEncapsulation.None
 })
-export class GraphComponent extends BaseComponent implements OnInit, AfterViewInit {
+export class GraphComponent extends BaseComponent implements OnInit, OnChanges, AfterViewInit {
   @ViewChild('network') el: ElementRef;
   @Input()
-  nodes$: Observable<GraphNode[]>;
+  nodes: GraphNode[];
   @Input()
-  edges$: Observable<GraphEdge[]>;
+  edges: GraphEdge[];
   @Input()
   options?: any;
 
@@ -27,24 +36,19 @@ export class GraphComponent extends BaseComponent implements OnInit, AfterViewIn
   ngOnInit(): void {
   }
 
-  ngAfterViewInit() {
-    const nodes = new DataSet<any>([]);
-    const edges = new DataSet<any>([]);
-    this.networkInstance = new Network(this.el.nativeElement, {nodes, edges}, {});
+  ngOnChanges(changes: SimpleChanges) {
+    this.setGraphData();
+  }
 
-    this.nodes$.subscribe(graphNodes => {
-      console.log('child', graphNodes);
-      if (this.networkInstance === undefined)
-        return;
-      const nodes = new DataSet<any>(graphNodes);
-      const edges = new DataSet<any>([]);
-      this.networkInstance.setData({nodes: nodes});
-    });
-    this.edges$.subscribe(graphNodes => {
-      if (this.networkInstance === undefined)
-        return;
-      const edges = new DataSet<any>(graphNodes);
-      //this.networkInstance.setData({edges: edges});
-    });
+  ngAfterViewInit() {
+    const nodes = new DataSet<any>(this.nodes);
+    const edges = new DataSet<any>(this.edges);
+    this.networkInstance = new Network(this.el.nativeElement, {nodes, edges}, {});
+  }
+
+  setGraphData() {
+    const nodes = new DataSet<any>(this.nodes);
+    const edges = new DataSet<any>(this.edges);
+    this.networkInstance.setData({nodes: nodes, edges: edges});
   }
 }

@@ -2,26 +2,26 @@
   {
     "id": "kaladin",
     "name": "kaladin",
-    "bookIds": ["Storm archive"],
-    "planet": "Roshar"
+    "bookIds": ["el camino de los reyes", "palabras radiantes"],
+    "planet": "roshar"
   },
   {
     "id": "dalinar",
     "name": "dalinar",
-    "bookIds": ["Storm archive"],
-    "planet": "Roshar"
+    "bookIds": ["el camino de los reyes", "palabras radiantes"],
+    "planet": "roshar"
   },
   {
     "id": "hoid",
     "name": "hoid",
-    "bookIds": ["Mistborn", "Storm archive"],
-    "planet": "Yolen"
+    "bookIds": ["el imperio final", "el camino de los reyes"],
+    "planet": "yolen"
   },
   {
     "id": "kelsier",
     "name": "kelsier",
-    "bookIds": ["Mistborn"],
-    "planet": "Scadrial"
+    "bookIds": ["el imperio final"],
+    "planet": "scadrial"
   }
 ]
 

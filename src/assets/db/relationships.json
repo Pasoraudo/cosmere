@@ -2,22 +2,32 @@
   {
     "id": "1",
     "characterId1": "kaladin",
-    "characterId2": "dalinar"
+    "characterId2": "dalinar",
+    "bookId": "el camino de los reyes"
   },
   {
     "id": "2",
     "characterId1": "hoid",
-    "characterId2": "kaladin"
+    "characterId2": "kaladin",
+    "bookId": "el camino de los reyes"
   },
   {
     "id": "3",
     "characterId1": "hoid",
-    "characterId2": "dalinar"
+    "characterId2": "dalinar",
+    "bookId": "el camino de los reyes"
   },
   {
     "id": "4",
     "characterId1": "hoid",
-    "characterId2": "kelsier"
+    "characterId2": "kelsier",
+    "bookId": "el imperio final"
+  },
+  {
+    "id": "5",
+    "characterId1": "hoid",
+    "characterId2": "kaladin",
+    "bookId": "palabras radiantes"
   }
 ]
 

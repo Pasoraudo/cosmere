@@ -1,5 +1,6 @@
 type RelationshipType = '';
 export interface Relationship {
+
   id: string;
 
   characterId1: string;
@@ -7,4 +8,6 @@ export interface Relationship {
   characterId2: string;
 
   type: RelationshipType;
+
+  bookId: string;
 }

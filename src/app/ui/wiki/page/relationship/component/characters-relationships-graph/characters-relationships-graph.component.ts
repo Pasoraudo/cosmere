@@ -1,4 +1,4 @@
-import {Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {BaseComponent} from '../../../../../shared/components/base.component';
 import {CharacterApi} from '../../../../../../../domain/service/api/character.api';
 import {RelationshipApi} from '../../../../../../../domain/service/api/relationship.api';
@@ -7,62 +7,59 @@ import {Book} from '../../../../../../../domain/model/book';
 import {FormGroup} from '@angular/forms';
 import {FormBuilderService} from '../../../../../../../domain/service/form/form.builder';
 import {charactersToNodes, relationshipsToEdges} from '../../../../../../../domain/function/network.helper';
-import {debounceTime, Observable, of, Subject} from 'rxjs';
 import {GraphEdge, GraphNode} from '../../../../../../../domain/model/network';
+import {Character} from '../../../../../../../domain/model/character';
+import {Relationship} from '../../../../../../../domain/model/relationship';
+import {Planet} from '../../../../../../../domain/model/planet';
+import {BookApi} from '../../../../../../../domain/service/api/book.api';
+import {PlanetApi} from '../../../../../../../domain/service/api/planet.api';
 
 @Component({
   selector: 'characters-relationships-graph',
   templateUrl: './characters-relationships-graph.component.html'
 })
-export class CharactersRelationshipsGraphComponent extends BaseComponent implements OnInit, OnChanges {
-  nodes$ = new Subject<GraphNode[]>();
-  edges$ = new Subject<GraphEdge[]>();
+export class CharactersRelationshipsGraphComponent extends BaseComponent implements OnInit {
   nodes: GraphNode[] = [];
   edges: GraphEdge[] = [];
+  characters: Character[] = [];
+  relationships: Relationship[] = [];
   books: Book[];
-  planets: string[];
+  planets: Planet[];
+  selectedBooks: string[];
+  selectedPlanets: string[];
   form: FormGroup;
 
-  constructor(private characterApi: CharacterApi, private relationshipApi: RelationshipApi, private formBuilder: FormBuilderService) {
+  constructor(private characterApi: CharacterApi, private relationshipApi: RelationshipApi, private formBuilder: FormBuilderService, private bookApi: BookApi,
+              private planetApi: PlanetApi) {
     super();
   }
 
   async ngOnInit() {
     this.subscribe(this.characterApi.allCharacters(), characters => {
-      console.log('nodes', characters);
+      this.characters = characters;
       this.nodes = charactersToNodes(characters);
-      this.nodes$.next(this.nodes);
     });
     this.subscribe(this.relationshipApi.allRelationship(), relationships => {
-      this.edges = relationshipsToEdges(relationships);
-      this.edges$.next(this.edges);
+      this.setRelationships(relationships);
     });
-    this.edges$.subscribe((edges) => {
-      console.log('New edges:', edges);
+    this.subscribe(this.bookApi.allBooks(), books => {
+      console.log('books', books);
+      this.books = books;
+      this.selectedBooks = this.books.map(book => book.title);
+    });
+    this.subscribe(this.planetApi.allPlanets(), planets => {
+      console.log('planets', planets);
+      this.planets = planets;
+      this.selectedPlanets = this.planets.map(planet => planet.name);
     });
     defer(() => {
       this.characterApi.fetchAllCharacter();
       this.relationshipApi.fetchAllRelationship();
+      this.bookApi.fetchAllBooks();
+      this.planetApi.fetchAllPlanets();
     });
 
-    this.books = [
-      {
-        id: '1',
-        title: 'mistborn'
-      },
-      {
-        id: '2',
-        title: 'storm archive'
-      }
-    ];
-    this.planets = ['yolen', 'scadrial', 'roshar'];
-
     this.buildForm();
-  }
-
-  selectAllFilters() {
-    this.form.get('bookFilter').setValue(this.books.map(book => book.title));
-    this.form.get('planetFilter').setValue(this.planets);
   }
 
   buildForm() {
@@ -70,24 +67,23 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
       return;
 
     this.form = this.formBuilder.build({
-      bookFilter: [],
-      planetFilter: []
+      bookFilter: this.selectedBooks,
+      planetFilter: this.selectedPlanets
     }, []);
-
-    this.selectAllFilters()
   }
 
-  onClick() {
-    console.log('onclick');
-    const newEdges = [
-      { from: '2', to: '2' },
-      { from: '1', to: '1' },
-    ];
-    this.edges = newEdges;
-    this.edges$.next(newEdges);
+  setRelationships(relationships: Relationship[]) {
+    this.relationships = relationships;
+    this.edges = relationshipsToEdges(this.relationships);
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log('aaaaaaaaaaa');
+  applyFilters() {
+    let filteredCharacters = this.characters;
+    const selectedBooksIds = this.books.filter(book => this.selectedBooks.includes(book.title)).map(book => book.id);
+
+    filteredCharacters = filteredCharacters.filter(character => character.bookIds.filter(bookId => selectedBooksIds.includes(bookId)).length > 0)
+    filteredCharacters = filteredCharacters.filter(character => this.selectedPlanets.includes(character.planet));
+    this.nodes = charactersToNodes(filteredCharacters);
+    console.log('char char', selectedBooksIds);
   }
 }
