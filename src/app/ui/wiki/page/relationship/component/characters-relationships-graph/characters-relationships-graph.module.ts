@@ -6,6 +6,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {CommonModule} from '@angular/common';
 import {PipeModule} from '../../../../../shared/pipe/pipe.module';
 import {ReactiveFormsModule} from '@angular/forms';
+import {SharedModule} from '../../../../../shared/components/shared.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     MatSelectModule,
     CommonModule,
     PipeModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ],
   exports: [
     CharactersRelationshipsGraphComponent

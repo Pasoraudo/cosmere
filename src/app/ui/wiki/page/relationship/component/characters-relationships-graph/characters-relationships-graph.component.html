@@ -18,7 +18,8 @@
           </mat-option>
         </mat-select>
       </mat-form-field>
+      <button class="mat-flat-button" (click)="onClick()">aaaaaaaaaaaaa</button>
     </form>
   </fuse-card>
-  <div #network class=""></div>
+  <graph class="flex flex-col w-60" [nodes$]="nodes$" [edges$]="edges$"></graph>
 </div>

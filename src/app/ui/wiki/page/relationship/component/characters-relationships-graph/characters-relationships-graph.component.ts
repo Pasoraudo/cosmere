@@ -1,27 +1,24 @@
-import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import {DataSet, Network} from 'vis';
+import {Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {BaseComponent} from '../../../../../shared/components/base.component';
-import {Character} from '../../../../../../../domain/model/character';
-import {Relationship} from '../../../../../../../domain/model/relationship';
-import {charactersToNodes, relationshipsToEdges} from '../../../../../../../domain/function/network.helper';
 import {CharacterApi} from '../../../../../../../domain/service/api/character.api';
 import {RelationshipApi} from '../../../../../../../domain/service/api/relationship.api';
 import {defer} from 'lodash';
 import {Book} from '../../../../../../../domain/model/book';
 import {FormGroup} from '@angular/forms';
 import {FormBuilderService} from '../../../../../../../domain/service/form/form.builder';
+import {charactersToNodes, relationshipsToEdges} from '../../../../../../../domain/function/network.helper';
+import {debounceTime, Observable, of, Subject} from 'rxjs';
+import {GraphEdge, GraphNode} from '../../../../../../../domain/model/network';
 
 @Component({
   selector: 'characters-relationships-graph',
   templateUrl: './characters-relationships-graph.component.html'
 })
-export class CharactersRelationshipsGraphComponent extends BaseComponent implements OnInit, AfterViewInit {
-  @ViewChild('network') el: ElementRef;
-
-  networkInstance: any;
-  container: any;
-  characters: Character[];
-  relationships: Relationship[];
+export class CharactersRelationshipsGraphComponent extends BaseComponent implements OnInit, OnChanges {
+  nodes$ = new Subject<GraphNode[]>();
+  edges$ = new Subject<GraphEdge[]>();
+  nodes: GraphNode[] = [];
+  edges: GraphEdge[] = [];
   books: Book[];
   planets: string[];
   form: FormGroup;
@@ -32,15 +29,17 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
 
   async ngOnInit() {
     this.subscribe(this.characterApi.allCharacters(), characters => {
-      this.characters = characters;
-      this.updateGraph();
+      console.log('nodes', characters);
+      this.nodes = charactersToNodes(characters);
+      this.nodes$.next(this.nodes);
     });
     this.subscribe(this.relationshipApi.allRelationship(), relationships => {
-      console.log(relationships);
-      this.relationships = relationships;
-      this.updateGraph();
+      this.edges = relationshipsToEdges(relationships);
+      this.edges$.next(this.edges);
     });
-
+    this.edges$.subscribe((edges) => {
+      console.log('New edges:', edges);
+    });
     defer(() => {
       this.characterApi.fetchAllCharacter();
       this.relationshipApi.fetchAllRelationship();
@@ -61,16 +60,6 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
     this.buildForm();
   }
 
-  ngAfterViewInit() {
-    this.container = this.el.nativeElement;
-  }
-
-  updateGraph() {
-    const nodes = new DataSet<any>(charactersToNodes(this.characters));
-    const edges = new DataSet<any>(relationshipsToEdges(this.relationships));
-    this.networkInstance = new Network(this.container, {nodes, edges}, {});
-  }
-
   selectAllFilters() {
     this.form.get('bookFilter').setValue(this.books.map(book => book.title));
     this.form.get('planetFilter').setValue(this.planets);
@@ -86,5 +75,19 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
     }, []);
 
     this.selectAllFilters()
+  }
+
+  onClick() {
+    console.log('onclick');
+    const newEdges = [
+      { from: '2', to: '2' },
+      { from: '1', to: '1' },
+    ];
+    this.edges = newEdges;
+    this.edges$.next(newEdges);
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('aaaaaaaaaaa');
   }
 }
