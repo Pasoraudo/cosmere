@@ -15,9 +15,10 @@ import {GraphEdge, GraphNode} from '../../../../domain/model/network';
 
 @Component({
   selector: 'graph',
-  template: '<div #network></div>',
+  template: '<div class="flex w-full h-full" #network></div>',
   encapsulation: ViewEncapsulation.None
 })
+
 export class GraphComponent extends BaseComponent implements OnInit, OnChanges, AfterViewInit {
   @ViewChild('network') el: ElementRef;
   @Input()
@@ -25,9 +26,30 @@ export class GraphComponent extends BaseComponent implements OnInit, OnChanges, 
   @Input()
   edges: GraphEdge[];
   @Input()
-  options?: any;
+  options= {
+    locale: 'es',
+    physics: {
+      enabled: false,
+    },
+    interaction: {
+      dragNodes: false,
+    },
+    edges: {
+      scaling:{
+        min: 1,
+        max: 10,
+        label: {
+          enabled: true,
+          min: 14,
+          max: 30,
+          maxVisible: 30,
+          drawThreshold: 5
+        },
+      },
+    }
+  };
 
-  networkInstance: any;
+  networkInstance: Network;
 
   constructor() {
     super();
@@ -44,11 +66,13 @@ export class GraphComponent extends BaseComponent implements OnInit, OnChanges, 
     const nodes = new DataSet<any>(this.nodes);
     const edges = new DataSet<any>(this.edges);
     this.networkInstance = new Network(this.el.nativeElement, {nodes, edges}, {});
+    this.networkInstance.setOptions(this.options);
   }
 
   setGraphData() {
     const nodes = new DataSet<any>(this.nodes);
     const edges = new DataSet<any>(this.edges);
     this.networkInstance.setData({nodes: nodes, edges: edges});
+
   }
 }

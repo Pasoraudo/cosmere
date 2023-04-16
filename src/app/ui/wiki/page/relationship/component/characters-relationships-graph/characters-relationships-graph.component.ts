@@ -78,12 +78,24 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
   }
 
   applyFilters() {
+    this.nodes = charactersToNodes(this.filteredCharacters());
+    this.edges = relationshipsToEdges(this.filteredRelationships());
+  }
+
+  filteredCharacters(): Character[] {
     let filteredCharacters = this.characters;
     const selectedBooksIds = this.books.filter(book => this.selectedBooks.includes(book.title)).map(book => book.id);
 
-    filteredCharacters = filteredCharacters.filter(character => character.bookIds.filter(bookId => selectedBooksIds.includes(bookId)).length > 0)
+    filteredCharacters = filteredCharacters.filter(character => character.bookIds.filter(bookId => selectedBooksIds.includes(bookId)).length > 0);
     filteredCharacters = filteredCharacters.filter(character => this.selectedPlanets.includes(character.planet));
-    this.nodes = charactersToNodes(filteredCharacters);
-    console.log('char char', selectedBooksIds);
+    return filteredCharacters;
+  }
+
+  filteredRelationships(): Relationship[] {
+    let filteredRelationships = this.relationships;
+    const selectedBooksIds = this.books.filter(book => this.selectedBooks.includes(book.title)).map(book => book.id);
+
+    filteredRelationships = filteredRelationships.filter(relationship => selectedBooksIds.includes(relationship.bookId));
+    return filteredRelationships;
   }
 }

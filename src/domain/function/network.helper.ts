@@ -10,8 +10,24 @@ export const charactersToNodes = (characters): GraphNode[] => {
 };
 
 export const relationshipsToEdges = (relationships: Relationship[]): GraphEdge[] => {
-  return relationships.map(relationship => ({
-    from: relationship.characterId1,
-    to: relationship.characterId2
-  }));
+  const groupedEdges: Record<string, number> = {};
+  for (const relationship of relationships) {
+    const key = `${relationship.characterId1}-${relationship.characterId2}`;
+    if (groupedEdges[key]) {
+      groupedEdges[key] += 1;
+    } else {
+      groupedEdges[key] = 1;
+    }
+  }
+  let resultEdges: GraphEdge[] = [];
+
+  for (const key in groupedEdges) {
+    const [from, to] = key.split('-');
+    const value = groupedEdges[key];
+    resultEdges.push({ from, to, value });
+  }
+  console.log('ppppp', relationships);
+
+  console.log('res', resultEdges);
+  return resultEdges;
 };

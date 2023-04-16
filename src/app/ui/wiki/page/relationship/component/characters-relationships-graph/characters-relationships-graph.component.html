@@ -1,5 +1,5 @@
 <div class="flex flex-row p-7 w-full h-full">
-  <fuse-card class="flex flex-col w-60 p-5">
+  <fuse-card class="flex flex-col p-5">
     <form [formGroup]="form">
       <mat-form-field class="w-full ">
         <mat-label>{{"books" | trans | titlecase}}</mat-label>
@@ -20,5 +20,5 @@
       </mat-form-field>
     </form>
   </fuse-card>
-  <graph class="flex flex-col w-60" [nodes]="nodes" [edges]="edges"></graph>
+  <graph class="flex flex-col" [nodes]="nodes" [edges]="edges"></graph>
 </div>
