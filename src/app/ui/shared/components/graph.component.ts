@@ -34,6 +34,9 @@ export class GraphComponent extends BaseComponent implements OnInit, OnChanges, 
     interaction: {
       dragNodes: false,
     },
+    layout: {
+      randomSeed: 5683756,
+    },
     edges: {
       scaling:{
         min: 1,

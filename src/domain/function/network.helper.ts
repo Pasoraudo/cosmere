@@ -26,8 +26,5 @@ export const relationshipsToEdges = (relationships: Relationship[]): GraphEdge[]
     const value = groupedEdges[key];
     resultEdges.push({ from, to, value });
   }
-  console.log('ppppp', relationships);
-
-  console.log('res', resultEdges);
   return resultEdges;
 };
