@@ -3,5 +3,5 @@ export interface Book {
 
   title: string;
 
-  href: string;
+  href?: string;
 }

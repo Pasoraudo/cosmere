@@ -1,15 +1,27 @@
 [
   {
-    "id": "99587359835",
-    "name": "kaladin"
+    "id": "kaladin",
+    "name": "kaladin",
+    "bookIds": ["el camino de los reyes", "palabras radiantes"],
+    "planet": "roshar"
   },
   {
-    "id": "3897358",
-    "name": "dalinar"
+    "id": "dalinar",
+    "name": "dalinar",
+    "bookIds": ["el camino de los reyes", "palabras radiantes"],
+    "planet": "roshar"
   },
   {
-    "id": "47394",
-    "name": "hoid"
+    "id": "hoid",
+    "name": "hoid",
+    "bookIds": ["el imperio final", "el camino de los reyes"],
+    "planet": "yolen"
+  },
+  {
+    "id": "kelsier",
+    "name": "kelsier",
+    "bookIds": ["el imperio final"],
+    "planet": "scadrial"
   }
 ]
 

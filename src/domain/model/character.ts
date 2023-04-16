@@ -1,11 +1,13 @@
-import {Book} from './book';
-
 export interface Character {
   id: string;
 
   name: string;
 
-  href: string;
+  href?: string;
 
-  bookId: string;
+  bookIds: string[];
+
+  planet?: string;
+
+  description?: string;
 }

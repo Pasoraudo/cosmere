@@ -1,21 +1,8 @@
-<div
-  cdkScrollable class="absolute inset-0 flex flex-col min-w-0 overflow-y-auto">
-  <div>
-    <div class="h-96 pt-10 pb-10 px-4 overflow-hidden bg-gray-200 dark:bg-gray-900">
-      <div class="flex flex-col items-center">
-        <div class="mt-3 text-2xl text-center font-bold">
-          <mat-icon
-            [svgIcon]="'heroicons_solid:bell'"
-            class="icon-size-5 text-black pt-1"></mat-icon>
-          Tienes 5 mantenimientos, 2 notificaciones y 3 mensajes pendientes
-        </div>
-        <div class="font-black mt-3 text-7xl  text-center">
-          ¿Qué quieres hacer hoy?
-        </div>
-        <graph></graph>
-      </div>
-    </div>
-  </div>
+<div class="absolute inset-0 flex flex-col min-w-0 overflow-y-auto" cdkScrollable>
+  <div>Relaciones entre los personajes</div>
+  <fuse-card style="min-height: 500px; min-width: 500px;" class="p-5 h-full m-10">
+    <characters-relationships-graph></characters-relationships-graph>
+  </fuse-card>
 </div>
 
 
