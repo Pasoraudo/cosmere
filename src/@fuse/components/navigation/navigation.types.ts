@@ -42,7 +42,7 @@ export interface FuseNavigationItem
     meta?: any;
 }
 
-export type FuseVerticalNavigationAppearance =
+export type FuseNavigationAppearance =
     | 'default'
     | 'compact'
     | 'dense'

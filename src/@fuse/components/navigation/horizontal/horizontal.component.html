@@ -1,0 +1,15 @@
+<div class="flex flex-row" #navigationContent>
+  <div class="fuse-horizontal-navigation-content-header">
+    <ng-content select="[fuseHorizontalNavigationContentHeader]"></ng-content>
+  </div>
+
+  <ng-container *ngFor="let item of navigation; trackBy: trackByFn">
+    <ng-container *ngIf="(item.hidden && !item.hidden(item)) || !item.hidden">
+      <ng-container *ngIf="item.type === 'basic'">
+        <fuse-horizontal-navigation-basic-item class="p-7"
+          [item]="item"
+          [name]="name"></fuse-horizontal-navigation-basic-item>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+</div>
