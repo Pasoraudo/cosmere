@@ -60,11 +60,13 @@ fuse-vertical-navigation {
               justify-content: center;
               padding: 12px;
 
-
-              .fuse-vertical-navigation-item-icon {
+              .fuse-vertical-navigation-item-icon-wrapper {
                 border-radius: 30px;
-                margin-right: 0;
+                .fuse-vertical-navigation-item-icon {
+                  margin-right: 0;
+                }
               }
+
 
               .fuse-vertical-navigation-item-title-wrapper {
                 margin-top: 8px;

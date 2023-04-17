@@ -9,10 +9,6 @@ export const wikiNavigation: FuseNavigationItem[] = [
     link: '/wiki/home'
   },
   {
-    id: 'divider-0',
-    type: 'divider'
-  },
-  {
     id: 'relationships',
     title: 'Relaciones',
     type: 'basic',
