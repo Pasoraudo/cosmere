@@ -4,7 +4,7 @@ import { NavigationEnd, Router } from '@angular/router';
 import { ScrollStrategy, ScrollStrategyOptions } from '@angular/cdk/overlay';
 import { delay, filter, merge, ReplaySubject, Subject, Subscription, takeUntil } from 'rxjs';
 import { fuseAnimations } from '@fuse/animations';
-import { FuseNavigationItem, FuseVerticalNavigationAppearance, FuseVerticalNavigationMode, FuseVerticalNavigationPosition } from '@fuse/components/navigation/navigation.types';
+import { FuseNavigationItem, FuseNavigationAppearance, FuseVerticalNavigationMode, FuseVerticalNavigationPosition } from '@fuse/components/navigation/navigation.types';
 import { FuseNavigationService } from '@fuse/components/navigation/navigation.service';
 import { FuseScrollbarDirective } from '@fuse/directives/scrollbar/scrollbar.directive';
 import { FuseUtilsService } from '@fuse/services/utils/utils.service';
@@ -27,7 +27,7 @@ export class FuseVerticalNavigationComponent implements OnChanges, OnInit, After
     static ngAcceptInputType_transparentOverlay: BooleanInput;
     /* eslint-enable @typescript-eslint/naming-convention */
 
-    @Input() appearance: FuseVerticalNavigationAppearance = 'default';
+    @Input() appearance: FuseNavigationAppearance = 'default';
     @Input() autoCollapse: boolean = true;
     @Input() inner: boolean = false;
     @Input() mode: FuseVerticalNavigationMode = 'side';
@@ -36,7 +36,7 @@ export class FuseVerticalNavigationComponent implements OnChanges, OnInit, After
     @Input() opened: boolean = true;
     @Input() position: FuseVerticalNavigationPosition = 'left';
     @Input() transparentOverlay: boolean = false;
-    @Output() readonly appearanceChanged: EventEmitter<FuseVerticalNavigationAppearance> = new EventEmitter<FuseVerticalNavigationAppearance>();
+    @Output() readonly appearanceChanged: EventEmitter<FuseNavigationAppearance> = new EventEmitter<FuseNavigationAppearance>();
     @Output() readonly modeChanged: EventEmitter<FuseVerticalNavigationMode> = new EventEmitter<FuseVerticalNavigationMode>();
     @Output() readonly openedChanged: EventEmitter<boolean> = new EventEmitter<boolean>();
     @Output() readonly positionChanged: EventEmitter<FuseVerticalNavigationPosition> = new EventEmitter<FuseVerticalNavigationPosition>();
