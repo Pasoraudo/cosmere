@@ -165,3 +165,57 @@ body .dark {
   /* Use all-component-colors to only generate the colors */
   @include mat.all-component-colors($dark-theme);
 }
+
+body.cosmere,
+body .cosmere {
+  $base-cosmere-theme: mat.define-light-theme((
+    color: ($palettes)
+  ));
+
+  $cosmere-theme: (
+    color: (
+      primary: map.get(map.get($base-cosmere-theme, color), primary),
+      accent: map.get(map.get($base-cosmere-theme, color), accent),
+      warn: map.get(map.get($base-cosmere-theme, color), warn),
+      is-dark: map.get(map.get($base-cosmere-theme, color), is-dark),
+      foreground: (
+        base: #000000,
+        divider: #E2E8F0, /* slate.200 */
+        dividers: #E2E8F0, /* slate.200 */
+        disabled: #94A3B8, /* slate.400 */
+        disabled-button: #94A3B8, /* slate.400 */
+        disabled-text: #94A3B8, /* slate.400 */
+        elevation: #000000,
+        hint-text: #94A3B8, /* slate.400 */
+        secondary-text: #64748B, /* slate.500 */
+        icon: #64748B, /* slate.500 */
+        icons: #64748B, /* slate.500 */
+        mat-icon: #64748B, /* slate.500 */
+        text: #1E293B, /* slate.800 */
+        slider-min: #1E293B, /* slate.800 */
+        slider-off: #CBD5E1, /* slate.300 */
+        slider-off-active: #94A3B8 /* slate.400 */
+      ),
+      background: (
+        status-bar: #CBD5E1, /* slate.300 */
+        app-bar: #FFFFFF,
+        background: #F1F5F9, /* slate.100 */
+        hover: rgba(148, 163, 184, 0.12), /* slate.400 + opacity */
+        card: #FFFFFF,
+        dialog: #FFFFFF,
+        disabled-button: rgba(148, 163, 184, 0.38), /* slate.400 + opacity */
+        raised-button: #FFFFFF,
+        focused-button: #64748B, /* slate.500 */
+        selected-button: #E2E8F0, /* slate.200 */
+        selected-disabled-button: #E2E8F0, /* slate.200 */
+        disabled-button-toggle: #CBD5E1, /* slate.300 */
+        unselected-chip: #E2E8F0, /* slate.200 */
+        disabled-list-option: #CBD5E1, /* slate.300 */
+        tooltip: #1E293B /* slate.800 */
+      )
+    )
+  );
+
+  /* Use all-component-colors to only generate the colors */
+  @include mat.all-component-colors($cosmere-theme);
+}
