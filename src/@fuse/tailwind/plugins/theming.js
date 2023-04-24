@@ -194,12 +194,12 @@ const theming = plugin.withOptions((options) => ({
                 'bg-status-bar': colors.slate[900]
               },
               cosmere: {
-                'bg-app-bar': '#00ff00',
-                'bg-card': '#00ff00',
-                'bg-default': '#00ff00',
-                'bg-dialog': '#00ff00',
-                'bg-hover': '#00ff00',
-                'bg-status-bar': '#00ff00'
+                'bg-app-bar': '#FFFFFF',
+                'bg-card': '#FFFFFF',
+                'bg-default': colors.slate[100],
+                'bg-dialog': '#FFFFFF',
+                'bg-hover': chroma(colors.slate[400]).alpha(0.12).css(),
+                'bg-status-bar': colors.slate[300]
               }
             },
             foreground: {
@@ -224,14 +224,14 @@ const theming = plugin.withOptions((options) => ({
                 'mat-icon': colors.slate[400]
               },
               cosmere: {
-                'text-default': '#00ff00',
-                'text-secondary': '#00ff00',
-                'text-hint': '#00ff00',
-                'text-disabled': '#00ff00',
-                'border': chroma(colors.slate[100]).alpha(0.12).css(),
-                'divider': chroma(colors.slate[100]).alpha(0.12).css(),
-                'icon': '#00ff00',
-                'mat-icon': '#00ff00'
+                'text-default': colors.slate[800],
+                'text-secondary': colors.slate[500],
+                'text-hint': colors.slate[400],
+                'text-disabled': colors.slate[400],
+                'border': colors.slate[200],
+                'divider': colors.slate[200],
+                'icon': colors.slate[500],
+                'mat-icon': colors.slate[500]
               }
             }
           },

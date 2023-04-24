@@ -3,15 +3,17 @@ import {RouterModule} from '@angular/router';
 import {HomePage} from './home.page';
 import {homeRouting} from './home.routing';
 import {SharedModule} from '../../../shared/components/shared.module';
+import {CdkScrollableModule} from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [
     HomePage
   ],
-  imports: [
-    RouterModule.forChild(homeRouting),
-    SharedModule,
-  ]
+    imports: [
+        RouterModule.forChild(homeRouting),
+        SharedModule,
+        CdkScrollableModule,
+    ]
 })
 export class HomeModule {
 }
