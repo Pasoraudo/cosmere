@@ -126,6 +126,8 @@ const theming = plugin.withOptions((options) => ({
         schemeSelector = darkSchemeSelectors;
       if (colorScheme === 'cosmere')
         schemeSelector = cosmereSchemeSelectors;
+
+      console.log('############### THEMING');
       return {
         [schemeSelector]: {
 
@@ -194,9 +196,9 @@ const theming = plugin.withOptions((options) => ({
                 'bg-status-bar': colors.slate[900]
               },
               cosmere: {
-                'bg-app-bar': '#FFFFFF',
-                'bg-card': '#FFFFFF',
-                'bg-default': colors.slate[100],
+                'bg-app-bar': '#FF9500',
+                'bg-card': '#0C0C0C',
+                'bg-default': '#000000',
                 'bg-dialog': '#FFFFFF',
                 'bg-hover': chroma(colors.slate[400]).alpha(0.12).css(),
                 'bg-status-bar': colors.slate[300]
@@ -224,14 +226,14 @@ const theming = plugin.withOptions((options) => ({
                 'mat-icon': colors.slate[400]
               },
               cosmere: {
-                'text-default': colors.slate[800],
-                'text-secondary': colors.slate[500],
-                'text-hint': colors.slate[400],
-                'text-disabled': colors.slate[400],
-                'border': colors.slate[200],
-                'divider': colors.slate[200],
-                'icon': colors.slate[500],
-                'mat-icon': colors.slate[500]
+                'text-default': '#CCCCCC',
+                'text-secondary': colors.slate[400],
+                'text-hint': colors.slate[500],
+                'text-disabled': colors.slate[600],
+                'border': chroma(colors.slate[100]).alpha(0.12).css(),
+                'divider': chroma(colors.slate[100]).alpha(0.12).css(),
+                'icon': colors.slate[400],
+                'mat-icon': colors.slate[400]
               }
             }
           },

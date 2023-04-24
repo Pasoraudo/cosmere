@@ -1,5 +1,8 @@
 {
   "books": "libros",
   "planets": "planetas",
-  "relationships": "relaciones"
+  "relationships": "relaciones",
+  "home.text.1": "Aquí encontrarás una recopilación detallada de los personajes más icónicos de las obras del famoso autor de fantasía, Brandon Sanderson. Desde la poderosa Vin de Mistborn hasta el enigmático Hoid.",
+  "home.text.2": "No importa si eres un fanático de Sanderson de toda la vida o si acabas de descubrir sus obras, nuestro sitio web te ayudará a profundizar en el mundo del Cosmere y descubrir nuevas conexiones entre los personajes y las historias.\n",
+  "home.text.3": "Utilizando técnicas avanzadas de análisis de datos, hemos creado un grafo interactivo que muestra las conexiones entre los personajes y su popularidad dentro del universo del Cosmere."
 }

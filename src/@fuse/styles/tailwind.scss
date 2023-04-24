@@ -72,7 +72,7 @@
     --tw-border-opacity: 1 !important;
     border-color: rgba(var(--fuse-border-rgb), var(--tw-border-opacity));
 
-    .dark & {
+    .dark &, .cosmere & {
       --tw-border-opacity: 0.12 !important;
     }
   }
