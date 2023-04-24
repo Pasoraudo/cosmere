@@ -5,6 +5,7 @@ import {homeRouting} from './home.routing';
 import {SharedModule} from '../../../shared/components/shared.module';
 import {CdkScrollableModule} from '@angular/cdk/scrolling';
 import {FuseCardModule} from '../../../../../@fuse/components/card';
+import {PipeModule} from '../../../shared/pipe/pipe.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import {FuseCardModule} from '../../../../../@fuse/components/card';
     SharedModule,
     CdkScrollableModule,
     FuseCardModule,
+    PipeModule,
   ]
 })
 export class HomeModule {
