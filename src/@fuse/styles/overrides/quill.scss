@@ -7,7 +7,7 @@
   @apply bg-gray-100;
   @apply border-gray-300 border-opacity-100 #{'!important'};
 
-  .dark & {
+  .dark &, cosmere & {
     background-color: rgba(0, 0, 0, 0.05);
     @apply border-gray-500 #{'!important'};
   }

@@ -812,7 +812,7 @@ export const crypto = {
             iso   : 'XRP',
             amount: 0.23512,
             trend : {
-                dir   : 'down',
+                dir   : 'down.svg',
                 amount: 0.35
             },
             series: [
@@ -1004,7 +1004,7 @@ export const crypto = {
             iso   : 'ZEC',
             amount: 58.41,
             trend : {
-                dir   : 'down',
+                dir   : 'down.svg',
                 amount: 8.79
             },
             series: [
@@ -1100,7 +1100,7 @@ export const crypto = {
             iso   : 'BTG',
             amount: 12.23,
             trend : {
-                dir   : 'down',
+                dir   : 'down.svg',
                 amount: 4.42
             },
             series: [

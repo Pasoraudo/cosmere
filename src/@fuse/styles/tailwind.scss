@@ -18,7 +18,9 @@
       outline: none !important;
     }
   }
-
+  :root {
+    --opacity-card: 0.1;
+  }
   /* HTML and Body default styles */
   html,
   body {
@@ -64,7 +66,7 @@
     -webkit-text-fill-color: currentColor;
   }
 
-  body, .dark, .light {
+  body, .dark, .light, .cosmere {
     @apply text-default bg-default #{'!important'};
   }
 
@@ -72,7 +74,7 @@
     --tw-border-opacity: 1 !important;
     border-color: rgba(var(--fuse-border-rgb), var(--tw-border-opacity));
 
-    .dark & {
+    .dark &, .cosmere & {
       --tw-border-opacity: 0.12 !important;
     }
   }
@@ -89,7 +91,7 @@
       font-size: 12px !important;
     }
 
-    body, .dark, .light {
+    body, .dark, .light, .cosmere {
       background: none !important;
     }
   }

@@ -1,7 +1,7 @@
 import {Layout} from 'app/layout/layout.types';
 
 // Types
-export type Scheme = 'auto' | 'dark' | 'light';
+export type Scheme = 'auto' | 'dark' | 'light' | 'cosmere';
 export type Screens = { [key: string]: string };
 export type Theme = 'theme-default' | string;
 export type Themes = { id: string; name: string }[];
@@ -34,7 +34,7 @@ export interface AppConfig
  */
 export const appConfig: AppConfig = {
     layout : 'classy',
-    scheme : 'light',
+    scheme : 'cosmere',
     screens: {
         sm: '600px',
         md: '960px',

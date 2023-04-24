@@ -1,15 +1,13 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-import {PageEvent} from '@angular/material/paginator';
+import {Component, ViewEncapsulation} from '@angular/core';
 import {BasePage} from '../../../shared/page/base.page';
 
 @Component({
-    selector     : 'home',
-    templateUrl  : './home.page.html',
-    encapsulation: ViewEncapsulation.None
+  selector: 'home',
+  templateUrl: './home.page.html',
+  encapsulation: ViewEncapsulation.None
 })
-export class HomePage extends BasePage
-{
-    constructor() {
-      super();
-    }
+export class HomePage extends BasePage {
+  constructor() {
+    super();
+  }
 }

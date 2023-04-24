@@ -10,7 +10,7 @@ const generatePalette = require(path.resolve(__dirname, ('src/@fuse/tailwind/uti
  * Tailwind-like color palettes automatically
  */
 const customPalettes = {
-  brand: generatePalette('#EB601F')
+  brand: generatePalette('#FF9500')
 };
 
 /**
@@ -21,7 +21,7 @@ const themes = {
   'default': {
     primary: {
       ...colors.orange,
-      DEFAULT: colors.orange[500]
+      DEFAULT: colors.orange[400]
     },
     accent: {
       ...colors.gray,
@@ -293,7 +293,7 @@ const config = {
     // Other third party and/or custom plugins
     require('@tailwindcss/typography')({modifiers: ['sm', 'lg']}),
     require('@tailwindcss/aspect-ratio'),
-    require('@tailwindcss/line-clamp')
+    require('@tailwindcss/line-clamp'),
   ]
 };
 

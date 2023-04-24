@@ -1,0 +1,33 @@
+.card-divider {
+  overflow: hidden;
+  line-height: 0;
+}
+
+.card-divider svg {
+  position: relative;
+  display: block;
+}
+
+.card-divider .shape-fill {
+  fill: #0C0C0CB3;
+}
+
+.custom-shape-divider-top-1682358371 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1682358371 svg {
+  position: relative;
+  display: block;
+  width: calc(195% + 1.3px);
+  height: 64px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1682358371 .shape-fill {
+  fill: #0C0C0CB3;
+}
