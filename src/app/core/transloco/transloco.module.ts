@@ -26,7 +26,7 @@ import {firstValueFrom} from 'rxjs';
           },
           {
             id: 'en',
-            label: 'Turkish'
+            label: 'English'
           }
         ],
         defaultLang: 'es',

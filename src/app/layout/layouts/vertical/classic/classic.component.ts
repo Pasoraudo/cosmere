@@ -3,7 +3,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {Subject, takeUntil} from 'rxjs';
 import {FuseMediaWatcherService} from '@fuse/services/media-watcher';
 import {FuseNavigationItem, FuseNavigationService, FuseVerticalNavigationComponent} from '@fuse/components/navigation';
-import {wikiNavigation} from '../../../../mock-api/common/navigation/wiki-navigation';
+import {wikiNavigation} from '../../../navigation/wiki-navigation';
 
 @Component({
   selector: 'classic-layout',
