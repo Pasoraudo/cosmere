@@ -12,7 +12,6 @@ import {FuseConfigModule} from '../@fuse/services/config';
 import {FuseMockApiModule} from '../@fuse/lib/mock-api';
 import {CoreModule} from './core/core.module';
 import {LayoutModule} from './layout/layout.module';
-import {mockApiServices} from './mock-api';
 import {appConfig} from './core/config/app.config';
 import {MarkdownModule} from 'ngx-markdown';
 import {DomainModule} from '../domain/domain.module';
@@ -26,7 +25,6 @@ import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import {PipeModule} from 'app/ui/shared/pipe/pipe.module';
 import {NgSelectModule} from '@ng-select/ng-select';
 import {JwtInterceptor} from '../domain/service/network/jwt.interceptor';
-import {CdkScrollableModule} from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [
@@ -43,7 +41,6 @@ import {CdkScrollableModule} from '@angular/cdk/scrolling';
     BrowserAnimationsModule,
     FuseModule,
     FuseConfigModule.forRoot(appConfig),
-    FuseMockApiModule.forRoot(mockApiServices),
     DomainModule,
 
     MatSnackBarModule,
