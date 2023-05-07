@@ -17,7 +17,6 @@ export class ApiClient {
     setInterval(() => {
       this.clearCache();
     },300);
-
   }
 
   public get<T>(routeName: string): Promise<T> {
