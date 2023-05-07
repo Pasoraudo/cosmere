@@ -4,7 +4,7 @@ import {CharacterApi} from '../../../../../../../domain/service/api/character.ap
 import {RelationshipApi} from '../../../../../../../domain/service/api/relationship.api';
 import {defer} from 'lodash';
 import {Book} from '../../../../../../../domain/model/book';
-import {FormGroup} from '@angular/forms';
+import {FormControl, FormGroup} from '@angular/forms';
 import {FormBuilderService} from '../../../../../../../domain/service/form/form.builder';
 import {charactersToNodes, relationshipsToEdges} from '../../../../../../../domain/function/network.helper';
 import {GraphEdge, GraphNode} from '../../../../../../../domain/model/network';
@@ -13,6 +13,7 @@ import {Relationship} from '../../../../../../../domain/model/relationship';
 import {Planet} from '../../../../../../../domain/model/planet';
 import {BookApi} from '../../../../../../../domain/service/api/book.api';
 import {PlanetApi} from '../../../../../../../domain/service/api/planet.api';
+import {conditionallyCreateMapObjectLiteral} from '@angular/compiler/src/render3/view/util';
 
 @Component({
   selector: 'characters-relationships-graph',
@@ -23,11 +24,11 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
   edges: GraphEdge[] = [];
   characters: Character[] = [];
   relationships: Relationship[] = [];
+
   books: Book[];
   planets: Planet[];
-  selectedBooks: string[];
-  selectedPlanets: string[];
-  form: FormGroup;
+  bookControl: FormControl = new FormControl([]);
+  planetControl: FormControl = new FormControl([]);
 
   constructor(private characterApi: CharacterApi, private relationshipApi: RelationshipApi, private formBuilder: FormBuilderService, private bookApi: BookApi,
               private planetApi: PlanetApi) {
@@ -43,14 +44,10 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
       this.setRelationships(relationships);
     });
     this.subscribe(this.bookApi.allBooks(), books => {
-      console.log('books', books);
       this.books = books;
-      this.selectedBooks = this.books.map(book => book.title);
     });
     this.subscribe(this.planetApi.allPlanets(), planets => {
-      console.log('planets', planets);
       this.planets = planets;
-      this.selectedPlanets = this.planets.map(planet => planet.name);
     });
     defer(() => {
       this.characterApi.fetchAllCharacter();
@@ -58,18 +55,6 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
       this.bookApi.fetchAllBooks();
       this.planetApi.fetchAllPlanets();
     });
-
-    this.buildForm();
-  }
-
-  buildForm() {
-    if (this.form)
-      return;
-
-    this.form = this.formBuilder.build({
-      bookFilter: this.selectedBooks,
-      planetFilter: this.selectedPlanets
-    }, []);
   }
 
   setRelationships(relationships: Relationship[]) {
@@ -78,24 +63,32 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
   }
 
   applyFilters() {
+    console.log('aaaaaaaaaaa');
     this.nodes = charactersToNodes(this.filteredCharacters());
     this.edges = relationshipsToEdges(this.filteredRelationships());
   }
 
   filteredCharacters(): Character[] {
     let filteredCharacters = this.characters;
-    const selectedBooksIds = this.books.filter(book => this.selectedBooks.includes(book.title)).map(book => book.id);
 
-    filteredCharacters = filteredCharacters.filter(character => character.bookIds.filter(bookId => selectedBooksIds.includes(bookId)).length > 0);
-    filteredCharacters = filteredCharacters.filter(character => this.selectedPlanets.includes(character.planet));
+    if (this.bookControl.value.length > 0) {
+      const selectedBooksIds = this.books.filter(book => this.bookControl.value.includes(book.title)).map(book => book.id);
+      filteredCharacters = filteredCharacters.filter(character => character.bookIds.filter(bookId => selectedBooksIds.includes(bookId)).length > 0);
+    }
+    if (this.planetControl.value.length > 0)
+      filteredCharacters = filteredCharacters.filter(character => this.planetControl.value.includes(character.planet));
+
     return filteredCharacters;
   }
 
   filteredRelationships(): Relationship[] {
     let filteredRelationships = this.relationships;
-    const selectedBooksIds = this.books.filter(book => this.selectedBooks.includes(book.title)).map(book => book.id);
 
-    filteredRelationships = filteredRelationships.filter(relationship => selectedBooksIds.includes(relationship.bookId));
+    if (this.bookControl.value.length > 0) {
+      const selectedBooksIds = this.books.filter(book => this.bookControl.value.includes(book.title)).map(book => book.id);
+      filteredRelationships = filteredRelationships.filter(relationship => selectedBooksIds.includes(relationship.bookId));
+    }
+
     return filteredRelationships;
   }
 }

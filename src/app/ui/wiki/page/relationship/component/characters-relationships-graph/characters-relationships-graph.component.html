@@ -1,24 +1,22 @@
 <div class="flex flex-row p-7 w-full h-full">
-  <fuse-card class="flex flex-col p-5">
-    <form [formGroup]="form">
-      <mat-form-field class="w-full ">
-        <mat-label>{{"books" | trans | titlecase}}</mat-label>
-        <mat-select formControlName="bookFilter" multiple [(ngModel)]="selectedBooks" (selectionChange)="applyFilters()">
-          <mat-option *ngFor="let book of books" [value]="book.title">
-            {{book.title | trans | uppercase}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
+  <div class="flex flex-col p-5 w-100">
+    <mat-form-field class="w-full" floatLabel="always">
+      <mat-label>{{"books" | trans | titlecase}}</mat-label>
+      <mat-select multiple [formControl]="bookControl" (selectionChange)="applyFilters()" placeholder="Libros: Todos">
+        <mat-option *ngFor="let book of books" [value]="book.id">
+          {{book.title | trans | uppercase}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
 
-      <mat-form-field class="w-full ">
-        <mat-label>{{"planets" | trans | titlecase}}</mat-label>
-        <mat-select formControlName="planetFilter" multiple [(ngModel)]="selectedPlanets" (selectionChange)="applyFilters()">
-          <mat-option *ngFor="let planet of planets" [value]="planet.name">
-            {{planet.name | trans | uppercase}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-    </form>
-  </fuse-card>
+    <mat-form-field class="w-full" floatLabel="always">
+      <mat-label>{{"planets" | trans | titlecase}}</mat-label>
+      <mat-select multiple [formControl]="planetControl" (selectionChange)="applyFilters()" placeholder="Planetas: Todos">
+        <mat-option *ngFor="let planet of planets" [value]="planet.id">
+          {{planet.name | trans | uppercase}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
   <graph class="flex flex-col w-full" [nodes]="nodes" [edges]="edges"></graph>
 </div>
