@@ -4,7 +4,7 @@ import {CharacterApi} from '../../../../../../../domain/service/api/character.ap
 import {RelationshipApi} from '../../../../../../../domain/service/api/relationship.api';
 import {defer} from 'lodash';
 import {Book} from '../../../../../../../domain/model/book';
-import {FormControl, FormGroup} from '@angular/forms';
+import {FormControl} from '@angular/forms';
 import {FormBuilderService} from '../../../../../../../domain/service/form/form.builder';
 import {charactersToNodes, relationshipsToEdges} from '../../../../../../../domain/function/network.helper';
 import {GraphEdge, GraphNode} from '../../../../../../../domain/model/network';
@@ -13,7 +13,8 @@ import {Relationship} from '../../../../../../../domain/model/relationship';
 import {Planet} from '../../../../../../../domain/model/planet';
 import {BookApi} from '../../../../../../../domain/service/api/book.api';
 import {PlanetApi} from '../../../../../../../domain/service/api/planet.api';
-import {conditionallyCreateMapObjectLiteral} from '@angular/compiler/src/render3/view/util';
+import {SpoilerAlertComponent} from '../../../../../shared/modal/spoiler-alert.component';
+import {Modal} from '../../../../../../../domain/ionic/modal.ionic';
 
 @Component({
   selector: 'characters-relationships-graph',
@@ -31,7 +32,7 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
   planetControl: FormControl = new FormControl([]);
 
   constructor(private characterApi: CharacterApi, private relationshipApi: RelationshipApi, private formBuilder: FormBuilderService, private bookApi: BookApi,
-              private planetApi: PlanetApi) {
+              private planetApi: PlanetApi, private modal: Modal) {
     super();
   }
 
@@ -55,6 +56,8 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
       this.bookApi.fetchAllBooks();
       this.planetApi.fetchAllPlanets();
     });
+
+    await this.openModal();
   }
 
   setRelationships(relationships: Relationship[]) {
@@ -63,7 +66,6 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
   }
 
   applyFilters() {
-    console.log('aaaaaaaaaaa');
     this.nodes = charactersToNodes(this.filteredCharacters());
     this.edges = relationshipsToEdges(this.filteredRelationships());
   }
@@ -90,5 +92,13 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
     }
 
     return filteredRelationships;
+  }
+
+  async openModal(): Promise<void> {
+    await this.modal.present({
+      component: SpoilerAlertComponent,
+      cssClass: 'custom-modal',
+      height: 'auto'
+    });
   }
 }

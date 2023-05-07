@@ -7,6 +7,7 @@ import {CommonModule} from '@angular/common';
 import {PipeModule} from '../../../../../shared/pipe/pipe.module';
 import {ReactiveFormsModule} from '@angular/forms';
 import {SharedModule} from '../../../../../shared/components/shared.module';
+import {SpoilerAlertComponent} from '../../../../../shared/modal/spoiler-alert.component';
 
 @NgModule({
   declarations: [

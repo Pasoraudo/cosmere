@@ -28,11 +28,9 @@ export class BaseComponent implements OnDestroy {
     });
 
     this.onDestroy();
-
   }
 
   onDestroy(): void {
-
   }
 
   protected subscribe<T>(
@@ -80,6 +78,4 @@ export class BaseComponent implements OnDestroy {
 
     return subscription?.subscription;
   }
-
-
 }

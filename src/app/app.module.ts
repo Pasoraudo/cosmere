@@ -25,6 +25,7 @@ import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import {PipeModule} from 'app/ui/shared/pipe/pipe.module';
 import {NgSelectModule} from '@ng-select/ng-select';
 import {JwtInterceptor} from '../domain/service/network/jwt.interceptor';
+import {ModalModule} from './ui/shared/modal/modal.module';
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import {JwtInterceptor} from '../domain/service/network/jwt.interceptor';
     MarkdownModule.forRoot({}),
 
     NgSelectModule,
+    ModalModule
   ],
   providers: [
     {provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
