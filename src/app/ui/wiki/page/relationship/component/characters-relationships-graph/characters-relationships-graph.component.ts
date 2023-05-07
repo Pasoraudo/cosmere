@@ -98,7 +98,6 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
     await this.modal.present({
       component: SpoilerAlertComponent,
       cssClass: 'custom-modal',
-      height: 'auto'
     });
   }
 }

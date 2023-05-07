@@ -3,7 +3,7 @@ import {ModalController} from '@ionic/angular';
 import {ComponentProps, ComponentRef, FrameworkDelegate, Mode} from '@ionic/core';
 import {isArray, isString} from 'lodash-es';
 
-type ModalHeight = 'default' | 'auto' | '90vh';
+type ModalHeight = 'default' | 'auto';
 
 export interface ModalOptions<T extends ComponentRef = ComponentRef> {
   component: T;
@@ -21,7 +21,6 @@ export interface ModalOptions<T extends ComponentRef = ComponentRef> {
   keyboardClose?: boolean;
   id?: string;
   height?: ModalHeight;
-
 }
 
 @Injectable({
@@ -60,12 +59,6 @@ export class Modal {
       if (isArray(options.cssClass) && !options.cssClass.includes('auto-height'))
         options.cssClass.push('auto-height');
     }
-
-    if (options.height === '90vh') {
-
-    }
-
-
     return {...options};
   }
 

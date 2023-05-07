@@ -12,7 +12,7 @@ import {BaseComponent} from './base.component';
 export class IconComponent extends BaseComponent {
   @Input() color: 'none' | 'primary' | 'bold' | 'warning' = 'none';
   @Input() size: '1' | '2' | '3' | '4' | '5' | '8' | '10';
-  @Input() icon: 'book-open' | 'clone' | 'alert' | 'add-user' | 'info' | 'add' | 'trash' | 'upload' | 'document' | 'refresh'
+  @Input() icon: 'book-open' | 'clone' | 'exclamation' | 'add-user' | 'info' | 'add' | 'trash' | 'upload' | 'document' | 'refresh'
     | 'eye' | 'check' | 'check-circle' | 'x' | 'search' | 'search-solid' | 'edit' | 'cart' | 'create' | 'create-solid' | 'save' | 'user-circle' | 'question-mark-circle'
     | 'remove-circle-outline' | 'ban' | 'clipboard-check' | 'pencil-alt' | 'duplicate' | 'folder' | 'clipboard-list' | 'lock-closed' | 'calendar';
 
@@ -21,8 +21,8 @@ export class IconComponent extends BaseComponent {
   }
 
   svg(): string {
-    if (this.icon === 'alert')
-      return 'heroicons_outline:alert-outline';
+    if (this.icon === 'exclamation')
+      return 'heroicons_outline:exclamation';
 
     if (this.icon === 'add-user')
       return 'heroicons_solid:user-add';
