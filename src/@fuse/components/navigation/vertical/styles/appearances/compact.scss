@@ -62,9 +62,14 @@ fuse-vertical-navigation {
 
               .fuse-vertical-navigation-item-icon-wrapper {
                 border-radius: 30px;
+
                 .fuse-vertical-navigation-item-icon {
                   margin-right: 0;
                 }
+              }
+
+              .fuse-vertical-navigation-item-icon-wrapper:hover {
+                background-color: rgb(255,255,255, 0.1);
               }
 
 

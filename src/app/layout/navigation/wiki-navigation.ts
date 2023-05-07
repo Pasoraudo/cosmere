@@ -12,8 +12,20 @@ export const wikiNavigation: FuseNavigationItem[] = [
     id: 'relationships',
     title: 'Relaciones',
     type: 'basic',
-    icon: 'heroicons_outline:home',
+    icon: 'heroicons_outline:users',
     link: '/wiki/relationship'
+  },
+  {
+    id: 'popularity',
+    title: 'Estadísticas',
+    type: 'basic',
+    icon: 'heroicons_outline:chart-bar',
+  },
+  {
+    id: 'info',
+    title: 'info',
+    type: 'basic',
+    icon: 'heroicons_outline:information-circle',
   },
 ]
 
