@@ -28,9 +28,11 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
 
   books: Book[];
   planets: Planet[];
+  groupByOptions: string[];
+
   bookControl: FormControl = new FormControl([]);
   planetControl: FormControl = new FormControl([]);
-
+  groupByOption: FormControl = new FormControl([]);
   constructor(private characterApi: CharacterApi, private relationshipApi: RelationshipApi, private formBuilder: FormBuilderService, private bookApi: BookApi,
               private planetApi: PlanetApi, private modal: Modal) {
     super();
@@ -72,7 +74,6 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
 
   filteredCharacters(): Character[] {
     let filteredCharacters = this.characters;
-
     if (this.bookControl.value.length > 0) {
       const selectedBooksIds = this.books.filter(book => this.bookControl.value.includes(book.title)).map(book => book.id);
       filteredCharacters = filteredCharacters.filter(character => character.bookIds.filter(bookId => selectedBooksIds.includes(bookId)).length > 0);

@@ -1,0 +1,525 @@
+Source;Target;Weight
+Kelsier;Vin;71
+Kelsier;Themos Tresting;5
+Kelsier;Jess;2
+Kelsier;Tepper;2
+Kelsier;Mennis;3
+Kelsier;Shum;1
+Kelsier;Marsh;26
+Kelsier;Reen;24
+Kelsier;Yeden;20
+Kelsier;Dockson;35
+Kelsier;Ruddy;1
+Kelsier;Camon;8
+Kelsier;Laird;1
+Kelsier;Theron;4
+Kelsier;Arriev;2
+Kelsier;Ulef;3
+Kelsier;Milev;4
+Kelsier;Hrud;1
+Kelsier;Harmon;1
+Kelsier;Hammond;14
+Kelsier;Gemmel;2
+Kelsier;Rashek;10
+Kelsier;Teven Renoux;25
+Kelsier;Straff Venture;1
+Kelsier;Sazed;36
+Kelsier;Cosahn;1
+Kelsier;Rudd;1
+Kelsier;Cobble;1
+Kelsier;Elend Venture;22
+Kelsier;Dilisteni;1
+Kelsier;Valette Entrone;17
+Kelsier;Tawnson;1
+Kelsier;Mare;2
+Kelsier;Melend Liese;1
+Kelsier;Hughes Entrone;1
+Kelsier;Charrs Entrone;1
+Kelsier;Gave Entrone;1
+Kelsier;Felise Demoux;3
+Kelsier;Demoux;3
+Kelsier;Bilg;1
+Kelsier;Kareien;1
+Kelsier;Jastes Lekal;1
+Kelsier;Crews Geffenry;1
+Kelsier;Ardous Geffenry;1
+Kelsier;Rene;1
+Kelsier;Kevoux;1
+Kelsier;Telden Hasting;1
+Kelsier;Redalevin;1
+Kelsier;Carlee;1
+Kelsier;Tyden;1
+Kelsier;Kliss;4
+Kelsier;Milen Davenpleu;1
+Kelsier;Callins Geffenry;1
+Kelsier;Bevidon;1
+Kelsier;Sertes;1
+Kelsier;Tevidian Tekiel;3
+Kelsier;Fedren Aime;1
+Kelsier;Redd;1
+Kelsier;Walin;1
+Kelsier;Kar (Scadrial);3
+Kelsier;Goradel;1
+Vin;Laird;2
+Vin;Reen;25
+Vin;Ulef;4
+Vin;Theron;5
+Vin;Camon;9
+Vin;Marsh;24
+Vin;Themos Tresting;3
+Vin;Yeden;17
+Vin;Dockson;36
+Vin;Ruddy;1
+Vin;Arriev;2
+Vin;Milev;4
+Vin;Hrud;1
+Vin;Harmon;1
+Vin;Hammond;12
+Vin;Gemmel;2
+Vin;Rashek;10
+Vin;Teven Renoux;23
+Vin;Straff Venture;1
+Vin;Sazed;33
+Vin;Cosahn;1
+Vin;Rudd;1
+Vin;Cobble;1
+Vin;Elend Venture;23
+Vin;Dilisteni;1
+Vin;Valette Entrone;15
+Vin;Tawnson;1
+Vin;Mare;2
+Vin;Melend Liese;1
+Vin;Felise Demoux;2
+Vin;Demoux;2
+Vin;Kareien;1
+Vin;Jastes Lekal;1
+Vin;Crews Geffenry;1
+Vin;Ardous Geffenry;1
+Vin;Rene;1
+Vin;Kevoux;1
+Vin;Telden Hasting;1
+Vin;Redalevin;1
+Vin;Carlee;1
+Vin;Tyden;1
+Vin;Kliss;4
+Vin;Milen Davenpleu;1
+Vin;Callins Geffenry;1
+Vin;Bevidon;1
+Vin;Sertes;1
+Vin;Mennis;1
+Vin;Tevidian Tekiel;3
+Vin;Fedren Aime;1
+Vin;Redd;1
+Vin;Walin;1
+Vin;Kar (Scadrial);3
+Vin;Goradel;1
+Themos Tresting;Jess;2
+Themos Tresting;Tepper;2
+Themos Tresting;Mennis;3
+Themos Tresting;Shum;1
+Themos Tresting;Marsh;1
+Themos Tresting;Reen;1
+Themos Tresting;Yeden;3
+Themos Tresting;Dockson;2
+Themos Tresting;Ruddy;1
+Themos Tresting;Camon;2
+Jess;Tepper;2
+Jess;Mennis;2
+Jess;Shum;1
+Tepper;Mennis;2
+Tepper;Shum;1
+Mennis;Shum;1
+Mennis;Yeden;1
+Marsh;Laird;1
+Marsh;Reen;9
+Marsh;Ulef;1
+Marsh;Theron;4
+Marsh;Camon;2
+Marsh;Yeden;12
+Marsh;Dockson;16
+Marsh;Ruddy;1
+Marsh;Arriev;1
+Marsh;Hrud;1
+Marsh;Milev;1
+Marsh;Harmon;1
+Marsh;Hammond;8
+Marsh;Rashek;5
+Marsh;Teven Renoux;11
+Marsh;Straff Venture;1
+Marsh;Sazed;10
+Marsh;Tawnson;1
+Marsh;Valette Entrone;5
+Marsh;Elend Venture;10
+Marsh;Felise Demoux;1
+Marsh;Demoux;1
+Marsh;Kareien;1
+Marsh;Tevidian Tekiel;1
+Marsh;Gemmel;1
+Marsh;Kliss;2
+Marsh;Redd;1
+Marsh;Mare;1
+Marsh;Walin;1
+Marsh;Kar (Scadrial);1
+Reen;Laird;1
+Reen;Ulef;3
+Reen;Theron;2
+Reen;Camon;4
+Reen;Yeden;7
+Reen;Dockson;12
+Reen;Ruddy;1
+Reen;Milev;2
+Reen;Arriev;1
+Reen;Hrud;1
+Reen;Harmon;1
+Reen;Hammond;4
+Reen;Rashek;4
+Reen;Teven Renoux;10
+Reen;Straff Venture;1
+Reen;Sazed;14
+Reen;Cosahn;1
+Reen;Rudd;1
+Reen;Cobble;1
+Reen;Elend Venture;9
+Reen;Dilisteni;1
+Reen;Valette Entrone;7
+Reen;Melend Liese;1
+Reen;Jastes Lekal;1
+Reen;Crews Geffenry;1
+Reen;Ardous Geffenry;1
+Reen;Rene;1
+Reen;Kevoux;1
+Reen;Telden Hasting;1
+Reen;Redalevin;1
+Reen;Carlee;1
+Reen;Tyden;1
+Reen;Kliss;2
+Reen;Milen Davenpleu;1
+Reen;Callins Geffenry;1
+Reen;Bevidon;1
+Reen;Sertes;1
+Reen;Redd;1
+Reen;Mare;1
+Yeden;Ulef;1
+Yeden;Theron;2
+Yeden;Camon;2
+Yeden;Dockson;13
+Yeden;Ruddy;1
+Yeden;Hrud;1
+Yeden;Milev;1
+Yeden;Harmon;1
+Yeden;Hammond;9
+Yeden;Rashek;3
+Yeden;Teven Renoux;7
+Yeden;Straff Venture;1
+Yeden;Sazed;6
+Yeden;Rudd;1
+Yeden;Cobble;1
+Yeden;Tawnson;1
+Yeden;Valette Entrone;3
+Yeden;Hughes Entrone;1
+Yeden;Charrs Entrone;1
+Yeden;Gave Entrone;1
+Yeden;Elend Venture;3
+Yeden;Felise Demoux;3
+Yeden;Demoux;3
+Yeden;Bilg;1
+Yeden;Tevidian Tekiel;1
+Dockson;Laird;1
+Dockson;Ulef;3
+Dockson;Theron;3
+Dockson;Camon;6
+Dockson;Ruddy;1
+Dockson;Arriev;2
+Dockson;Milev;4
+Dockson;Hrud;1
+Dockson;Harmon;1
+Dockson;Hammond;12
+Dockson;Gemmel;1
+Dockson;Rashek;6
+Dockson;Teven Renoux;13
+Dockson;Straff Venture;1
+Dockson;Sazed;14
+Dockson;Tawnson;1
+Dockson;Mare;1
+Dockson;Valette Entrone;6
+Dockson;Elend Venture;11
+Dockson;Felise Demoux;1
+Dockson;Demoux;1
+Dockson;Kareien;1
+Dockson;Jastes Lekal;1
+Dockson;Crews Geffenry;1
+Dockson;Ardous Geffenry;1
+Dockson;Rene;1
+Dockson;Kevoux;1
+Dockson;Telden Hasting;1
+Dockson;Redalevin;1
+Dockson;Carlee;1
+Dockson;Tyden;1
+Dockson;Kliss;2
+Dockson;Milen Davenpleu;1
+Dockson;Callins Geffenry;1
+Dockson;Tevidian Tekiel;2
+Dockson;Fedren Aime;1
+Dockson;Walin;1
+Dockson;Kar (Scadrial);1
+Dockson;Goradel;1
+Ruddy;Camon;1
+Camon;Laird;2
+Camon;Ulef;3
+Camon;Theron;2
+Camon;Arriev;2
+Camon;Milev;3
+Camon;Sazed;3
+Camon;Teven Renoux;2
+Camon;Valette Entrone;1
+Laird;Ulef;1
+Laird;Theron;2
+Laird;Arriev;1
+Theron;Ulef;1
+Theron;Arriev;1
+Theron;Rashek;1
+Theron;Teven Renoux;3
+Theron;Sazed;1
+Theron;Hammond;1
+Arriev;Ulef;1
+Arriev;Milev;1
+Ulef;Milev;3
+Ulef;Hrud;1
+Ulef;Harmon;1
+Ulef;Hammond;1
+Ulef;Sazed;1
+Milev;Hrud;1
+Milev;Harmon;1
+Milev;Hammond;1
+Milev;Sazed;1
+Hrud;Harmon;1
+Hrud;Hammond;1
+Harmon;Hammond;1
+Hammond;Rashek;5
+Hammond;Teven Renoux;5
+Hammond;Straff Venture;1
+Hammond;Sazed;8
+Hammond;Felise Demoux;2
+Hammond;Demoux;2
+Hammond;Bilg;1
+Hammond;Valette Entrone;2
+Hammond;Elend Venture;5
+Hammond;Kareien;1
+Hammond;Tevidian Tekiel;2
+Hammond;Kar (Scadrial);1
+Hammond;Goradel;1
+Rashek;Teven Renoux;6
+Rashek;Straff Venture;1
+Rashek;Sazed;7
+Rashek;Elend Venture;4
+Rashek;Dilisteni;1
+Rashek;Valette Entrone;2
+Rashek;Kareien;1
+Rashek;Tevidian Tekiel;2
+Rashek;Fedik;1
+Rashek;Kar (Scadrial);2
+Rashek;Goradel;1
+Teven Renoux;Straff Venture;1
+Teven Renoux;Sazed;16
+Teven Renoux;Cosahn;1
+Teven Renoux;Elend Venture;11
+Teven Renoux;Dilisteni;1
+Teven Renoux;Valette Entrone;12
+Teven Renoux;Tawnson;1
+Teven Renoux;Mare;1
+Teven Renoux;Melend Liese;1
+Teven Renoux;Hughes Entrone;1
+Teven Renoux;Charrs Entrone;1
+Teven Renoux;Gave Entrone;1
+Teven Renoux;Kareien;1
+Teven Renoux;Jastes Lekal;2
+Teven Renoux;Crews Geffenry;1
+Teven Renoux;Ardous Geffenry;1
+Teven Renoux;Rene;1
+Teven Renoux;Kevoux;1
+Teven Renoux;Telden Hasting;2
+Teven Renoux;Redalevin;1
+Teven Renoux;Carlee;1
+Teven Renoux;Tyden;1
+Teven Renoux;Kliss;2
+Teven Renoux;Milen Davenpleu;1
+Teven Renoux;Callins Geffenry;1
+Teven Renoux;Audil Lekal;1
+Teven Renoux;Walin;1
+Teven Renoux;Kar (Scadrial);1
+Teven Renoux;Goradel;1
+Teven Renoux;Tevidian Tekiel;1
+Straff Venture;Valette Entrone;2
+Straff Venture;Tegas;1
+Straff Venture;Staxles;1
+Straff Venture;Elend Venture;2
+Straff Venture;Jastes Lekal;2
+Straff Venture;Cladent;1
+Straff Venture;Felt;1
+Straff Venture;Audil Lekal;1
+Sazed;Cosahn;1
+Sazed;Elend Venture;17
+Sazed;Dilisteni;1
+Sazed;Valette Entrone;11
+Sazed;Tawnson;1
+Sazed;Melend Liese;1
+Sazed;Kareien;1
+Sazed;Jastes Lekal;1
+Sazed;Crews Geffenry;1
+Sazed;Ardous Geffenry;1
+Sazed;Rene;1
+Sazed;Kevoux;1
+Sazed;Telden Hasting;1
+Sazed;Redalevin;1
+Sazed;Carlee;1
+Sazed;Tyden;1
+Sazed;Kliss;2
+Sazed;Milen Davenpleu;1
+Sazed;Callins Geffenry;1
+Sazed;Kar (Scadrial);2
+Sazed;Goradel;1
+Sazed;Tevidian Tekiel;1
+Rudd;Cobble;1
+Elend Venture;Dilisteni;1
+Elend Venture;Valette Entrone;16
+Elend Venture;Melend Liese;1
+Elend Venture;Kareien;1
+Elend Venture;Jastes Lekal;4
+Elend Venture;Crews Geffenry;1
+Elend Venture;Ardous Geffenry;1
+Elend Venture;Rene;1
+Elend Venture;Kevoux;1
+Elend Venture;Telden Hasting;2
+Elend Venture;Redalevin;1
+Elend Venture;Carlee;1
+Elend Venture;Tyden;1
+Elend Venture;Kliss;4
+Elend Venture;Milen Davenpleu;1
+Elend Venture;Callins Geffenry;1
+Elend Venture;Tevidian Tekiel;2
+Elend Venture;Fedren Aime;1
+Elend Venture;Audil Lekal;2
+Elend Venture;Tegas;1
+Elend Venture;Staxles;1
+Elend Venture;Redd;1
+Elend Venture;Mare;1
+Elend Venture;Cladent;1
+Elend Venture;Felt;1
+Elend Venture;Kar (Scadrial);1
+Elend Venture;Goradel;1
+Valette Entrone;Melend Liese;1
+Valette Entrone;Hughes Entrone;1
+Valette Entrone;Charrs Entrone;1
+Valette Entrone;Gave Entrone;1
+Valette Entrone;Kareien;1
+Valette Entrone;Jastes Lekal;4
+Valette Entrone;Crews Geffenry;1
+Valette Entrone;Ardous Geffenry;1
+Valette Entrone;Rene;1
+Valette Entrone;Kevoux;1
+Valette Entrone;Telden Hasting;2
+Valette Entrone;Redalevin;1
+Valette Entrone;Carlee;1
+Valette Entrone;Tyden;1
+Valette Entrone;Kliss;3
+Valette Entrone;Milen Davenpleu;1
+Valette Entrone;Callins Geffenry;1
+Valette Entrone;Bevidon;1
+Valette Entrone;Sertes;1
+Valette Entrone;Fedren Aime;1
+Valette Entrone;Audil Lekal;2
+Valette Entrone;Tegas;1
+Valette Entrone;Staxles;1
+Valette Entrone;Cladent;1
+Valette Entrone;Felt;1
+Valette Entrone;Kar (Scadrial);1
+Valette Entrone;Goradel;1
+Valette Entrone;Tevidian Tekiel;1
+Mare;Redd;1
+Hughes Entrone;Charrs Entrone;1
+Hughes Entrone;Gave Entrone;1
+Charrs Entrone;Gave Entrone;1
+Felise Demoux;Demoux;3
+Felise Demoux;Bilg;1
+Demoux;Bilg;1
+Jastes Lekal;Crews Geffenry;1
+Jastes Lekal;Ardous Geffenry;1
+Jastes Lekal;Rene;1
+Jastes Lekal;Kevoux;1
+Jastes Lekal;Telden Hasting;2
+Jastes Lekal;Redalevin;1
+Jastes Lekal;Carlee;1
+Jastes Lekal;Tyden;1
+Jastes Lekal;Kliss;1
+Jastes Lekal;Milen Davenpleu;1
+Jastes Lekal;Callins Geffenry;1
+Jastes Lekal;Audil Lekal;2
+Jastes Lekal;Tegas;1
+Jastes Lekal;Staxles;1
+Jastes Lekal;Cladent;1
+Jastes Lekal;Felt;1
+Crews Geffenry;Ardous Geffenry;1
+Crews Geffenry;Rene;1
+Crews Geffenry;Kevoux;1
+Crews Geffenry;Telden Hasting;1
+Crews Geffenry;Redalevin;1
+Crews Geffenry;Carlee;1
+Crews Geffenry;Tyden;1
+Crews Geffenry;Kliss;1
+Crews Geffenry;Milen Davenpleu;1
+Crews Geffenry;Callins Geffenry;1
+Ardous Geffenry;Rene;1
+Ardous Geffenry;Kevoux;1
+Ardous Geffenry;Telden Hasting;1
+Ardous Geffenry;Redalevin;1
+Ardous Geffenry;Carlee;1
+Ardous Geffenry;Tyden;1
+Ardous Geffenry;Kliss;1
+Ardous Geffenry;Milen Davenpleu;1
+Ardous Geffenry;Callins Geffenry;1
+Rene;Kevoux;1
+Rene;Telden Hasting;1
+Rene;Redalevin;1
+Rene;Carlee;1
+Rene;Tyden;1
+Rene;Kliss;1
+Rene;Milen Davenpleu;1
+Rene;Callins Geffenry;1
+Kevoux;Telden Hasting;1
+Kevoux;Redalevin;1
+Kevoux;Carlee;1
+Kevoux;Tyden;1
+Kevoux;Kliss;1
+Kevoux;Milen Davenpleu;1
+Kevoux;Callins Geffenry;1
+Telden Hasting;Redalevin;1
+Telden Hasting;Carlee;1
+Telden Hasting;Tyden;1
+Telden Hasting;Kliss;1
+Telden Hasting;Milen Davenpleu;1
+Telden Hasting;Callins Geffenry;1
+Telden Hasting;Audil Lekal;1
+Redalevin;Carlee;1
+Redalevin;Tyden;1
+Redalevin;Kliss;1
+Redalevin;Milen Davenpleu;1
+Redalevin;Callins Geffenry;1
+Carlee;Tyden;1
+Carlee;Kliss;1
+Carlee;Milen Davenpleu;1
+Carlee;Callins Geffenry;1
+Tyden;Kliss;1
+Tyden;Milen Davenpleu;1
+Tyden;Callins Geffenry;1
+Kliss;Milen Davenpleu;1
+Kliss;Callins Geffenry;1
+Kliss;Fedren Aime;1
+Milen Davenpleu;Callins Geffenry;1
+Bevidon;Sertes;1
+Tevidian Tekiel;Kar (Scadrial);2
+Tevidian Tekiel;Goradel;1
+Kar (Scadrial);Goradel;1
+Audil Lekal;Cladent;1
+Audil Lekal;Felt;1
+Tegas;Staxles;1
+Cladent;Felt;1

@@ -1,33 +1,1122 @@
 [
   {
-    "id": "1",
-    "characterId1": "kaladin",
-    "characterId2": "dalinar",
-    "bookId": "el camino de los reyes"
+    "id": "Reen:Theron",
+    "characterId1": "Reen",
+    "characterId2": "Theron",
+    "type": "undefined",
+    "bookId": "mistborn1"
   },
   {
-    "id": "2",
-    "characterId1": "hoid",
-    "characterId2": "kaladin",
-    "bookId": "el camino de los reyes"
+    "id": "Kelsier:Marsh",
+    "characterId1": "Kelsier",
+    "characterId2": "Marsh",
+    "type": "undefined",
+    "bookId": "mistborn1"
   },
   {
-    "id": "3",
-    "characterId1": "hoid",
-    "characterId2": "dalinar",
-    "bookId": "el camino de los reyes"
+    "id": "Hammond:Yeden",
+    "characterId1": "Hammond",
+    "characterId2": "Yeden",
+    "type": "undefined",
+    "bookId": "mistborn1"
   },
   {
-    "id": "4",
-    "characterId1": "hoid",
-    "characterId2": "kelsier",
-    "bookId": "el imperio final"
+    "id": "Reen:Sazed",
+    "characterId1": "Reen",
+    "characterId2": "Sazed",
+    "type": "undefined",
+    "bookId": "mistborn1"
   },
   {
-    "id": "5",
-    "characterId1": "hoid",
-    "characterId2": "kaladin",
-    "bookId": "palabras radiantes"
+    "id": "Elend Venture:Tevidian Tekiel",
+    "characterId1": "Elend Venture",
+    "characterId2": "Tevidian Tekiel",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Audil Lekal:Valette Entrone",
+    "characterId1": "Audil Lekal",
+    "characterId2": "Valette Entrone",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Elend Venture:Sazed",
+    "characterId1": "Elend Venture",
+    "characterId2": "Sazed",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Teven Renoux:Vin",
+    "characterId1": "Teven Renoux",
+    "characterId2": "Vin",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Marsh:Reen",
+    "characterId1": "Marsh",
+    "characterId2": "Reen",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Hammond:Valette Entrone",
+    "characterId1": "Hammond",
+    "characterId2": "Valette Entrone",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Sazed",
+    "characterId1": "Kelsier",
+    "characterId2": "Sazed",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Vin",
+    "characterId1": "Kelsier",
+    "characterId2": "Vin",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Rashek:Tevidian Tekiel",
+    "characterId1": "Rashek",
+    "characterId2": "Tevidian Tekiel",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Dockson:Rashek",
+    "characterId1": "Dockson",
+    "characterId2": "Rashek",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Rashek:Vin",
+    "characterId1": "Rashek",
+    "characterId2": "Vin",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Jess:Themos Tresting",
+    "characterId1": "Jess",
+    "characterId2": "Themos Tresting",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Marsh:Sazed",
+    "characterId1": "Marsh",
+    "characterId2": "Sazed",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Arriev:Dockson",
+    "characterId1": "Arriev",
+    "characterId2": "Dockson",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kar (Scadrial):Sazed",
+    "characterId1": "Kar (Scadrial)",
+    "characterId2": "Sazed",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Jastes Lekal:Straff Venture",
+    "characterId1": "Jastes Lekal",
+    "characterId2": "Straff Venture",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Arriev:Camon",
+    "characterId1": "Arriev",
+    "characterId2": "Camon",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Jess:Mennis",
+    "characterId1": "Jess",
+    "characterId2": "Mennis",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Elend Venture:Rashek",
+    "characterId1": "Elend Venture",
+    "characterId2": "Rashek",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Kliss",
+    "characterId1": "Kelsier",
+    "characterId2": "Kliss",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Marsh:Valette Entrone",
+    "characterId1": "Marsh",
+    "characterId2": "Valette Entrone",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Themos Tresting:Vin",
+    "characterId1": "Themos Tresting",
+    "characterId2": "Vin",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Camon:Reen",
+    "characterId1": "Camon",
+    "characterId2": "Reen",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Elend Venture:Reen",
+    "characterId1": "Elend Venture",
+    "characterId2": "Reen",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Telden Hasting:Valette Entrone",
+    "characterId1": "Telden Hasting",
+    "characterId2": "Valette Entrone",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Reen",
+    "characterId1": "Kelsier",
+    "characterId2": "Reen",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Valette Entrone:Vin",
+    "characterId1": "Valette Entrone",
+    "characterId2": "Vin",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Jess:Kelsier",
+    "characterId1": "Jess",
+    "characterId2": "Kelsier",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Camon:Teven Renoux",
+    "characterId1": "Camon",
+    "characterId2": "Teven Renoux",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Dockson:Teven Renoux",
+    "characterId1": "Dockson",
+    "characterId2": "Teven Renoux",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Straff Venture:Valette Entrone",
+    "characterId1": "Straff Venture",
+    "characterId2": "Valette Entrone",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Valette Entrone:Yeden",
+    "characterId1": "Valette Entrone",
+    "characterId2": "Yeden",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kliss:Reen",
+    "characterId1": "Kliss",
+    "characterId2": "Reen",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Camon:Sazed",
+    "characterId1": "Camon",
+    "characterId2": "Sazed",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Hammond:Rashek",
+    "characterId1": "Hammond",
+    "characterId2": "Rashek",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Jastes Lekal:Telden Hasting",
+    "characterId1": "Jastes Lekal",
+    "characterId2": "Telden Hasting",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Marsh:Teven Renoux",
+    "characterId1": "Marsh",
+    "characterId2": "Teven Renoux",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Marsh:Vin",
+    "characterId1": "Marsh",
+    "characterId2": "Vin",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Demoux:Hammond",
+    "characterId1": "Demoux",
+    "characterId2": "Hammond",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Dockson:Ulef",
+    "characterId1": "Dockson",
+    "characterId2": "Ulef",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Sazed:Teven Renoux",
+    "characterId1": "Sazed",
+    "characterId2": "Teven Renoux",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Felise Demoux:Hammond",
+    "characterId1": "Felise Demoux",
+    "characterId2": "Hammond",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Tevidian Tekiel:Vin",
+    "characterId1": "Tevidian Tekiel",
+    "characterId2": "Vin",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Rashek:Yeden",
+    "characterId1": "Rashek",
+    "characterId2": "Yeden",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Hammond:Reen",
+    "characterId1": "Hammond",
+    "characterId2": "Reen",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Laird:Theron",
+    "characterId1": "Laird",
+    "characterId2": "Theron",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Teven Renoux:Yeden",
+    "characterId1": "Teven Renoux",
+    "characterId2": "Yeden",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Reen:Teven Renoux",
+    "characterId1": "Reen",
+    "characterId2": "Teven Renoux",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Demoux:Felise Demoux",
+    "characterId1": "Demoux",
+    "characterId2": "Felise Demoux",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Jastes Lekal:Valette Entrone",
+    "characterId1": "Jastes Lekal",
+    "characterId2": "Valette Entrone",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Elend Venture:Valette Entrone",
+    "characterId1": "Elend Venture",
+    "characterId2": "Valette Entrone",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Rashek:Reen",
+    "characterId1": "Rashek",
+    "characterId2": "Reen",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Jastes Lekal:Teven Renoux",
+    "characterId1": "Jastes Lekal",
+    "characterId2": "Teven Renoux",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Hammond:Vin",
+    "characterId1": "Hammond",
+    "characterId2": "Vin",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Felise Demoux:Yeden",
+    "characterId1": "Felise Demoux",
+    "characterId2": "Yeden",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Hammond:Kelsier",
+    "characterId1": "Hammond",
+    "characterId2": "Kelsier",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Rashek:Valette Entrone",
+    "characterId1": "Rashek",
+    "characterId2": "Valette Entrone",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kliss:Valette Entrone",
+    "characterId1": "Kliss",
+    "characterId2": "Valette Entrone",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kliss:Vin",
+    "characterId1": "Kliss",
+    "characterId2": "Vin",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Rashek",
+    "characterId1": "Kelsier",
+    "characterId2": "Rashek",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Yeden",
+    "characterId1": "Kelsier",
+    "characterId2": "Yeden",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kliss:Marsh",
+    "characterId1": "Kliss",
+    "characterId2": "Marsh",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Dockson:Kelsier",
+    "characterId1": "Dockson",
+    "characterId2": "Kelsier",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Mare",
+    "characterId1": "Kelsier",
+    "characterId2": "Mare",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Rashek:Teven Renoux",
+    "characterId1": "Rashek",
+    "characterId2": "Teven Renoux",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Hammond:Marsh",
+    "characterId1": "Hammond",
+    "characterId2": "Marsh",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Elend Venture:Hammond",
+    "characterId1": "Elend Venture",
+    "characterId2": "Hammond",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Hammond:Teven Renoux",
+    "characterId1": "Hammond",
+    "characterId2": "Teven Renoux",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kar (Scadrial):Kelsier",
+    "characterId1": "Kar (Scadrial)",
+    "characterId2": "Kelsier",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kar (Scadrial):Vin",
+    "characterId1": "Kar (Scadrial)",
+    "characterId2": "Vin",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Reen:Ulef",
+    "characterId1": "Reen",
+    "characterId2": "Ulef",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Camon:Kelsier",
+    "characterId1": "Camon",
+    "characterId2": "Kelsier",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Ulef",
+    "characterId1": "Kelsier",
+    "characterId2": "Ulef",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kliss:Sazed",
+    "characterId1": "Kliss",
+    "characterId2": "Sazed",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Elend Venture:Yeden",
+    "characterId1": "Elend Venture",
+    "characterId2": "Yeden",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Elend Venture:Kliss",
+    "characterId1": "Elend Venture",
+    "characterId2": "Kliss",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Dockson:Theron",
+    "characterId1": "Dockson",
+    "characterId2": "Theron",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Reen:Valette Entrone",
+    "characterId1": "Reen",
+    "characterId2": "Valette Entrone",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Dockson:Tevidian Tekiel",
+    "characterId1": "Dockson",
+    "characterId2": "Tevidian Tekiel",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Demoux:Yeden",
+    "characterId1": "Demoux",
+    "characterId2": "Yeden",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Demoux:Vin",
+    "characterId1": "Demoux",
+    "characterId2": "Vin",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Elend Venture:Telden Hasting",
+    "characterId1": "Elend Venture",
+    "characterId2": "Telden Hasting",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Marsh:Theron",
+    "characterId1": "Marsh",
+    "characterId2": "Theron",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Dockson:Milev",
+    "characterId1": "Dockson",
+    "characterId2": "Milev",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Teven Renoux",
+    "characterId1": "Kelsier",
+    "characterId2": "Teven Renoux",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Theron",
+    "characterId1": "Kelsier",
+    "characterId2": "Theron",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Teven Renoux:Valette Entrone",
+    "characterId1": "Teven Renoux",
+    "characterId2": "Valette Entrone",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Sazed:Yeden",
+    "characterId1": "Sazed",
+    "characterId2": "Yeden",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Camon:Vin",
+    "characterId1": "Camon",
+    "characterId2": "Vin",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Mennis",
+    "characterId1": "Kelsier",
+    "characterId2": "Mennis",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Elend Venture:Vin",
+    "characterId1": "Elend Venture",
+    "characterId2": "Vin",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Elend Venture:Jastes Lekal",
+    "characterId1": "Elend Venture",
+    "characterId2": "Jastes Lekal",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Elend Venture:Teven Renoux",
+    "characterId1": "Elend Venture",
+    "characterId2": "Teven Renoux",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Audil Lekal:Jastes Lekal",
+    "characterId1": "Audil Lekal",
+    "characterId2": "Jastes Lekal",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Tepper",
+    "characterId1": "Kelsier",
+    "characterId2": "Tepper",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Dockson:Elend Venture",
+    "characterId1": "Dockson",
+    "characterId2": "Elend Venture",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Dockson:Reen",
+    "characterId1": "Dockson",
+    "characterId2": "Reen",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Arriev:Kelsier",
+    "characterId1": "Arriev",
+    "characterId2": "Kelsier",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Milev",
+    "characterId1": "Kelsier",
+    "characterId2": "Milev",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Camon:Theron",
+    "characterId1": "Camon",
+    "characterId2": "Theron",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Rashek:Sazed",
+    "characterId1": "Rashek",
+    "characterId2": "Sazed",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Dockson:Themos Tresting",
+    "characterId1": "Dockson",
+    "characterId2": "Themos Tresting",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Elend Venture:Straff Venture",
+    "characterId1": "Elend Venture",
+    "characterId2": "Straff Venture",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Dockson:Hammond",
+    "characterId1": "Dockson",
+    "characterId2": "Hammond",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Mare:Vin",
+    "characterId1": "Mare",
+    "characterId2": "Vin",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Milev:Reen",
+    "characterId1": "Milev",
+    "characterId2": "Reen",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Telden Hasting:Teven Renoux",
+    "characterId1": "Telden Hasting",
+    "characterId2": "Teven Renoux",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Gemmel:Vin",
+    "characterId1": "Gemmel",
+    "characterId2": "Vin",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Gemmel:Kelsier",
+    "characterId1": "Gemmel",
+    "characterId2": "Kelsier",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Jess:Tepper",
+    "characterId1": "Jess",
+    "characterId2": "Tepper",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Elend Venture:Marsh",
+    "characterId1": "Elend Venture",
+    "characterId2": "Marsh",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Hammond:Tevidian Tekiel",
+    "characterId1": "Hammond",
+    "characterId2": "Tevidian Tekiel",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kliss:Teven Renoux",
+    "characterId1": "Kliss",
+    "characterId2": "Teven Renoux",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Milev:Ulef",
+    "characterId1": "Milev",
+    "characterId2": "Ulef",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Laird:Vin",
+    "characterId1": "Laird",
+    "characterId2": "Vin",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Felise Demoux:Vin",
+    "characterId1": "Felise Demoux",
+    "characterId2": "Vin",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Camon:Yeden",
+    "characterId1": "Camon",
+    "characterId2": "Yeden",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Camon:Dockson",
+    "characterId1": "Camon",
+    "characterId2": "Dockson",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Dockson:Kliss",
+    "characterId1": "Dockson",
+    "characterId2": "Kliss",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Audil Lekal:Elend Venture",
+    "characterId1": "Audil Lekal",
+    "characterId2": "Elend Venture",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Theron:Vin",
+    "characterId1": "Theron",
+    "characterId2": "Vin",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Reen:Vin",
+    "characterId1": "Reen",
+    "characterId2": "Vin",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Dockson:Vin",
+    "characterId1": "Dockson",
+    "characterId2": "Vin",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Dockson:Valette Entrone",
+    "characterId1": "Dockson",
+    "characterId2": "Valette Entrone",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Themos Tresting:Yeden",
+    "characterId1": "Themos Tresting",
+    "characterId2": "Yeden",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Valette Entrone",
+    "characterId1": "Kelsier",
+    "characterId2": "Valette Entrone",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kar (Scadrial):Tevidian Tekiel",
+    "characterId1": "Kar (Scadrial)",
+    "characterId2": "Tevidian Tekiel",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Sazed:Valette Entrone",
+    "characterId1": "Sazed",
+    "characterId2": "Valette Entrone",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Reen:Yeden",
+    "characterId1": "Reen",
+    "characterId2": "Yeden",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Tevidian Tekiel",
+    "characterId1": "Kelsier",
+    "characterId2": "Tevidian Tekiel",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Felise Demoux:Kelsier",
+    "characterId1": "Felise Demoux",
+    "characterId2": "Kelsier",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Mennis:Themos Tresting",
+    "characterId1": "Mennis",
+    "characterId2": "Themos Tresting",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kar (Scadrial):Rashek",
+    "characterId1": "Kar (Scadrial)",
+    "characterId2": "Rashek",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Camon:Milev",
+    "characterId1": "Camon",
+    "characterId2": "Milev",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Theron:Yeden",
+    "characterId1": "Theron",
+    "characterId2": "Yeden",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Camon:Marsh",
+    "characterId1": "Camon",
+    "characterId2": "Marsh",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Marsh:Yeden",
+    "characterId1": "Marsh",
+    "characterId2": "Yeden",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Sazed:Vin",
+    "characterId1": "Sazed",
+    "characterId2": "Vin",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Dockson:Marsh",
+    "characterId1": "Dockson",
+    "characterId2": "Marsh",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Tepper:Themos Tresting",
+    "characterId1": "Tepper",
+    "characterId2": "Themos Tresting",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Camon:Laird",
+    "characterId1": "Camon",
+    "characterId2": "Laird",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Ulef:Vin",
+    "characterId1": "Ulef",
+    "characterId2": "Vin",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Camon:Ulef",
+    "characterId1": "Camon",
+    "characterId2": "Ulef",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Milev:Vin",
+    "characterId1": "Milev",
+    "characterId2": "Vin",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Demoux:Kelsier",
+    "characterId1": "Demoux",
+    "characterId2": "Kelsier",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Mennis:Tepper",
+    "characterId1": "Mennis",
+    "characterId2": "Tepper",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Hammond:Sazed",
+    "characterId1": "Hammond",
+    "characterId2": "Sazed",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Themos Tresting",
+    "characterId1": "Kelsier",
+    "characterId2": "Themos Tresting",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Camon:Themos Tresting",
+    "characterId1": "Camon",
+    "characterId2": "Themos Tresting",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Marsh:Rashek",
+    "characterId1": "Marsh",
+    "characterId2": "Rashek",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Teven Renoux:Theron",
+    "characterId1": "Teven Renoux",
+    "characterId2": "Theron",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Elend Venture:Kelsier",
+    "characterId1": "Elend Venture",
+    "characterId2": "Kelsier",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Vin:Yeden",
+    "characterId1": "Vin",
+    "characterId2": "Yeden",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Arriev:Vin",
+    "characterId1": "Arriev",
+    "characterId2": "Vin",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Dockson:Sazed",
+    "characterId1": "Dockson",
+    "characterId2": "Sazed",
+    "type": "undefined",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Dockson:Yeden",
+    "characterId1": "Dockson",
+    "characterId2": "Yeden",
+    "type": "undefined",
+    "bookId": "mistborn1"
   }
 ]
-

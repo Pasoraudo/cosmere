@@ -29,7 +29,7 @@ export class GraphComponent extends BaseComponent implements OnInit, OnChanges, 
   options= {
     locale: 'es',
     physics: {
-      enabled: false,
+      enabled: true,
     },
     interaction: {
       dragNodes: false,
@@ -38,12 +38,12 @@ export class GraphComponent extends BaseComponent implements OnInit, OnChanges, 
       randomSeed: 5683756,
     },
     edges: {
-      scaling:{
+      scaling: {
         min: 1,
-        max: 10,
+        max: 1,
         label: {
           enabled: true,
-          min: 14,
+          min: 3,
           max: 30,
           maxVisible: 30,
           drawThreshold: 5
@@ -76,6 +76,5 @@ export class GraphComponent extends BaseComponent implements OnInit, OnChanges, 
     const nodes = new DataSet<any>(this.nodes);
     const edges = new DataSet<any>(this.edges);
     this.networkInstance.setData({nodes: nodes, edges: edges});
-
   }
 }

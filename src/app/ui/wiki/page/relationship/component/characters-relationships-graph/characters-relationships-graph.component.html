@@ -17,6 +17,15 @@
         </mat-option>
       </mat-select>
     </mat-form-field>
+
+    <mat-form-field class="w-full" floatLabel="always">
+      <mat-label>{{'group.by' | trans | titlecase}}</mat-label>
+      <mat-select multiple [formControl]="planetControl" (selectionChange)="applyFilters()">
+        <mat-option *ngFor="let groupBy of groupByOptions" [value]="groupBy">
+          {{groupBy | trans | uppercase}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
   </div>
   <graph class="flex flex-col w-full" [nodes]="nodes" [edges]="edges"></graph>
 </div>

@@ -1,5 +1,6 @@
 {
   "books": "books",
   "planets": "planets",
-  "relationships": "relationships"
+  "relationships": "relationships",
+  "group.by": "group by"
 }
