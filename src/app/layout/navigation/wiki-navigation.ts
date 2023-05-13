@@ -20,6 +20,7 @@ export const wikiNavigation: FuseNavigationItem[] = [
     title: 'Estadísticas',
     type: 'basic',
     icon: 'heroicons_outline:chart-bar',
+    link: '/wiki/statistics'
   },
   {
     id: 'info',

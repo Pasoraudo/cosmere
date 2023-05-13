@@ -14,4 +14,8 @@ export const wikiRouting: Route[] = [
     path: 'relationship',
     loadChildren: (): any => import('app/ui/wiki/page/relationship/relationship.module').then((m: any) => m.RelationshipModule)
   },
+  {
+    path: 'statistics',
+    loadChildren: (): any => import('app/ui/wiki/page/statistics/statistics.module').then((m: any) => m.StatisticsModule)
+  },
 ];
