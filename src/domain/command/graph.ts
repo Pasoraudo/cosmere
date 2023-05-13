@@ -1,4 +1,4 @@
-import {GraphEdge, GraphNode} from '../model/network';
+import {GraphEdge, GraphNode} from '../../app/ui/infrastructure/vis/model/network';
 
 export interface UpdateGraph {
   nodes: GraphNode[];

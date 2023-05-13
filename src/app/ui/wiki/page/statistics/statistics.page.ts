@@ -1,5 +1,8 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {BasePage} from '../../../shared/page/base.page';
+import {RelationshipApi} from '../../../../../domain/service/api/relationship.api';
+import {Relationship} from '../../../../../domain/model/relationship';
+import {BarCharItem} from '../../../infrastructure/d3/model/barChar.model';
 
 @Component({
   selector: 'relationship',
@@ -7,93 +10,53 @@ import {BasePage} from '../../../shared/page/base.page';
   encapsulation: ViewEncapsulation.None
 })
 export class StatisticsPage extends BasePage implements OnInit {
-  data = [{
-    "letter": "A",
-    "frequency": 0.08167
-  }, {
-    "letter": "B",
-    "frequency": 0.01492
-  }, {
-    "letter": "C",
-    "frequency": 0.02782
-  }, {
-    "letter": "D",
-    "frequency": 0.04253
-  }, {
-    "letter": "E",
-    "frequency": 0.12702
-  }, {
-    "letter": "F",
-    "frequency": 0.02288
-  }, {
-    "letter": "G",
-    "frequency": 0.02015
-  }, {
-    "letter": "H",
-    "frequency": 0.06094
-  }, {
-    "letter": "I",
-    "frequency": 0.06966
-  }, {
-    "letter": "J",
-    "frequency": 0.00153
-  }, {
-    "letter": "K",
-    "frequency": 0.00772
-  }, {
-    "letter": "L",
-    "frequency": 0.04025
-  }, {
-    "letter": "M",
-    "frequency": 0.02406
-  }, {
-    "letter": "N",
-    "frequency": 0.06749
-  }, {
-    "letter": "O",
-    "frequency": 0.07507
-  }, {
-    "letter": "P",
-    "frequency": 0.01929
-  }, {
-    "letter": "Q",
-    "frequency": 0.00095
-  }, {
-    "letter": "R",
-    "frequency": 0.05987
-  }, {
-    "letter": "S",
-    "frequency": 0.06327
-  }, {
-    "letter": "T",
-    "frequency": 0.09056
-  }, {
-    "letter": "U",
-    "frequency": 0.02758
-  }, {
-    "letter": "V",
-    "frequency": 0.00978
-  }, {
-    "letter": "W",
-    "frequency": 0.0236
-  }, {
-    "letter": "X",
-    "frequency": 0.0015
-  }, {
-    "letter": "Y",
-    "frequency": 0.01974
-  }, {
-    "letter": "Z",
-    "frequency": 0.00074
-  }];
+  popularityData: BarCharItem[] = [];
+  bookId: string = 'mistborn1'
 
-  constructor() {
+  constructor(private relationshipApi: RelationshipApi) {
     super();
   }
 
   ngOnInit(): void {
-
+    this.subscribe(this.relationshipApi.relationshipsByBook(this.bookId), relationships => this.setPopularityData(relationships) )
+    this.relationshipApi.fetchAllRelationship();
   }
 
+  setPopularityData(relationships: Relationship[]): void{
+    this.popularityData = this.popularityOfCharacters(relationships);
+    console.log(this.popularityData);
+  }
 
+  popularityOfCharacters(relationships: Relationship[]): BarCharItem[] {
+    var connectionsOfCharacters = {};
+    var characters: string[] = [];
+    const numRelationships: number = relationships.length;
+    relationships.forEach(relationship => {
+      if (!characters.includes(relationship.characterId1))
+        characters.push(relationship.characterId1)
+      if (!characters.includes(relationship.characterId2))
+        characters.push(relationship.characterId2)
+    });
+    characters.forEach(character => connectionsOfCharacters[character] = 0);
+    relationships.forEach(relationship => {
+      connectionsOfCharacters[relationship.characterId1] += 1;
+      connectionsOfCharacters[relationship.characterId2] += 1;
+    });
+    characters.forEach(character => connectionsOfCharacters[character] = connectionsOfCharacters[character] / numRelationships);
+    const items: [string, number][] = Object.keys(connectionsOfCharacters).map(function (key) {
+      return [key, connectionsOfCharacters[key]];
+    });
+    items.sort((item1, item2) => {
+      const v1: number = +item1[1];
+      const v2: number = +item2[1];
+      return v2 - v1;
+    });
+
+    return items.map(item => {
+      return {
+        letter: item[0],
+        frequency: item[1]
+      }
+    });
+  }
 }

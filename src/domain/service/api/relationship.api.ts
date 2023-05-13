@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {ApiClient} from '../network/api.client';
-import {Observable} from 'rxjs';
+import {map, Observable} from 'rxjs';
 import {RelationshipStore} from '../../store/relationship.store';
 import {Relationship} from '../../model/relationship';
 
@@ -23,5 +23,11 @@ export class RelationshipApi {
 
   allRelationship(): Observable<Relationship[]> {
     return this.store.relationships$;
+  }
+
+  relationshipsByBook(bookId): Observable<Relationship[]> {
+    return this.store.relationships$.pipe(
+      map(relationships => relationships.filter(relationship => relationship?.bookId === bookId))
+    );
   }
 }

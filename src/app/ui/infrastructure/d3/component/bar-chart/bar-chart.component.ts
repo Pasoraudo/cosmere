@@ -1,12 +1,12 @@
-import {AfterViewInit, Component, ElementRef, Input, ViewChild} from '@angular/core';
-import {BaseComponent} from '../../../../../shared/components/base.component';
+import {AfterViewInit, Component, ElementRef, Input, OnChanges, SimpleChanges, ViewChild} from '@angular/core';
+import {BaseComponent} from '../../../../shared/components/base.component';
 import * as d3 from 'd3';
 
 @Component({
   selector: 'bar-chart',
   template: '<div #barChart></div>',
 })
-export class BarChartComponent extends BaseComponent implements AfterViewInit {
+export class BarChartComponent extends BaseComponent implements AfterViewInit, OnChanges {
   @ViewChild('barChart')
   private chartContainer: ElementRef;
 
@@ -19,20 +19,24 @@ export class BarChartComponent extends BaseComponent implements AfterViewInit {
     super();
   }
 
-
-  ngAfterViewInit(): void {
-    if (!this.data) {
-      return;
-    }
-
+  ngOnChanges(changes: SimpleChanges): void {
     this.createChart();
   }
 
+
+  ngAfterViewInit(): void {
+    this.createChart();
+  }
+
+
   private createChart(): void {
+    if (!this.data || this.data.length === 0)
+      return;
+
     d3.select('svg').remove();
 
     const element = this.chartContainer.nativeElement;
-    const data = this.data;
+    const data = this.data.splice(0,10);
 
     const svg = d3.select(element).append('svg')
       .attr('width', element.offsetWidth)

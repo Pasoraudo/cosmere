@@ -7,7 +7,7 @@ import {Book} from '../../../../../../../domain/model/book';
 import {FormControl} from '@angular/forms';
 import {FormBuilderService} from '../../../../../../../domain/service/form/form.builder';
 import {charactersToNodes, relationshipsToEdges} from '../../../../../../../domain/function/network.helper';
-import {GraphEdge, GraphNode} from '../../../../../../../domain/model/network';
+import {GraphEdge, GraphNode} from '../../../../../infrastructure/vis/model/network';
 import {Character} from '../../../../../../../domain/model/character';
 import {Relationship} from '../../../../../../../domain/model/relationship';
 import {Planet} from '../../../../../../../domain/model/planet';
