@@ -12,8 +12,5 @@ export class RelationshipPage extends BasePage implements OnInit {
   }
 
   ngOnInit(): void {
-
   }
-
-
 }

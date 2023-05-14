@@ -1,10 +1,9 @@
 import {Relationship} from '../../domain/model/relationship';
 import {BarCharItem} from '../ui/infrastructure/d3/model/barChar.model';
 
-export function popularityOfCharacters(relationships: Relationship[]): BarCharItem[] {
+export function connectionsOfCharactersFromRelationships(relationships: Relationship[]): BarCharItem[] {
   var connectionsOfCharacters = {};
   var characters: string[] = [];
-  const numRelationships: number = relationships.length;
 
   relationships.forEach(relationship => {
     if (!characters.includes(relationship.characterId1))
@@ -17,7 +16,6 @@ export function popularityOfCharacters(relationships: Relationship[]): BarCharIt
     connectionsOfCharacters[relationship.characterId1] += 1;
     connectionsOfCharacters[relationship.characterId2] += 1;
   });
-  //characters.forEach(character => connectionsOfCharacters[character] = connectionsOfCharacters[character] / numRelationships);
   const popularityOfCharacters: [string, number][] = Object.keys(connectionsOfCharacters).map(function (key) {
     return [key, connectionsOfCharacters[key]];
   });

@@ -24,7 +24,7 @@ export const wikiNavigation: FuseNavigationItem[] = [
   },
   {
     id: 'info',
-    title: 'info',
+    title: 'Info',
     type: 'basic',
     icon: 'heroicons_outline:information-circle',
   },

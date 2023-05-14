@@ -3,7 +3,7 @@ import {BasePage} from '../../../shared/page/base.page';
 import {RelationshipApi} from '../../../../../domain/service/api/relationship.api';
 import {Relationship} from '../../../../../domain/model/relationship';
 import {BarCharItem} from '../../../infrastructure/d3/model/barChar.model';
-import {popularityOfCharacters} from '../../../../function/statistic.helper';
+import {connectionsOfCharactersFromRelationships} from '../../../../function/statistic.helper';
 
 @Component({
   selector: 'relationship',
@@ -12,7 +12,7 @@ import {popularityOfCharacters} from '../../../../function/statistic.helper';
 })
 export class StatisticsPage extends BasePage implements OnInit {
   popularityData: BarCharItem[] = [];
-  bookId: string = 'mistborn1'
+  bookId: string = 'mistborn1';
 
   constructor(private relationshipApi: RelationshipApi) {
     super();
@@ -24,6 +24,6 @@ export class StatisticsPage extends BasePage implements OnInit {
   }
 
   setPopularityData(relationships: Relationship[]): void {
-    this.popularityData = popularityOfCharacters(relationships);
+    this.popularityData = connectionsOfCharactersFromRelationships(relationships);
   }
 }
