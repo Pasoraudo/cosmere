@@ -4,11 +4,13 @@ import * as d3 from 'd3';
 
 @Component({
   selector: 'bar-chart',
-  template: '<div class="h-full w-full"  id="barchart" #barChart></div>',
+  template: '<div class="flex flex-1" id="{{id}}-barchart"></div>',
 })
 export class BarChartComponent extends BaseComponent implements AfterViewInit, OnChanges {
   @Input()
   data: any[];
+  @Input()
+  id: string;
   @Input()
   private options: {[name: string]: any} = {
     colors: {
@@ -18,8 +20,8 @@ export class BarChartComponent extends BaseComponent implements AfterViewInit, O
       xAxis: '#eee',
       yAxis: '#999'
     },
-    height: 700,
-    width: 2000,
+    height: 200,
+    width: 600,
     margin: {
       top: 10,
       left: 30,
@@ -54,7 +56,8 @@ export class BarChartComponent extends BaseComponent implements AfterViewInit, O
       return;
 
     this.data = this.data.splice(0, 10);
-    this.element = document.getElementById('barchart');
+    this.element = document.getElementById(this.id + '-barchart');
+
     this.initValues()
     this.initScales()
     this.initChart()
@@ -66,10 +69,12 @@ export class BarChartComponent extends BaseComponent implements AfterViewInit, O
     const el = d3.select(this.element)
     el.select('svg').remove()
 
-    this.svg = el.append('svg').attr(
-      'viewBox',
-      `0 0 ${this.options.width} ${this.options.height}`
-    )
+    this.svg = d3.select('#' + this.id + '-barchart')
+      .append("svg")
+      .attr(
+        'viewBox',
+        `0 0 ${this.options.width} ${this.options.height + 50}`
+      )
   }
 
   private initValues() {
@@ -185,6 +190,10 @@ export class BarChartComponent extends BaseComponent implements AfterViewInit, O
       .attr('class', 'axis x-axis')
       .attr('transform', `translate(0, ${this.options.height-15})`)
       .call(xAxis)
+      .selectAll("text")
+      .attr("transform", "translate(-10,0)rotate(-45)")
+      .style("text-anchor", "end");
+
 
     this.svg
       .append('g')
