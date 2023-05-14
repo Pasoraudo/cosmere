@@ -9,17 +9,17 @@ import {
   ViewChild,
   ViewEncapsulation
 } from '@angular/core';
-import {BaseComponent} from './base.component';
+import {BaseComponent} from '../../../shared/components/base.component';
 import {DataSet, Network} from 'vis';
-import {GraphEdge, GraphNode} from '../../../../domain/model/network';
+import {GraphEdge, GraphNode} from '../model/network';
 
 @Component({
-  selector: 'graph',
+  selector: 'network',
   template: '<div class="flex w-full h-full" #network></div>',
   encapsulation: ViewEncapsulation.None
 })
 
-export class GraphComponent extends BaseComponent implements OnInit, OnChanges, AfterViewInit {
+export class NetworkComponent extends BaseComponent implements OnInit, OnChanges, AfterViewInit {
   @ViewChild('network') el: ElementRef;
   @Input()
   nodes: GraphNode[];

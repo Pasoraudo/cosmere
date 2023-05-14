@@ -2,9 +2,9 @@ import {NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
 import {StatisticsPage} from './statistics.page';
 import {statisticsRouting} from './statistics.routing';
-import {BarChartModule} from './component/bar-chart/bar-chart.module';
 import {CdkScrollableModule} from '@angular/cdk/scrolling';
 import {FuseCardModule} from '../../../../../@fuse/components/card';
+import {D3Module} from '../../../infrastructure/d3/d3.module';
 
 @NgModule({
   declarations: [
@@ -12,9 +12,9 @@ import {FuseCardModule} from '../../../../../@fuse/components/card';
   ],
   imports: [
     RouterModule.forChild(statisticsRouting),
-    BarChartModule,
     CdkScrollableModule,
-    FuseCardModule
+    FuseCardModule,
+    D3Module
   ]
 })
 export class StatisticsModule {

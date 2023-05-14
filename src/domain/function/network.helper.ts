@@ -1,4 +1,4 @@
-import {GraphEdge, GraphNode} from '../model/network';
+import {GraphEdge, GraphNode} from '../../app/ui/infrastructure/vis/model/network';
 import {Relationship} from '../model/relationship';
 
 export const charactersToNodes = (characters): GraphNode[] => {

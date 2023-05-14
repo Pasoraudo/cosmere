@@ -7,7 +7,7 @@ import {Book} from '../../../../../../../domain/model/book';
 import {FormControl} from '@angular/forms';
 import {FormBuilderService} from '../../../../../../../domain/service/form/form.builder';
 import {charactersToNodes, relationshipsToEdges} from '../../../../../../../domain/function/network.helper';
-import {GraphEdge, GraphNode} from '../../../../../../../domain/model/network';
+import {GraphEdge, GraphNode} from '../../../../../infrastructure/vis/model/network';
 import {Character} from '../../../../../../../domain/model/character';
 import {Relationship} from '../../../../../../../domain/model/relationship';
 import {Planet} from '../../../../../../../domain/model/planet';
@@ -33,6 +33,7 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
   bookControl: FormControl = new FormControl([]);
   planetControl: FormControl = new FormControl([]);
   groupByOption: FormControl = new FormControl([]);
+
   constructor(private characterApi: CharacterApi, private relationshipApi: RelationshipApi, private formBuilder: FormBuilderService, private bookApi: BookApi,
               private planetApi: PlanetApi, private modal: Modal) {
     super();
@@ -40,8 +41,7 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
 
   async ngOnInit() {
     this.subscribe(this.characterApi.allCharacters(), characters => {
-      this.characters = characters;
-      this.nodes = charactersToNodes(characters);
+      this.setCharacters(characters)
     });
     this.subscribe(this.relationshipApi.allRelationship(), relationships => {
       this.setRelationships(relationships);
@@ -52,14 +52,18 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
     this.subscribe(this.planetApi.allPlanets(), planets => {
       this.planets = planets;
     });
+
     defer(() => {
       this.characterApi.fetchAllCharacter();
       this.relationshipApi.fetchAllRelationship();
       this.bookApi.fetchAllBooks();
       this.planetApi.fetchAllPlanets();
     });
+  }
 
-    await this.openModal();
+  setCharacters(characters: Character[]) {
+    this.characters = characters;
+    this.nodes = charactersToNodes(characters);
   }
 
   setRelationships(relationships: Relationship[]) {
@@ -93,12 +97,5 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
     }
 
     return filteredRelationships;
-  }
-
-  async openModal(): Promise<void> {
-    await this.modal.present({
-      component: SpoilerAlertComponent,
-      cssClass: 'custom-modal',
-    });
   }
 }
