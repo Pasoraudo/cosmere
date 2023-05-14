@@ -1,5 +1,5 @@
 export interface BarCharItem {
-  letter: string;
+  label: string;
 
-  frequency: number,
+  value: number,
 }
