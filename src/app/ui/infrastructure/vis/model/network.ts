@@ -13,3 +13,11 @@ export interface GraphEdge {
 
   value: number;
 }
+
+export interface D3Link {
+  source: string;
+
+  target: string;
+
+  weight: number;
+}

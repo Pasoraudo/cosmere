@@ -37,6 +37,8 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
 
   create(): void {
     this.types = Array.from(new Set(this.links.map(d => d.type)));
+    console.log(d3.select('#network').selectChildren());
+    d3.select('#network').selectChildren().remove();
     this.createSimulation();
     this.createSvg();
     this.createLink();
@@ -46,11 +48,11 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
   createSimulation(): void {
     this.simulation = d3.forceSimulation(this.nodes)
       .force("link", d3.forceLink(this.links).id(this.id))
-      .force("charge", d3.forceManyBody().strength(-400))
+      .force("charge", d3.forceManyBody().strength(-1000))
       .force("center", d3.forceCenter(this.width / 2, this.height / 2))
       .on("tick", () => {
         this.link.attr("d", this.linkArc);
-        this.node.attr("transform", d => `translate(${d.x},${d.y})`);
+        this.node.attr("transform", d => `translate(${d.x}, ${d.y})`);
       });
   }
 

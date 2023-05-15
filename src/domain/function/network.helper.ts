@@ -1,4 +1,4 @@
-import {GraphEdge, GraphNode} from '../../app/ui/infrastructure/vis/model/network';
+import {D3Link, GraphEdge, GraphNode} from '../../app/ui/infrastructure/vis/model/network';
 import {Relationship} from '../model/relationship';
 
 export const charactersToNodes = (characters): GraphNode[] => {
@@ -29,7 +29,7 @@ export const relationshipsToEdges = (relationships: Relationship[]): GraphEdge[]
   return resultEdges;
 };
 
-export const relationshipsToEdges2 = (relationships: Relationship[]): any[] => {
+export const relationshipsToLinks = (relationships: Relationship[]): D3Link[] => {
   const groupedEdges: Record<string, number> = {};
   for (const relationship of relationships) {
     const key = `${relationship.characterId1}-${relationship.characterId2}`;
@@ -39,12 +39,12 @@ export const relationshipsToEdges2 = (relationships: Relationship[]): any[] => {
       groupedEdges[key] = 1;
     }
   }
-  let resultEdges: any[] = [];
+  let resultEdges: D3Link[] = [];
 
   for (const key in groupedEdges) {
     const [source, target] = key.split('-');
-    const value = groupedEdges[key];
-    resultEdges.push({ source, target, value });
+    const weight = groupedEdges[key];
+    resultEdges.push({ source, target, weight });
   }
   return resultEdges;
 };
