@@ -6,7 +6,11 @@ import {defer} from 'lodash';
 import {Book} from '../../../../../../../domain/model/book';
 import {FormControl} from '@angular/forms';
 import {FormBuilderService} from '../../../../../../../domain/service/form/form.builder';
-import {charactersToNodes, relationshipsToEdges} from '../../../../../../../domain/function/network.helper';
+import {
+  charactersToNodes,
+  relationshipsToEdges,
+  relationshipsToEdges2
+} from '../../../../../../../domain/function/network.helper';
 import {GraphEdge, GraphNode} from '../../../../../infrastructure/vis/model/network';
 import {Character} from '../../../../../../../domain/model/character';
 import {Relationship} from '../../../../../../../domain/model/relationship';
@@ -21,7 +25,7 @@ import {Modal} from '../../../../../../../domain/ionic/modal.ionic';
 })
 export class CharactersRelationshipsGraphComponent extends BaseComponent implements OnInit {
   nodes: GraphNode[] = [];
-  edges: GraphEdge[] = [];
+  edges: any[] = [];
   characters: Character[] = [];
   relationships: Relationship[] = [];
 
@@ -67,12 +71,12 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
 
   setRelationships(relationships: Relationship[]) {
     this.relationships = relationships;
-    this.edges = relationshipsToEdges(this.relationships);
+    this.edges = relationshipsToEdges2(this.relationships);
   }
 
   applyFilters() {
     this.nodes = charactersToNodes(this.filteredCharacters());
-    this.edges = relationshipsToEdges(this.filteredRelationships());
+    this.edges = relationshipsToEdges2(this.filteredRelationships());
   }
 
   filteredCharacters(): Character[] {

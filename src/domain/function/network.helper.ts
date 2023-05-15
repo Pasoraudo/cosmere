@@ -28,3 +28,23 @@ export const relationshipsToEdges = (relationships: Relationship[]): GraphEdge[]
   }
   return resultEdges;
 };
+
+export const relationshipsToEdges2 = (relationships: Relationship[]): any[] => {
+  const groupedEdges: Record<string, number> = {};
+  for (const relationship of relationships) {
+    const key = `${relationship.characterId1}-${relationship.characterId2}`;
+    if (groupedEdges[key]) {
+      groupedEdges[key] += 1;
+    } else {
+      groupedEdges[key] = 1;
+    }
+  }
+  let resultEdges: any[] = [];
+
+  for (const key in groupedEdges) {
+    const [source, target] = key.split('-');
+    const value = groupedEdges[key];
+    resultEdges.push({ source, target, value });
+  }
+  return resultEdges;
+};
