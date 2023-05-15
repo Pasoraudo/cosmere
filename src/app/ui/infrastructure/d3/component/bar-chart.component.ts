@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, ElementRef, Input, OnChanges, SimpleChanges, ViewChild} from '@angular/core';
-import {BaseComponent} from '../../../../shared/components/base.component';
+import {BaseComponent} from '../../../shared/components/base.component';
 import * as d3 from 'd3';
 
 @Component({

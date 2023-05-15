@@ -9,6 +9,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {SharedModule} from '../../../../../shared/components/shared.module';
 import {SpoilerAlertComponent} from '../../../../../shared/modal/spoiler-alert.component';
 import {VisModule} from '../../../../../infrastructure/vis/vis.module';
+import {D3Module} from '../../../../../infrastructure/d3/d3.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {VisModule} from '../../../../../infrastructure/vis/vis.module';
         PipeModule,
         ReactiveFormsModule,
         SharedModule,
-        VisModule
+        VisModule,
+        D3Module
     ],
   exports: [
     CharactersRelationshipsGraphComponent

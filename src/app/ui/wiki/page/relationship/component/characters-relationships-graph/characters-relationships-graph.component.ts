@@ -13,7 +13,6 @@ import {Relationship} from '../../../../../../../domain/model/relationship';
 import {Planet} from '../../../../../../../domain/model/planet';
 import {BookApi} from '../../../../../../../domain/service/api/book.api';
 import {PlanetApi} from '../../../../../../../domain/service/api/planet.api';
-import {SpoilerAlertComponent} from '../../../../../shared/modal/spoiler-alert.component';
 import {Modal} from '../../../../../../../domain/ionic/modal.ionic';
 
 @Component({
