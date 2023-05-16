@@ -56,8 +56,8 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
   createSimulation(): void {
     // @ts-ignore
     this.simulation = d3.forceSimulation(this.nodes) // @ts-ignore
-      .force("link", d3.forceLink(this.links).id(this.id))
-      .force("charge", d3.forceManyBody().strength(-1000))
+      .force("link", d3.forceLink(this.links).id(this.id)) // @ts-ignore
+      .force("charge", d3.forceManyBody().strength(d => d.score * (-50)))
       .force("center", d3.forceCenter(this.width / 2, this.height / 2))
       .on("tick", () => {
         this.link.attr("d", this.linkArc);
@@ -124,7 +124,7 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
     ;
   }
 
-  linkArc(d) {
+  private linkArc(d) {
     const r = Math.hypot(d.target.x - d.source.x, d.target.y - d.source.y);
     return `
     M${d.source.x},${d.source.y}
