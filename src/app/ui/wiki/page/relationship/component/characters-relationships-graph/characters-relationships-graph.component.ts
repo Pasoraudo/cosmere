@@ -6,8 +6,12 @@ import {defer} from 'lodash';
 import {Book} from '../../../../../../../domain/model/book';
 import {FormControl} from '@angular/forms';
 import {FormBuilderService} from '../../../../../../../domain/service/form/form.builder';
-import {charactersToNodes, relationshipsToLinks} from '../../../../../../../domain/function/network.helper';
-import {GraphNode} from '../../../../../infrastructure/vis/model/network';
+import {
+  charactersToD3Nodes,
+  charactersToNodes,
+  relationshipsToLinks
+} from '../../../../../../../domain/function/network.helper';
+import {D3Link, D3Node} from '../../../../../infrastructure/vis/model/network';
 import {Character} from '../../../../../../../domain/model/character';
 import {Relationship} from '../../../../../../../domain/model/relationship';
 import {Planet} from '../../../../../../../domain/model/planet';
@@ -20,8 +24,8 @@ import {Modal} from '../../../../../../../domain/ionic/modal.ionic';
   templateUrl: './characters-relationships-graph.component.html'
 })
 export class CharactersRelationshipsGraphComponent extends BaseComponent implements OnInit {
-  nodes: GraphNode[] = [];
-  edges: any[] = [];
+  nodes: D3Node[] = [];
+  edges: D3Link[] = [];
   characters: Character[] = [];
   relationships: Relationship[] = [];
 
@@ -40,7 +44,7 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
 
   async ngOnInit() {
     this.subscribe(this.characterApi.allCharacters(), characters => {
-      this.setCharacters(characters)
+      this.setCharacters(characters);
     });
     this.subscribe(this.relationshipApi.allRelationship(), relationships => {
       this.setRelationships(relationships);
@@ -62,16 +66,16 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
 
   setCharacters(characters: Character[]) {
     this.characters = characters;
-    this.nodes = charactersToNodes(characters);
+    this.applyFilters();
   }
 
   setRelationships(relationships: Relationship[]) {
     this.relationships = relationships;
-    this.edges = relationshipsToLinks(this.relationships);
+    this.applyFilters();
   }
 
   applyFilters() {
-    this.nodes = charactersToNodes(this.filteredCharacters());
+    this.nodes = charactersToD3Nodes(this.filteredCharacters(), this.filteredRelationships());
     this.edges = relationshipsToLinks(this.filteredRelationships());
   }
 

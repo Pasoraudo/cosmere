@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, Input, OnChanges, SimpleChanges} from '@angular/core';
 import {BaseComponent} from '../../../shared/components/base.component';
 import * as d3 from 'd3';
+import {D3Link, GraphNode} from '../../vis/model/network';
 
 @Component({
   selector: 'd3-network',
@@ -8,18 +9,20 @@ import * as d3 from 'd3';
 })
 export class D3NetworkComponent extends BaseComponent implements AfterViewInit, OnChanges {
   @Input()
-  nodes: any[] = []
+  nodes: GraphNode[] = []
   @Input()
-  links: any[] = [];
-  private width: number = 1000;
-  private height: number = 800;
+  links: D3Link[] = [];
+
+  width: number = 1000;
+  height: number = 800;
+
+  private edgeGroups: string[] = []
+  private color;
+  private svg;
   private simulation;
   private link;
-  private svg;
   private node;
-  private margin = {top: 0, right: 0, bottom: 0, left: 0}
-  private types = ["licensing", "suit", "resolved"]
-  private color = d3.scaleOrdinal(this.types, d3.schemeCategory10);
+
 
   constructor() {
     super();
@@ -36,17 +39,23 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
   }
 
   create(): void {
-    this.types = Array.from(new Set(this.links.map(d => d.type)));
     console.log(d3.select('#network').selectChildren());
     d3.select('#network').selectChildren().remove();
+    this.initializeColor();
     this.createSimulation();
     this.createSvg();
     this.createLink();
     this.createNode();
   }
 
+  initializeColor(): void {
+    this.edgeGroups = Array.from(new Set(this.links.map(graphEdge => graphEdge.group)));
+    this.color = d3.scaleOrdinal(this.edgeGroups, d3.schemeCategory10);
+  }
+
   createSimulation(): void {
-    this.simulation = d3.forceSimulation(this.nodes)
+    // @ts-ignore
+    this.simulation = d3.forceSimulation(this.nodes) // @ts-ignore
       .force("link", d3.forceLink(this.links).id(this.id))
       .force("charge", d3.forceManyBody().strength(-1000))
       .force("center", d3.forceCenter(this.width / 2, this.height / 2))
@@ -62,13 +71,11 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
       .attr("viewBox", [0, 0, this.width, this.height])
       .style("font", "12px sans-serif");
 
-    this.svg.attr("width", this.width + this.margin.left + this.margin.right)
-      .attr("height", this.height + this.margin.top + this.margin.bottom)
-      .attr("transform",
-        "translate(" + this.margin.left + "," + this.margin.top + ")");
+    this.svg.attr("width", this.width)
+      .attr("height", this.height);
 
     this.svg.append("defs").selectAll("marker")
-      .data(this.types)
+      .data(this.edgeGroups)
       .join("marker")
       .attr("id", d => `arrow-${d}`)
       .attr("viewBox", "0 -5 10 10")
@@ -93,13 +100,28 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
   }
 
   createNode() {
-    this.node = this.svg
-      .selectAll("circle")
+    this.node = this.svg.append("g")
+      .attr("fill", "currentColor")
+      .attr("stroke-linecap", "round")
+      .attr("stroke-linejoin", "round")
+      .selectAll("g")
       .data(this.nodes)
-      .enter()
-      .append("circle")
-      .attr("r", 20)
-      .style("fill", "#69b3a2")
+      .join("g")
+      .call(this.drag(this.simulation));
+
+    this.node.append("circle")
+      .attr("stroke", "black")
+      .attr("stroke-width", 1)
+      .attr("r", d => d.score)
+      .style("fill", "#FF2121")
+
+    this.node.append("text")
+      .text(d => d.label)
+      .style("font-size", "1rem")
+      .style("color", "white")
+      .style("text-anchor", "middle")
+      .style("dominant-baseline", "central")
+    ;
   }
 
   linkArc(d) {
@@ -110,8 +132,33 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
   `;
   }
 
-  id(d) {
+  private id(d) {
     return d.id;
+  }
+
+  private drag(simulation) {
+
+    function dragstarted(event, d) {
+      if (!event.active) simulation.alphaTarget(0.3).restart();
+      d.fx = d.x;
+      d.fy = d.y;
+    }
+
+    function dragged(event, d) {
+      d.fx = event.x;
+      d.fy = event.y;
+    }
+
+    function dragended(event, d) {
+      if (!event.active) simulation.alphaTarget(0);
+      d.fx = null;
+      d.fy = null;
+    }
+
+    return d3.drag()
+      .on("start", dragstarted)
+      .on("drag", dragged)
+      .on("end", dragended);
   }
 }
 

@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.openModal();
+    //this.openModal();
   }
 
   async openModal(): Promise<void> {
