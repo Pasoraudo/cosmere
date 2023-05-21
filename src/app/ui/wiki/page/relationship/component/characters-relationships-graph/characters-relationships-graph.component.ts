@@ -6,14 +6,17 @@ import {defer} from 'lodash';
 import {Book} from '../../../../../../../domain/model/book';
 import {FormControl} from '@angular/forms';
 import {FormBuilderService} from '../../../../../../../domain/service/form/form.builder';
-import {charactersToNodes, relationshipsToEdges} from '../../../../../../../domain/function/network.helper';
-import {GraphEdge, GraphNode} from '../../../../../infrastructure/vis/model/network';
+import {
+  charactersToD3Nodes,
+  charactersToNodes,
+  relationshipsToLinks
+} from '../../../../../../../domain/function/network.helper';
+import {D3Link, D3Node} from '../../../../../infrastructure/vis/model/network';
 import {Character} from '../../../../../../../domain/model/character';
 import {Relationship} from '../../../../../../../domain/model/relationship';
 import {Planet} from '../../../../../../../domain/model/planet';
 import {BookApi} from '../../../../../../../domain/service/api/book.api';
 import {PlanetApi} from '../../../../../../../domain/service/api/planet.api';
-import {SpoilerAlertComponent} from '../../../../../shared/modal/spoiler-alert.component';
 import {Modal} from '../../../../../../../domain/ionic/modal.ionic';
 
 @Component({
@@ -21,8 +24,8 @@ import {Modal} from '../../../../../../../domain/ionic/modal.ionic';
   templateUrl: './characters-relationships-graph.component.html'
 })
 export class CharactersRelationshipsGraphComponent extends BaseComponent implements OnInit {
-  nodes: GraphNode[] = [];
-  edges: GraphEdge[] = [];
+  nodes: D3Node[] = [];
+  edges: D3Link[] = [];
   characters: Character[] = [];
   relationships: Relationship[] = [];
 
@@ -40,11 +43,12 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
   }
 
   async ngOnInit() {
-    this.subscribe(this.characterApi.allCharacters(), characters => {
-      this.setCharacters(characters)
+    this.subscribe(this.characterApi.cosmereCharacters(), characters => {
+      this.setCharacters(characters);
     });
-    this.subscribe(this.relationshipApi.allRelationship(), relationships => {
+    this.subscribe(this.relationshipApi.cosmereRelationship(), relationships => {
       this.setRelationships(relationships);
+      this.setCharacters(this.characters);
     });
     this.subscribe(this.bookApi.allBooks(), books => {
       this.books = books;
@@ -54,8 +58,8 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
     });
 
     defer(() => {
-      this.characterApi.fetchAllCharacter();
-      this.relationshipApi.fetchAllRelationship();
+      this.characterApi.fetchAllCosmereCharacter();
+      this.relationshipApi.fetchAllCosmereRelationship();
       this.bookApi.fetchAllBooks();
       this.planetApi.fetchAllPlanets();
     });
@@ -63,17 +67,24 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
 
   setCharacters(characters: Character[]) {
     this.characters = characters;
-    this.nodes = charactersToNodes(characters);
+    if (this.relationships.length === 0)
+      return;
+
+    let relationshipCharacters = this.relationships.map(relationship => relationship.characterId1);
+    relationshipCharacters = relationshipCharacters.concat(this.relationships.map(relationship => relationship.characterId2))
+    relationshipCharacters = Array.from(new Set<string>(relationshipCharacters))
+    this.characters = characters.filter(character => relationshipCharacters.includes(character.id));
+    this.applyFilters();
   }
 
   setRelationships(relationships: Relationship[]) {
     this.relationships = relationships;
-    this.edges = relationshipsToEdges(this.relationships);
+    this.applyFilters();
   }
 
   applyFilters() {
-    this.nodes = charactersToNodes(this.filteredCharacters());
-    this.edges = relationshipsToEdges(this.filteredRelationships());
+    this.nodes = charactersToD3Nodes(this.filteredCharacters(), this.filteredRelationships());
+    this.edges = relationshipsToLinks(this.filteredRelationships());
   }
 
   filteredCharacters(): Character[] {

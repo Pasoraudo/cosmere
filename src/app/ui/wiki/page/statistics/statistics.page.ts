@@ -20,7 +20,7 @@ export class StatisticsPage extends BasePage implements OnInit {
 
   ngOnInit(): void {
     this.subscribe(this.relationshipApi.relationshipsByBook(this.bookId), relationships => this.setPopularityData(relationships) )
-    this.relationshipApi.fetchAllRelationship();
+    this.relationshipApi.fetchAllCosmereRelationship();
   }
 
   setPopularityData(relationships: Relationship[]): void {
