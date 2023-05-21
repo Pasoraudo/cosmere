@@ -13,6 +13,8 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
   @Input()
   links: D3Link[] = [];
 
+
+  characterLinks: D3Link[] = [];
   width: number = 1000;
   height: number = 800;
 
@@ -39,8 +41,8 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
   }
 
   create(): void {
-    console.log(d3.select('#network').selectChildren());
     d3.select('#network').selectChildren().remove();
+    this.createCharacterLinks();
     this.initializeColor();
     this.createSimulation();
     this.createSvg();
@@ -49,14 +51,18 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
   }
 
   initializeColor(): void {
-    this.edgeGroups = Array.from(new Set(this.links.map(graphEdge => graphEdge.group)));
+    this.edgeGroups = Array.from(new Set(this.characterLinks.map(graphEdge => graphEdge.group)));
     this.color = d3.scaleOrdinal(this.edgeGroups, d3.schemeCategory10);
   }
 
+  createCharacterLinks(): void {
+    const characters = this.nodes.map(c => c.id);
+    this.characterLinks = this.links.filter(link => characters.includes(link.source) && characters.includes(link.target))
+  }
   createSimulation(): void {
     // @ts-ignore
     this.simulation = d3.forceSimulation(this.nodes) // @ts-ignore
-      .force("link", d3.forceLink(this.links).id(this.id)) // @ts-ignore
+      .force("link", d3.forceLink(this.characterLinks).id(this.id)) // @ts-ignore
       .force("charge", d3.forceManyBody().strength(d => d.score * (-50)))
       .force("center", d3.forceCenter(this.width / 2, this.height / 2))
       .on("tick", () => {
@@ -94,7 +100,7 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
       .attr("fill", "none")
       .attr("stroke-width", 1.5)
       .selectAll("path")
-      .data(this.links)
+      .data(this.characterLinks)
       .join("path")
       .attr("stroke", d => this.color(d.type))
   }

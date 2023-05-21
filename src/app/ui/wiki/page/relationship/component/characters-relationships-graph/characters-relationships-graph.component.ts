@@ -43,11 +43,12 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
   }
 
   async ngOnInit() {
-    this.subscribe(this.characterApi.allCharacters(), characters => {
+    this.subscribe(this.characterApi.cosmereCharacters(), characters => {
       this.setCharacters(characters);
     });
-    this.subscribe(this.relationshipApi.allRelationship(), relationships => {
+    this.subscribe(this.relationshipApi.cosmereRelationship(), relationships => {
       this.setRelationships(relationships);
+      this.setCharacters(this.characters);
     });
     this.subscribe(this.bookApi.allBooks(), books => {
       this.books = books;
@@ -57,8 +58,8 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
     });
 
     defer(() => {
-      this.characterApi.fetchAllCharacter();
-      this.relationshipApi.fetchAllRelationship();
+      this.characterApi.fetchAllCosmereCharacter();
+      this.relationshipApi.fetchAllCosmereRelationship();
       this.bookApi.fetchAllBooks();
       this.planetApi.fetchAllPlanets();
     });
@@ -66,6 +67,13 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
 
   setCharacters(characters: Character[]) {
     this.characters = characters;
+    if (this.relationships.length === 0)
+      return;
+
+    let relationshipCharacters = this.relationships.map(relationship => relationship.characterId1);
+    relationshipCharacters = relationshipCharacters.concat(this.relationships.map(relationship => relationship.characterId2))
+    relationshipCharacters = Array.from(new Set<string>(relationshipCharacters))
+    this.characters = characters.filter(character => relationshipCharacters.includes(character.id));
     this.applyFilters();
   }
 

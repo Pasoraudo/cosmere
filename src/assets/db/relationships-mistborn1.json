@@ -7,9 +7,9 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Goodman Tepper:Renoux",
-    "characterId1": "Goodman Tepper",
-    "characterId2": "Renoux",
+    "id": "Renoux:Goodman Tepper",
+    "characterId1": "Renoux",
+    "characterId2": "Goodman Tepper",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -21,30 +21,30 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Mennis:Tepper",
-    "characterId1": "Mennis",
-    "characterId2": "Tepper",
+    "id": "Tepper:Mennis",
+    "characterId1": "Tepper",
+    "characterId2": "Mennis",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Mennis:Kelsier",
-    "characterId1": "Mennis",
-    "characterId2": "Kelsier",
+    "id": "Kelsier:Mennis",
+    "characterId1": "Kelsier",
+    "characterId2": "Mennis",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Jess:Kelsier",
-    "characterId1": "Jess",
-    "characterId2": "Kelsier",
+    "id": "Kelsier:Jess",
+    "characterId1": "Kelsier",
+    "characterId2": "Jess",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Tresting:Kelsier",
-    "characterId1": "Tresting",
-    "characterId2": "Kelsier",
+    "id": "Kelsier:Tresting",
+    "characterId1": "Kelsier",
+    "characterId2": "Tresting",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -56,23 +56,23 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Ulef:Vin",
-    "characterId1": "Ulef",
-    "characterId2": "Vin",
+    "id": "Vin:Ulef",
+    "characterId1": "Vin",
+    "characterId2": "Ulef",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Camon:Vin",
-    "characterId1": "Camon",
-    "characterId2": "Vin",
+    "id": "Vin:Camon",
+    "characterId1": "Vin",
+    "characterId2": "Camon",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Camon:Jedue",
-    "characterId1": "Camon",
-    "characterId2": "Jedue",
+    "id": "Jedue:Camon",
+    "characterId1": "Jedue",
+    "characterId2": "Camon",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -84,37 +84,37 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Prelan Laird:Vin",
-    "characterId1": "Prelan Laird",
-    "characterId2": "Vin",
+    "id": "Vin:Prelan Laird",
+    "characterId1": "Vin",
+    "characterId2": "Prelan Laird",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Laird:Camon",
-    "characterId1": "Laird",
-    "characterId2": "Camon",
+    "id": "Camon:Laird",
+    "characterId1": "Camon",
+    "characterId2": "Laird",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Laird:Jedue",
-    "characterId1": "Laird",
-    "characterId2": "Jedue",
+    "id": "Jedue:Laird",
+    "characterId1": "Jedue",
+    "characterId2": "Laird",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Laird:Vin",
-    "characterId1": "Laird",
-    "characterId2": "Vin",
+    "id": "Vin:Laird",
+    "characterId1": "Vin",
+    "characterId2": "Laird",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Dockson:Kelsier",
-    "characterId1": "Dockson",
-    "characterId2": "Kelsier",
+    "id": "Kelsier:Dockson",
+    "characterId1": "Kelsier",
+    "characterId2": "Dockson",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -126,30 +126,30 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Breeze",
-    "characterId1": "Ham",
-    "characterId2": "Breeze",
+    "id": "Breeze:Ham",
+    "characterId1": "Breeze",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Misting:Kelsier",
-    "characterId1": "Misting",
-    "characterId2": "Kelsier",
+    "id": "Kelsier:Misting",
+    "characterId1": "Kelsier",
+    "characterId2": "Misting",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Smoker:Kelsier",
-    "characterId1": "Smoker",
-    "characterId2": "Kelsier",
+    "id": "Kelsier:Smoker",
+    "characterId1": "Kelsier",
+    "characterId2": "Smoker",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Camon:Reen",
-    "characterId1": "Camon",
-    "characterId2": "Reen",
+    "id": "Reen:Camon",
+    "characterId1": "Reen",
+    "characterId2": "Camon",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -161,9 +161,9 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Camon:Theron",
-    "characterId1": "Camon",
-    "characterId2": "Theron",
+    "id": "Theron:Camon",
+    "characterId1": "Theron",
+    "characterId2": "Camon",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -189,16 +189,16 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Camon:Marsh",
-    "characterId1": "Camon",
-    "characterId2": "Marsh",
+    "id": "Marsh:Camon",
+    "characterId1": "Marsh",
+    "characterId2": "Camon",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Camon:Kelsier",
-    "characterId1": "Camon",
-    "characterId2": "Kelsier",
+    "id": "Kelsier:Camon",
+    "characterId1": "Kelsier",
+    "characterId2": "Camon",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -217,90 +217,83 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Camon:Ulef",
-    "characterId1": "Camon",
+    "id": "Vin:Ulef",
+    "characterId1": "Vin",
     "characterId2": "Ulef",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Camon:Vin",
-    "characterId1": "Camon",
-    "characterId2": "Vin",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ulef:Vin",
-    "characterId1": "Ulef",
-    "characterId2": "Vin",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Camon:Ulef",
-    "characterId1": "Camon",
-    "characterId2": "Ulef",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Milev:Camon",
-    "characterId1": "Milev",
+    "id": "Vin:Camon",
+    "characterId1": "Vin",
     "characterId2": "Camon",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Milev:Vin",
-    "characterId1": "Milev",
-    "characterId2": "Vin",
+    "id": "Ulef:Camon",
+    "characterId1": "Ulef",
+    "characterId2": "Camon",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Milev:Kelsier",
-    "characterId1": "Milev",
+    "id": "Ulef:Camon",
+    "characterId1": "Ulef",
+    "characterId2": "Camon",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Camon:Milev",
+    "characterId1": "Camon",
+    "characterId2": "Milev",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Vin:Milev",
+    "characterId1": "Vin",
+    "characterId2": "Milev",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Milev",
+    "characterId1": "Kelsier",
+    "characterId2": "Milev",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Vin:Kelsier",
+    "characterId1": "Vin",
     "characterId2": "Kelsier",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Kelsier:Vin",
-    "characterId1": "Kelsier",
-    "characterId2": "Vin",
+    "id": "Dockson:Camon",
+    "characterId1": "Dockson",
+    "characterId2": "Camon",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Camon:Dockson",
-    "characterId1": "Camon",
+    "id": "Kelsier:Ale",
+    "characterId1": "Kelsier",
+    "characterId2": "Ale",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Dockson",
+    "characterId1": "Kelsier",
     "characterId2": "Dockson",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Ale:Kelsier",
-    "characterId1": "Ale",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Dockson:Kelsier",
-    "characterId1": "Dockson",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Dockson:Vin",
-    "characterId1": "Dockson",
-    "characterId2": "Vin",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
     "id": "Kelsier:Vin",
     "characterId1": "Kelsier",
     "characterId2": "Vin",
@@ -315,44 +308,51 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Disten:Vin",
-    "characterId1": "Disten",
-    "characterId2": "Vin",
+    "id": "Vin:Dockson",
+    "characterId1": "Vin",
+    "characterId2": "Dockson",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Disten:Kelsier",
-    "characterId1": "Disten",
-    "characterId2": "Kelsier",
+    "id": "Vin:Disten",
+    "characterId1": "Vin",
+    "characterId2": "Disten",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Milev:Camon",
-    "characterId1": "Milev",
+    "id": "Kelsier:Disten",
+    "characterId1": "Kelsier",
+    "characterId2": "Disten",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Camon",
+    "characterId1": "Kelsier",
     "characterId2": "Camon",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Milev:Kelsier",
-    "characterId1": "Milev",
-    "characterId2": "Kelsier",
+    "id": "Kelsier:Milev",
+    "characterId1": "Kelsier",
+    "characterId2": "Milev",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Camon:Kelsier",
+    "id": "Camon:Milev",
     "characterId1": "Camon",
-    "characterId2": "Kelsier",
+    "characterId2": "Milev",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Ulef:Kelsier",
-    "characterId1": "Ulef",
-    "characterId2": "Kelsier",
+    "id": "Kelsier:Ulef",
+    "characterId1": "Kelsier",
+    "characterId2": "Ulef",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -364,121 +364,86 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Hrud:Disten",
-    "characterId1": "Hrud",
-    "characterId2": "Disten",
+    "id": "Disten:Hrud",
+    "characterId1": "Disten",
+    "characterId2": "Hrud",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Breeze:Vin",
+    "id": "Vin:Breeze",
+    "characterId1": "Vin",
+    "characterId2": "Breeze",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Vin:Ham",
+    "characterId1": "Vin",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Vin:Clubs",
+    "characterId1": "Vin",
+    "characterId2": "Clubs",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Dox:Kell",
+    "characterId1": "Dox",
+    "characterId2": "Kell",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Breeze",
+    "characterId1": "Kelsier",
+    "characterId2": "Breeze",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Ham",
+    "characterId1": "Kelsier",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Breeze:Dockson",
     "characterId1": "Breeze",
-    "characterId2": "Vin",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Vin",
-    "characterId1": "Ham",
-    "characterId2": "Vin",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Clubs:Vin",
-    "characterId1": "Clubs",
-    "characterId2": "Vin",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Kell:Dox",
-    "characterId1": "Kell",
-    "characterId2": "Dox",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Breeze:Kelsier",
-    "characterId1": "Breeze",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Kelsier",
-    "characterId1": "Ham",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Dockson",
-    "characterId1": "Ham",
     "characterId2": "Dockson",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Breeze",
-    "characterId1": "Ham",
-    "characterId2": "Breeze",
+    "id": "Breeze:Ham",
+    "characterId1": "Breeze",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Dockson:Breeze",
+    "id": "Dockson:Ham",
     "characterId1": "Dockson",
-    "characterId2": "Breeze",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Yeden:Kelsier",
-    "characterId1": "Yeden",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Kell:Breeze",
-    "characterId1": "Kell",
-    "characterId2": "Breeze",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Yeden",
-    "characterId1": "Ham",
+    "id": "Kelsier:Yeden",
+    "characterId1": "Kelsier",
     "characterId2": "Yeden",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Kelsier",
-    "characterId1": "Ham",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Breeze",
-    "characterId1": "Ham",
-    "characterId2": "Breeze",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Yeden:Kelsier",
-    "characterId1": "Yeden",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Yeden:Breeze",
-    "characterId1": "Yeden",
-    "characterId2": "Breeze",
+    "id": "Breeze:Kell",
+    "characterId1": "Breeze",
+    "characterId2": "Kell",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -490,6 +455,34 @@
     "bookId": "mistborn1"
   },
   {
+    "id": "Kelsier:Ham",
+    "characterId1": "Kelsier",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Yeden",
+    "characterId1": "Kelsier",
+    "characterId2": "Yeden",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Breeze:Ham",
+    "characterId1": "Breeze",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Breeze:Yeden",
+    "characterId1": "Breeze",
+    "characterId2": "Yeden",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
     "id": "Ham:Yeden",
     "characterId1": "Ham",
     "characterId2": "Yeden",
@@ -497,16 +490,9 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Kelsier",
+    "id": "Ham:Yeden",
     "characterId1": "Ham",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Breeze",
-    "characterId1": "Ham",
-    "characterId2": "Breeze",
+    "characterId2": "Yeden",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -514,6 +500,20 @@
     "id": "Kelsier:Breeze",
     "characterId1": "Kelsier",
     "characterId2": "Breeze",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Ham",
+    "characterId1": "Kelsier",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Breeze:Ham",
+    "characterId1": "Breeze",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -525,22 +525,22 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Breeze:Kelsier",
-    "characterId1": "Breeze",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Breeze:Vin",
-    "characterId1": "Breeze",
-    "characterId2": "Vin",
+    "id": "Kelsier:Breeze",
+    "characterId1": "Kelsier",
+    "characterId2": "Breeze",
     "type": "",
     "bookId": "mistborn1"
   },
   {
     "id": "Kelsier:Vin",
     "characterId1": "Kelsier",
+    "characterId2": "Vin",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Breeze:Vin",
+    "characterId1": "Breeze",
     "characterId2": "Vin",
     "type": "",
     "bookId": "mistborn1"
@@ -553,44 +553,9 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Dockson",
-    "characterId1": "Ham",
-    "characterId2": "Dockson",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Breeze",
-    "characterId1": "Ham",
-    "characterId2": "Breeze",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Yeden",
-    "characterId1": "Ham",
-    "characterId2": "Yeden",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Kelsier",
-    "characterId1": "Ham",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
     "id": "Dockson:Breeze",
     "characterId1": "Dockson",
     "characterId2": "Breeze",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Dockson:Yeden",
-    "characterId1": "Dockson",
-    "characterId2": "Yeden",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -602,8 +567,15 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Breeze:Yeden",
-    "characterId1": "Breeze",
+    "id": "Dockson:Ham",
+    "characterId1": "Dockson",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Dockson:Yeden",
+    "characterId1": "Dockson",
     "characterId2": "Yeden",
     "type": "",
     "bookId": "mistborn1"
@@ -616,16 +588,30 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Yeden:Kelsier",
-    "characterId1": "Yeden",
-    "characterId2": "Kelsier",
+    "id": "Breeze:Ham",
+    "characterId1": "Breeze",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Yeden:Breeze",
-    "characterId1": "Yeden",
-    "characterId2": "Breeze",
+    "id": "Breeze:Yeden",
+    "characterId1": "Breeze",
+    "characterId2": "Yeden",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Ham",
+    "characterId1": "Kelsier",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Yeden",
+    "characterId1": "Kelsier",
+    "characterId2": "Yeden",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -637,16 +623,30 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Breeze",
-    "characterId1": "Ham",
-    "characterId2": "Breeze",
+    "id": "Breeze:Yeden",
+    "characterId1": "Breeze",
+    "characterId2": "Yeden",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Yeden:Breeze",
-    "characterId1": "Yeden",
-    "characterId2": "Breeze",
+    "id": "Breeze:Ham",
+    "characterId1": "Breeze",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Breeze:Yeden",
+    "characterId1": "Breeze",
+    "characterId2": "Yeden",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Ham:Yeden",
+    "characterId1": "Ham",
+    "characterId2": "Yeden",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -658,9 +658,9 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Dockson:Breeze",
-    "characterId1": "Dockson",
-    "characterId2": "Breeze",
+    "id": "Breeze:Dockson",
+    "characterId1": "Breeze",
+    "characterId2": "Dockson",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -672,30 +672,30 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Camon:Kelsier",
-    "characterId1": "Camon",
+    "id": "Vin:Kelsier",
+    "characterId1": "Vin",
     "characterId2": "Kelsier",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Camon:Vin",
-    "characterId1": "Camon",
-    "characterId2": "Vin",
+    "id": "Vin:Camon",
+    "characterId1": "Vin",
+    "characterId2": "Camon",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Kelsier:Vin",
+    "id": "Kelsier:Camon",
     "characterId1": "Kelsier",
-    "characterId2": "Vin",
+    "characterId2": "Camon",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Clubs:Kelsier",
-    "characterId1": "Clubs",
-    "characterId2": "Kelsier",
+    "id": "Kelsier:Clubs",
+    "characterId1": "Kelsier",
+    "characterId2": "Clubs",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -714,22 +714,22 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Dockson:Kelsier",
-    "characterId1": "Dockson",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Dockson:Venture",
-    "characterId1": "Dockson",
-    "characterId2": "Venture",
+    "id": "Kelsier:Dockson",
+    "characterId1": "Kelsier",
+    "characterId2": "Dockson",
     "type": "",
     "bookId": "mistborn1"
   },
   {
     "id": "Kelsier:Venture",
     "characterId1": "Kelsier",
+    "characterId2": "Venture",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Dockson:Venture",
+    "characterId1": "Dockson",
     "characterId2": "Venture",
     "type": "",
     "bookId": "mistborn1"
@@ -749,51 +749,51 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Clubs",
-    "characterId1": "Ham",
+    "id": "Breeze:Dockson",
+    "characterId1": "Breeze",
+    "characterId2": "Dockson",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Breeze:Clubs",
+    "characterId1": "Breeze",
     "characterId2": "Clubs",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Dockson",
-    "characterId1": "Ham",
-    "characterId2": "Dockson",
+    "id": "Breeze:Ham",
+    "characterId1": "Breeze",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Breeze",
-    "characterId1": "Ham",
-    "characterId2": "Breeze",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Clubs:Dockson",
-    "characterId1": "Clubs",
-    "characterId2": "Dockson",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Clubs:Breeze",
-    "characterId1": "Clubs",
-    "characterId2": "Breeze",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Dockson:Breeze",
+    "id": "Dockson:Clubs",
     "characterId1": "Dockson",
-    "characterId2": "Breeze",
+    "characterId2": "Clubs",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Hammond:Breeze",
-    "characterId1": "Hammond",
-    "characterId2": "Breeze",
+    "id": "Dockson:Ham",
+    "characterId1": "Dockson",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Clubs:Ham",
+    "characterId1": "Clubs",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Breeze:Hammond",
+    "characterId1": "Breeze",
+    "characterId2": "Hammond",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -819,16 +819,16 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Yeden:Vin",
-    "characterId1": "Yeden",
-    "characterId2": "Vin",
+    "id": "Vin:Yeden",
+    "characterId1": "Vin",
+    "characterId2": "Yeden",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Thug:Breeze",
-    "characterId1": "Thug",
-    "characterId2": "Breeze",
+    "id": "Breeze:Thug",
+    "characterId1": "Breeze",
+    "characterId2": "Thug",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -840,9 +840,9 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Yeden:Marsh",
-    "characterId1": "Yeden",
-    "characterId2": "Marsh",
+    "id": "Marsh:Yeden",
+    "characterId1": "Marsh",
+    "characterId2": "Yeden",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -861,44 +861,44 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Kell:Marsh",
-    "characterId1": "Kell",
+    "id": "Marsh:Kell",
+    "characterId1": "Marsh",
+    "characterId2": "Kell",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Saze",
+    "characterId1": "Kelsier",
+    "characterId2": "Saze",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Vin:Sazed",
+    "characterId1": "Vin",
+    "characterId2": "Sazed",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Gemmel",
+    "characterId1": "Kelsier",
+    "characterId2": "Gemmel",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Vin:Marsh",
+    "characterId1": "Vin",
     "characterId2": "Marsh",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Saze:Kelsier",
-    "characterId1": "Saze",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Sazed:Vin",
-    "characterId1": "Sazed",
-    "characterId2": "Vin",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Gemmel:Kelsier",
-    "characterId1": "Gemmel",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Marsh:Vin",
-    "characterId1": "Marsh",
-    "characterId2": "Vin",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Camon:Renoux",
-    "characterId1": "Camon",
-    "characterId2": "Renoux",
+    "id": "Renoux:Camon",
+    "characterId1": "Renoux",
+    "characterId2": "Camon",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -906,6 +906,20 @@
     "id": "Renoux:Vin",
     "characterId1": "Renoux",
     "characterId2": "Vin",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Vin:Saze",
+    "characterId1": "Vin",
+    "characterId2": "Saze",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Vin:Renoux",
+    "characterId1": "Vin",
+    "characterId2": "Renoux",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -913,20 +927,6 @@
     "id": "Saze:Renoux",
     "characterId1": "Saze",
     "characterId2": "Renoux",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Saze:Vin",
-    "characterId1": "Saze",
-    "characterId2": "Vin",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Renoux:Vin",
-    "characterId1": "Renoux",
-    "characterId2": "Vin",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -973,16 +973,16 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Terrisman:Kelsier",
-    "characterId1": "Terrisman",
-    "characterId2": "Kelsier",
+    "id": "Kelsier:Terrisman",
+    "characterId1": "Kelsier",
+    "characterId2": "Terrisman",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Saze:Renoux",
-    "characterId1": "Saze",
-    "characterId2": "Renoux",
+    "id": "Renoux:Saze",
+    "characterId1": "Renoux",
+    "characterId2": "Saze",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -994,219 +994,51 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Kelsier:Terrisman",
-    "characterId1": "Kelsier",
+    "id": "Vin:Terrisman",
+    "characterId1": "Vin",
     "characterId2": "Terrisman",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Kelsier:Vin",
-    "characterId1": "Kelsier",
-    "characterId2": "Vin",
+    "id": "Vin:Kelsier",
+    "characterId1": "Vin",
+    "characterId2": "Kelsier",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Terrisman:Vin",
+    "id": "Terrisman:Kelsier",
     "characterId1": "Terrisman",
-    "characterId2": "Vin",
+    "characterId2": "Kelsier",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Camon:Sazed",
-    "characterId1": "Camon",
-    "characterId2": "Sazed",
+    "id": "Sazed:Camon",
+    "characterId1": "Sazed",
+    "characterId2": "Camon",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Cosahn:Vin",
-    "characterId1": "Cosahn",
-    "characterId2": "Vin",
+    "id": "Vin:Cosahn",
+    "characterId1": "Vin",
+    "characterId2": "Cosahn",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Nalt:Trell",
-    "characterId1": "Nalt",
-    "characterId2": "Trell",
+    "id": "Trell:Nalt",
+    "characterId1": "Trell",
+    "characterId2": "Nalt",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Terrisman:Vin",
-    "characterId1": "Terrisman",
-    "characterId2": "Vin",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Buvidas:Tekiel",
-    "characterId1": "Buvidas",
-    "characterId2": "Tekiel",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Buvidas:Erikell",
-    "characterId1": "Buvidas",
-    "characterId2": "Erikell",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Buvidas:Lekal",
-    "characterId1": "Buvidas",
-    "characterId2": "Lekal",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Buvidas:Elariel",
-    "characterId1": "Buvidas",
-    "characterId2": "Elariel",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Buvidas:Urbain",
-    "characterId1": "Buvidas",
-    "characterId2": "Urbain",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Buvidas:Hasting",
-    "characterId1": "Buvidas",
-    "characterId2": "Hasting",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Buvidas:Haught",
-    "characterId1": "Buvidas",
-    "characterId2": "Haught",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Buvidas:Erikeller",
-    "characterId1": "Buvidas",
-    "characterId2": "Erikeller",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Tekiel:Erikell",
-    "characterId1": "Tekiel",
-    "characterId2": "Erikell",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Tekiel:Lekal",
-    "characterId1": "Tekiel",
-    "characterId2": "Lekal",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Tekiel:Elariel",
-    "characterId1": "Tekiel",
-    "characterId2": "Elariel",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Tekiel:Urbain",
-    "characterId1": "Tekiel",
-    "characterId2": "Urbain",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Tekiel:Hasting",
-    "characterId1": "Tekiel",
-    "characterId2": "Hasting",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Tekiel:Haught",
-    "characterId1": "Tekiel",
-    "characterId2": "Haught",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Tekiel:Erikeller",
-    "characterId1": "Tekiel",
-    "characterId2": "Erikeller",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Erikell:Lekal",
-    "characterId1": "Erikell",
-    "characterId2": "Lekal",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Erikell:Elariel",
-    "characterId1": "Erikell",
-    "characterId2": "Elariel",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Erikell:Urbain",
-    "characterId1": "Erikell",
-    "characterId2": "Urbain",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Erikell:Hasting",
-    "characterId1": "Erikell",
-    "characterId2": "Hasting",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Erikell:Haught",
-    "characterId1": "Erikell",
-    "characterId2": "Haught",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Erikell:Erikeller",
-    "characterId1": "Erikell",
-    "characterId2": "Erikeller",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Lekal:Elariel",
-    "characterId1": "Lekal",
-    "characterId2": "Elariel",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Lekal:Urbain",
-    "characterId1": "Lekal",
-    "characterId2": "Urbain",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Lekal:Hasting",
-    "characterId1": "Lekal",
-    "characterId2": "Hasting",
+    "id": "Vin:Terrisman",
+    "characterId1": "Vin",
+    "characterId2": "Terrisman",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -1218,6 +1050,20 @@
     "bookId": "mistborn1"
   },
   {
+    "id": "Lekal:Tekiel",
+    "characterId1": "Lekal",
+    "characterId2": "Tekiel",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Lekal:Erikell",
+    "characterId1": "Lekal",
+    "characterId2": "Erikell",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
     "id": "Lekal:Erikeller",
     "characterId1": "Lekal",
     "characterId2": "Erikeller",
@@ -1225,65 +1071,44 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Elariel:Urbain",
-    "characterId1": "Elariel",
+    "id": "Lekal:Hasting",
+    "characterId1": "Lekal",
+    "characterId2": "Hasting",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Lekal:Urbain",
+    "characterId1": "Lekal",
     "characterId2": "Urbain",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Elariel:Hasting",
-    "characterId1": "Elariel",
-    "characterId2": "Hasting",
+    "id": "Lekal:Buvidas",
+    "characterId1": "Lekal",
+    "characterId2": "Buvidas",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Elariel:Haught",
-    "characterId1": "Elariel",
-    "characterId2": "Haught",
+    "id": "Lekal:Elariel",
+    "characterId1": "Lekal",
+    "characterId2": "Elariel",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Elariel:Erikeller",
-    "characterId1": "Elariel",
-    "characterId2": "Erikeller",
+    "id": "Haught:Tekiel",
+    "characterId1": "Haught",
+    "characterId2": "Tekiel",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Urbain:Hasting",
-    "characterId1": "Urbain",
-    "characterId2": "Hasting",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Urbain:Haught",
-    "characterId1": "Urbain",
-    "characterId2": "Haught",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Urbain:Erikeller",
-    "characterId1": "Urbain",
-    "characterId2": "Erikeller",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Hasting:Haught",
-    "characterId1": "Hasting",
-    "characterId2": "Haught",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Hasting:Erikeller",
-    "characterId1": "Hasting",
-    "characterId2": "Erikeller",
+    "id": "Haught:Erikell",
+    "characterId1": "Haught",
+    "characterId2": "Erikell",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -1295,6 +1120,181 @@
     "bookId": "mistborn1"
   },
   {
+    "id": "Haught:Hasting",
+    "characterId1": "Haught",
+    "characterId2": "Hasting",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Haught:Urbain",
+    "characterId1": "Haught",
+    "characterId2": "Urbain",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Haught:Buvidas",
+    "characterId1": "Haught",
+    "characterId2": "Buvidas",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Haught:Elariel",
+    "characterId1": "Haught",
+    "characterId2": "Elariel",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Tekiel:Erikell",
+    "characterId1": "Tekiel",
+    "characterId2": "Erikell",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Tekiel:Erikeller",
+    "characterId1": "Tekiel",
+    "characterId2": "Erikeller",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Tekiel:Hasting",
+    "characterId1": "Tekiel",
+    "characterId2": "Hasting",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Tekiel:Urbain",
+    "characterId1": "Tekiel",
+    "characterId2": "Urbain",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Tekiel:Buvidas",
+    "characterId1": "Tekiel",
+    "characterId2": "Buvidas",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Tekiel:Elariel",
+    "characterId1": "Tekiel",
+    "characterId2": "Elariel",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Erikell:Erikeller",
+    "characterId1": "Erikell",
+    "characterId2": "Erikeller",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Erikell:Hasting",
+    "characterId1": "Erikell",
+    "characterId2": "Hasting",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Erikell:Urbain",
+    "characterId1": "Erikell",
+    "characterId2": "Urbain",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Erikell:Buvidas",
+    "characterId1": "Erikell",
+    "characterId2": "Buvidas",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Erikell:Elariel",
+    "characterId1": "Erikell",
+    "characterId2": "Elariel",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Erikeller:Hasting",
+    "characterId1": "Erikeller",
+    "characterId2": "Hasting",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Erikeller:Urbain",
+    "characterId1": "Erikeller",
+    "characterId2": "Urbain",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Erikeller:Buvidas",
+    "characterId1": "Erikeller",
+    "characterId2": "Buvidas",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Erikeller:Elariel",
+    "characterId1": "Erikeller",
+    "characterId2": "Elariel",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Hasting:Urbain",
+    "characterId1": "Hasting",
+    "characterId2": "Urbain",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Hasting:Buvidas",
+    "characterId1": "Hasting",
+    "characterId2": "Buvidas",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Hasting:Elariel",
+    "characterId1": "Hasting",
+    "characterId2": "Elariel",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Urbain:Buvidas",
+    "characterId1": "Urbain",
+    "characterId2": "Buvidas",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Urbain:Elariel",
+    "characterId1": "Urbain",
+    "characterId2": "Elariel",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Buvidas:Elariel",
+    "characterId1": "Buvidas",
+    "characterId2": "Elariel",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
     "id": "Valette Renoux:Teven Renoux",
     "characterId1": "Valette Renoux",
     "characterId2": "Teven Renoux",
@@ -1302,30 +1302,16 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Hadren:Fellette Renoux",
-    "characterId1": "Hadren",
-    "characterId2": "Fellette Renoux",
+    "id": "Fellette Renoux:Hadren",
+    "characterId1": "Fellette Renoux",
+    "characterId2": "Hadren",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Cosahn:Kelsier",
-    "characterId1": "Cosahn",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Cosahn:Sazed",
-    "characterId1": "Cosahn",
-    "characterId2": "Sazed",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Cosahn:Vin",
-    "characterId1": "Cosahn",
-    "characterId2": "Vin",
+    "id": "Kelsier:Cosahn",
+    "characterId1": "Kelsier",
+    "characterId2": "Cosahn",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -1339,6 +1325,20 @@
   {
     "id": "Kelsier:Vin",
     "characterId1": "Kelsier",
+    "characterId2": "Vin",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Cosahn:Sazed",
+    "characterId1": "Cosahn",
+    "characterId2": "Sazed",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Cosahn:Vin",
+    "characterId1": "Cosahn",
     "characterId2": "Vin",
     "type": "",
     "bookId": "mistborn1"
@@ -1358,58 +1358,58 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Soother:Breeze",
-    "characterId1": "Soother",
-    "characterId2": "Breeze",
+    "id": "Breeze:Soother",
+    "characterId1": "Breeze",
+    "characterId2": "Soother",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Clubs",
-    "characterId1": "Ham",
+    "id": "Breeze:Clubs",
+    "characterId1": "Breeze",
     "characterId2": "Clubs",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Breeze",
-    "characterId1": "Ham",
-    "characterId2": "Breeze",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Clubs:Breeze",
-    "characterId1": "Clubs",
-    "characterId2": "Breeze",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Breeze",
-    "characterId1": "Ham",
-    "characterId2": "Breeze",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Vin",
-    "characterId1": "Ham",
-    "characterId2": "Vin",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Breeze:Vin",
+    "id": "Breeze:Ham",
     "characterId1": "Breeze",
-    "characterId2": "Vin",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Soothers:Rioters",
-    "characterId1": "Soothers",
-    "characterId2": "Rioters",
+    "id": "Clubs:Ham",
+    "characterId1": "Clubs",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Vin:Breeze",
+    "characterId1": "Vin",
+    "characterId2": "Breeze",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Vin:Ham",
+    "characterId1": "Vin",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Breeze:Ham",
+    "characterId1": "Breeze",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Rioters:Soothers",
+    "characterId1": "Rioters",
+    "characterId2": "Soothers",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -1421,22 +1421,36 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Lestibournes:Vin",
-    "characterId1": "Lestibournes",
-    "characterId2": "Vin",
+    "id": "Vin:Lestibournes",
+    "characterId1": "Vin",
+    "characterId2": "Lestibournes",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "KELSIER:Vin",
-    "characterId1": "KELSIER",
-    "characterId2": "Vin",
+    "id": "Vin:KELSIER",
+    "characterId1": "Vin",
+    "characterId2": "KELSIER",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Dockson:Kelsier",
-    "characterId1": "Dockson",
+    "id": "Vin:Dockson",
+    "characterId1": "Vin",
+    "characterId2": "Dockson",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Vin:Sazed",
+    "characterId1": "Vin",
+    "characterId2": "Sazed",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Vin:Kelsier",
+    "characterId1": "Vin",
     "characterId2": "Kelsier",
     "type": "",
     "bookId": "mistborn1"
@@ -1449,44 +1463,30 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Dockson:Vin",
+    "id": "Dockson:Kelsier",
     "characterId1": "Dockson",
-    "characterId2": "Vin",
+    "characterId2": "Kelsier",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Kelsier:Sazed",
-    "characterId1": "Kelsier",
-    "characterId2": "Sazed",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Kelsier:Vin",
-    "characterId1": "Kelsier",
-    "characterId2": "Vin",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Sazed:Vin",
+    "id": "Sazed:Kelsier",
     "characterId1": "Sazed",
-    "characterId2": "Vin",
+    "characterId2": "Kelsier",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Straff Venture:Sazed",
-    "characterId1": "Straff Venture",
-    "characterId2": "Sazed",
+    "id": "Sazed:Straff Venture",
+    "characterId1": "Sazed",
+    "characterId2": "Straff Venture",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Valette:Vin",
-    "characterId1": "Valette",
-    "characterId2": "Vin",
+    "id": "Vin:Valette",
+    "characterId1": "Vin",
+    "characterId2": "Valette",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -1498,37 +1498,37 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "VIN:Renoux",
-    "characterId1": "VIN",
-    "characterId2": "Renoux",
+    "id": "Renoux:VIN",
+    "characterId1": "Renoux",
+    "characterId2": "VIN",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Elend_Venture:Sazed",
-    "characterId1": "Elend_Venture",
-    "characterId2": "Sazed",
+    "id": "Sazed:Elend",
+    "characterId1": "Sazed",
+    "characterId2": "Elend",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Elend_Venture:Vin",
-    "characterId1": "Elend_Venture",
-    "characterId2": "Vin",
+    "id": "Vin:Elend Venture",
+    "characterId1": "Vin",
+    "characterId2": "Elend Venture",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Kelsier:Elend_Venture",
+    "id": "Kelsier:Elend",
     "characterId1": "Kelsier",
-    "characterId2": "Elend_Venture",
+    "characterId2": "Elend",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Elend_Venture:Renoux",
-    "characterId1": "Elend_Venture",
-    "characterId2": "Renoux",
+    "id": "Renoux:Elend Venture",
+    "characterId1": "Renoux",
+    "characterId2": "Elend Venture",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -1540,30 +1540,16 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Mare:Vin",
-    "characterId1": "Mare",
-    "characterId2": "Vin",
+    "id": "Vin:Mare",
+    "characterId1": "Vin",
+    "characterId2": "Mare",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Kredik Shaw",
-    "characterId1": "Ham",
-    "characterId2": "Kredik Shaw",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Vin",
-    "characterId1": "Ham",
-    "characterId2": "Vin",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Sazed",
-    "characterId1": "Ham",
-    "characterId2": "Sazed",
+    "id": "Kredik Shaw:Ham",
+    "characterId1": "Kredik Shaw",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -1571,6 +1557,20 @@
     "id": "Vin:Sazed",
     "characterId1": "Vin",
     "characterId2": "Sazed",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Vin:Ham",
+    "characterId1": "Vin",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Sazed:Ham",
+    "characterId1": "Sazed",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -1596,30 +1596,16 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Allomancer:Vin",
-    "characterId1": "Allomancer",
-    "characterId2": "Vin",
+    "id": "Vin:Allomancer",
+    "characterId1": "Vin",
+    "characterId2": "Allomancer",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Sazed",
-    "characterId1": "Ham",
-    "characterId2": "Sazed",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Kelsier",
-    "characterId1": "Ham",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Vin",
-    "characterId1": "Ham",
-    "characterId2": "Vin",
+    "id": "Sazed:Ham",
+    "characterId1": "Sazed",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -1631,9 +1617,23 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "VIN:Reen",
-    "characterId1": "VIN",
-    "characterId2": "Reen",
+    "id": "Kelsier:Ham",
+    "characterId1": "Kelsier",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Vin:Ham",
+    "characterId1": "Vin",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Reen:VIN",
+    "characterId1": "Reen",
+    "characterId2": "VIN",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -1652,23 +1652,23 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Kell",
-    "characterId1": "Ham",
+    "id": "Breeze:Ham",
+    "characterId1": "Breeze",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Breeze:Kell",
+    "characterId1": "Breeze",
     "characterId2": "Kell",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Breeze",
+    "id": "Ham:Kell",
     "characterId1": "Ham",
-    "characterId2": "Breeze",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Kell:Breeze",
-    "characterId1": "Kell",
-    "characterId2": "Breeze",
+    "characterId2": "Kell",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -1680,65 +1680,30 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Kredik Shaw:Kelsier",
-    "characterId1": "Kredik Shaw",
-    "characterId2": "Kelsier",
+    "id": "Kelsier:Kredik Shaw",
+    "characterId1": "Kelsier",
+    "characterId2": "Kredik Shaw",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Renoux:Valette",
-    "characterId1": "Renoux",
+    "id": "Vin:Valette",
+    "characterId1": "Vin",
     "characterId2": "Valette",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Renoux:Vin",
-    "characterId1": "Renoux",
-    "characterId2": "Vin",
+    "id": "Vin:Renoux",
+    "characterId1": "Vin",
+    "characterId2": "Renoux",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Valette:Vin",
+    "id": "Valette:Renoux",
     "characterId1": "Valette",
-    "characterId2": "Vin",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Dockson:Yeden",
-    "characterId1": "Dockson",
-    "characterId2": "Yeden",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Dockson:Kelsier",
-    "characterId1": "Dockson",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Dockson:Breeze",
-    "characterId1": "Dockson",
-    "characterId2": "Breeze",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Yeden:Kelsier",
-    "characterId1": "Yeden",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Yeden:Breeze",
-    "characterId1": "Yeden",
-    "characterId2": "Breeze",
+    "characterId2": "Renoux",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -1750,16 +1715,44 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Dockson:Renoux",
-    "characterId1": "Dockson",
-    "characterId2": "Renoux",
+    "id": "Kelsier:Dockson",
+    "characterId1": "Kelsier",
+    "characterId2": "Dockson",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Dockson:Marsh",
+    "id": "Kelsier:Yeden",
+    "characterId1": "Kelsier",
+    "characterId2": "Yeden",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Breeze:Dockson",
+    "characterId1": "Breeze",
+    "characterId2": "Dockson",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Breeze:Yeden",
+    "characterId1": "Breeze",
+    "characterId2": "Yeden",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Dockson:Yeden",
     "characterId1": "Dockson",
-    "characterId2": "Marsh",
+    "characterId2": "Yeden",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Renoux:Dockson",
+    "characterId1": "Renoux",
+    "characterId2": "Dockson",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -1771,86 +1764,93 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Marsh:Sazed",
-    "characterId1": "Marsh",
-    "characterId2": "Sazed",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Dockson:Mundane",
+    "id": "Dockson:Marsh",
     "characterId1": "Dockson",
-    "characterId2": "Mundane",
+    "characterId2": "Marsh",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Ladrian:Sazed",
-    "characterId1": "Ladrian",
-    "characterId2": "Sazed",
+    "id": "Sazed:Marsh",
+    "characterId1": "Sazed",
+    "characterId2": "Marsh",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Saze:Dockson",
-    "characterId1": "Saze",
+    "id": "Mundane:Dockson",
+    "characterId1": "Mundane",
     "characterId2": "Dockson",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Kell:Vin",
-    "characterId1": "Kell",
-    "characterId2": "Vin",
+    "id": "Sazed:Ladrian",
+    "characterId1": "Sazed",
+    "characterId2": "Ladrian",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Mare:Kelsier",
-    "characterId1": "Mare",
-    "characterId2": "Kelsier",
+    "id": "Dockson:Saze",
+    "characterId1": "Dockson",
+    "characterId2": "Saze",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Elend_Venture:Vin",
-    "characterId1": "Elend_Venture",
-    "characterId2": "Vin",
+    "id": "Vin:Kell",
+    "characterId1": "Vin",
+    "characterId2": "Kell",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "MElend_Venture Liese:Renoux",
-    "characterId1": "MElend_Venture Liese",
-    "characterId2": "Renoux",
+    "id": "Kelsier:Mare",
+    "characterId1": "Kelsier",
+    "characterId2": "Mare",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Liese:Vin",
-    "characterId1": "Liese",
-    "characterId2": "Vin",
+    "id": "Vin:Elend",
+    "characterId1": "Vin",
+    "characterId2": "Elend",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Liese:Elend_Venture",
-    "characterId1": "Liese",
-    "characterId2": "Elend_Venture",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Liese:Venture",
-    "characterId1": "Liese",
-    "characterId2": "Venture",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Renoux:Elend_Venture",
+    "id": "Renoux:Melend Liese",
     "characterId1": "Renoux",
-    "characterId2": "Elend_Venture",
+    "characterId2": "Melend Liese",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Vin:Liese",
+    "characterId1": "Vin",
+    "characterId2": "Liese",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Elend:Liese",
+    "characterId1": "Elend",
+    "characterId2": "Liese",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Venture:Liese",
+    "characterId1": "Venture",
+    "characterId2": "Liese",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Renoux:Elend",
+    "characterId1": "Renoux",
+    "characterId2": "Elend",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -1862,93 +1862,93 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Liese:Sazed",
-    "characterId1": "Liese",
-    "characterId2": "Sazed",
+    "id": "Sazed:Liese",
+    "characterId1": "Sazed",
+    "characterId2": "Liese",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Terrisman:Elend_Venture",
+    "id": "Terrisman:Elend",
     "characterId1": "Terrisman",
-    "characterId2": "Elend_Venture",
+    "characterId2": "Elend",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Liese:Elend_Venture",
-    "characterId1": "Liese",
-    "characterId2": "Elend_Venture",
+    "id": "Vin:Elend",
+    "characterId1": "Vin",
+    "characterId2": "Elend",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Liese:Vin",
-    "characterId1": "Liese",
-    "characterId2": "Vin",
+    "id": "Vin:Liese",
+    "characterId1": "Vin",
+    "characterId2": "Liese",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Elend_Venture:Vin",
-    "characterId1": "Elend_Venture",
-    "characterId2": "Vin",
+    "id": "Elend:Liese",
+    "characterId1": "Elend",
+    "characterId2": "Liese",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "a Lady Shan:Vin",
-    "characterId1": "a Lady Shan",
-    "characterId2": "Vin",
+    "id": "Vin:a Lady Shan",
+    "characterId1": "Vin",
+    "characterId2": "a Lady Shan",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Shan:Vin",
-    "characterId1": "Shan",
-    "characterId2": "Vin",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Shan:Terrisman",
-    "characterId1": "Shan",
-    "characterId2": "Terrisman",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Shan:Vin",
-    "characterId1": "Shan",
-    "characterId2": "Vin",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Terrisman:Vin",
-    "characterId1": "Terrisman",
-    "characterId2": "Vin",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Camon:Shan",
-    "characterId1": "Camon",
+    "id": "Vin:Shan",
+    "characterId1": "Vin",
     "characterId2": "Shan",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Camon:Vin",
-    "characterId1": "Camon",
-    "characterId2": "Vin",
+    "id": "Vin:Terrisman",
+    "characterId1": "Vin",
+    "characterId2": "Terrisman",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Shan:Vin",
+    "id": "Vin:Shan",
+    "characterId1": "Vin",
+    "characterId2": "Shan",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Terrisman:Shan",
+    "characterId1": "Terrisman",
+    "characterId2": "Shan",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Vin:Shan",
+    "characterId1": "Vin",
+    "characterId2": "Shan",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Vin:Camon",
+    "characterId1": "Vin",
+    "characterId2": "Camon",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Shan:Camon",
     "characterId1": "Shan",
-    "characterId2": "Vin",
+    "characterId2": "Camon",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -1960,9 +1960,9 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Vin:Elend_Venture",
+    "id": "Vin:Elend",
     "characterId1": "Vin",
-    "characterId2": "Elend_Venture",
+    "characterId2": "Elend",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -1974,16 +1974,16 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Elend_Venture:Venture",
-    "characterId1": "Elend_Venture",
+    "id": "Elend:Venture",
+    "characterId1": "Elend",
     "characterId2": "Venture",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Tekiel:Kelsier",
-    "characterId1": "Tekiel",
-    "characterId2": "Kelsier",
+    "id": "Kelsier:Tekiel",
+    "characterId1": "Kelsier",
+    "characterId2": "Tekiel",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -2002,44 +2002,30 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Geffenry:Tekiel",
-    "characterId1": "Geffenry",
-    "characterId2": "Tekiel",
+    "id": "Tekiel:Geffenry",
+    "characterId1": "Tekiel",
+    "characterId2": "Geffenry",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Izenry:Tekiel",
-    "characterId1": "Izenry",
-    "characterId2": "Tekiel",
+    "id": "Tekiel:Izenry",
+    "characterId1": "Tekiel",
+    "characterId2": "Izenry",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Hoid:Dockson",
-    "characterId1": "Hoid",
-    "characterId2": "Dockson",
+    "id": "Dockson:Hoid",
+    "characterId1": "Dockson",
+    "characterId2": "Hoid",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Hoid:Kelsier",
-    "characterId1": "Hoid",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Elend_Venture:Renoux",
-    "characterId1": "Elend_Venture",
-    "characterId2": "Renoux",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Elend_Venture:Valette",
-    "characterId1": "Elend_Venture",
-    "characterId2": "Valette",
+    "id": "Kelsier:Hoid",
+    "characterId1": "Kelsier",
+    "characterId2": "Hoid",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -2051,6 +2037,20 @@
     "bookId": "mistborn1"
   },
   {
+    "id": "Renoux:Elend Venture",
+    "characterId1": "Renoux",
+    "characterId2": "Elend Venture",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Valette:Elend Venture",
+    "characterId1": "Valette",
+    "characterId2": "Elend Venture",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
     "id": "Renoux:Venture",
     "characterId1": "Renoux",
     "characterId2": "Venture",
@@ -2058,37 +2058,37 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Hoid:Renoux",
-    "characterId1": "Hoid",
-    "characterId2": "Renoux",
+    "id": "Renoux:Hoid",
+    "characterId1": "Renoux",
+    "characterId2": "Hoid",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Salmen Tekiel:Shan",
-    "characterId1": "Salmen Tekiel",
+    "id": "Kelsier:Shan",
+    "characterId1": "Kelsier",
     "characterId2": "Shan",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Salmen Tekiel:Kelsier",
-    "characterId1": "Salmen Tekiel",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Shan:Kelsier",
-    "characterId1": "Shan",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Kelsier:Elariel",
+    "id": "Kelsier:Salmen Tekiel",
     "characterId1": "Kelsier",
-    "characterId2": "Elariel",
+    "characterId2": "Salmen Tekiel",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Shan:Salmen Tekiel",
+    "characterId1": "Shan",
+    "characterId2": "Salmen Tekiel",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Elariel:Kelsier",
+    "characterId1": "Elariel",
+    "characterId2": "Kelsier",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -2100,9 +2100,9 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Erikell:Kelsier",
-    "characterId1": "Erikell",
-    "characterId2": "Kelsier",
+    "id": "Kelsier:Erikell",
+    "characterId1": "Kelsier",
+    "characterId2": "Erikell",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -2135,16 +2135,9 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Erikell:Renoux",
-    "characterId1": "Erikell",
-    "characterId2": "Renoux",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Erikell:Venture",
-    "characterId1": "Erikell",
-    "characterId2": "Venture",
+    "id": "Renoux:Erikell",
+    "characterId1": "Renoux",
+    "characterId2": "Erikell",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -2156,23 +2149,30 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Sazed:Elariel",
-    "characterId1": "Sazed",
+    "id": "Erikell:Venture",
+    "characterId1": "Erikell",
+    "characterId2": "Venture",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Vin:Sazed",
+    "characterId1": "Vin",
+    "characterId2": "Sazed",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Vin:Elariel",
+    "characterId1": "Vin",
     "characterId2": "Elariel",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Sazed:Vin",
+    "id": "Sazed:Elariel",
     "characterId1": "Sazed",
-    "characterId2": "Vin",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Elariel:Vin",
-    "characterId1": "Elariel",
-    "characterId2": "Vin",
+    "characterId2": "Elariel",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -2205,30 +2205,30 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Shan:Elend_Venture",
+    "id": "Vin:Shan",
+    "characterId1": "Vin",
+    "characterId2": "Shan",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Vin:Elend",
+    "characterId1": "Vin",
+    "characterId2": "Elend",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Shan:Elend",
     "characterId1": "Shan",
-    "characterId2": "Elend_Venture",
+    "characterId2": "Elend",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Shan:Vin",
-    "characterId1": "Shan",
-    "characterId2": "Vin",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Elend_Venture:Vin",
-    "characterId1": "Elend_Venture",
-    "characterId2": "Vin",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Curtsey:Renoux",
-    "characterId1": "Curtsey",
-    "characterId2": "Renoux",
+    "id": "Renoux:Curtsey",
+    "characterId1": "Renoux",
+    "characterId2": "Curtsey",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -2240,22 +2240,22 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Renoux:Kelsier",
-    "characterId1": "Renoux",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Renoux:Marsh",
-    "characterId1": "Renoux",
-    "characterId2": "Marsh",
+    "id": "Kelsier:Renoux",
+    "characterId1": "Kelsier",
+    "characterId2": "Renoux",
     "type": "",
     "bookId": "mistborn1"
   },
   {
     "id": "Kelsier:Marsh",
     "characterId1": "Kelsier",
+    "characterId2": "Marsh",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Renoux:Marsh",
+    "characterId1": "Renoux",
     "characterId2": "Marsh",
     "type": "",
     "bookId": "mistborn1"
@@ -2275,15 +2275,29 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Demoux:Kelsier",
-    "characterId1": "Demoux",
-    "characterId2": "Kelsier",
+    "id": "Kelsier:Demoux",
+    "characterId1": "Kelsier",
+    "characterId2": "Demoux",
     "type": "",
     "bookId": "mistborn1"
   },
   {
     "id": "Demoux:Yeden",
     "characterId1": "Demoux",
+    "characterId2": "Yeden",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Ham",
+    "characterId1": "Kelsier",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Yeden",
+    "characterId1": "Kelsier",
     "characterId2": "Yeden",
     "type": "",
     "bookId": "mistborn1"
@@ -2296,23 +2310,9 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Kelsier",
-    "characterId1": "Ham",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Yeden:Kelsier",
-    "characterId1": "Yeden",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Bilg:Kelsier",
-    "characterId1": "Bilg",
-    "characterId2": "Kelsier",
+    "id": "Kelsier:Bilg",
+    "characterId1": "Kelsier",
+    "characterId2": "Bilg",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -2324,23 +2324,23 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Bilg:Demoux",
-    "characterId1": "Bilg",
+    "id": "Kelsier:Bilg",
+    "characterId1": "Kelsier",
+    "characterId2": "Bilg",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Demoux",
+    "characterId1": "Kelsier",
     "characterId2": "Demoux",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Bilg:Kelsier",
+    "id": "Bilg:Demoux",
     "characterId1": "Bilg",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Demoux:Kelsier",
-    "characterId1": "Demoux",
-    "characterId2": "Kelsier",
+    "characterId2": "Demoux",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -2352,9 +2352,9 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Spook:Vin",
-    "characterId1": "Spook",
-    "characterId2": "Vin",
+    "id": "Vin:Spook",
+    "characterId1": "Vin",
+    "characterId2": "Spook",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -2366,20 +2366,6 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Delton:Renoux",
-    "characterId1": "Delton",
-    "characterId2": "Renoux",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Delton:Valette",
-    "characterId1": "Delton",
-    "characterId2": "Valette",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
     "id": "Renoux:Valette",
     "characterId1": "Renoux",
     "characterId2": "Valette",
@@ -2387,16 +2373,23 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Dockson:Kelsier",
-    "characterId1": "Dockson",
-    "characterId2": "Kelsier",
+    "id": "Renoux:Delton",
+    "characterId1": "Renoux",
+    "characterId2": "Delton",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Dockson:Marsh",
-    "characterId1": "Dockson",
-    "characterId2": "Marsh",
+    "id": "Valette:Delton",
+    "characterId1": "Valette",
+    "characterId2": "Delton",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Dockson",
+    "characterId1": "Kelsier",
+    "characterId2": "Dockson",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -2408,23 +2401,16 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Terris:Vin",
-    "characterId1": "Terris",
-    "characterId2": "Vin",
+    "id": "Dockson:Marsh",
+    "characterId1": "Dockson",
+    "characterId2": "Marsh",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Dockson:Kelsier",
-    "characterId1": "Dockson",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Dockson:Breeze",
-    "characterId1": "Dockson",
-    "characterId2": "Breeze",
+    "id": "Vin:Terris",
+    "characterId1": "Vin",
+    "characterId2": "Terris",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -2436,30 +2422,16 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Dockson",
-    "characterId1": "Ham",
+    "id": "Kelsier:Dockson",
+    "characterId1": "Kelsier",
     "characterId2": "Dockson",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Breeze",
-    "characterId1": "Ham",
-    "characterId2": "Breeze",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Sazed",
-    "characterId1": "Ham",
-    "characterId2": "Sazed",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Kelsier",
-    "characterId1": "Ham",
-    "characterId2": "Kelsier",
+    "id": "Breeze:Dockson",
+    "characterId1": "Breeze",
+    "characterId2": "Dockson",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -2485,6 +2457,13 @@
     "bookId": "mistborn1"
   },
   {
+    "id": "Dockson:Ham",
+    "characterId1": "Dockson",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
     "id": "Breeze:Sazed",
     "characterId1": "Breeze",
     "characterId2": "Sazed",
@@ -2499,6 +2478,13 @@
     "bookId": "mistborn1"
   },
   {
+    "id": "Breeze:Ham",
+    "characterId1": "Breeze",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
     "id": "Sazed:Kelsier",
     "characterId1": "Sazed",
     "characterId2": "Kelsier",
@@ -2506,16 +2492,44 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Devinshae:Kareien",
-    "characterId1": "Devinshae",
-    "characterId2": "Kareien",
+    "id": "Sazed:Ham",
+    "characterId1": "Sazed",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Dox:Vin",
-    "characterId1": "Dox",
-    "characterId2": "Vin",
+    "id": "Kelsier:Ham",
+    "characterId1": "Kelsier",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kareien:Devinshae",
+    "characterId1": "Kareien",
+    "characterId2": "Devinshae",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Vin:Dox",
+    "characterId1": "Vin",
+    "characterId2": "Dox",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Entrone:Geffenry",
+    "characterId1": "Entrone",
+    "characterId2": "Geffenry",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Entrone:Kliss",
+    "characterId1": "Entrone",
+    "characterId2": "Kliss",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -2527,37 +2541,23 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Geffenry:Entrone",
-    "characterId1": "Geffenry",
-    "characterId2": "Entrone",
+    "id": "Vin:Milen Davenpleu",
+    "characterId1": "Vin",
+    "characterId2": "Milen Davenpleu",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Kliss:Entrone",
-    "characterId1": "Kliss",
-    "characterId2": "Entrone",
+    "id": "Milen:Kliss",
+    "characterId1": "Milen",
+    "characterId2": "Kliss",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Milen Davenpleu:Vin",
-    "characterId1": "Milen Davenpleu",
-    "characterId2": "Vin",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Kliss:Milen",
-    "characterId1": "Kliss",
-    "characterId2": "Milen",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Kliss:Entrone",
-    "characterId1": "Kliss",
-    "characterId2": "Entrone",
+    "id": "Entrone:Kliss",
+    "characterId1": "Entrone",
+    "characterId2": "Kliss",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -2576,16 +2576,16 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Ardous:Vin",
-    "characterId1": "Ardous",
-    "characterId2": "Vin",
+    "id": "Vin:Ardous",
+    "characterId1": "Vin",
+    "characterId2": "Ardous",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Dockson:Elend_Venture",
+    "id": "Dockson:Elend",
     "characterId1": "Dockson",
-    "characterId2": "Elend_Venture",
+    "characterId2": "Elend",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -2597,9 +2597,9 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Kliss:Valette",
-    "characterId1": "Kliss",
-    "characterId2": "Valette",
+    "id": "Valette:Kliss",
+    "characterId1": "Valette",
+    "characterId2": "Kliss",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -2611,23 +2611,23 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Tyden:Vin",
-    "characterId1": "Tyden",
-    "characterId2": "Vin",
+    "id": "Vin:Tyden",
+    "characterId1": "Vin",
+    "characterId2": "Tyden",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Shan Elariel:Vin",
-    "characterId1": "Shan Elariel",
-    "characterId2": "Vin",
+    "id": "Vin:Shan Elariel",
+    "characterId1": "Vin",
+    "characterId2": "Shan Elariel",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Milen:Vin",
-    "characterId1": "Milen",
-    "characterId2": "Vin",
+    "id": "Vin:Milen",
+    "characterId1": "Vin",
+    "characterId2": "Milen",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -2639,44 +2639,16 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Shan:Elend_Venture",
+    "id": "Shan:Elend",
     "characterId1": "Shan",
-    "characterId2": "Elend_Venture",
+    "characterId2": "Elend",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Elend_Venture:Valette",
-    "characterId1": "Elend_Venture",
-    "characterId2": "Valette",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Hasting:Kelsier",
-    "characterId1": "Hasting",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Hasting:Elend_Venture",
-    "characterId1": "Hasting",
-    "characterId2": "Elend_Venture",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Hasting:Sazed",
-    "characterId1": "Hasting",
-    "characterId2": "Sazed",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Kelsier:Elend_Venture",
-    "characterId1": "Kelsier",
-    "characterId2": "Elend_Venture",
+    "id": "Valette:Elend",
+    "characterId1": "Valette",
+    "characterId2": "Elend",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -2688,79 +2660,107 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Elend_Venture:Sazed",
-    "characterId1": "Elend_Venture",
-    "characterId2": "Sazed",
+    "id": "Kelsier:Elend",
+    "characterId1": "Kelsier",
+    "characterId2": "Elend",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Lekal:Hasting",
-    "characterId1": "Lekal",
+    "id": "Kelsier:Hasting",
+    "characterId1": "Kelsier",
     "characterId2": "Hasting",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Lekal:Elend_Venture",
-    "characterId1": "Lekal",
-    "characterId2": "Elend_Venture",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Hasting:Elend_Venture",
-    "characterId1": "Hasting",
-    "characterId2": "Elend_Venture",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Sazed:Valette",
+    "id": "Sazed:Elend",
     "characterId1": "Sazed",
+    "characterId2": "Elend",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Sazed:Hasting",
+    "characterId1": "Sazed",
+    "characterId2": "Hasting",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Elend:Hasting",
+    "characterId1": "Elend",
+    "characterId2": "Hasting",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Hasting:Elend",
+    "characterId1": "Hasting",
+    "characterId2": "Elend",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Hasting:Lekal",
+    "characterId1": "Hasting",
+    "characterId2": "Lekal",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Elend:Lekal",
+    "characterId1": "Elend",
+    "characterId2": "Lekal",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Vin:Valette",
+    "characterId1": "Vin",
     "characterId2": "Valette",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Sazed:Vin",
-    "characterId1": "Sazed",
-    "characterId2": "Vin",
+    "id": "Vin:Sazed",
+    "characterId1": "Vin",
+    "characterId2": "Sazed",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Valette:Vin",
+    "id": "Valette:Sazed",
     "characterId1": "Valette",
-    "characterId2": "Vin",
+    "characterId2": "Sazed",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Lekal:Elend_Venture",
-    "characterId1": "Lekal",
-    "characterId2": "Elend_Venture",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Lekal:Hasting",
-    "characterId1": "Lekal",
+    "id": "Elend Venture:Hasting",
+    "characterId1": "Elend Venture",
     "characterId2": "Hasting",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Elend_Venture:Hasting",
-    "characterId1": "Elend_Venture",
-    "characterId2": "Hasting",
+    "id": "Elend Venture:Lekal",
+    "characterId1": "Elend Venture",
+    "characterId2": "Lekal",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Jastes:Elend_Venture",
-    "characterId1": "Jastes",
-    "characterId2": "Elend_Venture",
+    "id": "Hasting:Lekal",
+    "characterId1": "Hasting",
+    "characterId2": "Lekal",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Elend:Jastes",
+    "characterId1": "Elend",
+    "characterId2": "Jastes",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -2772,9 +2772,23 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Jastes:Redalevin",
-    "characterId1": "Jastes",
-    "characterId2": "Redalevin",
+    "id": "Redalevin:Jastes",
+    "characterId1": "Redalevin",
+    "characterId2": "Jastes",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kevoux:Telden",
+    "characterId1": "Kevoux",
+    "characterId2": "Telden",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kevoux:Jastes",
+    "characterId1": "Kevoux",
+    "characterId2": "Jastes",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -2786,37 +2800,37 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Telden:Kevoux",
-    "characterId1": "Telden",
-    "characterId2": "Kevoux",
+    "id": "Vin:Elend",
+    "characterId1": "Vin",
+    "characterId2": "Elend",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Jastes:Kevoux",
-    "characterId1": "Jastes",
-    "characterId2": "Kevoux",
+    "id": "Vin:Kelsier",
+    "characterId1": "Vin",
+    "characterId2": "Kelsier",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Kelsier:Elend_Venture",
-    "characterId1": "Kelsier",
-    "characterId2": "Elend_Venture",
+    "id": "Elend:Kelsier",
+    "characterId1": "Elend",
+    "characterId2": "Kelsier",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Kelsier:Vin",
-    "characterId1": "Kelsier",
-    "characterId2": "Vin",
+    "id": "Vin:Sazed",
+    "characterId1": "Vin",
+    "characterId2": "Sazed",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Elend_Venture:Vin",
-    "characterId1": "Elend_Venture",
-    "characterId2": "Vin",
+    "id": "Vin:KELSIER",
+    "characterId1": "Vin",
+    "characterId2": "KELSIER",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -2828,34 +2842,6 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Sazed:Vin",
-    "characterId1": "Sazed",
-    "characterId2": "Vin",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "KELSIER:Vin",
-    "characterId1": "KELSIER",
-    "characterId2": "Vin",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Clubs",
-    "characterId1": "Ham",
-    "characterId2": "Clubs",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Spook",
-    "characterId1": "Ham",
-    "characterId2": "Spook",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
     "id": "Clubs:Spook",
     "characterId1": "Clubs",
     "characterId2": "Spook",
@@ -2863,44 +2849,58 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Dockson:Kelsier",
-    "characterId1": "Dockson",
-    "characterId2": "Kelsier",
+    "id": "Clubs:Ham",
+    "characterId1": "Clubs",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Dockson:Elend_Venture",
-    "characterId1": "Dockson",
-    "characterId2": "Elend_Venture",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Kelsier:Elend_Venture",
-    "characterId1": "Kelsier",
-    "characterId2": "Elend_Venture",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Spook:Breeze",
+    "id": "Spook:Ham",
     "characterId1": "Spook",
-    "characterId2": "Breeze",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Mistborn:Mistings",
-    "characterId1": "Mistborn",
-    "characterId2": "Mistings",
+    "id": "Kelsier:Dockson",
+    "characterId1": "Kelsier",
+    "characterId2": "Dockson",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Soothers:Breeze",
-    "characterId1": "Soothers",
-    "characterId2": "Breeze",
+    "id": "Kelsier:Elend",
+    "characterId1": "Kelsier",
+    "characterId2": "Elend",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Dockson:Elend",
+    "characterId1": "Dockson",
+    "characterId2": "Elend",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Breeze:Spook",
+    "characterId1": "Breeze",
+    "characterId2": "Spook",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Mistings:Mistborn",
+    "characterId1": "Mistings",
+    "characterId2": "Mistborn",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Breeze:Soothers",
+    "characterId1": "Breeze",
+    "characterId2": "Soothers",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -2912,72 +2912,72 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Kell:Breeze",
-    "characterId1": "Kell",
+    "id": "Vin:Breeze",
+    "characterId1": "Vin",
     "characterId2": "Breeze",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Kell:Vin",
-    "characterId1": "Kell",
-    "characterId2": "Vin",
+    "id": "Vin:Kell",
+    "characterId1": "Vin",
+    "characterId2": "Kell",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Breeze:Vin",
+    "id": "Breeze:Kell",
     "characterId1": "Breeze",
-    "characterId2": "Vin",
+    "characterId2": "Kell",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Bevidon",
-    "characterId1": "Ham",
-    "characterId2": "Bevidon",
+    "id": "Bevidon:Ham",
+    "characterId1": "Bevidon",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Sertes",
-    "characterId1": "Ham",
+    "id": "Sertes:Ham",
+    "characterId1": "Sertes",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Vin:Sertes",
+    "characterId1": "Vin",
     "characterId2": "Sertes",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Sertes:Vin",
-    "characterId1": "Sertes",
-    "characterId2": "Vin",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Sertes",
-    "characterId1": "Ham",
+    "id": "Vin:Sertes",
+    "characterId1": "Vin",
     "characterId2": "Sertes",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Vin",
-    "characterId1": "Ham",
-    "characterId2": "Vin",
+    "id": "Vin:Ham",
+    "characterId1": "Vin",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Sertes:Vin",
+    "id": "Sertes:Ham",
     "characterId1": "Sertes",
-    "characterId2": "Vin",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Yeden:Dox",
-    "characterId1": "Yeden",
-    "characterId2": "Dox",
+    "id": "Dox:Yeden",
+    "characterId1": "Dox",
+    "characterId2": "Yeden",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -2996,34 +2996,6 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Dockson",
-    "characterId1": "Ham",
-    "characterId2": "Dockson",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Breeze",
-    "characterId1": "Ham",
-    "characterId2": "Breeze",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Renoux",
-    "characterId1": "Ham",
-    "characterId2": "Renoux",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Yeden",
-    "characterId1": "Ham",
-    "characterId2": "Yeden",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
     "id": "Dockson:Breeze",
     "characterId1": "Dockson",
     "characterId2": "Breeze",
@@ -3034,6 +3006,13 @@
     "id": "Dockson:Renoux",
     "characterId1": "Dockson",
     "characterId2": "Renoux",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Dockson:Ham",
+    "characterId1": "Dockson",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -3052,9 +3031,23 @@
     "bookId": "mistborn1"
   },
   {
+    "id": "Breeze:Ham",
+    "characterId1": "Breeze",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
     "id": "Breeze:Yeden",
     "characterId1": "Breeze",
     "characterId2": "Yeden",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Renoux:Ham",
+    "characterId1": "Renoux",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -3066,58 +3059,65 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Dockson",
+    "id": "Ham:Yeden",
     "characterId1": "Ham",
+    "characterId2": "Yeden",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Dockson",
+    "characterId1": "Kelsier",
     "characterId2": "Dockson",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Kelsier",
-    "characterId1": "Ham",
-    "characterId2": "Kelsier",
+    "id": "Kelsier:Ham",
+    "characterId1": "Kelsier",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Dockson:Kelsier",
+    "id": "Dockson:Ham",
     "characterId1": "Dockson",
-    "characterId2": "Kelsier",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Spook",
-    "characterId1": "Ham",
-    "characterId2": "Spook",
+    "id": "Spook:Ham",
+    "characterId1": "Spook",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Hammond",
-    "characterId1": "Ham",
+    "id": "Breeze:Hammond",
+    "characterId1": "Breeze",
     "characterId2": "Hammond",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Breeze",
-    "characterId1": "Ham",
-    "characterId2": "Breeze",
+    "id": "Breeze:Ham",
+    "characterId1": "Breeze",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Hammond:Breeze",
+    "id": "Hammond:Ham",
     "characterId1": "Hammond",
-    "characterId2": "Breeze",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Clubs",
-    "characterId1": "Ham",
-    "characterId2": "Clubs",
+    "id": "Clubs:Ham",
+    "characterId1": "Clubs",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -3171,79 +3171,65 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Kliss:Vin",
-    "characterId1": "Kliss",
-    "characterId2": "Vin",
+    "id": "Vin:Kliss",
+    "characterId1": "Vin",
+    "characterId2": "Kliss",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Tren-Pedri Delouse:Vin",
-    "characterId1": "Tren-Pedri Delouse",
-    "characterId2": "Vin",
+    "id": "Vin:Tren-Pedri Delouse",
+    "characterId1": "Vin",
+    "characterId2": "Tren-Pedri Delouse",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Telden:Elend_Venture",
-    "characterId1": "Telden",
-    "characterId2": "Elend_Venture",
+    "id": "Elend:Telden",
+    "characterId1": "Elend",
+    "characterId2": "Telden",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Elend_Venture:Kale Tekiel",
-    "characterId1": "Elend_Venture",
+    "id": "Elend:Kale Tekiel",
+    "characterId1": "Elend",
     "characterId2": "Kale Tekiel",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Elend_Venture:Venture",
-    "characterId1": "Elend_Venture",
+    "id": "Elend:Venture",
+    "characterId1": "Elend",
     "characterId2": "Venture",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Elend_Venture:Tineye",
-    "characterId1": "Elend_Venture",
-    "characterId2": "Tineye",
+    "id": "Tineye:Elend",
+    "characterId1": "Tineye",
+    "characterId2": "Elend",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Hasting:Elend_Venture",
+    "id": "Hasting:Elend",
     "characterId1": "Hasting",
-    "characterId2": "Elend_Venture",
+    "characterId2": "Elend",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Straff:Elend_Venture",
-    "characterId1": "Straff",
-    "characterId2": "Elend_Venture",
+    "id": "Elend:Straff",
+    "characterId1": "Elend",
+    "characterId2": "Straff",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Jastes:Venture",
-    "characterId1": "Jastes",
-    "characterId2": "Venture",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Kelsier",
-    "characterId1": "Ham",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Dox",
-    "characterId1": "Ham",
-    "characterId2": "Dox",
+    "id": "Venture:Jastes",
+    "characterId1": "Venture",
+    "characterId2": "Jastes",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -3255,37 +3241,16 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Dockson",
-    "characterId1": "Ham",
-    "characterId2": "Dockson",
+    "id": "Kelsier:Ham",
+    "characterId1": "Kelsier",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Breeze",
-    "characterId1": "Ham",
-    "characterId2": "Breeze",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Renoux",
-    "characterId1": "Ham",
-    "characterId2": "Renoux",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Sazed",
-    "characterId1": "Ham",
-    "characterId2": "Sazed",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Vin",
-    "characterId1": "Ham",
-    "characterId2": "Vin",
+    "id": "Dox:Ham",
+    "characterId1": "Dox",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -3293,13 +3258,6 @@
     "id": "Dockson:Breeze",
     "characterId1": "Dockson",
     "characterId2": "Breeze",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Dockson:Renoux",
-    "characterId1": "Dockson",
-    "characterId2": "Renoux",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -3318,9 +3276,16 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Breeze:Renoux",
-    "characterId1": "Breeze",
+    "id": "Dockson:Renoux",
+    "characterId1": "Dockson",
     "characterId2": "Renoux",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Dockson:Ham",
+    "characterId1": "Dockson",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -3339,16 +3304,16 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Renoux:Sazed",
-    "characterId1": "Renoux",
-    "characterId2": "Sazed",
+    "id": "Breeze:Renoux",
+    "characterId1": "Breeze",
+    "characterId2": "Renoux",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Renoux:Vin",
-    "characterId1": "Renoux",
-    "characterId2": "Vin",
+    "id": "Breeze:Ham",
+    "characterId1": "Breeze",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -3360,6 +3325,41 @@
     "bookId": "mistborn1"
   },
   {
+    "id": "Sazed:Renoux",
+    "characterId1": "Sazed",
+    "characterId2": "Renoux",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Sazed:Ham",
+    "characterId1": "Sazed",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Vin:Renoux",
+    "characterId1": "Vin",
+    "characterId2": "Renoux",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Vin:Ham",
+    "characterId1": "Vin",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Renoux:Ham",
+    "characterId1": "Renoux",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
     "id": "Theron:Kelsier",
     "characterId1": "Theron",
     "characterId2": "Kelsier",
@@ -3367,16 +3367,9 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Camon:Theron",
-    "characterId1": "Camon",
-    "characterId2": "Theron",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Camon:Vin",
-    "characterId1": "Camon",
-    "characterId2": "Vin",
+    "id": "Theron:Camon",
+    "characterId1": "Theron",
+    "characterId2": "Camon",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -3388,9 +3381,16 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Seeker:Marsh",
-    "characterId1": "Seeker",
-    "characterId2": "Marsh",
+    "id": "Camon:Vin",
+    "characterId1": "Camon",
+    "characterId2": "Vin",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Marsh:Seeker",
+    "characterId1": "Marsh",
+    "characterId2": "Seeker",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -3423,23 +3423,23 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Rashek:Terrismen",
-    "characterId1": "Rashek",
-    "characterId2": "Terrismen",
+    "id": "Terrismen:Rashek",
+    "characterId1": "Terrismen",
+    "characterId2": "Rashek",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Idren Seeris:Elariel",
-    "characterId1": "Idren Seeris",
-    "characterId2": "Elariel",
+    "id": "Elariel:Idren Seeris",
+    "characterId1": "Elariel",
+    "characterId2": "Idren Seeris",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Idren:Vin",
-    "characterId1": "Idren",
-    "characterId2": "Vin",
+    "id": "Vin:Idren",
+    "characterId1": "Vin",
+    "characterId2": "Idren",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -3451,58 +3451,58 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Kliss:Sazed",
-    "characterId1": "Kliss",
+    "id": "Vin:Sazed",
+    "characterId1": "Vin",
     "characterId2": "Sazed",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Kliss:Vin",
-    "characterId1": "Kliss",
-    "characterId2": "Vin",
+    "id": "Vin:Kliss",
+    "characterId1": "Vin",
+    "characterId2": "Kliss",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Sazed:Vin",
+    "id": "Sazed:Kliss",
     "characterId1": "Sazed",
-    "characterId2": "Vin",
+    "characterId2": "Kliss",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Sazed:Elend_Venture",
+    "id": "Vin:Sazed",
+    "characterId1": "Vin",
+    "characterId2": "Sazed",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Vin:Elend",
+    "characterId1": "Vin",
+    "characterId2": "Elend",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Sazed:Elend",
     "characterId1": "Sazed",
-    "characterId2": "Elend_Venture",
+    "characterId2": "Elend",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Sazed:Vin",
-    "characterId1": "Sazed",
-    "characterId2": "Vin",
+    "id": "Renoux:Hasting",
+    "characterId1": "Renoux",
+    "characterId2": "Hasting",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Elend_Venture:Vin",
-    "characterId1": "Elend_Venture",
-    "characterId2": "Vin",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Hasting:Renoux",
-    "characterId1": "Hasting",
-    "characterId2": "Renoux",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Kliss:Elend_Venture",
-    "characterId1": "Kliss",
-    "characterId2": "Elend_Venture",
+    "id": "Elend:Kliss",
+    "characterId1": "Elend",
+    "characterId2": "Kliss",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -3514,9 +3514,9 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Elariel:Elend_Venture",
+    "id": "Elariel:Elend",
     "characterId1": "Elariel",
-    "characterId2": "Elend_Venture",
+    "characterId2": "Elend",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -3528,23 +3528,9 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Elend_Venture:Venture",
-    "characterId1": "Elend_Venture",
+    "id": "Elend:Venture",
+    "characterId1": "Elend",
     "characterId2": "Venture",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Spook",
-    "characterId1": "Ham",
-    "characterId2": "Spook",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Dox",
-    "characterId1": "Ham",
-    "characterId2": "Dox",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -3556,6 +3542,20 @@
     "bookId": "mistborn1"
   },
   {
+    "id": "Spook:Ham",
+    "characterId1": "Spook",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Dox:Ham",
+    "characterId1": "Dox",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
     "id": "Hammond:Sazed",
     "characterId1": "Hammond",
     "characterId2": "Sazed",
@@ -3563,156 +3563,142 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Shan:Kelsier",
-    "characterId1": "Shan",
-    "characterId2": "Kelsier",
+    "id": "Kelsier:Shan",
+    "characterId1": "Kelsier",
+    "characterId2": "Shan",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Allomancer:Mare",
-    "characterId1": "Allomancer",
+    "id": "Vin:Mare",
+    "characterId1": "Vin",
     "characterId2": "Mare",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Allomancer:Vin",
-    "characterId1": "Allomancer",
-    "characterId2": "Vin",
+    "id": "Vin:Allomancer",
+    "characterId1": "Vin",
+    "characterId2": "Allomancer",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Mare:Vin",
+    "id": "Mare:Allomancer",
     "characterId1": "Mare",
-    "characterId2": "Vin",
+    "characterId2": "Allomancer",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Shan:Elariel",
-    "characterId1": "Shan",
-    "characterId2": "Elariel",
+    "id": "Elariel:Shan",
+    "characterId1": "Elariel",
+    "characterId2": "Shan",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Jastes:Felt",
-    "characterId1": "Jastes",
-    "characterId2": "Felt",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Jastes:Elend_Venture",
-    "characterId1": "Jastes",
-    "characterId2": "Elend_Venture",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Felt:Elend_Venture",
+    "id": "Felt:Elend",
     "characterId1": "Felt",
-    "characterId2": "Elend_Venture",
+    "characterId2": "Elend",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Jastes:Elend_Venture",
-    "characterId1": "Jastes",
-    "characterId2": "Elend_Venture",
+    "id": "Felt:Jastes",
+    "characterId1": "Felt",
+    "characterId2": "Jastes",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Jastes:Valette",
-    "characterId1": "Jastes",
-    "characterId2": "Valette",
+    "id": "Elend:Jastes",
+    "characterId1": "Elend",
+    "characterId2": "Jastes",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Elend_Venture:Valette",
-    "characterId1": "Elend_Venture",
-    "characterId2": "Valette",
+    "id": "Valette:Elend",
+    "characterId1": "Valette",
+    "characterId2": "Elend",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Jastes:El",
-    "characterId1": "Jastes",
-    "characterId2": "El",
+    "id": "Valette:Jastes",
+    "characterId1": "Valette",
+    "characterId2": "Jastes",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Elend_Venture:Elariel",
-    "characterId1": "Elend_Venture",
-    "characterId2": "Elariel",
+    "id": "Elend:Jastes",
+    "characterId1": "Elend",
+    "characterId2": "Jastes",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Marsh:Sazed",
-    "characterId1": "Marsh",
-    "characterId2": "Sazed",
+    "id": "El:Jastes",
+    "characterId1": "El",
+    "characterId2": "Jastes",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Spook:Elend_Venture",
-    "characterId1": "Spook",
-    "characterId2": "Elend_Venture",
+    "id": "Elariel:Elend",
+    "characterId1": "Elariel",
+    "characterId2": "Elend",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Spook:Vin",
-    "characterId1": "Spook",
-    "characterId2": "Vin",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Elend_Venture:Vin",
-    "characterId1": "Elend_Venture",
-    "characterId2": "Vin",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Hasting:Kelsier",
-    "characterId1": "Hasting",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Clubs:Dockson",
-    "characterId1": "Clubs",
-    "characterId2": "Dockson",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Thug:Tineye",
-    "characterId1": "Thug",
-    "characterId2": "Tineye",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Dox:Kelsier",
-    "characterId1": "Dox",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Dox:Marsh",
-    "characterId1": "Dox",
+    "id": "Sazed:Marsh",
+    "characterId1": "Sazed",
     "characterId2": "Marsh",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Vin:Elend",
+    "characterId1": "Vin",
+    "characterId2": "Elend",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Vin:Spook",
+    "characterId1": "Vin",
+    "characterId2": "Spook",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Elend:Spook",
+    "characterId1": "Elend",
+    "characterId2": "Spook",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Hasting",
+    "characterId1": "Kelsier",
+    "characterId2": "Hasting",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Dockson:Clubs",
+    "characterId1": "Dockson",
+    "characterId2": "Clubs",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Tineye:Thug",
+    "characterId1": "Tineye",
+    "characterId2": "Thug",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -3720,6 +3706,20 @@
     "id": "Kelsier:Marsh",
     "characterId1": "Kelsier",
     "characterId2": "Marsh",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Dox",
+    "characterId1": "Kelsier",
+    "characterId2": "Dox",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Marsh:Dox",
+    "characterId1": "Marsh",
+    "characterId2": "Dox",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -3752,51 +3752,23 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Tase:Vin",
-    "characterId1": "Tase",
-    "characterId2": "Vin",
+    "id": "Vin:Tase",
+    "characterId1": "Vin",
+    "characterId2": "Tase",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Tase:Lestibournes",
-    "characterId1": "Tase",
-    "characterId2": "Lestibournes",
+    "id": "Lestibournes:Tase",
+    "characterId1": "Lestibournes",
+    "characterId2": "Tase",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Clubs:Sazed",
-    "characterId1": "Clubs",
-    "characterId2": "Sazed",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Dockson",
-    "characterId1": "Ham",
-    "characterId2": "Dockson",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Breeze",
-    "characterId1": "Ham",
-    "characterId2": "Breeze",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Vin",
-    "characterId1": "Ham",
-    "characterId2": "Vin",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Kelsier",
-    "characterId1": "Ham",
-    "characterId2": "Kelsier",
+    "id": "Sazed:Clubs",
+    "characterId1": "Sazed",
+    "characterId2": "Clubs",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -3808,6 +3780,13 @@
     "bookId": "mistborn1"
   },
   {
+    "id": "Dockson:Kelsier",
+    "characterId1": "Dockson",
+    "characterId2": "Kelsier",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
     "id": "Dockson:Vin",
     "characterId1": "Dockson",
     "characterId2": "Vin",
@@ -3815,8 +3794,15 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Dockson:Kelsier",
+    "id": "Dockson:Ham",
     "characterId1": "Dockson",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Breeze:Kelsier",
+    "characterId1": "Breeze",
     "characterId2": "Kelsier",
     "type": "",
     "bookId": "mistborn1"
@@ -3829,51 +3815,79 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Breeze:Kelsier",
+    "id": "Breeze:Ham",
     "characterId1": "Breeze",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Vin:Kelsier",
-    "characterId1": "Vin",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Inquisitor:Ham",
-    "characterId1": "Inquisitor",
     "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Inquisitor:Kelsier",
-    "characterId1": "Inquisitor",
-    "characterId2": "Kelsier",
+    "id": "Kelsier:Vin",
+    "characterId1": "Kelsier",
+    "characterId2": "Vin",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Kelsier",
+    "id": "Kelsier:Ham",
+    "characterId1": "Kelsier",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Vin:Ham",
+    "characterId1": "Vin",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Ham",
+    "characterId1": "Kelsier",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Inquisitor",
+    "characterId1": "Kelsier",
+    "characterId2": "Inquisitor",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Ham:Inquisitor",
     "characterId1": "Ham",
-    "characterId2": "Kelsier",
+    "characterId2": "Inquisitor",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Inquisitor:Kelsier",
-    "characterId1": "Inquisitor",
-    "characterId2": "Kelsier",
+    "id": "Kelsier:Inquisitor",
+    "characterId1": "Kelsier",
+    "characterId2": "Inquisitor",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Elend_Venture:Valette",
-    "characterId1": "Elend_Venture",
-    "characterId2": "Valette",
+    "id": "Valette:Elend Venture",
+    "characterId1": "Valette",
+    "characterId2": "Elend Venture",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Renoux",
+    "characterId1": "Kelsier",
+    "characterId2": "Renoux",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Spook",
+    "characterId1": "Kelsier",
+    "characterId2": "Spook",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -3885,51 +3899,23 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Renoux:Kelsier",
+    "id": "Renoux:Spook",
     "characterId1": "Renoux",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Spook:Kelsier",
-    "characterId1": "Spook",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Spook",
-    "characterId1": "Ham",
     "characterId2": "Spook",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Renoux",
-    "characterId1": "Ham",
-    "characterId2": "Renoux",
+    "id": "Renoux:Ham",
+    "characterId1": "Renoux",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Spook:Renoux",
+    "id": "Spook:Ham",
     "characterId1": "Spook",
-    "characterId2": "Renoux",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Elend_Venture:Kelsier",
-    "characterId1": "Elend_Venture",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Elend_Venture:Valette",
-    "characterId1": "Elend_Venture",
-    "characterId2": "Valette",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -3941,23 +3927,37 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Ashmounts:Kelsier",
-    "characterId1": "Ashmounts",
-    "characterId2": "Kelsier",
+    "id": "Kelsier:Elend Venture",
+    "characterId1": "Kelsier",
+    "characterId2": "Elend Venture",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Elend_Venture:Kelsier",
-    "characterId1": "Elend_Venture",
-    "characterId2": "Kelsier",
+    "id": "Valette:Elend Venture",
+    "characterId1": "Valette",
+    "characterId2": "Elend Venture",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Renoux",
-    "characterId1": "Ham",
-    "characterId2": "Renoux",
+    "id": "Kelsier:Ashmounts",
+    "characterId1": "Kelsier",
+    "characterId2": "Ashmounts",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Elend Venture",
+    "characterId1": "Kelsier",
+    "characterId2": "Elend Venture",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Renoux:Ham",
+    "characterId1": "Renoux",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -3969,16 +3969,16 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Dockson:Clubs",
+    "id": "Dockson:Sazed",
     "characterId1": "Dockson",
-    "characterId2": "Clubs",
+    "characterId2": "Sazed",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Dockson:Sazed",
+    "id": "Dockson:Clubs",
     "characterId1": "Dockson",
-    "characterId2": "Sazed",
+    "characterId2": "Clubs",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -3990,16 +3990,16 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Breeze:Clubs",
+    "id": "Breeze:Sazed",
     "characterId1": "Breeze",
-    "characterId2": "Clubs",
+    "characterId2": "Sazed",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Breeze:Sazed",
+    "id": "Breeze:Clubs",
     "characterId1": "Breeze",
-    "characterId2": "Sazed",
+    "characterId2": "Clubs",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -4011,16 +4011,9 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Clubs:Sazed",
-    "characterId1": "Clubs",
-    "characterId2": "Sazed",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Clubs:Spook",
-    "characterId1": "Clubs",
-    "characterId2": "Spook",
+    "id": "Sazed:Clubs",
+    "characterId1": "Sazed",
+    "characterId2": "Clubs",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -4032,16 +4025,23 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "KREDIK Shaw:VIN",
-    "characterId1": "KREDIK Shaw",
-    "characterId2": "VIN",
+    "id": "Clubs:Spook",
+    "characterId1": "Clubs",
+    "characterId2": "Spook",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Temadre:Elend_Venture",
+    "id": "VIN:KREDIK Shaw",
+    "characterId1": "VIN",
+    "characterId2": "KREDIK Shaw",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Temadre:Elend",
     "characterId1": "Temadre",
-    "characterId2": "Elend_Venture",
+    "characterId2": "Elend",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -4053,9 +4053,9 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Kar:Vin",
-    "characterId1": "Kar",
-    "characterId2": "Vin",
+    "id": "Vin:Kar",
+    "characterId1": "Vin",
+    "characterId2": "Kar",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -4067,37 +4067,37 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Ventures:Dockson",
-    "characterId1": "Ventures",
-    "characterId2": "Dockson",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Hammond:Elend_Venture",
-    "characterId1": "Hammond",
-    "characterId2": "Elend_Venture",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Dockson",
-    "characterId1": "Ham",
-    "characterId2": "Dockson",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Ham:Elend_Venture",
-    "characterId1": "Ham",
-    "characterId2": "Elend_Venture",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Dockson:Elend_Venture",
+    "id": "Dockson:Ventures",
     "characterId1": "Dockson",
-    "characterId2": "Elend_Venture",
+    "characterId2": "Ventures",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Hammond:Elend",
+    "characterId1": "Hammond",
+    "characterId2": "Elend",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Dockson:Elend",
+    "characterId1": "Dockson",
+    "characterId2": "Elend",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Dockson:Ham",
+    "characterId1": "Dockson",
+    "characterId2": "Ham",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Elend:Ham",
+    "characterId1": "Elend",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -4109,23 +4109,23 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Elend_Venture:Kelsier",
-    "characterId1": "Elend_Venture",
-    "characterId2": "Kelsier",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Elend_Venture:Valette",
-    "characterId1": "Elend_Venture",
-    "characterId2": "Valette",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
     "id": "Kelsier:Valette",
     "characterId1": "Kelsier",
     "characterId2": "Valette",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Kelsier:Elend",
+    "characterId1": "Kelsier",
+    "characterId2": "Elend",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Valette:Elend",
+    "characterId1": "Valette",
+    "characterId2": "Elend",
     "type": "",
     "bookId": "mistborn1"
   },
@@ -4144,6 +4144,20 @@
     "bookId": "mistborn1"
   },
   {
+    "id": "Vin:Sazed",
+    "characterId1": "Vin",
+    "characterId2": "Sazed",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
+    "id": "Vin:Marsh",
+    "characterId1": "Vin",
+    "characterId2": "Marsh",
+    "type": "",
+    "bookId": "mistborn1"
+  },
+  {
     "id": "Sazed:Marsh",
     "characterId1": "Sazed",
     "characterId2": "Marsh",
@@ -4151,65 +4165,51 @@
     "bookId": "mistborn1"
   },
   {
-    "id": "Sazed:Vin",
-    "characterId1": "Sazed",
-    "characterId2": "Vin",
+    "id": "El:Ham",
+    "characterId1": "El",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Marsh:Vin",
-    "characterId1": "Marsh",
-    "characterId2": "Vin",
+    "id": "Elend:Ham",
+    "characterId1": "Elend",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:El",
-    "characterId1": "Ham",
-    "characterId2": "El",
+    "id": "Elend:Straff Venture",
+    "characterId1": "Elend",
+    "characterId2": "Straff Venture",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Elend_Venture",
-    "characterId1": "Ham",
-    "characterId2": "Elend_Venture",
+    "id": "Vin:Elend",
+    "characterId1": "Vin",
+    "characterId2": "Elend",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Straff Venture:Elend_Venture",
-    "characterId1": "Straff Venture",
-    "characterId2": "Elend_Venture",
+    "id": "Vin:Ham",
+    "characterId1": "Vin",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Elend_Venture",
-    "characterId1": "Ham",
-    "characterId2": "Elend_Venture",
+    "id": "Elend:Ham",
+    "characterId1": "Elend",
+    "characterId2": "Ham",
     "type": "",
     "bookId": "mistborn1"
   },
   {
-    "id": "Ham:Vin",
-    "characterId1": "Ham",
-    "characterId2": "Vin",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "Elend_Venture:Vin",
-    "characterId1": "Elend_Venture",
-    "characterId2": "Vin",
-    "type": "",
-    "bookId": "mistborn1"
-  },
-  {
-    "id": "OreSeur:Vin",
-    "characterId1": "OreSeur",
-    "characterId2": "Vin",
+    "id": "Vin:OreSeur",
+    "characterId1": "Vin",
+    "characterId2": "OreSeur",
     "type": "",
     "bookId": "mistborn1"
   }
