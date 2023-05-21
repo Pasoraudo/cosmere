@@ -1,4 +1,4 @@
-export const cosmerePlanets = () => ['Roshar', 'Yolen', 'Scadrial'];
+export const cosmerePlanets = () => ['Roshar', 'Yolen', 'Scadrial', 'Nalthis'];
 export interface Planet {
   id: string;
 

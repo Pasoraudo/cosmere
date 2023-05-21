@@ -1,4 +1,4 @@
-export const cosmereBookIds = () => ['mistborn1', 'mistborn2', 'warbreaker'];
+export const cosmereBookIds = () => ['warbreaker', 'mistborn1', 'mistborn2'];
 export interface Book {
   id: string;
 
