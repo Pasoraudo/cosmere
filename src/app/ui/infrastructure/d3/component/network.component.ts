@@ -15,7 +15,7 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
 
 
   characterLinks: D3Link[] = [];
-  width: number = 1000;
+  width: number = 1400;
   height: number = 800;
 
   private edgeGroups: string[] = []
