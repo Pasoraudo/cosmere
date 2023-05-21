@@ -63,8 +63,9 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
     // @ts-ignore
     this.simulation = d3.forceSimulation(this.nodes) // @ts-ignore
       .force("link", d3.forceLink(this.characterLinks).id(this.id)) // @ts-ignore
-      .force("charge", d3.forceManyBody().strength(d => d.score * (-50)))
-      .force("center", d3.forceCenter(this.width / 2, this.height / 2))
+      .force("charge", d3.forceManyBody().strength(d => d.score * (-3)))
+      .force("center", d3.forceCenter(this.width / 2, this.height / 2))// @ts-ignore
+      .force("radius", d3.forceCollide(d => d.score + 20))
       .on("tick", () => {
         this.link.attr("d", this.linkArc);
         this.node.attr("transform", d => `translate(${d.x}, ${d.y})`);
@@ -126,8 +127,7 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
       .style("font-size", "1rem")
       .style("color", "white")
       .style("text-anchor", "middle")
-      .style("dominant-baseline", "central")
-    ;
+      .style("dominant-baseline", "central");
   }
 
   private linkArc(d) {
