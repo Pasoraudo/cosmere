@@ -6,11 +6,7 @@ import {defer} from 'lodash';
 import {Book} from '../../../../../../../domain/model/book';
 import {FormControl} from '@angular/forms';
 import {FormBuilderService} from '../../../../../../../domain/service/form/form.builder';
-import {
-  charactersToD3Nodes,
-  charactersToNodes,
-  relationshipsToLinks
-} from '../../../../../../../domain/function/network.helper';
+import {charactersToD3Nodes, relationshipsToLinks} from '../../../../../../../domain/function/network.helper';
 import {D3Link, D3Node} from '../../../../../infrastructure/vis/model/network';
 import {Character} from '../../../../../../../domain/model/character';
 import {Relationship} from '../../../../../../../domain/model/relationship';
@@ -27,6 +23,7 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
   nodes: D3Node[] = [];
   edges: D3Link[] = [];
   characters: Character[] = [];
+  relationshipCharacters: Character[] = [];
   relationships: Relationship[] = [];
 
   books: Book[];
@@ -67,18 +64,15 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
 
   setCharacters(characters: Character[]) {
     this.characters = characters;
-    if (this.relationships.length === 0)
-      return;
-
-    let relationshipCharacters = this.relationships.map(relationship => relationship.characterId1);
-    relationshipCharacters = relationshipCharacters.concat(this.relationships.map(relationship => relationship.characterId2))
-    relationshipCharacters = Array.from(new Set<string>(relationshipCharacters))
-    this.characters = characters.filter(character => relationshipCharacters.includes(character.id));
     this.applyFilters();
   }
 
   setRelationships(relationships: Relationship[]) {
     this.relationships = relationships;
+    let relationshipCharacters = this.relationships.map(relationship => relationship.characterId1);
+    relationshipCharacters = relationshipCharacters.concat(this.relationships.map(relationship => relationship.characterId2))
+    relationshipCharacters = Array.from(new Set<string>(relationshipCharacters))
+    this.relationshipCharacters = this.characters.filter(character => relationshipCharacters.includes(character.id));
     this.applyFilters();
   }
 
@@ -88,7 +82,7 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
   }
 
   filteredCharacters(): Character[] {
-    let filteredCharacters = this.characters;
+    let filteredCharacters = this.relationshipCharacters;
     if (this.bookControl.value.length > 0) {
       const selectedBooksIds = this.books.filter(book => this.bookControl.value.includes(book.title)).map(book => book.id);
       filteredCharacters = filteredCharacters.filter(character => character.bookIds.filter(bookId => selectedBooksIds.includes(bookId)).length > 0);
