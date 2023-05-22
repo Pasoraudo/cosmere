@@ -69,9 +69,10 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
 
   setRelationships(relationships: Relationship[]) {
     this.relationships = relationships;
+
     let relationshipCharacters = this.relationships.map(relationship => relationship.characterId1);
     relationshipCharacters = relationshipCharacters.concat(this.relationships.map(relationship => relationship.characterId2))
-    relationshipCharacters = Array.from(new Set<string>(relationshipCharacters))
+    relationshipCharacters = Array.from(new Set<string>(relationshipCharacters));
     this.relationshipCharacters = this.characters.filter(character => relationshipCharacters.includes(character.id));
     this.applyFilters();
   }

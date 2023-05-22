@@ -1,36 +1,15 @@
 [
   {
-    "id": "Hallandren:Vasher",
-    "characterId1": "Hallandren",
-    "characterId2": "Vasher",
+    "id": "Zahel:Vahr",
+    "characterId1": "Zahel",
+    "characterId2": "Vahr",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Vahr:Vasher",
-    "characterId1": "Vahr",
-    "characterId2": "Vasher",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "God King:Vasher",
-    "characterId1": "God King",
-    "characterId2": "Vasher",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Fafen:Siri",
+    "id": "Fafen:Sisirinah",
     "characterId1": "Fafen",
-    "characterId2": "Siri",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Fafen:Ridger",
-    "characterId1": "Fafen",
-    "characterId2": "Ridger",
+    "characterId2": "Sisirinah",
     "type": "",
     "bookId": "warbreaker"
   },
@@ -49,51 +28,30 @@
     "bookId": "warbreaker"
   },
   {
-    "id": "Ridger:Vivenna",
-    "characterId1": "Ridger",
+    "id": "Fafen:Ridger",
+    "characterId1": "Fafen",
+    "characterId2": "Ridger",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Vivenna:Ridger",
+    "characterId1": "Vivenna",
+    "characterId2": "Ridger",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Sisirinah:Mab",
+    "characterId1": "Sisirinah",
+    "characterId2": "Mab",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Father_Bin:Vivenna",
+    "characterId1": "Father_Bin",
     "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Mab:Siri",
-    "characterId1": "Mab",
-    "characterId2": "Siri",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Mab:Austre",
-    "characterId1": "Mab",
-    "characterId2": "Austre",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Father:Hallandren",
-    "characterId1": "Father",
-    "characterId2": "Hallandren",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Father:Vivenna",
-    "characterId1": "Father",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Hallandren:Vivenna",
-    "characterId1": "Hallandren",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Vahr:Idris",
-    "characterId1": "Vahr",
-    "characterId2": "Idris",
     "type": "",
     "bookId": "warbreaker"
   },
@@ -105,13 +63,6 @@
     "bookId": "warbreaker"
   },
   {
-    "id": "Hallandren:Idris",
-    "characterId1": "Hallandren",
-    "characterId2": "Idris",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
     "id": "Dedelin:Yarda",
     "characterId1": "Dedelin",
     "characterId2": "Yarda",
@@ -119,373 +70,163 @@
     "bookId": "warbreaker"
   },
   {
-    "id": "Yarda:Vivenna",
-    "characterId1": "Yarda",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Tedradel:Hallandren",
-    "characterId1": "Tedradel",
-    "characterId2": "Hallandren",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Hallandren:Vivenna",
-    "characterId1": "Hallandren",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Idris:Vivenna",
-    "characterId1": "Idris",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Fafen:Vivenna",
-    "characterId1": "Fafen",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Mab:Vivenna",
-    "characterId1": "Mab",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Ridger:Vivenna",
-    "characterId1": "Ridger",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Siri:Idris",
-    "characterId1": "Siri",
-    "characterId2": "Idris",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Fafen:Siri",
-    "characterId1": "Fafen",
-    "characterId2": "Siri",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Fafen:Vivenna",
-    "characterId1": "Fafen",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Siri:Vivenna",
-    "characterId1": "Siri",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Siri:Vivenna",
-    "characterId1": "Siri",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Lightsong:Scoot",
-    "characterId1": "Lightsong",
-    "characterId2": "Scoot",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Llarimar:Lightsong",
-    "characterId1": "Llarimar",
-    "characterId2": "Lightsong",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Susebron:Lightsong",
-    "characterId1": "Susebron",
-    "characterId2": "Lightsong",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Sisirinah Royal:Treledees",
-    "characterId1": "Sisirinah Royal",
-    "characterId2": "Treledees",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Sisirinah Royal:Susebron",
-    "characterId1": "Sisirinah Royal",
-    "characterId2": "Susebron",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Treledees:Susebron",
-    "characterId1": "Treledees",
-    "characterId2": "Susebron",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Father:Siri",
-    "characterId1": "Father",
-    "characterId2": "Siri",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Father:Vivenna",
-    "characterId1": "Father",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Siri:Vivenna",
-    "characterId1": "Siri",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Nightblood:Vasher",
-    "characterId1": "Nightblood",
-    "characterId2": "Vasher",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Bebid:Idris",
-    "characterId1": "Bebid",
-    "characterId2": "Idris",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Bebid:Vasher",
-    "characterId1": "Bebid",
-    "characterId2": "Vasher",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Llarimar:Idris",
-    "characterId1": "Llarimar",
-    "characterId2": "Idris",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Havarseth:Bluefingers",
-    "characterId1": "Havarseth",
-    "characterId2": "Bluefingers",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Bluefingers:Siri",
-    "characterId1": "Bluefingers",
-    "characterId2": "Siri",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "the God King:Siri",
-    "characterId1": "the God King",
-    "characterId2": "Siri",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "the God King’s:Bluefingers",
-    "characterId1": "the God King’s",
-    "characterId2": "Bluefingers",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Blushweaver:Lightsong",
-    "characterId1": "Blushweaver",
-    "characterId2": "Lightsong",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Calmseer:Lightsong",
-    "characterId1": "Calmseer",
-    "characterId2": "Lightsong",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Peacegiver:Kalad",
-    "characterId1": "Peacegiver",
-    "characterId2": "Kalad",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Bluefingers:Vessel",
-    "characterId1": "Bluefingers",
-    "characterId2": "Vessel",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Vivenna:Parlin",
+    "id": "Vivenna:Yarda",
     "characterId1": "Vivenna",
-    "characterId2": "Parlin",
+    "characterId2": "Yarda",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "the God King’s:Susebron",
-    "characterId1": "the God King’s",
-    "characterId2": "Susebron",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "the God King’s:Siri",
-    "characterId1": "the God King’s",
-    "characterId2": "Siri",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Susebron:Siri",
-    "characterId1": "Susebron",
-    "characterId2": "Siri",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Siri:Hallandren",
-    "characterId1": "Siri",
-    "characterId2": "Hallandren",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Siri:Vivenna",
-    "characterId1": "Siri",
+    "id": "Fafen:Vivenna",
+    "characterId1": "Fafen",
     "characterId2": "Vivenna",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Hallandren:Vivenna",
-    "characterId1": "Hallandren",
+    "id": "Vivenna:Mab",
+    "characterId1": "Vivenna",
+    "characterId2": "Mab",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Vivenna:Ridger",
+    "characterId1": "Vivenna",
+    "characterId2": "Ridger",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Fafen:Sisirinah",
+    "characterId1": "Fafen",
+    "characterId2": "Sisirinah",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Fafen:Vivenna",
+    "characterId1": "Fafen",
     "characterId2": "Vivenna",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Lemex:Vivenna",
-    "characterId1": "Lemex",
+    "id": "Sisirinah:Vivenna",
+    "characterId1": "Sisirinah",
     "characterId2": "Vivenna",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Tonk Fah:Denth",
-    "characterId1": "Tonk Fah",
-    "characterId2": "Denth",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Austre:Vivenna",
-    "characterId1": "Austre",
+    "id": "Sisirinah:Vivenna",
+    "characterId1": "Sisirinah",
     "characterId2": "Vivenna",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Denth:Vivenna",
-    "characterId1": "Denth",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Siri:Treledees",
-    "characterId1": "Siri",
+    "id": "Susebron_the_Fourth:Treledees",
+    "characterId1": "Susebron_the_Fourth",
     "characterId2": "Treledees",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Vessel:Treledees",
-    "characterId1": "Vessel",
-    "characterId2": "Treledees",
+    "id": "Sisirinah:Father_Bin",
+    "characterId1": "Sisirinah",
+    "characterId2": "Father_Bin",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Siri:Hallandren",
-    "characterId1": "Siri",
-    "characterId2": "Hallandren",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Bluefingers:the God King",
-    "characterId1": "Bluefingers",
-    "characterId2": "the God King",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "The God King:Siri",
-    "characterId1": "The God King",
-    "characterId2": "Siri",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Tonk Fah:Vivenna",
-    "characterId1": "Tonk Fah",
+    "id": "Sisirinah:Vivenna",
+    "characterId1": "Sisirinah",
     "characterId2": "Vivenna",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Lemex:Denth",
-    "characterId1": "Lemex",
-    "characterId2": "Denth",
+    "id": "Father_Bin:Vivenna",
+    "characterId1": "Father_Bin",
+    "characterId2": "Vivenna",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Lemex:Idris",
-    "characterId1": "Lemex",
-    "characterId2": "Idris",
+    "id": "Zahel:Nightblood",
+    "characterId1": "Zahel",
+    "characterId2": "Nightblood",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Lemex:Hallandren",
-    "characterId1": "Lemex",
-    "characterId2": "Hallandren",
+    "id": "Bebid:Zahel",
+    "characterId1": "Bebid",
+    "characterId2": "Zahel",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Havarseth:Sisirinah",
+    "characterId1": "Havarseth",
+    "characterId2": "Sisirinah",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Parlin:Vivenna",
+    "characterId1": "Parlin",
+    "characterId2": "Vivenna",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Sisirinah:Susebron_the_Fourth",
+    "characterId1": "Sisirinah",
+    "characterId2": "Susebron_the_Fourth",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Vivenna:Lemex",
+    "characterId1": "Vivenna",
+    "characterId2": "Lemex",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "VaraTreledees:Tonk_Fah",
+    "characterId1": "VaraTreledees",
+    "characterId2": "Tonk_Fah",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "VaraTreledees:Vivenna",
+    "characterId1": "VaraTreledees",
+    "characterId2": "Vivenna",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Sisirinah:Treledees",
+    "characterId1": "Sisirinah",
+    "characterId2": "Treledees",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Vivenna:Tonk_Fah",
+    "characterId1": "Vivenna",
+    "characterId2": "Tonk_Fah",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "VaraTreledees:Lemex",
+    "characterId1": "VaraTreledees",
+    "characterId2": "Lemex",
     "type": "",
     "bookId": "warbreaker"
   },
@@ -504,72 +245,23 @@
     "bookId": "warbreaker"
   },
   {
-    "id": "Susebron:Siri",
-    "characterId1": "Susebron",
-    "characterId2": "Siri",
+    "id": "Havarseth:Zahel",
+    "characterId1": "Havarseth",
+    "characterId2": "Zahel",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Manywar:Hallandren",
-    "characterId1": "Manywar",
-    "characterId2": "Hallandren",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Siri:Austre",
-    "characterId1": "Siri",
-    "characterId2": "Austre",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Pahn Kahl:Hallandren",
-    "characterId1": "Pahn Kahl",
-    "characterId2": "Hallandren",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Bluefingers:Peacegiver the Blessed",
-    "characterId1": "Bluefingers",
-    "characterId2": "Peacegiver the Blessed",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Stillmark:Lightsong",
+    "id": "Stillmark:Nanrovah",
     "characterId1": "Stillmark",
-    "characterId2": "Lightsong",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Nanrovah:Stillmark",
-    "characterId1": "Nanrovah",
-    "characterId2": "Stillmark",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Blushweaver:Stillmark",
-    "characterId1": "Blushweaver",
-    "characterId2": "Stillmark",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Blushweaver:Nanrovah",
-    "characterId1": "Blushweaver",
     "characterId2": "Nanrovah",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Blushweaver:Inhanna",
-    "characterId1": "Blushweaver",
-    "characterId2": "Inhanna",
+    "id": "Stillmark:Blushweaver",
+    "characterId1": "Stillmark",
+    "characterId2": "Blushweaver",
     "type": "",
     "bookId": "warbreaker"
   },
@@ -581,23 +273,16 @@
     "bookId": "warbreaker"
   },
   {
-    "id": "the God King’s:Siri",
-    "characterId1": "the God King’s",
-    "characterId2": "Siri",
+    "id": "Nanrovah:Blushweaver",
+    "characterId1": "Nanrovah",
+    "characterId2": "Blushweaver",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Lemex:Parlin",
-    "characterId1": "Lemex",
-    "characterId2": "Parlin",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Lemex:Vivenna",
-    "characterId1": "Lemex",
-    "characterId2": "Vivenna",
+    "id": "Inhanna:Blushweaver",
+    "characterId1": "Inhanna",
+    "characterId2": "Blushweaver",
     "type": "",
     "bookId": "warbreaker"
   },
@@ -609,65 +294,44 @@
     "bookId": "warbreaker"
   },
   {
-    "id": "Tonks:Denth",
-    "characterId1": "Tonks",
-    "characterId2": "Denth",
+    "id": "Parlin:Lemex",
+    "characterId1": "Parlin",
+    "characterId2": "Lemex",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Tonk Fah’s:Denth",
-    "characterId1": "Tonk Fah’s",
-    "characterId2": "Denth",
+    "id": "Vivenna:Lemex",
+    "characterId1": "Vivenna",
+    "characterId2": "Lemex",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Dedelin:Siri",
-    "characterId1": "Dedelin",
-    "characterId2": "Siri",
+    "id": "Sisirinah:Dedelin",
+    "characterId1": "Sisirinah",
+    "characterId2": "Dedelin",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Vahr:Denth",
-    "characterId1": "Vahr",
-    "characterId2": "Denth",
+    "id": "VaraTreledees:Vahr",
+    "characterId1": "VaraTreledees",
+    "characterId2": "Vahr",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "the God King’s:Treledees",
-    "characterId1": "the God King’s",
-    "characterId2": "Treledees",
+    "id": "Tonk_Fah:Vahr",
+    "characterId1": "Tonk_Fah",
+    "characterId2": "Vahr",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Llarimar:Your Grace",
-    "characterId1": "Llarimar",
-    "characterId2": "Your Grace",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Vahr:Tonk Fah",
-    "characterId1": "Vahr",
-    "characterId2": "Tonk Fah",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Denth:Jewels",
-    "characterId1": "Denth",
-    "characterId2": "Jewels",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Denth:Vivenna",
-    "characterId1": "Denth",
-    "characterId2": "Vivenna",
+    "id": "Jewels:VaraTreledees",
+    "characterId1": "Jewels",
+    "characterId2": "VaraTreledees",
     "type": "",
     "bookId": "warbreaker"
   },
@@ -679,93 +343,86 @@
     "bookId": "warbreaker"
   },
   {
-    "id": "Jewels:Vivenna",
-    "characterId1": "Jewels",
+    "id": "VaraTreledees:Vivenna",
+    "characterId1": "VaraTreledees",
     "characterId2": "Vivenna",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Jewels:Denth",
-    "characterId1": "Jewels",
-    "characterId2": "Denth",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Tonk Fah:Vasher",
-    "characterId1": "Tonk Fah",
-    "characterId2": "Vasher",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Tonk Fah:Tax",
-    "characterId1": "Tonk Fah",
-    "characterId2": "Tax",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Vasher:Tax",
-    "characterId1": "Vasher",
-    "characterId2": "Tax",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Arsteel:Denth",
-    "characterId1": "Arsteel",
-    "characterId2": "Denth",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Arsteel:Vasher",
-    "characterId1": "Arsteel",
-    "characterId2": "Vasher",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Vasher:Vivenna",
-    "characterId1": "Vasher",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Tonk Fah:Jewels",
-    "characterId1": "Tonk Fah",
+    "id": "Vivenna:Jewels",
+    "characterId1": "Vivenna",
     "characterId2": "Jewels",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Giftbeacon:Peaceyearning",
-    "characterId1": "Giftbeacon",
-    "characterId2": "Peaceyearning",
+    "id": "VaraTreledees:Jewels",
+    "characterId1": "VaraTreledees",
+    "characterId2": "Jewels",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Giftbeacon:Vasher",
-    "characterId1": "Giftbeacon",
-    "characterId2": "Vasher",
+    "id": "Zahel:Tonk_Fah",
+    "characterId1": "Zahel",
+    "characterId2": "Tonk_Fah",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Peaceyearning:Vasher",
+    "id": "VaraTreledees:Clod",
+    "characterId1": "VaraTreledees",
+    "characterId2": "Clod",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Zahel:Clod",
+    "characterId1": "Zahel",
+    "characterId2": "Clod",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Zahel:Vivenna",
+    "characterId1": "Zahel",
+    "characterId2": "Vivenna",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Jewels:Tonk_Fah",
+    "characterId1": "Jewels",
+    "characterId2": "Tonk_Fah",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Peaceyearning:Zahel",
     "characterId1": "Peaceyearning",
-    "characterId2": "Vasher",
+    "characterId2": "Zahel",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Mercystar:Vasher",
+    "id": "Peaceyearning:Giftbeacon",
+    "characterId1": "Peaceyearning",
+    "characterId2": "Giftbeacon",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Zahel:Giftbeacon",
+    "characterId1": "Zahel",
+    "characterId2": "Giftbeacon",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Mercystar:Zahel",
     "characterId1": "Mercystar",
-    "characterId2": "Vasher",
+    "characterId2": "Zahel",
     "type": "",
     "bookId": "warbreaker"
   },
@@ -791,20 +448,6 @@
     "bookId": "warbreaker"
   },
   {
-    "id": "Truthcall:Lightsong",
-    "characterId1": "Truthcall",
-    "characterId2": "Lightsong",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Weatherlove:Lightsong",
-    "characterId1": "Weatherlove",
-    "characterId2": "Lightsong",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
     "id": "Truthcall:Lifeblesser",
     "characterId1": "Truthcall",
     "characterId2": "Lifeblesser",
@@ -812,23 +455,16 @@
     "bookId": "warbreaker"
   },
   {
-    "id": "Lifeblesser:Lightsong",
-    "characterId1": "Lifeblesser",
-    "characterId2": "Lightsong",
+    "id": "Fob:Tonk_Fah",
+    "characterId1": "Fob",
+    "characterId2": "Tonk_Fah",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Fob:Tonk Fah",
+    "id": "Fob:VaraTreledees",
     "characterId1": "Fob",
-    "characterId2": "Tonk Fah",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Fob:Denth",
-    "characterId1": "Fob",
-    "characterId2": "Denth",
+    "characterId2": "VaraTreledees",
     "type": "",
     "bookId": "warbreaker"
   },
@@ -840,13 +476,6 @@
     "bookId": "warbreaker"
   },
   {
-    "id": "Fob:Tonk Fah",
-    "characterId1": "Fob",
-    "characterId2": "Tonk Fah",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
     "id": "Fob:Vivenna",
     "characterId1": "Fob",
     "characterId2": "Vivenna",
@@ -854,198 +483,107 @@
     "bookId": "warbreaker"
   },
   {
-    "id": "Tonk Fah:Vivenna",
-    "characterId1": "Tonk Fah",
-    "characterId2": "Vivenna",
+    "id": "Fob:Tonk_Fah",
+    "characterId1": "Fob",
+    "characterId2": "Tonk_Fah",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Parlin:Clod the Lifeless",
+    "id": "Vivenna:Tonk_Fah",
+    "characterId1": "Vivenna",
+    "characterId2": "Tonk_Fah",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "VaraTreledees:Parlin",
+    "characterId1": "VaraTreledees",
+    "characterId2": "Parlin",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "VaraTreledees:Tonk_Fah",
+    "characterId1": "VaraTreledees",
+    "characterId2": "Tonk_Fah",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Parlin:Tonk_Fah",
     "characterId1": "Parlin",
-    "characterId2": "Clod the Lifeless",
+    "characterId2": "Tonk_Fah",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Parlin:Vivenna",
-    "characterId1": "Parlin",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Clod the Lifeless:Vivenna",
-    "characterId1": "Clod the Lifeless",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Parlin:Tonk Fah",
-    "characterId1": "Parlin",
-    "characterId2": "Tonk Fah",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Parlin:Denth",
-    "characterId1": "Parlin",
-    "characterId2": "Denth",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Tonk Fah:Denth",
-    "characterId1": "Tonk Fah",
-    "characterId2": "Denth",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Clod:Jewels",
-    "characterId1": "Clod",
+    "id": "Vivenna:Jewels",
+    "characterId1": "Vivenna",
     "characterId2": "Jewels",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Clod:Vivenna",
-    "characterId1": "Clod",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Jewels:Vivenna",
-    "characterId1": "Jewels",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Grable:Tonk Fah",
-    "characterId1": "Grable",
-    "characterId2": "Tonk Fah",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Grable:Vivenna",
-    "characterId1": "Grable",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Grable:Denth",
-    "characterId1": "Grable",
-    "characterId2": "Denth",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Vivenna:Tonk Fah",
+    "id": "Vivenna:Clod",
     "characterId1": "Vivenna",
-    "characterId2": "Tonk Fah",
+    "characterId2": "Clod",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Vivenna:Denth",
+    "id": "Jewels:Clod",
+    "characterId1": "Jewels",
+    "characterId2": "Clod",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Tonk_Fah:Grable",
+    "characterId1": "Tonk_Fah",
+    "characterId2": "Grable",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Vivenna:Grable",
     "characterId1": "Vivenna",
-    "characterId2": "Denth",
+    "characterId2": "Grable",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Tonk Fah:Denth",
-    "characterId1": "Tonk Fah",
-    "characterId2": "Denth",
+    "id": "VaraTreledees:Grable",
+    "characterId1": "VaraTreledees",
+    "characterId2": "Grable",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Jewels:Tonk Fah",
-    "characterId1": "Jewels",
-    "characterId2": "Tonk Fah",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Jewels:Denth",
-    "characterId1": "Jewels",
-    "characterId2": "Denth",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Jewels:Parlin",
-    "characterId1": "Jewels",
-    "characterId2": "Parlin",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Jewels:Vivenna",
-    "characterId1": "Jewels",
+    "id": "VaraTreledees:Vivenna",
+    "characterId1": "VaraTreledees",
     "characterId2": "Vivenna",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Jewels:Idrian",
-    "characterId1": "Jewels",
-    "characterId2": "Idrian",
+    "id": "VaraTreledees:Tonk_Fah",
+    "characterId1": "VaraTreledees",
+    "characterId2": "Tonk_Fah",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Tonk Fah:Denth",
-    "characterId1": "Tonk Fah",
-    "characterId2": "Denth",
+    "id": "Vivenna:Tonk_Fah",
+    "characterId1": "Vivenna",
+    "characterId2": "Tonk_Fah",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Tonk Fah:Parlin",
-    "characterId1": "Tonk Fah",
-    "characterId2": "Parlin",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Tonk Fah:Vivenna",
-    "characterId1": "Tonk Fah",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Tonk Fah:Idrian",
-    "characterId1": "Tonk Fah",
-    "characterId2": "Idrian",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Denth:Parlin",
-    "characterId1": "Denth",
-    "characterId2": "Parlin",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Denth:Vivenna",
-    "characterId1": "Denth",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Denth:Idrian",
-    "characterId1": "Denth",
-    "characterId2": "Idrian",
+    "id": "Parlin:VaraTreledees",
+    "characterId1": "Parlin",
+    "characterId2": "VaraTreledees",
     "type": "",
     "bookId": "warbreaker"
   },
@@ -1057,44 +595,9 @@
     "bookId": "warbreaker"
   },
   {
-    "id": "Parlin:Idrian",
+    "id": "Parlin:Tonk_Fah",
     "characterId1": "Parlin",
-    "characterId2": "Idrian",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Vivenna:Idrian",
-    "characterId1": "Vivenna",
-    "characterId2": "Idrian",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Mercystar:Blushweaver",
-    "characterId1": "Mercystar",
-    "characterId2": "Blushweaver",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Mercystar:Lightsong",
-    "characterId1": "Mercystar",
-    "characterId2": "Lightsong",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "the God King:Treledees",
-    "characterId1": "the God King",
-    "characterId2": "Treledees",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Tonk Fah:Parlin",
-    "characterId1": "Tonk Fah",
-    "characterId2": "Parlin",
+    "characterId2": "Tonk_Fah",
     "type": "",
     "bookId": "warbreaker"
   },
@@ -1106,9 +609,65 @@
     "bookId": "warbreaker"
   },
   {
-    "id": "Parlin:Vivenna",
-    "characterId1": "Parlin",
+    "id": "VaraTreledees:Vivenna",
+    "characterId1": "VaraTreledees",
     "characterId2": "Vivenna",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "VaraTreledees:Tonk_Fah",
+    "characterId1": "VaraTreledees",
+    "characterId2": "Tonk_Fah",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "VaraTreledees:Jewels",
+    "characterId1": "VaraTreledees",
+    "characterId2": "Jewels",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Vivenna:Tonk_Fah",
+    "characterId1": "Vivenna",
+    "characterId2": "Tonk_Fah",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Vivenna:Jewels",
+    "characterId1": "Vivenna",
+    "characterId2": "Jewels",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Tonk_Fah:Jewels",
+    "characterId1": "Tonk_Fah",
+    "characterId2": "Jewels",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Mercystar:Blushweaver",
+    "characterId1": "Mercystar",
+    "characterId2": "Blushweaver",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Parlin:Tonk_Fah",
+    "characterId1": "Parlin",
+    "characterId2": "Tonk_Fah",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Jewels:Parlin",
+    "characterId1": "Jewels",
+    "characterId2": "Parlin",
     "type": "",
     "bookId": "warbreaker"
   },
@@ -1120,16 +679,16 @@
     "bookId": "warbreaker"
   },
   {
-    "id": "Lightsong:Allmother",
-    "characterId1": "Lightsong",
-    "characterId2": "Allmother",
+    "id": "Parlin:Vivenna",
+    "characterId1": "Parlin",
+    "characterId2": "Vivenna",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Lolan:Taff",
-    "characterId1": "Lolan",
-    "characterId2": "Taff",
+    "id": "Taff:Lolan",
+    "characterId1": "Taff",
+    "characterId2": "Lolan",
     "type": "",
     "bookId": "warbreaker"
   },
@@ -1141,142 +700,107 @@
     "bookId": "warbreaker"
   },
   {
-    "id": "Bluefingers:Susebron",
-    "characterId1": "Bluefingers",
-    "characterId2": "Susebron",
+    "id": "Havarseth:Susebron_the_Fourth",
+    "characterId1": "Havarseth",
+    "characterId2": "Susebron_the_Fourth",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Lightsong the Bold:Siri",
-    "characterId1": "Lightsong the Bold",
-    "characterId2": "Siri",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "The God Kings:Siri",
-    "characterId1": "The God Kings",
-    "characterId2": "Siri",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Siri:Lightsong",
-    "characterId1": "Siri",
+    "id": "Sisirinah:Lightsong",
+    "characterId1": "Sisirinah",
     "characterId2": "Lightsong",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Thame:Vivenna",
-    "characterId1": "Thame",
-    "characterId2": "Vivenna",
+    "id": "Vivenna:Thame",
+    "characterId1": "Vivenna",
+    "characterId2": "Thame",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Jewels:Parlin",
-    "characterId1": "Jewels",
-    "characterId2": "Parlin",
+    "id": "Parlin:Jewels",
+    "characterId1": "Parlin",
+    "characterId2": "Jewels",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Clod:Vivenna",
-    "characterId1": "Clod",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Tonk Fah:Clod",
-    "characterId1": "Tonk Fah",
+    "id": "Vivenna:Clod",
+    "characterId1": "Vivenna",
     "characterId2": "Clod",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Tonk Fah:Jewels",
-    "characterId1": "Tonk Fah",
+    "id": "Parlin:Jewels",
+    "characterId1": "Parlin",
     "characterId2": "Jewels",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Tonk Fah:Parlin",
-    "characterId1": "Tonk Fah",
-    "characterId2": "Parlin",
+    "id": "Parlin:Clod",
+    "characterId1": "Parlin",
+    "characterId2": "Clod",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Clod:Jewels",
-    "characterId1": "Clod",
-    "characterId2": "Jewels",
+    "id": "Parlin:Tonk_Fah",
+    "characterId1": "Parlin",
+    "characterId2": "Tonk_Fah",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Clod:Parlin",
-    "characterId1": "Clod",
-    "characterId2": "Parlin",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Jewels:Parlin",
+    "id": "Jewels:Clod",
     "characterId1": "Jewels",
-    "characterId2": "Parlin",
+    "characterId2": "Clod",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Bluefingers:Austre",
-    "characterId1": "Bluefingers",
-    "characterId2": "Austre",
+    "id": "Jewels:Tonk_Fah",
+    "characterId1": "Jewels",
+    "characterId2": "Tonk_Fah",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Bluefingers:Pahn",
-    "characterId1": "Bluefingers",
-    "characterId2": "Pahn",
+    "id": "Clod:Tonk_Fah",
+    "characterId1": "Clod",
+    "characterId2": "Tonk_Fah",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Austre:Pahn",
-    "characterId1": "Austre",
-    "characterId2": "Pahn",
+    "id": "Jewels:Clod",
+    "characterId1": "Jewels",
+    "characterId2": "Clod",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Arsteel:Jewels",
-    "characterId1": "Arsteel",
+    "id": "Zahel:Jewels",
+    "characterId1": "Zahel",
     "characterId2": "Jewels",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Jewels:Vasher",
-    "characterId1": "Jewels",
-    "characterId2": "Vasher",
+    "id": "Zahel:VaraTreledees",
+    "characterId1": "Zahel",
+    "characterId2": "VaraTreledees",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Vasher:Denth",
-    "characterId1": "Vasher",
-    "characterId2": "Denth",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "VaraTreledees:Denth",
-    "characterId1": "VaraTreledees",
-    "characterId2": "Denth",
+    "id": "Shashara:Zahel",
+    "characterId1": "Shashara",
+    "characterId2": "Zahel",
     "type": "",
     "bookId": "warbreaker"
   },
@@ -1288,16 +812,9 @@
     "bookId": "warbreaker"
   },
   {
-    "id": "Shashara:Vasher",
-    "characterId1": "Shashara",
-    "characterId2": "Vasher",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Nightblood:Vasher",
-    "characterId1": "Nightblood",
-    "characterId2": "Vasher",
+    "id": "Zahel:Nightblood",
+    "characterId1": "Zahel",
+    "characterId2": "Nightblood",
     "type": "",
     "bookId": "warbreaker"
   },
@@ -1316,86 +833,44 @@
     "bookId": "warbreaker"
   },
   {
-    "id": "Hopefinder:Lightsong",
-    "characterId1": "Hopefinder",
-    "characterId2": "Lightsong",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Blushweaver:Hopefinder",
-    "characterId1": "Blushweaver",
-    "characterId2": "Hopefinder",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Blushweaver:Lightsong",
-    "characterId1": "Blushweaver",
-    "characterId2": "Lightsong",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Hopefinder:Lightsong",
-    "characterId1": "Hopefinder",
-    "characterId2": "Lightsong",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Jewels:Tonk Fah",
-    "characterId1": "Jewels",
-    "characterId2": "Tonk Fah",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Jewels:Vivenna",
-    "characterId1": "Jewels",
+    "id": "VaraTreledees:Vivenna",
+    "characterId1": "VaraTreledees",
     "characterId2": "Vivenna",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Jewels:Denth",
-    "characterId1": "Jewels",
-    "characterId2": "Denth",
+    "id": "VaraTreledees:Tonk_Fah",
+    "characterId1": "VaraTreledees",
+    "characterId2": "Tonk_Fah",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Jewels:Clod",
-    "characterId1": "Jewels",
+    "id": "VaraTreledees:Jewels",
+    "characterId1": "VaraTreledees",
+    "characterId2": "Jewels",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "VaraTreledees:Clod",
+    "characterId1": "VaraTreledees",
     "characterId2": "Clod",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Tonk Fah:Vivenna",
-    "characterId1": "Tonk Fah",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Tonk Fah:Denth",
-    "characterId1": "Tonk Fah",
-    "characterId2": "Denth",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Tonk Fah:Clod",
-    "characterId1": "Tonk Fah",
-    "characterId2": "Clod",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Vivenna:Denth",
+    "id": "Vivenna:Tonk_Fah",
     "characterId1": "Vivenna",
-    "characterId2": "Denth",
+    "characterId2": "Tonk_Fah",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Vivenna:Jewels",
+    "characterId1": "Vivenna",
+    "characterId2": "Jewels",
     "type": "",
     "bookId": "warbreaker"
   },
@@ -1407,254 +882,107 @@
     "bookId": "warbreaker"
   },
   {
-    "id": "Denth:Clod",
-    "characterId1": "Denth",
-    "characterId2": "Clod",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Denth:Parlin",
-    "characterId1": "Denth",
-    "characterId2": "Parlin",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Hallandren:Denth",
-    "characterId1": "Hallandren",
-    "characterId2": "Denth",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Thame:Rira",
-    "characterId1": "Thame",
-    "characterId2": "Rira",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Vahr:Ashu",
-    "characterId1": "Vahr",
-    "characterId2": "Ashu",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Kalad:Tonk Fah",
-    "characterId1": "Kalad",
-    "characterId2": "Tonk Fah",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Clod:Tonk Fah",
-    "characterId1": "Clod",
-    "characterId2": "Tonk Fah",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Hoid:Lightsong",
-    "characterId1": "Hoid",
-    "characterId2": "Lightsong",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Strifelover:Siri",
-    "characterId1": "Strifelover",
-    "characterId2": "Siri",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Peacegiver:Susebron",
-    "characterId1": "Peacegiver",
-    "characterId2": "Susebron",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Kalad:Hallandren",
-    "characterId1": "Kalad",
-    "characterId2": "Hallandren",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Kuth:Huth",
-    "characterId1": "Kuth",
-    "characterId2": "Huth",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Hoid:Siri",
-    "characterId1": "Hoid",
-    "characterId2": "Siri",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Clod:Denth",
-    "characterId1": "Clod",
-    "characterId2": "Denth",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Clod:Jewels",
-    "characterId1": "Clod",
+    "id": "Tonk_Fah:Jewels",
+    "characterId1": "Tonk_Fah",
     "characterId2": "Jewels",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "the God King:Vivenna",
-    "characterId1": "the God King",
+    "id": "Tonk_Fah:Clod",
+    "characterId1": "Tonk_Fah",
+    "characterId2": "Clod",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Jewels:Clod",
+    "characterId1": "Jewels",
+    "characterId2": "Clod",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "VaraTreledees:Parlin",
+    "characterId1": "VaraTreledees",
+    "characterId2": "Parlin",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Rira_(character):Thame",
+    "characterId1": "Rira_(character)",
+    "characterId2": "Thame",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Ashu:Vahr",
+    "characterId1": "Ashu",
+    "characterId2": "Vahr",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Clod:Tonk_Fah",
+    "characterId1": "Clod",
+    "characterId2": "Tonk_Fah",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Sisirinah:Zahel",
+    "characterId1": "Sisirinah",
+    "characterId2": "Zahel",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Sisirinah:Hoid",
+    "characterId1": "Sisirinah",
+    "characterId2": "Hoid",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Sisirinah:Blushweaver",
+    "characterId1": "Sisirinah",
+    "characterId2": "Blushweaver",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Allmother:Blushweaver",
+    "characterId1": "Allmother",
+    "characterId2": "Blushweaver",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Susebron_the_Fourth:Vivenna",
+    "characterId1": "Susebron_the_Fourth",
     "characterId2": "Vivenna",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Breath:Vivenna",
-    "characterId1": "Breath",
-    "characterId2": "Vivenna",
+    "id": "Sisirinah:Susebron_the_Fourth",
+    "characterId1": "Sisirinah",
+    "characterId2": "Susebron_the_Fourth",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Blushweaver:Siri",
-    "characterId1": "Blushweaver",
-    "characterId2": "Siri",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Blushweaver:Allmother",
-    "characterId1": "Blushweaver",
-    "characterId2": "Allmother",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "T’Telir:Vivenna",
-    "characterId1": "T’Telir",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Susebron:Vivenna",
-    "characterId1": "Susebron",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Lightsong:Vivenna",
-    "characterId1": "Lightsong",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Denth:Tonk Fah’s",
-    "characterId1": "Denth",
-    "characterId2": "Tonk Fah’s",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Denth:Tonk Fah",
-    "characterId1": "Denth",
-    "characterId2": "Tonk Fah",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Denth:Vivenna",
-    "characterId1": "Denth",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Tonk Fah’s:Tonk Fah",
-    "characterId1": "Tonk Fah’s",
-    "characterId2": "Tonk Fah",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Tonk Fah’s:Vivenna",
-    "characterId1": "Tonk Fah’s",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Tonk Fah:Vivenna",
-    "characterId1": "Tonk Fah",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Kahl:Pahn",
-    "characterId1": "Kahl",
-    "characterId2": "Pahn",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Susebron:Siri",
-    "characterId1": "Susebron",
-    "characterId2": "Siri",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Susebron:Treledees",
-    "characterId1": "Susebron",
+    "id": "Sisirinah:Treledees",
+    "characterId1": "Sisirinah",
     "characterId2": "Treledees",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Siri:Treledees",
-    "characterId1": "Siri",
+    "id": "Susebron_the_Fourth:Treledees",
+    "characterId1": "Susebron_the_Fourth",
     "characterId2": "Treledees",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "God King:Treledees",
-    "characterId1": "God King",
-    "characterId2": "Treledees",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Susebron:Treledees",
-    "characterId1": "Susebron",
-    "characterId2": "Treledees",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Peacegiver:Treledees",
-    "characterId1": "Peacegiver",
-    "characterId2": "Treledees",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Susebron:Hallandren",
-    "characterId1": "Susebron",
-    "characterId2": "Hallandren",
     "type": "",
     "bookId": "warbreaker"
   },
@@ -1666,13 +994,6 @@
     "bookId": "warbreaker"
   },
   {
-    "id": "Her Grace:Lightsong",
-    "characterId1": "Her Grace",
-    "characterId2": "Lightsong",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
     "id": "Calmseer:Allmother",
     "characterId1": "Calmseer",
     "characterId2": "Allmother",
@@ -1680,16 +1001,9 @@
     "bookId": "warbreaker"
   },
   {
-    "id": "Fafen:Ridger",
+    "id": "Fafen:Sisirinah",
     "characterId1": "Fafen",
-    "characterId2": "Ridger",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Fafen:Siri",
-    "characterId1": "Fafen",
-    "characterId2": "Siri",
+    "characterId2": "Sisirinah",
     "type": "",
     "bookId": "warbreaker"
   },
@@ -1701,22 +1015,50 @@
     "bookId": "warbreaker"
   },
   {
-    "id": "Ridger:Siri",
-    "characterId1": "Ridger",
-    "characterId2": "Siri",
+    "id": "Fafen:Ridger",
+    "characterId1": "Fafen",
+    "characterId2": "Ridger",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Ridger:Vivenna",
-    "characterId1": "Ridger",
+    "id": "Sisirinah:Vivenna",
+    "characterId1": "Sisirinah",
     "characterId2": "Vivenna",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Siri:Vivenna",
-    "characterId1": "Siri",
+    "id": "Sisirinah:Ridger",
+    "characterId1": "Sisirinah",
+    "characterId2": "Ridger",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Vivenna:Ridger",
+    "characterId1": "Vivenna",
+    "characterId2": "Ridger",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Nightblood:Vivenna",
+    "characterId1": "Nightblood",
+    "characterId2": "Vivenna",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Zahel:Nightblood",
+    "characterId1": "Zahel",
+    "characterId2": "Nightblood",
+    "type": "",
+    "bookId": "warbreaker"
+  },
+  {
+    "id": "Zahel:Vivenna",
+    "characterId1": "Zahel",
     "characterId2": "Vivenna",
     "type": "",
     "bookId": "warbreaker"
@@ -1729,37 +1071,16 @@
     "bookId": "warbreaker"
   },
   {
-    "id": "Nightblood:Vasher",
-    "characterId1": "Nightblood",
-    "characterId2": "Vasher",
+    "id": "Zahel:Nanrovah",
+    "characterId1": "Zahel",
+    "characterId2": "Nanrovah",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Nightblood:Vivenna",
-    "characterId1": "Nightblood",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Vasher:Vivenna",
-    "characterId1": "Vasher",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Nanrovah:Vasher",
-    "characterId1": "Nanrovah",
-    "characterId2": "Vasher",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Shashara:Vasher",
+    "id": "Shashara:Zahel",
     "characterId1": "Shashara",
-    "characterId2": "Vasher",
+    "characterId2": "Zahel",
     "type": "",
     "bookId": "warbreaker"
   },
@@ -1771,44 +1092,23 @@
     "bookId": "warbreaker"
   },
   {
-    "id": "the God King of the Iridescent Tones:Vasher",
-    "characterId1": "the God King of the Iridescent Tones",
-    "characterId2": "Vasher",
+    "id": "VaraTreledees:Nightblood",
+    "characterId1": "VaraTreledees",
+    "characterId2": "Nightblood",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Tonk Fah:Vasher",
-    "characterId1": "Tonk Fah",
-    "characterId2": "Vasher",
+    "id": "VaraTreledees:Zahel",
+    "characterId1": "VaraTreledees",
+    "characterId2": "Zahel",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Nightblood:Vasher",
+    "id": "Nightblood:Zahel",
     "characterId1": "Nightblood",
-    "characterId2": "Vasher",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Nightblood:Denth",
-    "characterId1": "Nightblood",
-    "characterId2": "Denth",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Vasher:Denth",
-    "characterId1": "Vasher",
-    "characterId2": "Denth",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Lord of Colors:Vivenna",
-    "characterId1": "Lord of Colors",
-    "characterId2": "Vivenna",
+    "characterId2": "Zahel",
     "type": "",
     "bookId": "warbreaker"
   },
@@ -1820,107 +1120,30 @@
     "bookId": "warbreaker"
   },
   {
-    "id": "Bluefingers:Gendren",
-    "characterId1": "Bluefingers",
-    "characterId2": "Gendren",
+    "id": "Gendren:Havarseth",
+    "characterId1": "Gendren",
+    "characterId2": "Havarseth",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Bluefingers:Lightsong",
-    "characterId1": "Bluefingers",
-    "characterId2": "Lightsong",
+    "id": "Zahel:Susebron_the_Fourth",
+    "characterId1": "Zahel",
+    "characterId2": "Susebron_the_Fourth",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Pahn Kahl:Denth",
-    "characterId1": "Pahn Kahl",
-    "characterId2": "Denth",
+    "id": "Shashara:VaraTreledees",
+    "characterId1": "Shashara",
+    "characterId2": "VaraTreledees",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Hallandren:Pahn",
-    "characterId1": "Hallandren",
-    "characterId2": "Pahn",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Pahn Kahl:Vasher",
-    "characterId1": "Pahn Kahl",
-    "characterId2": "Vasher",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Pahn Kahl:Denth",
-    "characterId1": "Pahn Kahl",
-    "characterId2": "Denth",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Vasher:Denth",
-    "characterId1": "Vasher",
-    "characterId2": "Denth",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Pahn Kahl:Hallandren",
-    "characterId1": "Pahn Kahl",
-    "characterId2": "Hallandren",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Pahn Kahl:Idris",
-    "characterId1": "Pahn Kahl",
-    "characterId2": "Idris",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Hallandren:Idris",
-    "characterId1": "Hallandren",
-    "characterId2": "Idris",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Talaxin:Nightblood",
-    "characterId1": "Talaxin",
-    "characterId2": "Nightblood",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Talaxin:Vivenna",
-    "characterId1": "Talaxin",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Susebron:Idris",
-    "characterId1": "Susebron",
-    "characterId2": "Idris",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "the God King of Hallandren:Vivenna",
-    "characterId1": "the God King of Hallandren",
-    "characterId2": "Vivenna",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Susebron:Vasher",
-    "characterId1": "Susebron",
-    "characterId2": "Vasher",
+    "id": "Shashara:Clod",
+    "characterId1": "Shashara",
+    "characterId2": "Clod",
     "type": "",
     "bookId": "warbreaker"
   },
@@ -1932,44 +1155,23 @@
     "bookId": "warbreaker"
   },
   {
-    "id": "Shashara:Arsteel",
-    "characterId1": "Shashara",
-    "characterId2": "Arsteel",
+    "id": "VaraTreledees:Clod",
+    "characterId1": "VaraTreledees",
+    "characterId2": "Clod",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Shashara:Denth",
-    "characterId1": "Shashara",
-    "characterId2": "Denth",
+    "id": "VaraTreledees:Yesteel",
+    "characterId1": "VaraTreledees",
+    "characterId2": "Yesteel",
     "type": "",
     "bookId": "warbreaker"
   },
   {
-    "id": "Yesteel:Arsteel",
-    "characterId1": "Yesteel",
-    "characterId2": "Arsteel",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Yesteel:Denth",
-    "characterId1": "Yesteel",
-    "characterId2": "Denth",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Arsteel:Denth",
-    "characterId1": "Arsteel",
-    "characterId2": "Denth",
-    "type": "",
-    "bookId": "warbreaker"
-  },
-  {
-    "id": "Arsteel:Vivenna",
-    "characterId1": "Arsteel",
-    "characterId2": "Vivenna",
+    "id": "Clod:Yesteel",
+    "characterId1": "Clod",
+    "characterId2": "Yesteel",
     "type": "",
     "bookId": "warbreaker"
   }
