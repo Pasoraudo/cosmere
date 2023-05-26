@@ -1,49 +1,72 @@
 import {AfterViewInit, Component, Input, OnChanges, SimpleChanges} from '@angular/core';
 import {BaseComponent} from '../../../shared/components/base.component';
 import * as d3 from 'd3';
+import {uuid} from '../../../../../domain/function/uuid.helper';
+import {schemeRdYlGn} from 'd3-scale-chromatic';
+
+export interface Chart3DItem {
+  label: string;
+  x: number;
+  y: number;
+  z: number;
+}
 
 @Component({
-  selector: '3d-chart',
-  template: '<div class="flex flex-1" id="{{id}}-barchart"></div>',
+  selector: 'chart-3d',
+  template: '<div class="flex flex-1" id="{{id}}"></div>',
 })
 export class Chart3DComponent extends BaseComponent implements AfterViewInit, OnChanges {
   @Input()
-  data: any[];
+  data: Chart3DItem[];
   @Input()
-  id: string;
+  xLabel: string = '';
   @Input()
-  private options: { [name: string]: any } = {
-    colors: {
-      highlight: '#b11adc',
-      highlightLight: '#d975f6',
-      text: '#777',
-      xAxis: '#eee',
-      yAxis: '#999'
-    },
+  yLabel: string= '';
+  @Input()
+  private config: { [name: string]: any } = {
     height: 200,
     width: 600,
     margin: {
-      top: 10,
+      top: 20,
       left: 40,
-      right: 10,
-      bottom: 20
+      right: 30,
+      bottom: 30
     },
+    inset: {
+      top: 6,
+      right: 6,
+      bottom: 6,
+      left: 6,
+    },
+    dot: {
+      radius: 10,
+      strokeWidth: 0,
+      strokeColor: "white",
+    },
+    padding: 10,
     animationDuration: 300,
-    ticksInterval: 10
+    ticksInterval: 10,
   };
 
+  protected id: string = uuid();
   private element: HTMLElement;
-  private minValue: number;
-  private maxValue: number;
+  private X: number[];
+  private Y: number[];
+  private Z: number[];
   private svg: any;
-  private yScale: any;
   private xScale: any;
+  private yScale: any;
+  private zScale: any;
+  private xAxis: any;
+  private yAxis: any;
+  private cell: any;
 
   constructor() {
     super();
   }
 
   ngOnChanges(changes: SimpleChanges): void {
+    console.log(this.id)
     this.create();
   }
 
@@ -55,156 +78,102 @@ export class Chart3DComponent extends BaseComponent implements AfterViewInit, On
     if (!this.data || this.data.length === 0)
       return;
 
-    this.data = this.data.splice(0, 10);
-    this.element = document.getElementById(this.id + '-barchart');
+    this.element = document.getElementById(this.id);
 
-    this.initValues()
-    this.initScales()
-    this.initChart()
-    this.createAxis()
-    this.createBars()
-    this.createCell();
-  }
-
-  private initChart() {
-    const el = d3.select(this.element)
-    el.select('svg').remove()
-
-    this.svg = d3.select('#' + this.id + '-3Dchart')
-      .append("svg")
-      .attr(
-        'viewBox',
-        `0 0 ${this.options.width} ${this.options.height + 100}`
-      )
+    this.initValues();
+    this.initScales();
+    this.createAxis();
+    this.createSvg();
   }
 
   private initValues() {
-    const minValue = Number(d3.min(this.data.map(el => el.value)));
-    const maxValue = Number(d3.max(this.data.map(el => el.value)));
-
-    this.minValue = minValue < 0 ? minValue - this.options.ticksInterval : 0;
-    this.maxValue = maxValue;
+    this.X = this.data.map(e => e.x);
+    this.Y = this.data.map(e => e.y);
+    this.Z = this.data.map(e => e.z);
   }
 
   private initScales() {
-    const xScales = X.map(X => xType(d3.extent(X), [0, cellWidth]));
-    const yScales = Y.map(Y => yType(d3.extent(Y), [cellHeight, 0]));
-    const zScale = d3.scaleOrdinal(zDomain, colors);
-  }
+    const xDomain = d3.extent(this.X);
+    const yDomain = d3.extent(this.Y);
+    const zDomain = new d3.InternSet(d3.extent(this.Z));
 
-  private getBarMaxWidth() {
-    const width = window.innerWidth
-    return width <= 768 ? width <= 480 ? 10 : 15 : 20
-  }
+    const xRange = [this.config.margin.left + this.config.inset.left, this.config.width - this.config.margin.right - this.config.inset.right];
+    const yRange = [this.config.height - this.config.margin.bottom - this.config.inset.bottom, this.config.margin.top + this.config.inset.top];
 
-  private getBarColor(i: number, change: number = 0) {
-    const red = (210 + change).toString()
-    const green = ((10 + 20 * i) + change).toString()
-    const blue = ((220 - 20 * i) + change).toString()
-    return `rgb(${red}, ${green}, ${blue})`
-  }
-
-  private createBars() {
-    const svg = d3.create("svg")
-      .attr("width", width)
-      .attr("height", height)
-      .attr("viewBox", [-marginLeft, -marginTop, width, height])
-      .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
-
-    svg.append("g")
-      .selectAll("g")
-      .data(yScales)
-      .join("g")
-      .attr("transform", (d, i) => `translate(0,${i * (cellHeight + padding)})`)
-      .each(function(yScale) { return d3.select(this).call(yAxis.scale(yScale)); })
-      .call(g => g.select(".domain").remove())
-      .call(g => g.selectAll(".tick line").clone()
-        .attr("x2", width - marginLeft - marginRight)
-        .attr("stroke-opacity", 0.1));
-
-    svg.append("g")
-      .selectAll("g")
-      .data(xScales)
-      .join("g")
-      .attr("transform", (d, i) => `translate(${i * (cellWidth + padding)},${height - marginBottom - marginTop})`)
-      .each(function(xScale) { return d3.select(this).call(xAxis.scale(xScale)); })
-      .call(g => g.select(".domain").remove())
-      .call(g => g.selectAll(".tick line").clone()
-        .attr("y2", -height + marginTop + marginBottom)
-        .attr("stroke-opacity", 0.1))
+    this.xScale = d3.scaleLinear(xDomain, xRange);
+    this.yScale = d3.scaleLinear(yDomain, yRange);
   }
 
   private createAxis() {
-    const xAxis = d3.axisBottom().ticks(cellWidth / 50);
-    const yAxis = d3.axisLeft().ticks(cellHeight / 35);
-
-    const xAxis = d3
-      .axisBottom(this.xScale)
-      .tickSize(-this.options.width)
-      .tickFormat((d, i) => this.data[i].label.toUpperCase())
-
-    const yAxis = d3
-      .axisLeft(this.yScale)
-      .tickSize(-this.options.width)
-      .tickFormat(d => `${d}`)
-      .ticks(this.options.ticksInterval)
+    this.xAxis = d3.axisBottom(this.xScale).ticks(this.config.width / 80);
+    this.yAxis = d3.axisLeft(this.yScale).ticks(this.config.height / 50);
   }
 
   private createSvg(): void {
-    const svg = d3.create("svg")
-      .attr("width", width)
-      .attr("height", height)
-      .attr("viewBox", [-marginLeft, -marginTop, width, height])
-      .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
+    const el = d3.select(this.element)
+    el.select('svg').remove()
+    this.svg = d3.select(this.element)
+      .append("svg")
+      .attr("width", this.config.width)
+      .attr("height", this.config.height)
+      .attr("viewBox", [0, 0, this.config.width, this.config.height])
+      .attr("style", "max-width: 100%; this.options.height: auto; height: intrinsic;");
 
-    svg.append("g")
-      .selectAll("g")
-      .data(yScales)
-      .join("g")
-      .attr("transform", (d, i) => `translate(0,${i * (cellHeight + padding)})`)
-      .each(function(yScale) { return d3.select(this).call(yAxis.scale(yScale)); })
+    this.svg.append("g")
+      .attr("transform", `translate(0,${this.config.height - this.config.margin.bottom})`)
+      .call(this.xAxis)
       .call(g => g.select(".domain").remove())
       .call(g => g.selectAll(".tick line").clone()
-        .attr("x2", width - marginLeft - marginRight)
-        .attr("stroke-opacity", 0.1));
-
-    svg.append("g")
-      .selectAll("g")
-      .data(xScales)
-      .join("g")
-      .attr("transform", (d, i) => `translate(${i * (cellWidth + padding)},${height - marginBottom - marginTop})`)
-      .each(function(xScale) { return d3.select(this).call(xAxis.scale(xScale)); })
-      .call(g => g.select(".domain").remove())
-      .call(g => g.selectAll(".tick line").clone()
-        .attr("y2", -height + marginTop + marginBottom)
+        .attr("y2", this.config.margin.top + this.config.margin.bottom - this.config.height)
         .attr("stroke-opacity", 0.1))
-  }
-  private createCell(): void {
-    const cell = svg.append("g")
-      .selectAll("g")
-      .data(d3.cross(d3.range(X.length), d3.range(Y.length)))
-      .join("g")
-      .attr("fill-opacity", fillOpacity)
-      .attr("transform", ([i, j]) => `translate(${i * (cellWidth + padding)},${j * (cellHeight + padding)})`);
+      .call(g => g.append("text")
+        .attr("x", this.config.width)
+        .attr("y", this.config.margin.bottom - 4)
+        .attr("fill", "currentColor")
+        .attr("text-anchor", "end")
+        .text(this.xLabel));
 
-    cell.append("rect")
-      .attr("fill", "none")
-      .attr("stroke", "currentColor")
-      .attr("width", cellWidth)
-      .attr("height", cellHeight);
+    this.svg.append("g")
+      .attr("transform", `translate(${this.config.margin.left},0)`)
+      .call(this.yAxis)
+      .call(g => g.select(".domain").remove())
+      .call(g => g.selectAll(".tick line").clone()
+        .attr("x2", this.config.width - this.config.margin.left - this.config.margin.right)
+        .attr("stroke-opacity", 0.1))
+      .call(g => g.append("text")
+        .attr("x", -this.config.margin.left)
+        .attr("y", 10)
+        .attr("fill", "currentColor")
+        .attr("text-anchor", "start")
+        .text(this.yLabel));
 
-    cell.each(function([x, y]) {
-      d3.select(this).selectAll("circle")
-        .data(I.filter(i => !isNaN(X[x][i]) && !isNaN(Y[y][i])))
-        .join("circle")
-        .attr("r", 3.5)
-        .attr("cx", i => xScales[x](X[x][i]))
-        .attr("cy", i => yScales[y](Y[y][i]))
-        .attr("fill", i => zScale(Z[i]));
-    });
+    const I = d3.range(this.X.length).filter(i => !isNaN(this.X[i]) && !isNaN(this.Y[i]));
+
+    this.svg.append("g")
+      .attr("stroke", this.config.dot.strokeColor)
+      .attr("stroke-width", this.config.dot.strokeWidth)
+      .selectAll("circle")
+      .data(I)
+      .join("circle")
+      .attr("cx", i => this.xScale(this.X[i]))
+      .attr("cy", i => this.yScale(this.Y[i]))
+      .attr("fill", i => d3.interpolateViridis(this.Z[i]))
+      .attr("r", this.config.dot.radius);
   }
-  private calculatePadding(barCount: number) {
-    return 1 - (barCount * this.getBarMaxWidth() / this.options.width)
-  }
+
+  // private createCell(): void {
+  //   this.cell = this.svg.append("g")
+  //     .selectAll("g")
+  //     .data(d3.cross(d3.range(this.X.length), d3.range(this.Y.length)))
+  //     .join("g")
+  //     .attr("fill-opacity", fillOpacity)
+  //     .attr("transform", ([i, j]) => `translate(${i * (cellWidth + this.options.padding)},${j * (cellHeight + this.options.padding)})`);
+  //
+  //   this.cell.append("rect")
+  //     .attr("fill", "none")
+  //     .attr("stroke", "currentColor")
+  //     .attr("width", cellWidth)
+  //     .attr("height", cellHeight);
+  // }
 }
 

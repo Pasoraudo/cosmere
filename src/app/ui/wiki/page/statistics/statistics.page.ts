@@ -10,6 +10,8 @@ import closenessCentrality from 'graphology-metrics/centrality/closeness';
 import eigenvectorCentrality from 'graphology-metrics/centrality/eigenvector';
 import betweennessCentrality from 'graphology-metrics/centrality/betweenness';
 import {BarChartItem, mapToBarChartItemArray} from '../../../infrastructure/d3/model/barChar.model';
+import {Chart3DItem} from '../../../infrastructure/d3/component/3D-chart.component';
+import {degreeCentrality} from 'graphology-metrics/centrality/degree';
 
 
 @Component({
@@ -23,7 +25,9 @@ export class StatisticsPage extends BasePage implements OnInit {
   eigenvectorCosmere: BarChartItem[];
   betweennessCosmere: BarChartItem[];
   closenessCosmere: BarChartItem[];
+  degreeCentralityCosmere: BarChartItem[];
 
+  prueba: Chart3DItem[] = [];
 
   constructor(private relationshipApi: RelationshipApi) {
     super();
@@ -52,6 +56,18 @@ export class StatisticsPage extends BasePage implements OnInit {
 
     const betweennessCosmere = betweennessCentrality(this.graph);
     this.betweennessCosmere = mapToBarChartItemArray(betweennessCosmere);
-    console.log(closenessCosmere)
+
+    const degreeCentralityCosmere = degreeCentrality(this.graph);
+    this.degreeCentralityCosmere = mapToBarChartItemArray(degreeCentralityCosmere);
+
+    this.prueba = characterIds.map(cId => {
+      return {
+        label: cId,
+        x: this.pagerankCosmere.find(c => c.label === cId).value,
+        y: this.eigenvectorCosmere.find(c => c.label === cId).value,
+        z: this.degreeCentralityCosmere.find(c => c.label === cId).value,
+      }
+    });
+    console.log(this.prueba)
   }
 }
