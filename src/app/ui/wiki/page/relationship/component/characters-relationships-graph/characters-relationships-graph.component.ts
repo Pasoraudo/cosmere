@@ -43,7 +43,7 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
     this.subscribe(this.characterApi.cosmereCharacters(), characters => {
       this.setCharacters(characters);
     });
-    this.subscribe(this.relationshipApi.cosmereRelationship(), relationships => {
+    this.subscribe(this.relationshipApi.cosmereRelationships(), relationships => {
       this.setRelationships(relationships);
       this.setCharacters(this.characters);
     });

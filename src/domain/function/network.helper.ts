@@ -1,42 +1,6 @@
-import {
-  D3Link,
-  D3Node,
-  D3NodeMaxScore,
-  D3NodeMinScore,
-  GraphEdge,
-  GraphNode
-} from '../../app/ui/infrastructure/vis/model/network';
+import {D3Link, D3Node, D3NodeMaxScore, D3NodeMinScore} from '../../app/ui/infrastructure/vis/model/network';
 import {Relationship} from '../model/relationship';
 import {Character} from '../model/character';
-
-export const charactersToNodes = (characters): GraphNode[] => {
-  return characters.map(character => ({
-    id: character.id,
-    label: character.name,
-    group: character.planet
-  }));
-};
-
-export const relationshipsToEdges = (relationships: Relationship[]): GraphEdge[] => {
-  const groupedEdges: Record<string, number> = {};
-  for (const relationship of relationships) {
-    const key = `${relationship.characterId1}-${relationship.characterId2}`;
-    if (groupedEdges[key]) {
-      groupedEdges[key] += 1;
-    } else {
-      groupedEdges[key] = 1;
-    }
-  }
-  let resultEdges: GraphEdge[] = [];
-
-  for (const key in groupedEdges) {
-    const [from, to] = key.split('-');
-    const value = groupedEdges[key];
-    resultEdges.push({ from, to, value });
-  }
-  return resultEdges;
-};
-
 
 export const charactersToD3Nodes = (characters: Character[], relationships: Relationship[]): D3Node[] => {
   if (characters.length === 0)
@@ -89,7 +53,16 @@ export const relationshipsToLinks = (relationships: Relationship[]): D3Link[] =>
     const [source, target] = key.split('-');
     const weight = groupedEdges[key];
     const group = 'undefined';
-    resultEdges.push({ source, target, weight, group });
+    resultEdges.push({source, target, weight, group});
   }
   return resultEdges;
+};
+
+export const characterIdsFromRelationships = (relationships: Relationship[]): string[] => {
+  const characterSet: Set<string> = new Set();
+  relationships.forEach(relationship => {
+    characterSet.add(relationship.characterId1);
+    characterSet.add(relationship.characterId2);
+  })
+  return Array.from(characterSet)
 };
