@@ -2,7 +2,7 @@ import {AfterViewInit, Component, Input, OnChanges, SimpleChanges} from '@angula
 import {BaseComponent} from '../../../shared/components/base.component';
 import * as d3 from 'd3';
 import {uuid} from '../../../../../domain/function/uuid.helper';
-import {schemeRdYlGn} from 'd3-scale-chromatic';
+import {Legend} from '../function/legend.helper';
 
 export interface Chart3DItem {
   label: string;
@@ -13,7 +13,12 @@ export interface Chart3DItem {
 
 @Component({
   selector: 'chart-3d',
-  template: '<div class="flex flex-1" id="{{id}}"></div>',
+  template: `
+    <div class="flex flex-row">
+      <div class="flex flex-1" id="{{id}}-chart-3d"></div>
+      <div class="flex flex-1 items-end pb-10" id="{{id}}-legend-bar"></div>
+    </div>
+  `,
 })
 export class Chart3DComponent extends BaseComponent implements AfterViewInit, OnChanges {
   @Input()
@@ -21,10 +26,10 @@ export class Chart3DComponent extends BaseComponent implements AfterViewInit, On
   @Input()
   xLabel: string = '';
   @Input()
-  yLabel: string= '';
+  yLabel: string = '';
   @Input()
   private config: { [name: string]: any } = {
-    height: 200,
+    height: 600,
     width: 600,
     margin: {
       top: 20,
@@ -39,34 +44,38 @@ export class Chart3DComponent extends BaseComponent implements AfterViewInit, On
       left: 6,
     },
     dot: {
-      radius: 10,
+      radius: 20,
       strokeWidth: 0,
       strokeColor: "white",
+    },
+    domain: {
+      x: [0, 1],
+      y: [0, 1]
     },
     padding: 10,
     animationDuration: 300,
     ticksInterval: 10,
+    color: d3.interpolateViridis
   };
 
   protected id: string = uuid();
   private element: HTMLElement;
+  private legendElement: HTMLElement;
   private X: number[];
   private Y: number[];
   private Z: number[];
+  private labels: string[];
   private svg: any;
   private xScale: any;
   private yScale: any;
-  private zScale: any;
   private xAxis: any;
   private yAxis: any;
-  private cell: any;
-
+  private color;
   constructor() {
     super();
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(this.id)
     this.create();
   }
 
@@ -78,30 +87,40 @@ export class Chart3DComponent extends BaseComponent implements AfterViewInit, On
     if (!this.data || this.data.length === 0)
       return;
 
-    this.element = document.getElementById(this.id);
+    this.element = document.getElementById(this.id + "-chart-3d");
 
     this.initValues();
+    this.createColorBar();
     this.initScales();
     this.createAxis();
     this.createSvg();
   }
 
+  private createColorBar(): void {
+    // @ts-ignore
+    const legend = Legend({
+      color: d3.scaleSequential([0, 1], this.color),
+      title: "Degree"
+    })
+    this.legendElement = document.getElementById(this.id + "-legend-bar");
+    d3.select(this.legendElement).select('svg').remove()
+    this.legendElement.append(legend);
+  }
+
   private initValues() {
+    this.color = this.config.color;
     this.X = this.data.map(e => e.x);
     this.Y = this.data.map(e => e.y);
     this.Z = this.data.map(e => e.z);
+    this.labels = this.data.map(e => e.label);
   }
 
   private initScales() {
-    const xDomain = d3.extent(this.X);
-    const yDomain = d3.extent(this.Y);
-    const zDomain = new d3.InternSet(d3.extent(this.Z));
-
     const xRange = [this.config.margin.left + this.config.inset.left, this.config.width - this.config.margin.right - this.config.inset.right];
     const yRange = [this.config.height - this.config.margin.bottom - this.config.inset.bottom, this.config.margin.top + this.config.inset.top];
 
-    this.xScale = d3.scaleLinear(xDomain, xRange);
-    this.yScale = d3.scaleLinear(yDomain, yRange);
+    this.xScale = d3.scaleLinear(this.config.domain.x, xRange);
+    this.yScale = d3.scaleLinear(this.config.domain.y, yRange);
   }
 
   private createAxis() {
@@ -147,7 +166,9 @@ export class Chart3DComponent extends BaseComponent implements AfterViewInit, On
         .attr("text-anchor", "start")
         .text(this.yLabel));
 
+
     const I = d3.range(this.X.length).filter(i => !isNaN(this.X[i]) && !isNaN(this.Y[i]));
+
 
     this.svg.append("g")
       .attr("stroke", this.config.dot.strokeColor)
@@ -156,24 +177,24 @@ export class Chart3DComponent extends BaseComponent implements AfterViewInit, On
       .data(I)
       .join("circle")
       .attr("cx", i => this.xScale(this.X[i]))
-      .attr("cy", i => this.yScale(this.Y[i]))
-      .attr("fill", i => d3.interpolateViridis(this.Z[i]))
+      .attr("cy", i => this.yScale(this.Y[i]))// @ts-ignore
+      .attr("fill", i => this.color(this.Z[i]))
       .attr("r", this.config.dot.radius);
-  }
 
-  // private createCell(): void {
-  //   this.cell = this.svg.append("g")
-  //     .selectAll("g")
-  //     .data(d3.cross(d3.range(this.X.length), d3.range(this.Y.length)))
-  //     .join("g")
-  //     .attr("fill-opacity", fillOpacity)
-  //     .attr("transform", ([i, j]) => `translate(${i * (cellWidth + this.options.padding)},${j * (cellHeight + this.options.padding)})`);
-  //
-  //   this.cell.append("rect")
-  //     .attr("fill", "none")
-  //     .attr("stroke", "currentColor")
-  //     .attr("width", cellWidth)
-  //     .attr("height", cellHeight);
-  // }
+    this.svg.append("g")
+      .attr("font-family", "sans-serif")
+      .attr("font-size", 20)
+      .attr("stroke-linejoin", "round")
+      .attr("stroke-linecap", "round")
+      .selectAll("text")
+      .data(I)
+      .join("text")
+      .attr("x", i => this.xScale(this.X[i]))
+      .attr("y", i => this.yScale(this.Y[i]))
+      .text(i => this.labels[i])
+      .style("fill", "white")
+      .style("text-anchor", "middle")
+      .style("dominant-baseline", "central");
+  }
 }
 

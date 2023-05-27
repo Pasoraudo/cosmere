@@ -18,3 +18,13 @@ export const arrayToBarChartItemArray = (array: Array<[string, number]>): BarCha
 export const mapToBarChartItemArray = (map): BarChartItem[] => {
   return arrayToBarChartItemArray(_.map(sortMap(map), (valor: number, clave) => [clave, valor]))
 }
+
+export const normalizeBarChartItems = (items: BarChartItem[]): BarChartItem[] => {
+  const min = Math.min(...items.map(item => item.value));
+  const max = Math.max(...items.map(item => item.value));
+
+  return items.map(item => ({
+    ...item,
+    value: (item.value - min) / (max - min)
+  }));
+}

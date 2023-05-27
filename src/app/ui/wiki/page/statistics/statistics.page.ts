@@ -9,7 +9,11 @@ import {pagerank} from 'graphology-metrics/centrality';
 import closenessCentrality from 'graphology-metrics/centrality/closeness';
 import eigenvectorCentrality from 'graphology-metrics/centrality/eigenvector';
 import betweennessCentrality from 'graphology-metrics/centrality/betweenness';
-import {BarChartItem, mapToBarChartItemArray} from '../../../infrastructure/d3/model/barChar.model';
+import {
+  BarChartItem,
+  mapToBarChartItemArray,
+  normalizeBarChartItems
+} from '../../../infrastructure/d3/model/barChar.model';
 import {Chart3DItem} from '../../../infrastructure/d3/component/3D-chart.component';
 import {degreeCentrality} from 'graphology-metrics/centrality/degree';
 
@@ -27,7 +31,7 @@ export class StatisticsPage extends BasePage implements OnInit {
   closenessCosmere: BarChartItem[];
   degreeCentralityCosmere: BarChartItem[];
 
-  prueba: Chart3DItem[] = [];
+  pagerankEigenvectorAndDegreeCentrality: Chart3DItem[] = [];
 
   constructor(private relationshipApi: RelationshipApi) {
     super();
@@ -35,7 +39,7 @@ export class StatisticsPage extends BasePage implements OnInit {
 
   ngOnInit(): void {
     this.subscribe(this.relationshipApi.cosmereRelationships(), relationships => this.calculateGlobalStats(relationships))
-    this.relationshipApi.fetchAllCosmereRelationship();
+    this.relationshipApi.fetchAllRelationshipByBookId('warbreaker');
   }
 
   calculateGlobalStats(relationships: Relationship[]): void {
@@ -60,14 +64,18 @@ export class StatisticsPage extends BasePage implements OnInit {
     const degreeCentralityCosmere = degreeCentrality(this.graph);
     this.degreeCentralityCosmere = mapToBarChartItemArray(degreeCentralityCosmere);
 
-    this.prueba = characterIds.map(cId => {
+    const pageRankNormalized = normalizeBarChartItems(this.pagerankCosmere);
+    const eigenvectorNormalized = normalizeBarChartItems(this.eigenvectorCosmere);
+    const degreeCentralityNormalized = normalizeBarChartItems(this.degreeCentralityCosmere);
+
+    this.pagerankEigenvectorAndDegreeCentrality = characterIds.map(cId => {
       return {
         label: cId,
-        x: this.pagerankCosmere.find(c => c.label === cId).value,
-        y: this.eigenvectorCosmere.find(c => c.label === cId).value,
-        z: this.degreeCentralityCosmere.find(c => c.label === cId).value,
+        x: pageRankNormalized.find(c => c.label === cId).value,
+        y: eigenvectorNormalized.find(c => c.label === cId).value,
+        z: degreeCentralityNormalized.find(c => c.label === cId).value,
       }
     });
-    console.log(this.prueba)
+    this.pagerankEigenvectorAndDegreeCentrality = this.pagerankEigenvectorAndDegreeCentrality.filter(p => p.x >= 0.1 && p.y > 0.1);
   }
 }
