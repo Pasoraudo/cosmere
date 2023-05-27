@@ -1,4 +1,5 @@
 import {some} from 'lodash-es';
+import _ from 'lodash';
 
 export const mergeArrays = <T>(originalArray: T[], arrayToMerge: T[]): T[] => {
   if (!originalArray)
@@ -24,3 +25,7 @@ export const pushOrReplace = <T>(array: T[], entry: T): T[] => {
 
   return newArray;
 };
+
+export const sortMap = (map: any) => {
+  return _.fromPairs(_.sortBy(_.toPairs(map), 1).reverse())
+}

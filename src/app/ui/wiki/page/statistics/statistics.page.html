@@ -1,11 +1,36 @@
-<div class="absolute inset-0 flex flex-col min-w-0 overflow-y-auto" cdkScrollable>
-  <div class="flex flex-row">
-    <fuse-card class="flex flex-col p-5 h-full grow m-10">
-      <div class="text-xl mb-5">Personajes más populares de El imperio final</div>
-      <bar-chart class=" w-full" [data]="popularityData" [id]="'mistborn1'"></bar-chart>
-    </fuse-card>
-    <div class="basis-1/2"></div>
-  </div>
+<div class="inset-0 flex flex-col min-w-0 overflow-y-scroll h-screen">
+  <fuse-card class="p-10">
+    <div class="flex flex-row">
+      <div class="flex flex-col basis-1/2">
+        <div class="text-xl mb-5">Pagerank</div>
+        <vertical-bar-chart class="w-full" [data]="pageRankNormalized"></vertical-bar-chart>
+      </div>
+      <div class="flex flex-1 basis-1/2">I’ve added the first two networks that we constructed from the TV series
+        (instead of the books). We started with the first season. I admit this information is far removed from tonight’s
+        season premiere. In fact, looking at the complete network for the books might be more satisfying today (even
+        though it is still two seasons behind). We tackled the third season next, for sentimental reasons. That’s the
+        first one we started with all those years ago.
+        So check out the Season 1 page to whet your appetite, and experience some nostalgia for the simpler times of Ned
+        Stark. Remember when you could tell right from wrong? Yeah, me too. Here’s a preview of the top characters for
+        the first season. No surprises.
+      </div>
+    </div>
+  </fuse-card>
+  <fuse-card class="flex flex-row p-10 mt-5 gap-5">
+    <div class="flex flex-col grow">
+      <div class="text-xl mb-5">Closeness</div>
+      <bar-chart class="w-full" [data]="closenessCosmere"></bar-chart>
+    </div>
+    <div class="flex flex-col grow">
+      <div class="text-xl mb-5">Eigenvector</div>
+      <bar-chart class="w-full" [data]="eigenvectorCosmere"></bar-chart>
+    </div>
+    <div class="flex flex-col grow">
+      <div class="text-xl mb-5">Betweenness</div>
+      <bar-chart class="w-full" [data]="betweennessCosmere"></bar-chart>
+    </div>
+  </fuse-card>
+
 </div>
 
 

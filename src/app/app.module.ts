@@ -9,7 +9,6 @@ import {AppRoutingModule} from './app-routing.module';
 import {FuseModule} from '../@fuse';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FuseConfigModule} from '../@fuse/services/config';
-import {FuseMockApiModule} from '../@fuse/lib/mock-api';
 import {CoreModule} from './core/core.module';
 import {LayoutModule} from './layout/layout.module';
 import {appConfig} from './core/config/app.config';
@@ -49,19 +48,16 @@ import {ModalModule} from './ui/shared/modal/modal.module';
     MatSelectModule,
     MatRadioModule,
 
-    // Core module of your application
     CoreModule,
 
-    // Layout module of your application
     LayoutModule,
     LayoutUserModule,
     LayoutNoBarModule,
 
-    // 3rd party modules that require global configuration via forRoot
     MarkdownModule.forRoot({}),
 
     NgSelectModule,
-    ModalModule
+    ModalModule,
   ],
   providers: [
     {provide: RouteReuseStrategy, useClass: IonicRouteStrategy},

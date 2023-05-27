@@ -1,6 +1,7 @@
-import {AfterViewInit, Component, ElementRef, Input, OnChanges, SimpleChanges, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, Input, OnChanges, SimpleChanges} from '@angular/core';
 import {BaseComponent} from '../../../shared/components/base.component';
 import * as d3 from 'd3';
+import {uuid} from '../../../../../domain/function/uuid.helper';
 
 @Component({
   selector: 'bar-chart',
@@ -10,9 +11,7 @@ export class BarChartComponent extends BaseComponent implements AfterViewInit, O
   @Input()
   data: any[];
   @Input()
-  id: string;
-  @Input()
-  private options: {[name: string]: any} = {
+  private options: { [name: string]: any } = {
     colors: {
       highlight: '#b11adc',
       highlightLight: '#d975f6',
@@ -24,7 +23,7 @@ export class BarChartComponent extends BaseComponent implements AfterViewInit, O
     width: 600,
     margin: {
       top: 10,
-      left: 30,
+      left: 40,
       right: 10,
       bottom: 20
     },
@@ -32,6 +31,7 @@ export class BarChartComponent extends BaseComponent implements AfterViewInit, O
     ticksInterval: 10
   };
 
+  protected id: string = uuid();
   private element: HTMLElement;
   private minValue: number;
   private maxValue: number;
@@ -69,20 +69,20 @@ export class BarChartComponent extends BaseComponent implements AfterViewInit, O
     const el = d3.select(this.element)
     el.select('svg').remove()
 
-    this.svg = d3.select('#' + this.id + '-barchart')
+    this.svg = d3.select(this.element)
       .append("svg")
       .attr(
         'viewBox',
-        `0 0 ${this.options.width} ${this.options.height + 50}`
+        `0 0 ${this.options.width} ${this.options.height + 100}`
       )
   }
 
   private initValues() {
-    const minValue = Number(d3.min(this.data.map(el => el.value)))
-    const maxValue = Number(d3.max(this.data.map(el => el.value)))
+    const minValue = Number(d3.min(this.data.map(el => el.value)));
+    const maxValue = Number(d3.max(this.data.map(el => el.value)));
 
-    this.minValue = minValue < 0 ? minValue - this.options.ticksInterval : 0
-    this.maxValue = maxValue + this.options.ticksInterval
+    this.minValue = minValue < 0 ? minValue - this.options.ticksInterval : 0;
+    this.maxValue = maxValue;
   }
 
   private initScales() {
@@ -140,37 +140,37 @@ export class BarChartComponent extends BaseComponent implements AfterViewInit, O
       .attr('width', this.xScale.bandwidth())
       .attr('height', (d, i) => d.value < 0 ? this.yScale(d.value) - this.yScale(0) : this.yScale(0) - this.yScale(d.value))
 
-    bars.on("mouseover touchstart", (d, i, nodes) => {
-      const tick = d3.select(`.x-axis .tick:nth-child(${i+1}`)
-      const color = this.getBarColor(i, 20)
-
-      d3.select(nodes[i])
-        .transition()
-        .style('fill', color)
-
-      tick.select('line')
-        .transition()
-        .style('stroke', color)
-
-      tick.select('text')
-        .transition()
-        .style('fill', color)
-
-    }).on("mouseout touchend", (d, i, nodes) => {
-      const tick = d3.select(`.x-axis .tick:nth-child(${i+1}`)
-
-      d3.select(nodes[i])
-        .transition()
-        .style('fill', this.getBarColor(i))
-
-      tick.select('line')
-        .transition()
-        .style('stroke', this.options.colors.xAxis)
-
-      tick.select('text')
-        .transition()
-        .style('fill', this.options.colors.text)
-    })
+    // bars.on("mouseover touchstart", (d, i, nodes) => {
+    //   const tick = d3.select(`.x-axis .tick:nth-child(${i + 1}`)
+    //   const color = this.getBarColor(i, 20)
+    //
+    //   d3.select(nodes[i])
+    //     .transition()
+    //     .style('fill', color)
+    //
+    //   tick.select('line')
+    //     .transition()
+    //     .style('stroke', color)
+    //
+    //   tick.select('text')
+    //     .transition()
+    //     .style('fill', color)
+    //
+    // }).on("mouseout touchend", (d, i, nodes) => {
+    //   const tick = d3.select(`.x-axis .tick:nth-child(${i + 1}`)
+    //
+    //   d3.select(nodes[i])
+    //     .transition()
+    //     .style('fill', this.getBarColor(i))
+    //
+    //   tick.select('line')
+    //     .transition()
+    //     .style('stroke', this.options.colors.xAxis)
+    //
+    //   tick.select('text')
+    //     .transition()
+    //     .style('fill', this.options.colors.text)
+    // })
   }
 
   private createAxis() {
@@ -182,13 +182,13 @@ export class BarChartComponent extends BaseComponent implements AfterViewInit, O
     const yAxis = d3
       .axisLeft(this.yScale)
       .tickSize(-this.options.width)
-      .tickFormat(d => `${d} %`)
+      .tickFormat(d => `${d}`)
       .ticks(this.options.ticksInterval)
 
     this.svg
       .append('g')
       .attr('class', 'axis x-axis')
-      .attr('transform', `translate(0, ${this.options.height-15})`)
+      .attr('transform', `translate(0, ${this.options.height - 15})`)
       .call(xAxis)
       .selectAll("text")
       .attr("transform", "translate(-10,0)rotate(-45)")

@@ -41,7 +41,7 @@ export class RelationshipApi {
     return this.store.relationships$;
   }
 
-  cosmereRelationship(): Observable<Relationship[]> {
+  cosmereRelationships(): Observable<Relationship[]> {
     return this.store.relationships$.pipe(map(relationships =>
       relationships.filter(relationship => cosmereBookIds().includes(relationship.bookId))
     ));
