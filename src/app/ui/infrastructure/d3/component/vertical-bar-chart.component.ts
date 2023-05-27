@@ -2,6 +2,7 @@ import {AfterViewInit, Component, Input, OnChanges, SimpleChanges} from '@angula
 import {BaseComponent} from '../../../shared/components/base.component';
 import * as d3 from 'd3';
 import {BarChartItem} from '../model/barChar.model';
+import {uuid} from '../../../../../domain/function/uuid.helper';
 
 @Component({
   selector: 'vertical-bar-chart',
@@ -11,7 +12,7 @@ export class VerticalBarChartComponent extends BaseComponent implements AfterVie
   @Input()
   data: BarChartItem[];
   @Input()
-  id: string;
+  label: string;
   @Input()
   private config: { [name: string]: any } = {
     colors: {
@@ -22,24 +23,38 @@ export class VerticalBarChartComponent extends BaseComponent implements AfterVie
       yAxis: '#999'
     },
     height: 200,
-    width: 600,
+    width: 640,
     margin: {
-      top: 10,
-      left: 40,
-      right: 10,
-      bottom: 20
+      top: 30,
+      left: 70,
+      right: 5,
+      bottom: 0
     },
+    padding: {
+      top: 0.05,
+      left: 0,
+      right: 0,
+      bottom: 0.05
+    },
+    xFormat: '',
     animationDuration: 300,
     ticksInterval: 10,
-    type: d3.scaleLinear
+    type: d3.scaleLinear,
+    titleColor: "white",
+    title: ''
   };
 
+  protected id: string = uuid();
   private element: HTMLElement;
-  private minValue: number;
-  private maxValue: number;
   private svg: any;
+  private xDomain: any;
+  private yDomain: any;
   private yScale: any;
   private xScale: any;
+  private xAxis: any;
+  private yAxis: any;
+  private X: number[];
+  private Y: string[];
 
   constructor() {
     super();
@@ -60,142 +75,84 @@ export class VerticalBarChartComponent extends BaseComponent implements AfterVie
     this.data = this.data.splice(0, 10);
     this.element = document.getElementById(this.id + '-vertical-bar-chart');
 
-    this.initValues()
-    this.initScales()
-    this.initChart()
-    this.createAxis()
-    this.createBars()
-  }
-
-  private initChart() {
-    d3.select(this.element).select('svg').remove()
-    this.svg = d3.select(this.element)
-      .append("svg")
-      .attr(
-        'viewBox',
-        `0 0 ${this.config.width} ${this.config.height + 100}`
-      )
+    this.initValues();
+    this.initScales();
+    this.createSvg();
   }
 
   private initValues() {
-    const minValue = Number(d3.min(this.data.map(el => el.value)));
-    const maxValue = Number(d3.max(this.data.map(el => el.value)));
-
-    this.minValue = minValue < 0 ? minValue - this.config.ticksInterval : 0;
-    this.maxValue = maxValue;
+    this.X = this.data.map(e => e.value);
+    this.Y = this.data.map(e => e.label);
   }
 
   initScales(): void {
-    const xDomain = d3.extent(this.data.map(e => e.value))
-    this.xScale = this.config.type(xDomain, xRange);
-    this.yScale = d3.scaleBand(yDomain, yRange).padding(yPadding);
+    const xRange = [this.config.margin.left, this.config.width - this.config.margin.right];
+    const yRange = [this.config.margin.top, this.config.height - this.config.margin.bottom];
+    this.xDomain = [0, d3.max(this.X)];
+    this.yDomain = new d3.InternSet(this.Y);
+    this.xScale = this.config.type(this.xDomain, xRange);
+    this.yScale = d3.scaleBand(this.yDomain, yRange).padding(this.config.padding.top + this.config.padding.bottom);
+    this.xAxis = d3.axisTop(this.xScale).ticks(this.config.width / 80, this.config.xFormat);
+    this.yAxis = d3.axisLeft(this.yScale).tickSizeOuter(0);
+
   }
-  function BarChart(data, {
-    x = d => d,
-    y = (d, i) => i,
-    title,
-    marginTop = 30,
-    marginRight = 0,
-    marginBottom = 10,
-    marginLeft = 30,
-    width = 640,
-    height,
-    xType = d3.scaleLinear,
-    xDomain,
-    xRange = [marginLeft, width - marginRight],
-    xFormat,
-    xLabel,
-    yPadding = 0.1,
-    yDomain,
-    yRange,
-    color = "currentColor",
-    titleColor = "white",
-    titleAltColor = "currentColor",
-  } = {}) {
-    // Compute values.
-    const X = d3.map(data, x);
-    const Y = d3.map(data, y);
 
-    // Compute default domains, and unique the y-domain.
-    if (xDomain === undefined) xDomain = [0, d3.max(X)];
-    if (yDomain === undefined) yDomain = Y;
-    yDomain = new d3.InternSet(yDomain);
+  createSvg(): void {
+    const I = d3.range(this.X.length).filter(i => this.yDomain.has(this.Y[i]));
 
-    // Omit any data not present in the y-domain.
-    const I = d3.range(X.length).filter(i => yDomain.has(Y[i]));
-
-    // Compute the default height.
-    if (height === undefined) height = Math.ceil((yDomain.size + yPadding) * 25) + marginTop + marginBottom;
-    if (yRange === undefined) yRange = [marginTop, height - marginBottom];
-
-    // Construct  and axes.
-
-    const xAxis = d3.axisTop(xScale).ticks(width / 80, xFormat);
-    const yAxis = d3.axisLeft(yScale).tickSizeOuter(0);
-
-    // Compute titles.
-    if (title === undefined) {
-      const formatValue = xScale.tickFormat(100, xFormat);
-      title = i => `${formatValue(X[i])}`;
-    } else {
-      const O = d3.map(data, d => d);
-      const T = title;
-      title = i => T(O[i], i, data);
-    }
-
-    const svg = d3.create("svg")
-      .attr("width", width)
-      .attr("height", height)
-      .attr("viewBox", [0, 0, width, height])
+    d3.select(this.element).select('svg').remove()
+    this.svg = this.svg = d3.select(this.element)
+      .append("svg")
+      .attr("width", this.config.width)
+      .attr("height", this.config.height)
+      .attr("viewBox", [0, 0, this.config.width, this.config.height])
       .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
 
-    svg.append("g")
-      .attr("transform", `translate(0,${marginTop})`)
-      .call(xAxis)
+    this.svg.append("g")
+      .attr("transform", `translate(0,${this.config.margin.top})`)
+      .call(this.xAxis)
       .call(g => g.select(".domain").remove())
       .call(g => g.selectAll(".tick line").clone()
-        .attr("y2", height - marginTop - marginBottom)
+        .attr("y2", this.config.height - this.config.margin.top - this.config.margin.bottom)
         .attr("stroke-opacity", 0.1))
       .call(g => g.append("text")
-        .attr("x", width - marginRight)
+        .attr("x", this.config.width - this.config.margin.right)
         .attr("y", -22)
-        .attr("fill", "currentColor")
+        .attr("fill", "none")
         .attr("text-anchor", "end")
-        .text(xLabel));
+        .text(this.label));
 
-    svg.append("g")
-      .attr("fill", color)
+    this.svg.append("g")
+      .attr("fill", "red")
       .selectAll("rect")
       .data(I)
       .join("rect")
-      .attr("x", xScale(0))
-      .attr("y", i => yScale(Y[i]))
-      .attr("width", i => xScale(X[i]) - xScale(0))
-      .attr("height", yScale.bandwidth());
+      .attr("x", this.xScale(0))
+      .attr("y", i => this.yScale(this.Y[i]))
+      .attr("width", i => this.xScale(this.X[i]) - this.xScale(0))
+      .attr("height", this.yScale.bandwidth());
 
-    svg.append("g")
-      .attr("fill", titleColor)
+    this.svg.append("g")
+      .attr("fill", this.config.titleColor)
       .attr("text-anchor", "end")
       .attr("font-family", "sans-serif")
       .attr("font-size", 10)
       .selectAll("text")
       .data(I)
       .join("text")
-      .attr("x", i => xScale(X[i]))
-      .attr("y", i => yScale(Y[i]) + yScale.bandwidth() / 2)
+      .attr("x", i => this.xScale(this.X[i]))
+      .attr("y", i => this.yScale(this.Y[i]) + this.yScale.bandwidth() / 2)
       .attr("dy", "0.35em")
       .attr("dx", -4)
-      .text(title)
-      .call(text => text.filter(i => xScale(X[i]) - xScale(0) < 20) // short bars
+      .text(this.config.title)
+      .call(text => text.filter(i => this.xScale(this.X[i]) - this.xScale(0) < 20) // short bars
         .attr("dx", +4)
-        .attr("fill", titleAltColor)
+        .attr("fill", this.config.titleAltColor)
         .attr("text-anchor", "start"));
 
-    svg.append("g")
-      .attr("transform", `translate(${marginLeft},0)`)
-      .call(yAxis);
-
-    return svg.node();
+    this.svg.append("g")
+      .attr("transform", `translate(${this.config.margin.left},0)`)
+      .call(this.yAxis);
   }
 }
 

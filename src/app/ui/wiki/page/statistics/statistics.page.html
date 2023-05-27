@@ -15,9 +15,9 @@
 <!--      <bar-chart class="w-full" [data]="closenessCosmere" [id]="'closeness'"></bar-chart>-->
     </fuse-card>
     <fuse-card class="flex flex-col p-5 grow m-10">
-      <chart-3d [data]="pagerankEigenvectorAndDegreeCentrality"></chart-3d>
-<!--      <div class="text-xl mb-5">Eigenvector</div>-->
-<!--      <bar-chart class="w-full" [data]="eigenvectorCosmere" [id]="'eigenvector'"></bar-chart>-->
+<!--      <chart-3d [data]="pagerankEigenvectorAndDegreeCentrality"></chart-3d>-->
+      <div class="text-xl mb-5">Eigenvector</div>
+      <vertical-bar-chart class="w-full" [data]="pageRankNormalized" label="Eifg"></vertical-bar-chart>
     </fuse-card>
   </div>
 
