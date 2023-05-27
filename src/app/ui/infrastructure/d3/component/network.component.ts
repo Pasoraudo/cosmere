@@ -13,7 +13,6 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
   @Input()
   links: D3Link[] = [];
 
-
   characterLinks: D3Link[] = [];
   width: number = 1400;
   height: number = 800;
@@ -31,11 +30,15 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
   }
 
   ngOnChanges(changes: SimpleChanges): void {
+    console.log('nodes: ', this.nodes)
+    console.log('link: ', this.links)
     if (this.nodes.length > 0 && this.links.length > 0)
       this.create();
   }
 
   ngAfterViewInit(): void {
+    console.log('nodes: ', this.nodes)
+    console.log('link: ', this.links)
     if (this.nodes.length > 0 && this.links.length > 0)
       this.create();
   }

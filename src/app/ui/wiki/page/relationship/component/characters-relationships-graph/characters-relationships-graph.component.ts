@@ -42,6 +42,7 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
   async ngOnInit() {
     this.subscribe(this.characterApi.cosmereCharacters(), characters => {
       this.setCharacters(characters);
+      this.setRelationships(this.relationships);
     });
     this.subscribe(this.relationshipApi.cosmereRelationships(), relationships => {
       this.setRelationships(relationships);
