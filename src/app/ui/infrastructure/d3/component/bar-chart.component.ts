@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, Input, OnChanges, SimpleChanges} from '@angular/core';
 import {BaseComponent} from '../../../shared/components/base.component';
 import * as d3 from 'd3';
+import {uuid} from '../../../../../domain/function/uuid.helper';
 
 @Component({
   selector: 'bar-chart',
@@ -9,8 +10,6 @@ import * as d3 from 'd3';
 export class BarChartComponent extends BaseComponent implements AfterViewInit, OnChanges {
   @Input()
   data: any[];
-  @Input()
-  id: string;
   @Input()
   private options: { [name: string]: any } = {
     colors: {
@@ -32,6 +31,7 @@ export class BarChartComponent extends BaseComponent implements AfterViewInit, O
     ticksInterval: 10
   };
 
+  protected id: string = uuid();
   private element: HTMLElement;
   private minValue: number;
   private maxValue: number;
@@ -69,7 +69,7 @@ export class BarChartComponent extends BaseComponent implements AfterViewInit, O
     const el = d3.select(this.element)
     el.select('svg').remove()
 
-    this.svg = d3.select('#' + this.id + '-barchart')
+    this.svg = d3.select(this.element)
       .append("svg")
       .attr(
         'viewBox',

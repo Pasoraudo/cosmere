@@ -3,7 +3,7 @@ import {RouterModule} from '@angular/router';
 import {HomePage} from './home.page';
 import {homeRouting} from './home.routing';
 import {SharedModule} from '../../../shared/components/shared.module';
-import {CdkScrollableModule} from '@angular/cdk/scrolling';
+import {CdkScrollableModule, ScrollingModule} from '@angular/cdk/scrolling';
 import {FuseCardModule} from '../../../../../@fuse/components/card';
 import {PipeModule} from '../../../shared/pipe/pipe.module';
 
@@ -14,9 +14,10 @@ import {PipeModule} from '../../../shared/pipe/pipe.module';
   imports: [
     RouterModule.forChild(homeRouting),
     SharedModule,
-    CdkScrollableModule,
     FuseCardModule,
     PipeModule,
+    CdkScrollableModule,
+    ScrollingModule
   ]
 })
 export class HomeModule {

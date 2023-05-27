@@ -69,7 +69,6 @@ export class StatisticsPage extends BasePage implements OnInit {
     const eigenvectorNormalized = normalizeBarChartItems(this.eigenvectorCosmere);
     const degreeCentralityNormalized = normalizeBarChartItems(this.degreeCentralityCosmere);
 
-    console.log(this.pageRankNormalized)
     this.pagerankEigenvectorAndDegreeCentrality = characterIds.map(cId => {
       return {
         label: cId,

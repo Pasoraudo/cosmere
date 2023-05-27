@@ -12,8 +12,6 @@ export class VerticalBarChartComponent extends BaseComponent implements AfterVie
   @Input()
   data: BarChartItem[];
   @Input()
-  label: string;
-  @Input()
   private config: { [name: string]: any } = {
     colors: {
       highlight: '#b11adc',
@@ -22,7 +20,7 @@ export class VerticalBarChartComponent extends BaseComponent implements AfterVie
       xAxis: '#eee',
       yAxis: '#999'
     },
-    height: 200,
+    height: 500,
     width: 640,
     margin: {
       top: 30,
@@ -30,12 +28,7 @@ export class VerticalBarChartComponent extends BaseComponent implements AfterVie
       right: 5,
       bottom: 0
     },
-    padding: {
-      top: 0.05,
-      left: 0,
-      right: 0,
-      bottom: 0.05
-    },
+    gap: 0.4,
     xFormat: '',
     animationDuration: 300,
     ticksInterval: 10,
@@ -91,7 +84,7 @@ export class VerticalBarChartComponent extends BaseComponent implements AfterVie
     this.xDomain = [0, d3.max(this.X)];
     this.yDomain = new d3.InternSet(this.Y);
     this.xScale = this.config.type(this.xDomain, xRange);
-    this.yScale = d3.scaleBand(this.yDomain, yRange).padding(this.config.padding.top + this.config.padding.bottom);
+    this.yScale = d3.scaleBand(this.yDomain, yRange).padding(this.config.gap);
     this.xAxis = d3.axisTop(this.xScale).ticks(this.config.width / 80, this.config.xFormat);
     this.yAxis = d3.axisLeft(this.yScale).tickSizeOuter(0);
 
@@ -119,8 +112,7 @@ export class VerticalBarChartComponent extends BaseComponent implements AfterVie
         .attr("x", this.config.width - this.config.margin.right)
         .attr("y", -22)
         .attr("fill", "none")
-        .attr("text-anchor", "end")
-        .text(this.label));
+        .attr("text-anchor", "end"));
 
     this.svg.append("g")
       .attr("fill", "red")
