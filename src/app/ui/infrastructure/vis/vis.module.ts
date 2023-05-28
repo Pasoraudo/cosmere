@@ -1,13 +1,13 @@
 import {NgModule} from '@angular/core';
-import {NetworkComponent} from './component/network.component';
+import {VisNetworkComponent} from './component/vis-network.component';
 
 @NgModule({
   declarations: [
-    NetworkComponent
+    VisNetworkComponent
   ],
   imports: [],
   exports: [
-    NetworkComponent
+    VisNetworkComponent
   ]
 })
 export class VisModule {

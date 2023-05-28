@@ -16,6 +16,7 @@ import {
 } from '../../../infrastructure/d3/model/barChar.model';
 import {Chart3DItem} from '../../../infrastructure/d3/component/3D-chart.component';
 import {degreeCentrality} from 'graphology-metrics/centrality/degree';
+import louvain from 'graphology-communities-louvain';
 
 
 @Component({
@@ -78,5 +79,7 @@ export class StatisticsPage extends BasePage implements OnInit {
       }
     });
     this.pagerankEigenvectorAndDegreeCentrality = this.pagerankEigenvectorAndDegreeCentrality.filter(p => p.x >= 0.1 && p.y > 0.1);
+
+    //console.log(louvain(this.graph))
   }
 }

@@ -1,9 +1,8 @@
 import {AfterViewInit, Component, Input, OnChanges, SimpleChanges} from '@angular/core';
 import {BaseComponent} from '../../../shared/components/base.component';
 import * as d3 from 'd3';
-import {D3Link, GraphNode} from '../../vis/model/network';
+import {D3Link, D3Node} from '../../vis/model/network';
 import {uuid} from '../../../../../domain/function/uuid.helper';
-import {translate} from '@ngneat/transloco';
 
 @Component({
   selector: 'd3-network',
@@ -11,18 +10,18 @@ import {translate} from '@ngneat/transloco';
 })
 export class D3NetworkComponent extends BaseComponent implements AfterViewInit, OnChanges {
   @Input()
-  nodes: GraphNode[] = []
+  nodes: D3Node[] = []
   @Input()
   links: D3Link[] = [];
   @Input()
-  width: number =   window.screen.availWidth;
+  width: number = window.screen.availWidth;
   @Input()
-  height: number =   window.screen.availHeight;
+  height: number = window.screen.availHeight;
   characterLinks: D3Link[] = [];
 
   protected id = uuid();
   private element: HTMLElement;
-  private edgeGroups: string[] = [];
+  private groups: string[] = [];
   private color;
   private svg;
   private g;
@@ -48,7 +47,6 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
     this.element = document.getElementById(this.id + '-network');
     d3.select(this.element).selectChildren().remove();
 
-
     this.createCharacterLinks();
     this.initializeColor();
     this.createSimulation();
@@ -57,10 +55,9 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
     this.createNode();
   }
 
-
   initializeColor(): void {
-    this.edgeGroups = Array.from(new Set(this.characterLinks.map(graphEdge => graphEdge.group)));
-    this.color = d3.scaleOrdinal(this.edgeGroups, d3.schemeCategory10);
+    this.groups = Array.from(new Set(this.characterLinks.map(graphEdge => graphEdge.group)));
+    this.color = d3.scaleOrdinal(this.groups, d3.schemeCategory10);
   }
 
   createCharacterLinks(): void {
@@ -87,7 +84,7 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
       .attr("viewBox", [0, 0, this.width, this.height])
       .style("font", "12px sans-serif")
 
-    this.g  = this.svg.append("g");
+    this.g = this.svg.append("g");
     this.svg.call(d3.zoom()
       .extent([[0, 0], [this.width, this.height]])
       .on("zoom", zoomed));
@@ -102,7 +99,7 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
       .attr("height", this.height);
 
     this.svg.append("defs").selectAll("marker")
-      .data(this.edgeGroups)
+      .data(this.groups)
       .join("marker")
       .attr("id", d => `arrow-${d}`)
       .attr("viewBox", "0 -5 10 10")
@@ -141,8 +138,9 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
       .attr("stroke", "black")
       .attr("stroke-width", 1)
       .attr("r", d => d.score)
-      .style("fill", "#FF2121")
+      .style("fill", d =>  this.color(d.group));
 
+    console.log(this.nodes)
     this.node.append("text")
       .text(d => d.label)
       .style("font-size", "1rem")

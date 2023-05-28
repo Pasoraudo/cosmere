@@ -22,7 +22,7 @@ export interface D3Node {
 
   label: string;
 
-  group: string;
+  group: string | number;
 
   score: number;
 }
