@@ -1,4 +1,4 @@
-import {Component, OnChanges, OnInit, SimpleChanges, ViewEncapsulation} from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {BasePage} from '../../../shared/page/base.page';
 import {D3Link, D3Node} from '../../../infrastructure/vis/model/network';
 import {charactersToD3Nodes, relationshipsToLinks} from '../../../../../domain/function/network.helper';

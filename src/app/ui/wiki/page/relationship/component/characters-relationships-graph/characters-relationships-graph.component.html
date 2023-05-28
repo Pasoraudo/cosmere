@@ -1,32 +1,32 @@
-<div class="flex flex-row p-7 w-full h-full">
-  <div class="flex flex-col p-5 w-100">
-    <mat-form-field class="w-full" floatLabel="always">
-      <mat-label>{{"books" | trans | titlecase}}</mat-label>
-      <mat-select multiple [formControl]="bookControl" (selectionChange)="applyFilters()" placeholder="Libros: Todos">
-        <mat-option *ngFor="let book of books" [value]="book.id">
-          {{book.title | trans | uppercase}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
+<div class="flex flex-row w-full h-full justify-center">
+<!--  <div class="flex flex-col p-5 w-100">-->
+<!--    <mat-form-field class="w-full" floatLabel="always">-->
+<!--      <mat-label>{{"books" | trans | titlecase}}</mat-label>-->
+<!--      <mat-select multiple [formControl]="bookControl" (selectionChange)="applyFilters()" placeholder="Libros: Todos">-->
+<!--        <mat-option *ngFor="let book of books" [value]="book.id">-->
+<!--          {{book.title | trans | uppercase}}-->
+<!--        </mat-option>-->
+<!--      </mat-select>-->
+<!--    </mat-form-field>-->
 
-    <mat-form-field class="w-full" floatLabel="always">
-      <mat-label>{{"planets" | trans | titlecase}}</mat-label>
-      <mat-select multiple [formControl]="planetControl" (selectionChange)="applyFilters()" placeholder="Planetas: Todos">
-        <mat-option *ngFor="let planet of planets" [value]="planet.id">
-          {{planet.name | trans | uppercase}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
+<!--    <mat-form-field class="w-full" floatLabel="always">-->
+<!--      <mat-label>{{"planets" | trans | titlecase}}</mat-label>-->
+<!--      <mat-select multiple [formControl]="planetControl" (selectionChange)="applyFilters()" placeholder="Planetas: Todos">-->
+<!--        <mat-option *ngFor="let planet of planets" [value]="planet.id">-->
+<!--          {{planet.name | trans | uppercase}}-->
+<!--        </mat-option>-->
+<!--      </mat-select>-->
+<!--    </mat-form-field>-->
 
-    <mat-form-field class="w-full" floatLabel="always">
-      <mat-label>{{'group.by' | trans | titlecase}}</mat-label>
-      <mat-select multiple [formControl]="planetControl" (selectionChange)="applyFilters()">
-        <mat-option *ngFor="let groupBy of groupByOptions" [value]="groupBy">
-          {{groupBy | trans | uppercase}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-  </div>
+<!--    <mat-form-field class="w-full" floatLabel="always">-->
+<!--      <mat-label>{{'group.by' | trans | titlecase}}</mat-label>-->
+<!--      <mat-select multiple [formControl]="planetControl" (selectionChange)="applyFilters()">-->
+<!--        <mat-option *ngFor="let groupBy of groupByOptions" [value]="groupBy">-->
+<!--          {{groupBy | trans | uppercase}}-->
+<!--        </mat-option>-->
+<!--      </mat-select>-->
+<!--    </mat-form-field>-->
+<!--  </div>-->
   <!--   <network class="flex flex-col w-full" [nodes]="nodes" [edges]="edges"></network> -->
   <d3-network [nodes]="nodes" [links]="edges"></d3-network>
 </div>

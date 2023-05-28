@@ -9,23 +9,13 @@
 <!--            d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"-->
 <!--            class="shape-fill"></path>-->
 <!--        </svg>-->
-<div class="inset-0 flex flex-col min-w-0 overflow-y-scroll h-screen w-full">
-  <fuse-horizontal-navigation
-    [name]="'mainNavigation'"
-    [navigation]="navigation"
-    class="cosmere print:hidden justify-center">
-    <ng-container fuseVerticalNavigationContentHeader>
-      <div class="items-center wrapper w-25 h-25 p-6">
-        <img src="assets/icon/favicon.png" style="max-width: 100%;" alt="">
-      </div>
-    </ng-container>
-  </fuse-horizontal-navigation>
 
+<div class="inset-0 flex flex-col min-w-0 w-full">
   <div class="flex flex-col mx-100 text-center">
     <div class="font-black mt-3 text-7xl text-center mb-7">
       {{ 'home.title' | trans }}
     </div>
-    <d3-network [nodes]="nodes" [links]="edges"></d3-network>
+    <d3-network [nodes]="nodes" [links]="edges" [height]="600"></d3-network>
     <div class="flex flex-col">
       <div class="font-black mt-3 text-2xl text-center mb-7">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et gravida nisi, eget maximus nibh. Donec a metus elit. Ut porta, nunc id porttitor pellentesque, est enim porta odio, eget ullamcorper est dui vel ex. Aliquam leo orci, aliquet eget consectetur sit amet, pulvinar volutpat nulla. Cras porttitor, dolor non vulputate hendrerit, turpis sapien malesuada nunc, rhoncus accumsan nunc odio vel lectus. Integer eu tincidunt massa. Aliquam efficitur, est eget vulputate finibus, diam enim pulvinar tortor, quis posuere mi lorem nec nisl. Donec sed nulla vel enim facilisis aliquet.
