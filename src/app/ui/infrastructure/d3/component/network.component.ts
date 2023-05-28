@@ -2,49 +2,53 @@ import {AfterViewInit, Component, Input, OnChanges, SimpleChanges} from '@angula
 import {BaseComponent} from '../../../shared/components/base.component';
 import * as d3 from 'd3';
 import {D3Link, GraphNode} from '../../vis/model/network';
+import {uuid} from '../../../../../domain/function/uuid.helper';
+import {translate} from '@ngneat/transloco';
 
 @Component({
   selector: 'd3-network',
-  template: '<div class="flex flex-1" id="network"></div>',
+  template: '<div class="flex flex-1" id="{{ id }}-network"></div>',
 })
 export class D3NetworkComponent extends BaseComponent implements AfterViewInit, OnChanges {
   @Input()
   nodes: GraphNode[] = []
   @Input()
   links: D3Link[] = [];
+  @Input()
+  width: number = 1920;
+  @Input()
+  height: number = 1080;
 
   characterLinks: D3Link[] = [];
-  width: number = 1400;
-  height: number = 800;
 
+  protected id = uuid();
+  private element: HTMLElement;
   private edgeGroups: string[] = []
   private color;
   private svg;
+  private g;
   private simulation;
   private link;
   private node;
-
 
   constructor() {
     super();
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log('nodes: ', this.nodes)
-    console.log('link: ', this.links)
     if (this.nodes.length > 0 && this.links.length > 0)
       this.create();
   }
 
   ngAfterViewInit(): void {
-    console.log('nodes: ', this.nodes)
-    console.log('link: ', this.links)
     if (this.nodes.length > 0 && this.links.length > 0)
       this.create();
   }
 
   create(): void {
-    d3.select('#network').selectChildren().remove();
+    this.element = document.getElementById(this.id + '-network');
+
+    d3.select(this.element).selectChildren().remove();
     this.createCharacterLinks();
     this.initializeColor();
     this.createSimulation();
@@ -62,10 +66,11 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
     const characters = this.nodes.map(c => c.id);
     this.characterLinks = this.links.filter(link => characters.includes(link.source) && characters.includes(link.target))
   }
+
   createSimulation(): void {
     // @ts-ignore
     this.simulation = d3.forceSimulation(this.nodes) // @ts-ignore
-      .force("link", d3.forceLink(this.characterLinks).id(this.id)) // @ts-ignore
+      .force("link", d3.forceLink(this.characterLinks).id(this.getId)) // @ts-ignore
       .force("charge", d3.forceManyBody().strength(d => d.score * (-6)))
       .force("center", d3.forceCenter(this.width / 2, this.height / 2))// @ts-ignore
       .force("radius", d3.forceCollide(d => d.score + 20))
@@ -76,10 +81,12 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
   }
 
   createSvg() {
-    this.svg = d3.select("#network")
+    this.svg = d3.select(this.element)
       .append("svg")
       .attr("viewBox", [0, 0, this.width, this.height])
       .style("font", "12px sans-serif");
+
+    this.g = this.svg.append("g");
 
     this.svg.attr("width", this.width)
       .attr("height", this.height);
@@ -100,17 +107,17 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
   }
 
   createLink(): void {
-    this.link = this.svg.append("g")
+    this.link = this.g.append("g")
       .attr("fill", "none")
       .attr("stroke-width", 1.5)
       .selectAll("path")
       .data(this.characterLinks)
       .join("path")
-      .attr("stroke", d => this.color(d.type))
+      .attr("stroke", d => this.color(d.type));
   }
 
   createNode() {
-    this.node = this.svg.append("g")
+    this.node = this.g.append("g")
       .attr("fill", "currentColor")
       .attr("stroke-linecap", "round")
       .attr("stroke-linejoin", "round")
@@ -119,7 +126,8 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
       .join("g")
       .call(this.drag(this.simulation));
 
-    this.node.append("circle")
+    this.node
+      .append("circle")
       .attr("stroke", "black")
       .attr("stroke-width", 1)
       .attr("r", d => d.score)
@@ -133,6 +141,10 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
       .style("dominant-baseline", "central");
   }
 
+  private getId(d) {
+    return d.id;
+  }
+
   private linkArc(d) {
     const r = Math.hypot(d.target.x - d.source.x, d.target.y - d.source.y);
     return `
@@ -141,12 +153,7 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
   `;
   }
 
-  private id(d) {
-    return d.id;
-  }
-
   private drag(simulation) {
-
     function dragstarted(event, d) {
       if (!event.active) simulation.alphaTarget(0.3).restart();
       d.fx = d.x;
