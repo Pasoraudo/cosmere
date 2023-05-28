@@ -8,27 +8,7 @@ export const charactersToD3Nodes = (characters: Character[], relationships: Rela
   if (relationships.length === 0)
     return [];
 
-  const minScore = D3NodeMinScore;
-  const maxScore = D3NodeMaxScore;
-  const characterScore: Record<string, number> = {};
-
-  relationships.forEach(relationship => {
-    characterScore[relationship.characterId1] ??= 0;
-    characterScore[relationship.characterId2] ??= 0;
-
-    characterScore[relationship.characterId1] += 1;
-    characterScore[relationship.characterId2] += 1;
-  });
-  const scores = Object.values(characterScore);
-  let minCharacterScore = Math.min(...scores);
-  let maxCharacterScore = Math.max(...scores);
-  const range = maxCharacterScore - minCharacterScore;
-
-  const normalizedScore: Record<string, number> = {};
-  for (const [key, score] of Object.entries(characterScore)) {
-    normalizedScore[key] = ((score - minCharacterScore) / range) * (maxScore - minScore) + minScore;
-  }
-
+  const normalizedScore = characterScoresFromRelationships(characters, relationships);
   return characters.map(character => ({
     id: character.id,
     label: character.name,
@@ -66,3 +46,28 @@ export const characterIdsFromRelationships = (relationships: Relationship[]): st
   })
   return Array.from(characterSet)
 };
+
+export const characterScoresFromRelationships = (characters: Character[], relationships: Relationship[]): Record<string, number> => {
+  const minScore = D3NodeMinScore;
+  const maxScore = D3NodeMaxScore;
+  const characterScore: Record<string, number> = {};
+
+  relationships.forEach(relationship => {
+    characterScore[relationship.characterId1] ??= 0;
+    characterScore[relationship.characterId2] ??= 0;
+
+    characterScore[relationship.characterId1] += 1;
+    characterScore[relationship.characterId2] += 1;
+  });
+  const scores = Object.values(characterScore);
+  let minCharacterScore = Math.min(...scores);
+  let maxCharacterScore = Math.max(...scores);
+  const range = maxCharacterScore - minCharacterScore;
+
+  const normalizedScore: Record<string, number> = {};
+  for (const [key, score] of Object.entries(characterScore)) {
+    normalizedScore[key] = ((score - minCharacterScore) / range) * (maxScore - minScore) + minScore;
+  }
+
+  return normalizedScore;
+}

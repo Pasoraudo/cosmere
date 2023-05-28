@@ -6,7 +6,11 @@ import {defer} from 'lodash';
 import {Book} from '../../../../../../../domain/model/book';
 import {FormControl} from '@angular/forms';
 import {FormBuilderService} from '../../../../../../../domain/service/form/form.builder';
-import {charactersToD3Nodes, relationshipsToLinks} from '../../../../../../../domain/function/network.helper';
+import {
+  characterIdsFromRelationships,
+  charactersToD3Nodes,
+  relationshipsToLinks
+} from '../../../../../../../domain/function/network.helper';
 import {D3Link, D3Node} from '../../../../../infrastructure/vis/model/network';
 import {Character} from '../../../../../../../domain/model/character';
 import {Relationship} from '../../../../../../../domain/model/relationship';
@@ -14,6 +18,8 @@ import {Planet} from '../../../../../../../domain/model/planet';
 import {BookApi} from '../../../../../../../domain/service/api/book.api';
 import {PlanetApi} from '../../../../../../../domain/service/api/planet.api';
 import {Modal} from '../../../../../../../domain/ionic/modal.ionic';
+import Graph from 'graphology';
+import louvain from 'graphology-communities-louvain';
 
 @Component({
   selector: 'characters-relationships-graph',
@@ -48,18 +54,10 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
       this.setRelationships(relationships);
       this.setCharacters(this.characters);
     });
-    this.subscribe(this.bookApi.allBooks(), books => {
-      this.books = books;
-    });
-    this.subscribe(this.planetApi.allPlanets(), planets => {
-      this.planets = planets;
-    });
 
     defer(() => {
       this.characterApi.fetchAllCosmereCharacter();
       this.relationshipApi.fetchAllCosmereRelationship();
-      this.bookApi.fetchAllBooks();
-      this.planetApi.fetchAllPlanets();
     });
   }
 
@@ -81,16 +79,17 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
   applyFilters() {
     this.nodes = charactersToD3Nodes(this.filteredCharacters(), this.filteredRelationships());
     this.edges = relationshipsToLinks(this.filteredRelationships());
+    this.setCommunities();
   }
 
   filteredCharacters(): Character[] {
     let filteredCharacters = this.relationshipCharacters;
-    if (this.bookControl.value.length > 0) {
-      const selectedBooksIds = this.books.filter(book => this.bookControl.value.includes(book.title)).map(book => book.id);
-      filteredCharacters = filteredCharacters.filter(character => character.bookIds.filter(bookId => selectedBooksIds.includes(bookId)).length > 0);
-    }
-    if (this.planetControl.value.length > 0)
-      filteredCharacters = filteredCharacters.filter(character => this.planetControl.value.includes(character.planet));
+    // if (this.bookControl.value.length > 0) {
+    //   const selectedBooksIds = this.books.filter(book => this.bookControl.value.includes(book.title)).map(book => book.id);
+    //   filteredCharacters = filteredCharacters.filter(character => character.bookIds.filter(bookId => selectedBooksIds.includes(bookId)).length > 0);
+    // }
+    // if (this.planetControl.value.length > 0)
+    //   filteredCharacters = filteredCharacters.filter(character => this.planetControl.value.includes(character.planet));
 
     return filteredCharacters;
   }
@@ -104,5 +103,20 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
     }
 
     return filteredRelationships;
+  }
+
+  setCommunities(): void {
+    const graph = new Graph();
+    const characterIds: string[] = characterIdsFromRelationships(this.relationships);
+    characterIds.forEach(characterId => graph.addNode(characterId));
+    this.relationships.forEach(relationship => graph.addEdge(relationship.characterId1, relationship.characterId2));
+    const communities = louvain(graph);
+
+    this.nodes = this.nodes.map(node => {
+      return {
+        ...node,
+        group: communities[node.id],
+      };
+    });
   }
 }

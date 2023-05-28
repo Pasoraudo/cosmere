@@ -138,11 +138,7 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
       .attr("stroke", "black")
       .attr("stroke-width", 1)
       .attr("r", d => d.score)
-      .style("fill", d => {
-        if (!d.group)
-          return "none"
-        return this.color(d.group);
-      });
+      .style("fill", d =>  this.color(d.group));
 
     console.log(this.nodes)
     this.node.append("text")
