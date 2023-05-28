@@ -14,12 +14,12 @@ import {DataSet, Network} from 'vis';
 import {GraphEdge, GraphNode} from '../model/network';
 
 @Component({
-  selector: 'network',
+  selector: 'vis-network',
   template: '<div class="flex w-full h-full" #network></div>',
   encapsulation: ViewEncapsulation.None
 })
 
-export class NetworkComponent extends BaseComponent implements OnInit, OnChanges, AfterViewInit {
+export class VisNetworkComponent extends BaseComponent implements OnInit, OnChanges, AfterViewInit {
   @ViewChild('network') el: ElementRef;
   @Input()
   nodes: GraphNode[];
