@@ -15,10 +15,9 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
   @Input()
   links: D3Link[] = [];
   @Input()
-  width: number = 1920;
+  width: number =   window.screen.availWidth;
   @Input()
-  height: number = 1080;
-
+  height: number =   window.screen.availHeight;
   characterLinks: D3Link[] = [];
 
   protected id = uuid();
@@ -47,8 +46,9 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
 
   create(): void {
     this.element = document.getElementById(this.id + '-network');
-
     d3.select(this.element).selectChildren().remove();
+
+
     this.createCharacterLinks();
     this.initializeColor();
     this.createSimulation();
@@ -56,6 +56,7 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
     this.createLink();
     this.createNode();
   }
+
 
   initializeColor(): void {
     this.edgeGroups = Array.from(new Set(this.characterLinks.map(graphEdge => graphEdge.group)));
@@ -81,12 +82,21 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
   }
 
   createSvg() {
-    this.svg = d3.select(this.element)
-      .append("svg")
+    const _this = this;
+    this.svg = d3.create("svg")
       .attr("viewBox", [0, 0, this.width, this.height])
-      .style("font", "12px sans-serif");
+      .style("font", "12px sans-serif")
 
-    this.g = this.svg.append("g");
+    this.g  = this.svg.append("g");
+    this.svg.call(d3.zoom()
+      .extent([[0, 0], [this.width, this.height]])
+      .on("zoom", zoomed));
+
+    function zoomed({transform}) {
+      _this.g.attr("transform", transform);
+    }
+
+    this.element.append(this.svg.node());
 
     this.svg.attr("width", this.width)
       .attr("height", this.height);
