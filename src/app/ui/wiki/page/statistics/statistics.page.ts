@@ -40,7 +40,7 @@ export class StatisticsPage extends BasePage implements OnInit {
 
   ngOnInit(): void {
     this.subscribe(this.relationshipApi.cosmereRelationships(), relationships => this.calculateGlobalStats(relationships))
-    this.relationshipApi.fetchAllRelationshipByBookId('warbreaker');
+    this.relationshipApi.fetchAllCosmereRelationship();
   }
 
   calculateGlobalStats(relationships: Relationship[]): void {
@@ -65,7 +65,7 @@ export class StatisticsPage extends BasePage implements OnInit {
     const degreeCentralityCosmere = degreeCentrality(this.graph);
     this.degreeCentralityCosmere = mapToBarChartItemArray(degreeCentralityCosmere);
 
-    this.pageRankNormalized = normalizeBarChartItems(this.pagerankCosmere).filter(e => e.value !== 0);
+    this.pageRankNormalized = normalizeBarChartItems(this.pagerankCosmere);
     const eigenvectorNormalized = normalizeBarChartItems(this.eigenvectorCosmere);
     const degreeCentralityNormalized = normalizeBarChartItems(this.degreeCentralityCosmere);
 

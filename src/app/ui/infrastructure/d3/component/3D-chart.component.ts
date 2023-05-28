@@ -15,7 +15,7 @@ export interface Chart3DItem {
   selector: 'chart-3d',
   template: `
     <div class="flex flex-row">
-      <div class="flex flex-1" id="{{id}}-chart-3d"></div>
+      <div id="{{id}}-chart-3d"></div>
       <div class="flex flex-1 items-end pb-10" id="{{id}}-legend-bar"></div>
     </div>
   `,
@@ -29,8 +29,8 @@ export class Chart3DComponent extends BaseComponent implements AfterViewInit, On
   yLabel: string = '';
   @Input()
   private config: { [name: string]: any } = {
-    height: 600,
-    width: 600,
+    height: 500,
+    width: 500,
     margin: {
       top: 20,
       left: 40,

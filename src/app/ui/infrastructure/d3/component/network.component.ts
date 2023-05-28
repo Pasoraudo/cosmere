@@ -22,7 +22,7 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
 
   protected id = uuid();
   private element: HTMLElement;
-  private edgeGroups: string[] = []
+  private edgeGroups: string[] = [];
   private color;
   private svg;
   private g;
