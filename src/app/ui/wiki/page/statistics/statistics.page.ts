@@ -49,18 +49,20 @@ export class StatisticsPage extends BasePage implements OnInit {
     characterIds.forEach(characterId => this.graph.addNode(characterId));
     relationships.forEach(relationship => this.graph.addEdge(relationship.characterId1, relationship.characterId2));
 
-    const pagerankCosmere = pagerank(this.graph);
+    // @ts-ignore
+    const pagerankCosmere = pagerank(this.graph, {maxIterations: 300});
     this.pagerankCosmere = mapToBarChartItemArray(pagerankCosmere);
+
+    const betweennessCosmere = betweennessCentrality(this.graph);
+    this.betweennessCosmere = mapToBarChartItemArray(betweennessCosmere);
 
     const closenessCosmere = closenessCentrality(this.graph);
     this.closenessCosmere = mapToBarChartItemArray(closenessCosmere);
     this.closenessCosmere = reject(this.closenessCosmere, e => e.value === 1);
 
-    const eigenvectorCosmere = eigenvectorCentrality(this.graph);
+    // @ts-ignore
+    const eigenvectorCosmere = eigenvectorCentrality(this.graph, {maxIterations: 200});
     this.eigenvectorCosmere = mapToBarChartItemArray(eigenvectorCosmere);
-
-    const betweennessCosmere = betweennessCentrality(this.graph);
-    this.betweennessCosmere = mapToBarChartItemArray(betweennessCosmere);
 
     const degreeCentralityCosmere = degreeCentrality(this.graph);
     this.degreeCentralityCosmere = mapToBarChartItemArray(degreeCentralityCosmere);

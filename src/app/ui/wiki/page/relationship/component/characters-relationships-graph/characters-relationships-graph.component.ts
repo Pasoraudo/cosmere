@@ -20,6 +20,7 @@ import {PlanetApi} from '../../../../../../../domain/service/api/planet.api';
 import {Modal} from '../../../../../../../domain/ionic/modal.ionic';
 import {UndirectedGraph} from 'graphology';
 import louvain from 'graphology-communities-louvain';
+import * as seedrandom from 'seedrandom';
 
 @Component({
   selector: 'characters-relationships-graph',
@@ -110,8 +111,7 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
     const characterIds: string[] = characterIdsFromRelationships(this.relationships);
     characterIds.forEach(characterId => graph.addNode(characterId));
     this.relationships.forEach(relationship => graph.addEdge(relationship.characterId1, relationship.characterId2));
-
-    const communities = louvain(graph);
+    const communities = louvain(graph, {rng: seedrandom('1231312'), resolution: 2});
     this.nodes = this.nodes.map(node => {
       return {
         ...node,
@@ -119,4 +119,5 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
       };
     });
   }
+
 }

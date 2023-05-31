@@ -63,6 +63,7 @@
     "perfect-scrollbar": "^1.5.5",
     "qr-scanner": "^1.4.1",
     "rxjs": "^7.0.0",
+    "seedrandom": "^3.0.5",
     "tippy.js": "^6.3.7",
     "tslib": "^2.2.0",
     "vis": "^4.21.0-EOL",
