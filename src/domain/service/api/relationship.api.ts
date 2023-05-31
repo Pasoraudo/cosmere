@@ -4,6 +4,7 @@ import {map, Observable} from 'rxjs';
 import {RelationshipStore} from '../../store/relationship.store';
 import {Relationship} from '../../model/relationship';
 import {cosmereBookIds} from '../../model/book';
+import {mergeArrays} from '../../function/array.helper';
 
 @Injectable({
   providedIn: 'root',
@@ -24,13 +25,14 @@ export class RelationshipApi {
   }
 
   async fetchAllCosmereRelationship(): Promise<void> {
+    let relationships = [];
     for (const bookId of cosmereBookIds()) {
       try {
-        const httpRelationship = await this.api.get('relationships-' + bookId) as Relationship[];
-        this.store.saveAllRelationship(httpRelationship);
+        relationships = mergeArrays(relationships, await this.api.get('relationships-' + bookId) as Relationship[]);
       } catch (e) {
       }
     }
+    this.store.saveAllRelationship(relationships);
   }
 
   syncAllRelationship(): Relationship[] {

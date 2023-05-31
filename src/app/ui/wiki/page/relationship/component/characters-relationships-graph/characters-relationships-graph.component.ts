@@ -18,7 +18,7 @@ import {Planet} from '../../../../../../../domain/model/planet';
 import {BookApi} from '../../../../../../../domain/service/api/book.api';
 import {PlanetApi} from '../../../../../../../domain/service/api/planet.api';
 import {Modal} from '../../../../../../../domain/ionic/modal.ionic';
-import Graph from 'graphology';
+import {UndirectedGraph} from 'graphology';
 import louvain from 'graphology-communities-louvain';
 
 @Component({
@@ -106,12 +106,12 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
   }
 
   setCommunities(): void {
-    const graph = new Graph();
+    const graph = new UndirectedGraph();
     const characterIds: string[] = characterIdsFromRelationships(this.relationships);
     characterIds.forEach(characterId => graph.addNode(characterId));
     this.relationships.forEach(relationship => graph.addEdge(relationship.characterId1, relationship.characterId2));
-    const communities = louvain(graph);
 
+    const communities = louvain(graph);
     this.nodes = this.nodes.map(node => {
       return {
         ...node,

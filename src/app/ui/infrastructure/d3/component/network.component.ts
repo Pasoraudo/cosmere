@@ -3,6 +3,7 @@ import {BaseComponent} from '../../../shared/components/base.component';
 import * as d3 from 'd3';
 import {D3Link, D3Node} from '../../vis/model/network';
 import {uuid} from '../../../../../domain/function/uuid.helper';
+import {delay} from 'rxjs';
 
 @Component({
   selector: 'd3-network',
@@ -49,9 +50,9 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
 
     this.createCharacterLinks();
     this.initializeColor();
-    this.createSimulation();
     this.createSvg();
     this.createLink();
+    this.createSimulation();
     this.createNode();
   }
 
@@ -69,7 +70,7 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
     // @ts-ignore
     this.simulation = d3.forceSimulation(this.nodes) // @ts-ignore
       .force("link", d3.forceLink(this.characterLinks).id(this.getId)) // @ts-ignore
-      .force("charge", d3.forceManyBody().strength(d => d.score * (-6)))
+      .force("charge", d3.forceManyBody().strength(d => d.score * (-15)))
       .force("center", d3.forceCenter(this.width / 2, this.height / 2))// @ts-ignore
       .force("radius", d3.forceCollide(d => d.score + 20))
       .on("tick", () => {
@@ -138,9 +139,8 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
       .attr("stroke", "black")
       .attr("stroke-width", 1)
       .attr("r", d => d.score)
-      .style("fill", d =>  this.color(d.group));
+      .style("fill", d => this.color(d.group));
 
-    console.log(this.nodes)
     this.node.append("text")
       .text(d => d.label)
       .style("font-size", "1rem")

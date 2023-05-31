@@ -2,7 +2,7 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {BasePage} from '../../../shared/page/base.page';
 import {RelationshipApi} from '../../../../../domain/service/api/relationship.api';
 import {Relationship} from '../../../../../domain/model/relationship';
-import Graph from 'graphology';
+import Graph, {UndirectedGraph} from 'graphology';
 import {characterIdsFromRelationships} from '../../../../../domain/function/network.helper';
 import {reject} from 'lodash';
 import {pagerank} from 'graphology-metrics/centrality';
@@ -16,7 +16,6 @@ import {
 } from '../../../infrastructure/d3/model/barChar.model';
 import {Chart3DItem} from '../../../infrastructure/d3/component/3D-chart.component';
 import {degreeCentrality} from 'graphology-metrics/centrality/degree';
-import louvain from 'graphology-communities-louvain';
 
 
 @Component({
@@ -45,7 +44,7 @@ export class StatisticsPage extends BasePage implements OnInit {
   }
 
   calculateGlobalStats(relationships: Relationship[]): void {
-    this.graph = new Graph();
+    this.graph = new UndirectedGraph();
     const characterIds: string[] = characterIdsFromRelationships(relationships);
     characterIds.forEach(characterId => this.graph.addNode(characterId));
     relationships.forEach(relationship => this.graph.addEdge(relationship.characterId1, relationship.characterId2));
