@@ -1,5 +1,6 @@
-export interface Character {
-  id: string;
+import {Entity} from './shared.model';
+
+export interface Character extends Entity {
 
   name: string;
 

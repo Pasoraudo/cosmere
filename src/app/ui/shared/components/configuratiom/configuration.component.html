@@ -1,0 +1,40 @@
+<div class="relative ">
+  <button mat-flat-button class="absolute z-50 p-4 bg-primary" (click)="toggle()">Mostrar</button>
+  <div *ngIf="showCard" class="absolute z-50 w-screen">
+    <fuse-card class="flex flex-col h-full p-6 w-1/5">
+      <button mat-flat-button class="p-4 bg-primary" (click)="toggle()">Esconder</button>
+      <form [formGroup]="filterForm" class="flex flex-col">
+        <div class="grow w-full">
+          <mat-form-field floatLabel="always" class="w-full">
+            <mat-label>{{"books" | trans | titlecase}}</mat-label>
+            <mat-select multiple formControlName="bookControl" (selectionChange)="applyFilters()"
+                        placeholder="Libros: Todos">
+              <mat-option *ngFor="let book of data.books" [value]="book.id">
+                {{book.title | trans | uppercase}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <!--    <mat-form-field class="w-full" floatLabel="always">-->
+        <!--      <mat-label>{{"planets" | trans | titlecase}}</mat-label>-->
+        <!--      <mat-select multiple [formControl]="planetControl" (selectionChange)="applyFilters()" placeholder="Planetas: Todos">-->
+        <!--        <mat-option *ngFor="let planet of planets" [value]="planet.id">-->
+        <!--          {{planet.name | trans | uppercase}}-->
+        <!--        </mat-option>-->
+        <!--      </mat-select>-->
+        <!--    </mat-form-field>-->
+
+        <!--    <mat-form-field class="w-full" floatLabel="always">-->
+        <!--      <mat-label>{{'group.by' | trans | titlecase}}</mat-label>-->
+        <!--      <mat-select multiple [formControl]="planetControl" (selectionChange)="applyFilters()">-->
+        <!--        <mat-option *ngFor="let groupBy of groupByOptions" [value]="groupBy">-->
+        <!--          {{groupBy | trans | uppercase}}-->
+        <!--        </mat-option>-->
+        <!--      </mat-select>-->
+        <!--    </mat-form-field>-->
+        <!--  </div>-->
+      </form>
+    </fuse-card>
+  </div>
+</div>
+

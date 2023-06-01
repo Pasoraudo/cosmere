@@ -21,6 +21,7 @@ import {Modal} from '../../../../../../../domain/ionic/modal.ionic';
 import {UndirectedGraph} from 'graphology';
 import louvain from 'graphology-communities-louvain';
 import * as seedrandom from 'seedrandom';
+import {Configuration} from '../../../../../../../domain/model/configuration';
 
 @Component({
   selector: 'characters-relationships-graph',
@@ -41,6 +42,7 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
   planetControl: FormControl = new FormControl([]);
   groupByOption: FormControl = new FormControl([]);
 
+  configuration: Configuration;
   constructor(private characterApi: CharacterApi, private relationshipApi: RelationshipApi, private formBuilder: FormBuilderService, private bookApi: BookApi,
               private planetApi: PlanetApi, private modal: Modal) {
     super();
@@ -64,7 +66,7 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
 
   setCharacters(characters: Character[]) {
     this.characters = characters;
-    this.applyFilters();
+    this.applyFilters(null);
   }
 
   setRelationships(relationships: Relationship[]) {
@@ -74,10 +76,12 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
     relationshipCharacters = relationshipCharacters.concat(this.relationships.map(relationship => relationship.characterId2))
     relationshipCharacters = Array.from(new Set<string>(relationshipCharacters));
     this.relationshipCharacters = this.characters.filter(character => relationshipCharacters.includes(character.id));
-    this.applyFilters();
+    this.applyFilters(null);
   }
 
-  applyFilters() {
+  applyFilters(configuration: Configuration) {
+    console.log('aaaaaaaaaaaaaa', configuration)
+
     this.nodes = charactersToD3Nodes(this.filteredCharacters(), this.filteredRelationships());
     this.edges = relationshipsToLinks(this.filteredRelationships());
     this.setCommunities();
