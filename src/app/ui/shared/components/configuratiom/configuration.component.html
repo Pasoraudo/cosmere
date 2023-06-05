@@ -3,11 +3,11 @@
   <div *ngIf="showCard" class="absolute z-50 w-screen">
     <fuse-card class="flex flex-col h-full p-6 w-1/5">
       <button mat-flat-button class="p-4 bg-primary" (click)="toggle()">Esconder</button>
-      <form [formGroup]="filterForm" class="flex flex-col">
+      <form [formGroup]="configurationForm" class="flex flex-col">
         <div class="grow w-full">
           <mat-form-field floatLabel="always" class="w-full">
             <mat-label>{{"books" | trans | titlecase}}</mat-label>
-            <mat-select multiple formControlName="bookControl" (selectionChange)="applyFilters()"
+            <mat-select multiple formControlName="books"
                         placeholder="Libros: Todos">
               <mat-option *ngFor="let book of data.books" [value]="book.id">
                 {{book.title | trans | uppercase}}

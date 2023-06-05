@@ -22,6 +22,7 @@ import {UndirectedGraph} from 'graphology';
 import louvain from 'graphology-communities-louvain';
 import * as seedrandom from 'seedrandom';
 import {Configuration} from '../../../../../../../domain/model/configuration';
+import {ConfigurationApi} from '../../../../../../../domain/service/api/configuration.api';
 
 @Component({
   selector: 'characters-relationships-graph',
@@ -44,7 +45,7 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
 
   configuration: Configuration;
   constructor(private characterApi: CharacterApi, private relationshipApi: RelationshipApi, private formBuilder: FormBuilderService, private bookApi: BookApi,
-              private planetApi: PlanetApi, private modal: Modal) {
+              private planetApi: PlanetApi, private modal: Modal, private configurationApi: ConfigurationApi) {
     super();
   }
 
@@ -57,6 +58,7 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
       this.setRelationships(relationships);
       this.setCharacters(this.characters);
     });
+    this.subscribe(this.configurationApi.configuration(), (configuration) => this.setConfiguration(configuration));
 
     defer(() => {
       this.characterApi.fetchAllCosmereCharacter();
@@ -66,7 +68,7 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
 
   setCharacters(characters: Character[]) {
     this.characters = characters;
-    this.applyFilters(null);
+    this.applyFilters();
   }
 
   setRelationships(relationships: Relationship[]) {
@@ -76,12 +78,10 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
     relationshipCharacters = relationshipCharacters.concat(this.relationships.map(relationship => relationship.characterId2))
     relationshipCharacters = Array.from(new Set<string>(relationshipCharacters));
     this.relationshipCharacters = this.characters.filter(character => relationshipCharacters.includes(character.id));
-    this.applyFilters(null);
+    this.applyFilters();
   }
 
-  applyFilters(configuration: Configuration) {
-    console.log('aaaaaaaaaaaaaa', configuration)
-
+  applyFilters() {
     this.nodes = charactersToD3Nodes(this.filteredCharacters(), this.filteredRelationships());
     this.edges = relationshipsToLinks(this.filteredRelationships());
     this.setCommunities();
@@ -102,10 +102,10 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
   filteredRelationships(): Relationship[] {
     let filteredRelationships = this.relationships;
 
-    if (this.bookControl.value.length > 0) {
-      const selectedBooksIds = this.books.filter(book => this.bookControl.value.includes(book.title)).map(book => book.id);
-      filteredRelationships = filteredRelationships.filter(relationship => selectedBooksIds.includes(relationship.bookId));
-    }
+    // if (this.bookControl.value.length > 0) {
+    //   const selectedBooksIds = this.books.filter(book => this.bookControl.value.includes(book.title)).map(book => book.id);
+    //   filteredRelationships = filteredRelationships.filter(relationship => selectedBooksIds.includes(relationship.bookId));
+    // }
 
     return filteredRelationships;
   }
@@ -124,4 +124,9 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
     });
   }
 
+  setConfiguration(configuration: Configuration): void {
+    this.configuration = configuration;
+    console.log(configuration)
+    this.applyFilters();
+  }
 }

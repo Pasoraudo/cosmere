@@ -1,11 +1,13 @@
 import {ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {BaseComponent} from '../base.component';
 import {Configuration} from '../../../../../domain/model/configuration';
-import {FormControl, FormGroup} from '@angular/forms';
+import {FormGroup} from '@angular/forms';
 import {FormBuilderService} from '../../../../../domain/service/form/form.builder';
 import {BookApi} from '../../../../../domain/service/api/book.api';
 import {Book} from '../../../../../domain/model/book';
 import {defer} from 'lodash';
+import {ConfigurationApi} from '../../../../../domain/service/api/configuration.api';
+import {compilePipeFromMetadata} from '@angular/compiler';
 
 
 @Component({
@@ -16,11 +18,8 @@ import {defer} from 'lodash';
 export class ConfigurationComponent extends BaseComponent implements OnInit {
 
   @Output() readonly configurationChanges: EventEmitter<Configuration> = new EventEmitter<Configuration>();
-  configuration: Configuration = {
-    id: '',
-    bookIds: []
-  };
-  filterForm: FormGroup;
+  configuration: Configuration;
+  configurationForm: FormGroup;
   showCard = false;
   data: {
     books: Book[];
@@ -28,12 +27,13 @@ export class ConfigurationComponent extends BaseComponent implements OnInit {
     books: []
   }
 
-  constructor(private formBuilder: FormBuilderService, private bookApi: BookApi) {
+  constructor(private configurationApi: ConfigurationApi, private formBuilder: FormBuilderService, private bookApi: BookApi) {
     super();
   }
 
   ngOnInit(): void {
-    this.subscribe(this.bookApi.allBooks(), books => this.setBooks(books));
+    this.subscribe(this.bookApi.allBooks(), books => this.data.books = books);
+    this.subscribe(this.configurationApi.configuration(), (configuration) => this.setConfiguration(configuration));
 
     defer(async () => {
       await this.bookApi.fetchAllBooks();
@@ -42,20 +42,27 @@ export class ConfigurationComponent extends BaseComponent implements OnInit {
   }
 
   buildForm(): void {
-    this.filterForm = new FormGroup({
-      bookControl: new FormControl([''])
+    this.configurationForm = this.formBuilder.build(this.configuration);
+
+    this.configurationForm.get('books').valueChanges.subscribe(books => {
+      this.configuration.books = books;
+      this.saveConfiguration();
     });
-  }
-
-  applyFilters(): void {
-    this.configurationChanges.emit(this.configuration);
-  }
-
-  setBooks(books: Book[]): void {
-    this.data.books = books;
   }
 
   toggle() {
     this.showCard = !this.showCard;
+  }
+
+  setConfiguration(configuration: Configuration): void {
+    this.configuration = {...configuration};
+
+    if (!this.configurationForm)
+      return;
+    this.configurationForm.patchValue(configuration);
+  }
+
+  saveConfiguration(): void {
+    this.configurationApi.saveConfiguration(this.configuration);
   }
 }
