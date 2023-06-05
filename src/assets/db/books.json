@@ -2,6 +2,22 @@
   {
     "id": "mistborn1",
     "title": "Mistborn: The Final Empire"
+  },
+  {
+    "id": "mistborn2",
+    "title": "Mistborn: 2"
+  },
+  {
+    "id": "mistborn3",
+    "title": "Mistborn: 3"
+  },
+  {
+    "id": "stormlight1",
+    "title": "Stormlight 1"
+  },
+  {
+    "id": "warbreaker",
+    "title": "Warbreaker"
   }
 ]
 
