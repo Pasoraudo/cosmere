@@ -23,6 +23,7 @@ import louvain from 'graphology-communities-louvain';
 import * as seedrandom from 'seedrandom';
 import {Configuration} from '../../../../../../../domain/model/configuration';
 import {ConfigurationApi} from '../../../../../../../domain/service/api/configuration.api';
+import {intersection} from 'lodash-es';
 
 @Component({
   selector: 'characters-relationships-graph',
@@ -82,16 +83,16 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
   }
 
   applyFilters() {
-    this.nodes = charactersToD3Nodes(this.filteredCharacters(), this.filteredRelationships());
     this.edges = relationshipsToLinks(this.filteredRelationships());
+    this.nodes = charactersToD3Nodes(this.filteredCharacters(), this.filteredRelationships())
+      .filter(node => this.edges.map(edge => edge.source).includes(node.id) || this.edges.map(edge => edge.target).includes(node.id));
     this.setCommunities();
   }
 
   filteredCharacters(): Character[] {
     let filteredCharacters = this.relationshipCharacters;
-    // if (this.bookControl.value.length > 0) {
-    //   const selectedBooksIds = this.books.filter(book => this.bookControl.value.includes(book.title)).map(book => book.id);
-    //   filteredCharacters = filteredCharacters.filter(character => character.bookIds.filter(bookId => selectedBooksIds.includes(bookId)).length > 0);
+    // if (this.configuration.books.length > 0) {
+    //   filteredCharacters = filteredCharacters.filter(character => intersection(character.bookIds, this.configuration.books).length > 0);
     // }
     // if (this.planetControl.value.length > 0)
     //   filteredCharacters = filteredCharacters.filter(character => this.planetControl.value.includes(character.planet));
@@ -102,10 +103,10 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
   filteredRelationships(): Relationship[] {
     let filteredRelationships = this.relationships;
 
-    // if (this.bookControl.value.length > 0) {
-    //   const selectedBooksIds = this.books.filter(book => this.bookControl.value.includes(book.title)).map(book => book.id);
-    //   filteredRelationships = filteredRelationships.filter(relationship => selectedBooksIds.includes(relationship.bookId));
-    // }
+    if (this.configuration.books.length > 0) {
+      filteredRelationships = filteredRelationships.filter(relationship =>  this.configuration.books.includes(relationship.bookId));
+    }
+    console.log(filteredRelationships)
 
     return filteredRelationships;
   }
@@ -126,7 +127,6 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
 
   setConfiguration(configuration: Configuration): void {
     this.configuration = configuration;
-    console.log(configuration)
     this.applyFilters();
   }
 }

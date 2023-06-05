@@ -80,7 +80,5 @@ export class StatisticsPage extends BasePage implements OnInit {
       }
     });
     this.pagerankEigenvectorAndDegreeCentrality = this.pagerankEigenvectorAndDegreeCentrality.filter(p => p.x >= 0.1 && p.y > 0.1);
-
-    //console.log(louvain(this.graph))
   }
 }
