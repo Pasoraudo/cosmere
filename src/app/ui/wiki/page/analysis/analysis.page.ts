@@ -3,11 +3,7 @@ import {BasePage} from '../../../shared/page/base.page';
 import {RelationshipApi} from '../../../../../domain/service/api/relationship.api';
 import {Relationship} from '../../../../../domain/model/relationship';
 import Graph, {UndirectedGraph} from 'graphology';
-import {
-  characterIdsFromRelationships,
-  charactersToD3Nodes,
-  relationshipsToLinks
-} from '../../../../../domain/function/network.helper';
+import {characterIdsFromRelationships} from '../../../../../domain/function/network.helper';
 import {reject} from 'lodash';
 import {pagerank} from 'graphology-metrics/centrality';
 import closenessCentrality from 'graphology-metrics/centrality/closeness';
@@ -22,15 +18,14 @@ import {Chart3DItem} from '../../../infrastructure/d3/component/3D-chart.compone
 import {degreeCentrality} from 'graphology-metrics/centrality/degree';
 import {Configuration, newConfiguration} from '../../../../../domain/model/configuration';
 import {ConfigurationApi} from '../../../../../domain/service/api/configuration.api';
-import {Character} from '../../../../../domain/model/character';
 
 
 @Component({
-  selector: 'relationship',
-  templateUrl: './statistics.page.html',
+  selector: 'network',
+  templateUrl: './analysis.page.html',
   encapsulation: ViewEncapsulation.None
 })
-export class StatisticsPage extends BasePage implements OnInit {
+export class AnalysisPage extends BasePage implements OnInit {
   relationships: Relationship[];
   pagerankCosmere: BarChartItem[];
   eigenvectorCosmere: BarChartItem[];
@@ -46,12 +41,8 @@ export class StatisticsPage extends BasePage implements OnInit {
   }
 
   ngOnInit(): void {
-    this.subscribe(this.relationshipApi.cosmereRelationships(), relationships => {
-      this.relationships = relationships;
-      const graph = this.generateGraph();
-      this.analyseNetwork(graph);
-    });
-    this.subscribe(this.configurationApi.configuration(), (configuration) => this.configurationChanges(configuration));
+    this.subscribe(this.relationshipApi.cosmereRelationships(), relationships => this.onRelationshipsChanges(relationships));
+    this.subscribe(this.configurationApi.configuration(), configuration => this.onConfigurationChanges(configuration));
 
     this.relationshipApi.fetchAllCosmereRelationship();
   }
@@ -86,28 +77,30 @@ export class StatisticsPage extends BasePage implements OnInit {
         y: eigenvectorNormalized.find(c => c.label === node).value,
         z: degreeCentralityNormalized.find(c => c.label === node).value,
       }
-    });
-    this.pagerankEigenvectorAndDegreeCentrality = this.pagerankEigenvectorAndDegreeCentrality.filter(p => p.x >= 0.1 && p.y > 0.1);
+    }).filter(p => p.x >= 0.1 && p.y > 0.1);
   }
 
-  configurationChanges(configuration: Configuration): void {
-    this.configuration = configuration;
+  onRelationshipsChanges(relationships: Relationship[]): void {
+    this.relationships = relationships;
+    this.analyseNetwork(this.graph());
+  }
 
-    const graph = this.generateGraph();
-    this.analyseNetwork(graph);
+  onConfigurationChanges(configuration: Configuration): void {
+    this.configuration = configuration;
+    this.analyseNetwork(this.graph());
   }
 
   filterRelationships(relationships: Relationship[]): Relationship[] {
     let filteredRelationships = relationships;
 
     if (this.configuration.books.length > 0) {
-      filteredRelationships = filteredRelationships.filter(relationship =>  this.configuration.books.includes(relationship.bookId));
+      filteredRelationships = filteredRelationships.filter(relationship => this.configuration.books.includes(relationship.bookId));
     }
 
     return filteredRelationships;
   }
 
-  generateGraph(): Graph {
+  graph(): Graph {
     const filteredRelationships = this.filterRelationships(this.relationships);
     const graph = new UndirectedGraph();
     const characterIds: string[] = characterIdsFromRelationships(filteredRelationships);

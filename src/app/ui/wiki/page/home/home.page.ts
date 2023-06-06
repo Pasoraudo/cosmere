@@ -1,7 +1,11 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {BasePage} from '../../../shared/page/base.page';
 import {D3Link, D3Node} from '../../../infrastructure/vis/model/network';
-import {charactersToD3Nodes, relationshipsToLinks} from '../../../../../domain/function/network.helper';
+import {
+  characterIdsFromRelationships,
+  charactersToD3Nodes,
+  relationshipsToLinks
+} from '../../../../../domain/function/network.helper';
 import {Character} from '../../../../../domain/model/character';
 import {Relationship} from '../../../../../domain/model/relationship';
 import {CharacterApi} from '../../../../../domain/service/api/character.api';
@@ -9,6 +13,8 @@ import {RelationshipApi} from '../../../../../domain/service/api/relationship.ap
 import {defer} from 'lodash';
 import {wikiNavigation} from '../../../../layout/navigation/wiki-navigation';
 import {FuseNavigationItem} from '../../../../../@fuse/components/navigation';
+import {UndirectedGraph} from 'graphology';
+import louvain from 'graphology-communities-louvain';
 
 @Component({
   selector: 'home',
@@ -20,7 +26,6 @@ export class HomePage extends BasePage implements OnInit {
   nodes: D3Node[] = [];
   edges: D3Link[] = [];
   characters: Character[] = [];
-  relationshipCharacters: Character[] = [];
   relationships: Relationship[] = [];
 
   constructor(private characterApi: CharacterApi, private relationshipApi: RelationshipApi) {
@@ -28,33 +33,44 @@ export class HomePage extends BasePage implements OnInit {
   }
 
   ngOnInit(): void {
-    this.subscribe(this.characterApi.cosmereCharacters(), characters => {
-      this.setCharacters(characters);
-      this.setRelationships(this.relationships);
-    });
-    this.subscribe(this.relationshipApi.relationshipsByBook('mistborn1'), relationships => {
-      this.setRelationships(relationships);
-      this.setCharacters(this.characters);
-    });
+    this.subscribe(this.characterApi.cosmereCharacters(), characters => this.onCharactersChanges(characters));
+    this.subscribe(this.relationshipApi.relationshipsByBook('mistborn1'),
+      relationships => this.onRelationshipsChanges(relationships)
+    );
+
     defer(() => {
       this.characterApi.fetchAllCosmereCharacter();
       this.relationshipApi.fetchAllCosmereRelationship();
     });
   }
 
-  setCharacters(characters: Character[]) {
-    this.characters = characters;
+  generateNetworkParameters() {
+    this.edges = relationshipsToLinks(this.relationships);
+
+    const graph = new UndirectedGraph();
+    const characterIds: string[] = characterIdsFromRelationships(this.relationships);
+    characterIds.forEach(characterId => graph.addNode(characterId));
+    this.relationships.forEach(relationship => graph.addEdge(relationship.characterId1, relationship.characterId2));
+    const communities = louvain(graph);
+
+    this.nodes = charactersToD3Nodes(this.characters, this.relationships)
+      .filter(node => this.edges.map(edge => edge.source).includes(node.id) || this.edges.map(edge => edge.target).includes(node.id));
+    this.nodes = this.nodes.map(node => {
+      return {
+        ...node,
+        group: communities[node.id],
+      };
+    });
   }
 
-  setRelationships(relationships: Relationship[]) {
-    this.relationships = relationships;
-    let relationshipCharacters = this.relationships.map(relationship => relationship.characterId1);
-    relationshipCharacters = relationshipCharacters.concat(this.relationships.map(relationship => relationship.characterId2))
-    relationshipCharacters = Array.from(new Set<string>(relationshipCharacters));
-    this.relationshipCharacters = this.characters.filter(character => relationshipCharacters.includes(character.id));
+  onCharactersChanges(characters: Character[]) {
+    this.characters = characters;
+    this.generateNetworkParameters();
+  }
 
-    this.nodes = charactersToD3Nodes(this.relationshipCharacters, this.relationships);
-    this.edges = relationshipsToLinks(this.relationships);
+  onRelationshipsChanges(relationships: Relationship[]) {
+    this.relationships = relationships;
+    this.generateNetworkParameters();
   }
 
   protected readonly wikiNavigation = wikiNavigation;
