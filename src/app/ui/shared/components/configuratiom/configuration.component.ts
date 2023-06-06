@@ -7,7 +7,6 @@ import {BookApi} from '../../../../../domain/service/api/book.api';
 import {Book} from '../../../../../domain/model/book';
 import {defer} from 'lodash';
 import {ConfigurationApi} from '../../../../../domain/service/api/configuration.api';
-import {compilePipeFromMetadata} from '@angular/compiler';
 
 
 @Component({

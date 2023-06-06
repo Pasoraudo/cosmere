@@ -1,10 +1,11 @@
-<div class="relative ">
-  <button mat-flat-button class="absolute z-50 p-4 bg-primary" (click)="toggle()">Mostrar</button>
-  <div *ngIf="showCard" class="absolute z-50 w-screen">
-    <fuse-card class="flex flex-col h-full p-6 w-1/5">
-      <button mat-flat-button class="p-4 bg-primary" (click)="toggle()">Esconder</button>
-      <form [formGroup]="configurationForm" class="flex flex-col">
-        <div class="grow w-full">
+<div class="absolute top-0 right-0 z-50">
+  <div class="flex flex-col items-end pr-6">
+    <button mat-icon-button (click)="toggle()">
+      <app-icon icon="pencil-alt" size="10"></app-icon>
+    </button>
+    <div *ngIf="showCard" class="z-50">
+      <fuse-card class="flex flex-col h-full p-6 gap-5 w-100">
+        <form [formGroup]="configurationForm" class="w-full">
           <mat-form-field floatLabel="always" class="w-full">
             <mat-label>{{"books" | trans | titlecase}}</mat-label>
             <mat-select multiple formControlName="books"
@@ -14,27 +15,9 @@
               </mat-option>
             </mat-select>
           </mat-form-field>
-        </div>
-        <!--    <mat-form-field class="w-full" floatLabel="always">-->
-        <!--      <mat-label>{{"planets" | trans | titlecase}}</mat-label>-->
-        <!--      <mat-select multiple [formControl]="planetControl" (selectionChange)="applyFilters()" placeholder="Planetas: Todos">-->
-        <!--        <mat-option *ngFor="let planet of planets" [value]="planet.id">-->
-        <!--          {{planet.name | trans | uppercase}}-->
-        <!--        </mat-option>-->
-        <!--      </mat-select>-->
-        <!--    </mat-form-field>-->
-
-        <!--    <mat-form-field class="w-full" floatLabel="always">-->
-        <!--      <mat-label>{{'group.by' | trans | titlecase}}</mat-label>-->
-        <!--      <mat-select multiple [formControl]="planetControl" (selectionChange)="applyFilters()">-->
-        <!--        <mat-option *ngFor="let groupBy of groupByOptions" [value]="groupBy">-->
-        <!--          {{groupBy | trans | uppercase}}-->
-        <!--        </mat-option>-->
-        <!--      </mat-select>-->
-        <!--    </mat-form-field>-->
-        <!--  </div>-->
-      </form>
-    </fuse-card>
+        </form>
+      </fuse-card>
+    </div>
   </div>
 </div>
 
