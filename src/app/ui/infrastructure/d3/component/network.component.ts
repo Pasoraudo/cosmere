@@ -14,10 +14,15 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
   @Input()
   links: D3Link[] = [];
   @Input()
+  options: any;
+  @Input()
   width: number = window.screen.availWidth;
   @Input()
   height: number = window.screen.availHeight;
   characterLinks: D3Link[] = [];
+  private defaultOptions: any = {
+    zoom: true
+  };
 
   protected id = uuid();
   private element: HTMLElement;
@@ -44,6 +49,7 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
   }
 
   create(): void {
+    this.options = {...this.defaultOptions, ...this.options};
     this.element = document.getElementById(this.id + '-network');
     d3.select(this.element).selectChildren().remove();
 
@@ -85,9 +91,11 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
       .style("font", "12px sans-serif")
 
     this.g = this.svg.append("g");
-    this.svg.call(d3.zoom()
-      .extent([[0, 0], [this.width, this.height]])
-      .on("zoom", zoomed));
+
+    if (this.options.zoom)
+      this.svg.call(d3.zoom()
+        .extent([[0, 0], [this.width, this.height]])
+        .on("zoom", zoomed));
 
     function zoomed({transform}) {
       _this.g.attr("transform", transform);

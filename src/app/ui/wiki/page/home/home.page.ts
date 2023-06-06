@@ -27,7 +27,9 @@ export class HomePage extends BasePage implements OnInit {
   edges: D3Link[] = [];
   characters: Character[] = [];
   relationships: Relationship[] = [];
-
+  networkOptions: any = {
+    zoom: false
+  }
   constructor(private characterApi: CharacterApi, private relationshipApi: RelationshipApi) {
     super();
   }
