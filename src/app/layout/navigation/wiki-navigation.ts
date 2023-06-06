@@ -10,14 +10,14 @@ export const wikiNavigation: FuseNavigationItem[] = [
   },
   {
     id: 'relationships',
-    title: 'Relaciones',
+    title: 'Network',
     type: 'basic',
     icon: 'heroicons_outline:users',
     link: '/wiki/relationship'
   },
   {
     id: 'popularity',
-    title: 'Estadísticas',
+    title: 'Análisis',
     type: 'basic',
     icon: 'heroicons_outline:chart-bar',
     link: '/wiki/statistics'
