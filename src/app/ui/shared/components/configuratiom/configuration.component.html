@@ -1,0 +1,23 @@
+<div class="absolute top-0 right-0 z-50">
+  <div class="flex flex-col items-end pr-6">
+    <button mat-icon-button (click)="toggle()">
+      <app-icon icon="pencil-alt" size="10"></app-icon>
+    </button>
+    <div *ngIf="showCard" class="z-50">
+      <fuse-card class="flex flex-col h-full p-6 gap-5 w-100">
+        <form [formGroup]="configurationForm" class="w-full">
+          <mat-form-field floatLabel="always" class="w-full">
+            <mat-label>{{"books" | trans | titlecase}}</mat-label>
+            <mat-select multiple formControlName="books"
+                        placeholder="Libros: Todos">
+              <mat-option *ngFor="let book of data.books" [value]="book.id">
+                {{book.title | trans | uppercase}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </form>
+      </fuse-card>
+    </div>
+  </div>
+</div>
+

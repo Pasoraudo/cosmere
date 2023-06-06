@@ -1,7 +1,7 @@
-type RelationshipType = '';
-export interface Relationship {
+import {Entity} from './shared.model';
 
-  id: string;
+type RelationshipType = '';
+export interface Relationship extends Entity {
 
   characterId1: string;
 

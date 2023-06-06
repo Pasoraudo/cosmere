@@ -3,7 +3,11 @@ import {BasePage} from '../../../shared/page/base.page';
 import {RelationshipApi} from '../../../../../domain/service/api/relationship.api';
 import {Relationship} from '../../../../../domain/model/relationship';
 import Graph, {UndirectedGraph} from 'graphology';
-import {characterIdsFromRelationships} from '../../../../../domain/function/network.helper';
+import {
+  characterIdsFromRelationships,
+  charactersToD3Nodes,
+  relationshipsToLinks
+} from '../../../../../domain/function/network.helper';
 import {reject} from 'lodash';
 import {pagerank} from 'graphology-metrics/centrality';
 import closenessCentrality from 'graphology-metrics/centrality/closeness';
@@ -16,6 +20,9 @@ import {
 } from '../../../infrastructure/d3/model/barChar.model';
 import {Chart3DItem} from '../../../infrastructure/d3/component/3D-chart.component';
 import {degreeCentrality} from 'graphology-metrics/centrality/degree';
+import {Configuration, newConfiguration} from '../../../../../domain/model/configuration';
+import {ConfigurationApi} from '../../../../../domain/service/api/configuration.api';
+import {Character} from '../../../../../domain/model/character';
 
 
 @Component({
@@ -24,63 +31,88 @@ import {degreeCentrality} from 'graphology-metrics/centrality/degree';
   encapsulation: ViewEncapsulation.None
 })
 export class StatisticsPage extends BasePage implements OnInit {
-  graph: Graph;
+  relationships: Relationship[];
   pagerankCosmere: BarChartItem[];
   eigenvectorCosmere: BarChartItem[];
   betweennessCosmere: BarChartItem[];
   closenessCosmere: BarChartItem[];
   degreeCentralityCosmere: BarChartItem[];
-  pageRankNormalized: BarChartItem[];
 
   pagerankEigenvectorAndDegreeCentrality: Chart3DItem[] = [];
+  configuration: Configuration = newConfiguration();
 
-  constructor(private relationshipApi: RelationshipApi) {
+  constructor(private relationshipApi: RelationshipApi, private configurationApi: ConfigurationApi) {
     super();
   }
 
   ngOnInit(): void {
-    this.subscribe(this.relationshipApi.cosmereRelationships(), relationships => this.calculateGlobalStats(relationships))
+    this.subscribe(this.relationshipApi.cosmereRelationships(), relationships => {
+      this.relationships = relationships;
+      const graph = this.generateGraph();
+      this.analyseNetwork(graph);
+    });
+    this.subscribe(this.configurationApi.configuration(), (configuration) => this.configurationChanges(configuration));
+
     this.relationshipApi.fetchAllCosmereRelationship();
   }
 
-  calculateGlobalStats(relationships: Relationship[]): void {
-    this.graph = new UndirectedGraph();
-    const characterIds: string[] = characterIdsFromRelationships(relationships);
-    characterIds.forEach(characterId => this.graph.addNode(characterId));
-    relationships.forEach(relationship => this.graph.addEdge(relationship.characterId1, relationship.characterId2));
+  analyseNetwork(graph: Graph): void {
+    const nodes: string[] = graph.nodes();
 
-    // @ts-ignore
-    const pagerankCosmere = pagerank(this.graph, {maxIterations: 300});
+    const pagerankCosmere = pagerank(graph, {getEdgeWeight: undefined, maxIterations: 300});
     this.pagerankCosmere = mapToBarChartItemArray(pagerankCosmere);
 
-    const betweennessCosmere = betweennessCentrality(this.graph);
+    const betweennessCosmere = betweennessCentrality(graph);
     this.betweennessCosmere = mapToBarChartItemArray(betweennessCosmere);
 
-    const closenessCosmere = closenessCentrality(this.graph);
+    const closenessCosmere = closenessCentrality(graph);
     this.closenessCosmere = mapToBarChartItemArray(closenessCosmere);
     this.closenessCosmere = reject(this.closenessCosmere, e => e.value === 1);
 
-    // @ts-ignore
-    const eigenvectorCosmere = eigenvectorCentrality(this.graph, {maxIterations: 200});
+    const eigenvectorCosmere = eigenvectorCentrality(graph, {maxIterations: 200});
     this.eigenvectorCosmere = mapToBarChartItemArray(eigenvectorCosmere);
 
-    const degreeCentralityCosmere = degreeCentrality(this.graph);
+    const degreeCentralityCosmere = degreeCentrality(graph);
     this.degreeCentralityCosmere = mapToBarChartItemArray(degreeCentralityCosmere);
 
-    this.pageRankNormalized = normalizeBarChartItems(this.pagerankCosmere);
+    const pageRankNormalized = normalizeBarChartItems(this.pagerankCosmere);
     const eigenvectorNormalized = normalizeBarChartItems(this.eigenvectorCosmere);
     const degreeCentralityNormalized = normalizeBarChartItems(this.degreeCentralityCosmere);
 
-    this.pagerankEigenvectorAndDegreeCentrality = characterIds.map(cId => {
+    this.pagerankEigenvectorAndDegreeCentrality = nodes.map(node => {
       return {
-        label: cId,
-        x: this.pageRankNormalized.find(c => c.label === cId).value,
-        y: eigenvectorNormalized.find(c => c.label === cId).value,
-        z: degreeCentralityNormalized.find(c => c.label === cId).value,
+        label: node,
+        x: pageRankNormalized.find(c => c.label === node).value,
+        y: eigenvectorNormalized.find(c => c.label === node).value,
+        z: degreeCentralityNormalized.find(c => c.label === node).value,
       }
     });
     this.pagerankEigenvectorAndDegreeCentrality = this.pagerankEigenvectorAndDegreeCentrality.filter(p => p.x >= 0.1 && p.y > 0.1);
+  }
 
-    //console.log(louvain(this.graph))
+  configurationChanges(configuration: Configuration): void {
+    this.configuration = configuration;
+
+    const graph = this.generateGraph();
+    this.analyseNetwork(graph);
+  }
+
+  filterRelationships(relationships: Relationship[]): Relationship[] {
+    let filteredRelationships = relationships;
+
+    if (this.configuration.books.length > 0) {
+      filteredRelationships = filteredRelationships.filter(relationship =>  this.configuration.books.includes(relationship.bookId));
+    }
+
+    return filteredRelationships;
+  }
+
+  generateGraph(): Graph {
+    const filteredRelationships = this.filterRelationships(this.relationships);
+    const graph = new UndirectedGraph();
+    const characterIds: string[] = characterIdsFromRelationships(filteredRelationships);
+    characterIds.forEach(characterId => graph.addNode(characterId));
+    filteredRelationships.forEach(relationship => graph.addEdge(relationship.characterId1, relationship.characterId2));
+    return graph;
   }
 }

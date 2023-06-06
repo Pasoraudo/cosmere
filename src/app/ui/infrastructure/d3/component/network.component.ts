@@ -3,7 +3,6 @@ import {BaseComponent} from '../../../shared/components/base.component';
 import * as d3 from 'd3';
 import {D3Link, D3Node} from '../../vis/model/network';
 import {uuid} from '../../../../../domain/function/uuid.helper';
-import {delay} from 'rxjs';
 
 @Component({
   selector: 'd3-network',

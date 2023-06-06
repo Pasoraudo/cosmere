@@ -16,6 +16,4 @@ export class CdnPipe implements PipeTransform {
 
     return environment.cdnHost + src;
   }
-
-
 }

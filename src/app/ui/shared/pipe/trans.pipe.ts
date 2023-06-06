@@ -10,6 +10,4 @@ export class TranslatorPipe implements PipeTransform {
   transform(key: string): string {
     return this.translator.trans(key);
   }
-
-
 }
