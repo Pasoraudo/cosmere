@@ -38,11 +38,6 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
 
   books: Book[];
   planets: Planet[];
-  groupByOptions: string[];
-
-  bookControl: FormControl = new FormControl([]);
-  planetControl: FormControl = new FormControl([]);
-  groupByOption: FormControl = new FormControl([]);
 
   configuration: Configuration;
   constructor(private characterApi: CharacterApi, private relationshipApi: RelationshipApi, private formBuilder: FormBuilderService, private bookApi: BookApi,
@@ -106,7 +101,6 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
     if (this.configuration.books.length > 0) {
       filteredRelationships = filteredRelationships.filter(relationship =>  this.configuration.books.includes(relationship.bookId));
     }
-    console.log(filteredRelationships)
 
     return filteredRelationships;
   }
