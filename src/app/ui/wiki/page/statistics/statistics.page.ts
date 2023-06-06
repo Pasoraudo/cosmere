@@ -21,7 +21,7 @@ import {ConfigurationApi} from '../../../../../domain/service/api/configuration.
 
 
 @Component({
-  selector: 'relationship',
+  selector: 'network',
   templateUrl: './statistics.page.html',
   encapsulation: ViewEncapsulation.None
 })
