@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
-import {StatisticsPage} from './statistics.page';
-import {statisticsRouting} from './statistics.routing';
+import {AnalysisPage} from './analysis.page';
+import {analysisRouting} from './analysis.routing';
 import {CdkScrollableModule} from '@angular/cdk/scrolling';
 import {FuseCardModule} from '../../../../../@fuse/components/card';
 import {D3Module} from '../../../infrastructure/d3/d3.module';
@@ -10,10 +10,10 @@ import {SharedModule} from '../../../shared/components/shared.module';
 
 @NgModule({
   declarations: [
-    StatisticsPage
+    AnalysisPage
   ],
     imports: [
-        RouterModule.forChild(statisticsRouting),
+        RouterModule.forChild(analysisRouting),
         CdkScrollableModule,
         FuseCardModule,
         D3Module,
@@ -21,5 +21,5 @@ import {SharedModule} from '../../../shared/components/shared.module';
         SharedModule
     ]
 })
-export class StatisticsModule {
+export class AnalysisModule {
 }

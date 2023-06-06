@@ -16,11 +16,11 @@ export const wikiNavigation: FuseNavigationItem[] = [
     link: '/wiki/network'
   },
   {
-    id: 'popularity',
+    id: 'analysis',
     title: 'Análisis',
     type: 'basic',
     icon: 'heroicons_outline:chart-bar',
-    link: '/wiki/statistics'
+    link: '/wiki/analysis'
   },
   {
     id: 'info',

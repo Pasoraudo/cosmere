@@ -22,10 +22,10 @@ import {ConfigurationApi} from '../../../../../domain/service/api/configuration.
 
 @Component({
   selector: 'network',
-  templateUrl: './statistics.page.html',
+  templateUrl: './analysis.page.html',
   encapsulation: ViewEncapsulation.None
 })
-export class StatisticsPage extends BasePage implements OnInit {
+export class AnalysisPage extends BasePage implements OnInit {
   relationships: Relationship[];
   pagerankCosmere: BarChartItem[];
   eigenvectorCosmere: BarChartItem[];
