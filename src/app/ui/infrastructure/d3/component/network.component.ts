@@ -3,6 +3,7 @@ import {BaseComponent} from '../../../shared/components/base.component';
 import * as d3 from 'd3';
 import {D3Link, D3Node} from '../../vis/model/network';
 import {uuid} from '../../../../../domain/function/uuid.helper';
+import {tick} from '@angular/core/testing';
 
 @Component({
   selector: 'd3-network',
@@ -72,15 +73,19 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
   }
 
   createSimulation(): void {
+    let elapsedTime = 0;
+
     // @ts-ignore
     this.simulation = d3.forceSimulation(this.nodes) // @ts-ignore
-      .force("link", d3.forceLink(this.characterLinks).id(this.getId)) // @ts-ignore
-      .force("charge", d3.forceManyBody().strength(d => d.score * (-15)))
+      .force("link", d3.forceLink(this.characterLinks).distance(100).id(this.getId)) // @ts-ignore
+      .force("charge", d3.forceManyBody().strength(d => d.score * (-50)))
       .force("center", d3.forceCenter(this.width / 2, this.height / 2))// @ts-ignore
       .force("radius", d3.forceCollide(d => d.score + 20))
+      .force('cluster', this.cluster(this.nodes))
       .on("tick", () => {
         this.link.attr("d", this.linkArc);
         this.node.attr("transform", d => `translate(${d.x}, ${d.y})`);
+        setTimeout(tick, 200);
       });
   }
 
@@ -190,6 +195,22 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
       .on("start", dragstarted)
       .on("drag", dragged)
       .on("end", dragended);
+  }
+
+  private cluster(nodes) {
+    const strength = 0.2; // Fuerza de agrupamiento
+
+    function force(alpha) {
+      for (const node of nodes) {
+        const clusterNodes = nodes.filter(d => d.group === node.group);
+        const x = clusterNodes.reduce((acc, curr) => acc + curr.x, 0) / clusterNodes.length;
+        const y = clusterNodes.reduce((acc, curr) => acc + curr.y, 0) / clusterNodes.length;
+        node.vx += (x - node.x) * alpha * strength;
+        node.vy += (y - node.y) * alpha * strength;
+      }
+    }
+
+    return force;
   }
 }
 
