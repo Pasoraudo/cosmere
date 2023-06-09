@@ -48,7 +48,7 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
     });
   }
 
-  generateNetworkParameters() {
+  regenerateNetworkParameters() {
     this.edges = relationshipsToLinks(this.filterRelationships(this.relationships));
 
 
@@ -84,16 +84,16 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
 
   onCharactersChanges(characters: Character[]) {
     this.characters = characters;
-    this.generateNetworkParameters();
+    this.regenerateNetworkParameters();
   }
 
   onRelationshipsChanges(relationships: Relationship[]) {
     this.relationships = relationships;
-    this.generateNetworkParameters();
+    this.regenerateNetworkParameters();
   }
 
   onConfigurationChanges(configuration: Configuration): void {
     this.configuration = configuration;
-    this.generateNetworkParameters();
+    this.regenerateNetworkParameters();
   }
 }
