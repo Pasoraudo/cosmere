@@ -32,8 +32,8 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
   relationships: Relationship[] = [];
   configuration: Configuration;
 
-  constructor(private characterApi: CharacterApi, private relationshipApi: RelationshipApi, private formBuilder: FormBuilderService, private bookApi: BookApi,
-              private planetApi: PlanetApi, private modal: Modal, private configurationApi: ConfigurationApi) {
+  constructor(private characterApi: CharacterApi, private relationshipApi: RelationshipApi, private formBuilder: FormBuilderService,
+              private bookApi: BookApi, private planetApi: PlanetApi, private modal: Modal, private configurationApi: ConfigurationApi) {
     super();
   }
 
