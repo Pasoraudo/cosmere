@@ -56,5 +56,6 @@ export class IconComponent extends BaseComponent {
     'clipboard-list': 'heroicons_outline:clipboard-list',
     'lock-closed': 'heroicons_outline:lock-closed',
     'calendar': 'heroicons_outline:calendar',
+    'settings': 'feather:settings',
   };
 }

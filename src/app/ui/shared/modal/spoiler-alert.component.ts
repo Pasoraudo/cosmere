@@ -7,7 +7,7 @@ import {Modal} from '../../../../domain/ionic/modal.ionic';
   template: `
     <fuse-card class="flex flex-col p-7">
       <div class="flex flex-row gap-5 mb-5">
-        <app-icon icon="exclamation" size="10" color="warning"></app-icon>
+        <app-icon icon="exclamation" size="10" color="warn"></app-icon>
         <div class="text-xl text-bold">{{ 'spoiler.alert' | trans }}</div>
       </div>
       <div class="flex flex-row justify-end">
