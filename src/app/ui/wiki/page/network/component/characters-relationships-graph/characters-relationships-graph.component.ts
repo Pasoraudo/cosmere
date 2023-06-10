@@ -55,7 +55,6 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
   regenerateNetworkParameters() {
     this.edges = relationshipsToLinks(this.filterRelationships(this.relationships));
 
-
     const graph = new UndirectedGraph();
     const characterIds: string[] = characterIdsFromRelationships(this.relationships);
     characterIds.forEach(characterId => graph.addNode(characterId));
