@@ -523,8 +523,12 @@
       border-radius: 6px;
       padding: 0 16px;
       border-width: 1px;
-      @apply shadow-sm bg-white border-gray-300 dark:bg-black dark:bg-opacity-5 dark:border-gray-500 #{'!important'};
+      background: rgb(255, 255, 255, 0.1);
+      @apply shadow-sm border-gray-300 dark:bg-black dark:bg-opacity-5 dark:border-gray-500 #{'!important'};
 
+      span {
+        color: white !important;
+      }
       .mat-form-field-prefix {
 
         > .mat-icon {

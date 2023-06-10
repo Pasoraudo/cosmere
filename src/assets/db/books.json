@@ -12,8 +12,32 @@
     "title": "Mistborn: 3"
   },
   {
+    "id": "mistborn4",
+    "title": "Mistborn: 4"
+  },
+  {
+    "id": "mistborn5",
+    "title": "Mistborn: 5"
+  },
+  {
+    "id": "mistborn6",
+    "title": "Mistborn: 6"
+  },
+  {
     "id": "stormlight1",
     "title": "Stormlight 1"
+  },
+  {
+    "id": "stormlight2",
+    "title": "Stormlight 2"
+  },
+  {
+    "id": "stormlight3",
+    "title": "Stormlight 3"
+  },
+  {
+    "id": "stormlight4",
+    "title": "Stormlight 4"
   },
   {
     "id": "warbreaker",
