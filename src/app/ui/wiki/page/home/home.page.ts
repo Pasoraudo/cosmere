@@ -75,6 +75,4 @@ export class HomePage extends BasePage implements OnInit {
     this.relationships = relationships;
     this.generateNetworkParameters();
   }
-
-  protected readonly wikiNavigation = wikiNavigation;
 }
