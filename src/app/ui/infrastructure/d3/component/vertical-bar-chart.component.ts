@@ -37,7 +37,7 @@ export class VerticalBarChartComponent extends BaseComponent implements AfterVie
     title: ''
   };
 
-  protected id: string = uuid();
+  id: string = uuid();
   private element: HTMLElement;
   private svg: any;
   private xDomain: any;

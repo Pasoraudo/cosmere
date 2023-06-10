@@ -25,7 +25,7 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
     zoom: true
   };
 
-  protected id = uuid();
+  id = uuid();
   private element: HTMLElement;
   private groups: string[] = [];
   private color;

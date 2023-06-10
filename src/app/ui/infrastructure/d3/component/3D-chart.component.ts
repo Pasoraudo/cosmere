@@ -58,7 +58,7 @@ export class Chart3DComponent extends BaseComponent implements AfterViewInit, On
     color: d3.interpolateViridis
   };
 
-  protected id: string = uuid();
+  id: string = uuid();
   private element: HTMLElement;
   private legendElement: HTMLElement;
   private X: number[];

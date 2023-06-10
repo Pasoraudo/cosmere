@@ -31,7 +31,7 @@ export class BarChartComponent extends BaseComponent implements AfterViewInit, O
     ticksInterval: 10
   };
 
-  protected id: string = uuid();
+  id: string = uuid();
   private element: HTMLElement;
   private minValue: number;
   private maxValue: number;
