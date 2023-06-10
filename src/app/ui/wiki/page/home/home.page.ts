@@ -61,7 +61,7 @@ export class HomePage extends BasePage implements OnInit {
     this.nodes = this.nodes.map(node => {
       return {
         ...node,
-        group: communities[node.id],
+        group: communities[node.id] as unknown as string,
       };
     });
   }

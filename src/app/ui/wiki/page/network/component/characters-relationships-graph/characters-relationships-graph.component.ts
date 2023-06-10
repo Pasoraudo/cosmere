@@ -38,8 +38,12 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
   }
 
   async ngOnInit() {
-    this.subscribe(this.characterApi.cosmereCharacters(), characters => { this.onCharactersChanges(characters);});
-    this.subscribe(this.relationshipApi.cosmereRelationships(), relationships => { this.onRelationshipsChanges(relationships);});
+    this.subscribe(this.characterApi.cosmereCharacters(), characters => {
+      this.onCharactersChanges(characters);
+    });
+    this.subscribe(this.relationshipApi.cosmereRelationships(), relationships => {
+      this.onRelationshipsChanges(relationships);
+    });
     this.subscribe(this.configurationApi.configuration(), (configuration) => this.onConfigurationChanges(configuration));
 
     defer(() => {
@@ -57,13 +61,24 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
     characterIds.forEach(characterId => graph.addNode(characterId));
     this.filterRelationships(this.relationships).forEach(relationship => graph.addEdge(relationship.characterId1, relationship.characterId2));
     const communities = louvain(graph, {rng: seedrandom('1231312'), resolution: 2});
-
     this.nodes = charactersToD3Nodes(this.filterCharacters(this.characters), this.filterRelationships(this.relationships))
       .filter(node => this.edges.map(edge => edge.source).includes(node.id) || this.edges.map(edge => edge.target).includes(node.id));
+
     this.nodes = this.nodes.map(node => {
       return {
         ...node,
-        group: communities[node.id],
+        group: communities[node.id] as unknown as string,
+      };
+    });
+    this.edges = this.edges.map(edge => {
+      const target = this.nodes.find(node => node.id === edge.target);
+      const source = this.nodes.find(node => node.id === edge.source);
+      if (target === undefined || source === undefined)
+        return edge;
+      const community = target.score > source.score ? communities[target.id] : communities[source.id];
+      return {
+        ...edge,
+        group: community as unknown as string,
       };
     });
   }

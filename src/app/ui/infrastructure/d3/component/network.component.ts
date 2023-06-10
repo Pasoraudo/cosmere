@@ -73,8 +73,6 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
   }
 
   createSimulation(): void {
-    let elapsedTime = 0;
-
     // @ts-ignore
     this.simulation = d3.forceSimulation(this.nodes) // @ts-ignore
       .force("link", d3.forceLink(this.characterLinks).distance(100).id(this.getId)) // @ts-ignore
@@ -133,7 +131,7 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
       .selectAll("path")
       .data(this.characterLinks)
       .join("path")
-      .attr("stroke", d => this.color(d.type));
+      .attr("stroke", d => this.color(d.group));
   }
 
   createNode() {
