@@ -75,8 +75,8 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
   createSimulation(): void {
     // @ts-ignore
     this.simulation = d3.forceSimulation(this.nodes) // @ts-ignore
-      .force("link", d3.forceLink(this.characterLinks).distance(100).id(this.getId)) // @ts-ignore
-      .force("charge", d3.forceManyBody().strength(d => d.score * (-50)))
+      .force("link", d3.forceLink(this.characterLinks).distance(20).id(this.getId)) // @ts-ignore
+      .force("charge", d3.forceManyBody().strength(d => d.score * (-200)))
       .force("center", d3.forceCenter(this.width / 2, this.height / 2))// @ts-ignore
       .force("radius", d3.forceCollide(d => d.score + 20))
       .force('cluster', this.cluster(this.nodes))
