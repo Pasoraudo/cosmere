@@ -10,6 +10,11 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'cosmere',
+    redirectTo: 'wiki',
+    pathMatch: 'full'
+  },
+  {
     path: 'wiki',
     component: LayoutComponent,
     children: [
