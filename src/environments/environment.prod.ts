@@ -2,5 +2,6 @@ export const environment = {
   production: true,
   environment: 'production',
   appVersion: '0.0.2',
-  cdnHost: 'https://cosmere.alejandro.com',
+  cdnHost: 'https://pasoraudo.github.io/cosmere',
+  baseHref: '/cosmere/',
 };

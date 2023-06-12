@@ -7,6 +7,7 @@ export const environment = {
   environment: 'local',
   appVersion: '0.0.2',
   cdnHost: 'http://localhost:8050',
+  baseHref: '/',
 };
 
 /*

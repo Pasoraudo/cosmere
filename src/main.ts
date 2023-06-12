@@ -8,5 +8,8 @@ if (environment.production) {
   enableProdMode();
 }
 
+const baseHref = environment.baseHref;
+const baseElement = document.querySelector('base') as HTMLBaseElement;
+baseElement.href = baseHref;
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.log(err));

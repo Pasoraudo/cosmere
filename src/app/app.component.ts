@@ -9,6 +9,7 @@ import {Modal} from '../domain/ionic/modal.ionic';
 
 })
 export class AppComponent implements OnInit {
+
   constructor(private modal: Modal) {
   }
 
