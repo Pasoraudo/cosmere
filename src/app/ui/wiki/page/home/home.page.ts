@@ -41,9 +41,9 @@ export class HomePage extends BasePage implements OnInit {
       relationships => this.onRelationshipsChanges(relationships)
     );
 
-    defer(() => {
-      this.characterApi.fetchAllCosmereCharacter();
-      this.relationshipApi.fetchAllCosmereRelationship();
+    defer(async () => {
+      await this.characterApi.fetchAllCosmereCharacter();
+      await this.relationshipApi.fetchAllCosmereRelationship();
     });
   }
 
