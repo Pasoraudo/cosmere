@@ -102,7 +102,12 @@ export class Chart3DComponent extends BaseComponent implements AfterViewInit, On
       color: d3.scaleSequential([0, 1], this.color),
       title: "Degree"
     })
+
+
     this.legendElement = document.getElementById(this.id + "-legend-bar");
+    if (!this.legendElement)
+      return;
+
     d3.select(this.legendElement).select('svg').remove()
     this.legendElement.append(legend);
   }

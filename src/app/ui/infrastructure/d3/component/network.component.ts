@@ -3,7 +3,7 @@ import {BaseComponent} from '../../../shared/components/base.component';
 import * as d3 from 'd3';
 import {D3Link, D3Node} from '../../vis/model/network';
 import {uuid} from '../../../../../domain/function/uuid.helper';
-import {tick} from '@angular/core/testing';
+import {delay} from 'rxjs';
 
 @Component({
   selector: 'd3-network',
@@ -83,7 +83,7 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
       .on("tick", () => {
         this.link.attr("d", this.linkArc);
         this.node.attr("transform", d => `translate(${d.x}, ${d.y})`);
-        setTimeout(tick, 200);
+        delay(200);
       });
   }
 

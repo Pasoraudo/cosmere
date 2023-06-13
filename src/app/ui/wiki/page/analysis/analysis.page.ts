@@ -91,6 +91,9 @@ export class AnalysisPage extends BasePage implements OnInit {
   }
 
   filterRelationships(relationships: Relationship[]): Relationship[] {
+    if (!this.configuration)
+      return relationships;
+
     let filteredRelationships = relationships;
 
     if (this.configuration.books.length > 0) {

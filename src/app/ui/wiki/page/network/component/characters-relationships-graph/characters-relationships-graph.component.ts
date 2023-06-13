@@ -87,6 +87,9 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
   }
 
   filterRelationships(relationship: Relationship[]): Relationship[] {
+    if (!this.configuration)
+      return relationship;
+
     let filteredRelationships = relationship;
 
     if (this.configuration.books.length > 0) {
