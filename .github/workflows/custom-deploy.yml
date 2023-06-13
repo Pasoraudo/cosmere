@@ -21,8 +21,8 @@ jobs:
         with:
           node-version: 16
 
-      - name: Install dependencies
-        run: npm install --force
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli@13.2.3
 
       - name: Build project
         run: ng build --configuration=production --base-href /cosmere/
