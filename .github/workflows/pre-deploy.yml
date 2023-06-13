@@ -2,8 +2,9 @@ name: pre-deploy
 
 on:
   push:
-    branches:
-      - main
+    branches: [ $default-branch ]
+  pull_request:
+    branches: [ $default-branch ]
 
 jobs:
   build:
