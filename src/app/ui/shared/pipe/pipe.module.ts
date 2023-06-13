@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {CdnPipe} from 'app/ui/shared/pipe/cdn.pipe';
-import {TranslatorPipe} from 'app/ui/shared/pipe/trans.pipe';
+import {TranslatorPipe} from './trans.pipe';
 
 @NgModule({
   declarations: [

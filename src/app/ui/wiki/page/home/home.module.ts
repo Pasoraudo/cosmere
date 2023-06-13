@@ -2,7 +2,6 @@ import {NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
 import {HomePage} from './home.page';
 import {homeRouting} from './home.routing';
-import {WikiModule} from '../../wiki.module';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {SharedModule} from '../../../shared/components/shared.module';
