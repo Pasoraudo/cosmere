@@ -25,10 +25,10 @@ jobs:
         run: npm install --force
 
       - name: Build Angular app
-        run: ng build --prod --base-href=/cosmere/
+        run: ng build --configuration=production --base-href /cosmere/
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           branch: gh-pages
-          folder: dist/cosmere # Ruta relativa al directorio raíz del proyecto donde se encuentra el directorio de construcción de Angular
+          folder: .
