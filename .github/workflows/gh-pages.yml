@@ -50,7 +50,5 @@ jobs:
     needs: build
     steps:
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.1
-        with:
-          branch: master # The branch the action should deploy to.
-          folder: docs/dist
+        run: ng deploy --base-href=/cosmere/
+
