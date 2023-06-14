@@ -44,14 +44,21 @@ jobs:
       - name: Build project
         run: ng build --configuration=production --base-href /cosmere/
 
+      - name: Replace secret
+        uses: cschleiden/replace-tokens@v1
+        with:
+          tokenPrefix: '{'
+          tokenSuffix: '}'
+          files: 'src/environments/environment.prod.ts'
+        env:
+          SECRET_API_KEY: ${{ secrets.API_KEY}}
   # Deployment job
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
     steps:
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: master # The branch the action should deploy to.
+          folder: docs
