@@ -22,7 +22,8 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
   height: number = window.screen.availHeight;
   characterLinks: D3Link[] = [];
   private defaultOptions: any = {
-    zoom: true
+    zoom: true,
+    edgeRadius: 0
   };
 
   id = uuid();
@@ -81,7 +82,12 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
       .force("radius", d3.forceCollide(d => d.score + 20))
       .force('cluster', this.cluster(this.nodes))
       .on("tick", () => {
-        this.link.attr("d", this.linkArc);
+        this.link.attr("d", d => {
+          return `
+            M${d.source.x},${d.source.y}
+            A${this.options.edgeRadius},${this.options.edgeRadius} 0 0,1 ${d.target.x},${d.target.y}
+          `;
+        });
         this.node.attr("transform", d => `translate(${d.x}, ${d.y})`);
         delay(10000);
       });
@@ -145,7 +151,7 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
       .attr("stroke-linejoin", "round")
       .selectAll("g")
       .data(this.nodes)
-      .join("g");
+      .join("g")
       //.call(this.drag(this.simulation));
 
     this.node
@@ -165,14 +171,6 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
 
   private getId(d) {
     return d.id;
-  }
-
-  private linkArc(d) {
-    const r = 0;
-    return `
-    M${d.source.x},${d.source.y}
-    A${r},${r} 0 0,1 ${d.target.x},${d.target.y}
-  `;
   }
 
   private drag(simulation) {
