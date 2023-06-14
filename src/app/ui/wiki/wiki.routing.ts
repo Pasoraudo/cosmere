@@ -1,4 +1,7 @@
 import {Route} from '@angular/router';
+import {HomeModule} from './page/home/home.module';
+import {NetworkModule} from './page/network/network.module';
+import {AnalysisModule} from './page/analysis/analysis.module';
 
 export const wikiRouting: Route[] = [
   {
@@ -8,14 +11,14 @@ export const wikiRouting: Route[] = [
   },
   {
     path: 'home',
-    loadChildren: (): any => import('app/ui/wiki/page/home/home.module').then((m: any) => m.HomeModule)
+    loadChildren: (): any => HomeModule
   },
   {
     path: 'network',
-    loadChildren: (): any => import('app/ui/wiki/page/network/network.module').then((m: any) => m.NetworkModule)
+    loadChildren: (): any => NetworkModule
   },
   {
     path: 'analysis',
-    loadChildren: (): any => import('app/ui/wiki/page/analysis/analysis.module').then((m: any) => m.AnalysisModule)
+    loadChildren: (): any => AnalysisModule
   },
 ];

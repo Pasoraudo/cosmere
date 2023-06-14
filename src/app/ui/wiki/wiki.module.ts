@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
-import {wikiRouting} from 'app/ui/wiki/wiki.routing';
+import {wikiRouting} from './wiki.routing';
 
 @NgModule({
   declarations: [],

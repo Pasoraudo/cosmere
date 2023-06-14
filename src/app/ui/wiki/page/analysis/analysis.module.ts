@@ -3,10 +3,10 @@ import {RouterModule} from '@angular/router';
 import {AnalysisPage} from './analysis.page';
 import {analysisRouting} from './analysis.routing';
 import {CdkScrollableModule} from '@angular/cdk/scrolling';
-import {FuseCardModule} from '../../../../../@fuse/components/card';
 import {D3Module} from '../../../infrastructure/d3/d3.module';
 import {CommonModule} from '@angular/common';
 import {SharedModule} from '../../../shared/components/shared.module';
+import {FuseCardModule} from '../../../../../@fuse/components/card/card.module';
 
 @NgModule({
   declarations: [
