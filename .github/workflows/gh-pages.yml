@@ -43,12 +43,5 @@ jobs:
 
       - name: Build project
         run: ng build --configuration=production --base-href /cosmere/
-
-  # Deployment job
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
       - name: Deploy to GitHub Pages
         run: ng deploy --base-href=/cosmere/
-
