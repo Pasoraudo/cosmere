@@ -127,7 +127,6 @@ const theming = plugin.withOptions((options) => ({
       if (colorScheme === 'cosmere')
         schemeSelector = cosmereSchemeSelectors;
 
-      console.log('############### THEMING');
       return {
         [schemeSelector]: {
 
