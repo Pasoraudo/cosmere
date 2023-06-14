@@ -8,7 +8,6 @@ import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
 import {FuseModule} from '../@fuse';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {FuseConfigModule} from '../@fuse/services/config';
 import {CoreModule} from './core/core.module';
 import {LayoutModule} from './layout/layout.module';
 import {appConfig} from './core/config/app.config';
@@ -21,10 +20,11 @@ import {LayoutNoBarModule} from './ui/shared/layout/layout.module';
 import {LayoutUserModule} from './ui/shared/layout/layout-user.module';
 import {MatRadioModule} from '@angular/material/radio';
 import {HTTP_INTERCEPTORS} from '@angular/common/http';
-import {PipeModule} from 'app/ui/shared/pipe/pipe.module';
 import {NgSelectModule} from '@ng-select/ng-select';
 import {JwtInterceptor} from '../domain/service/network/jwt.interceptor';
 import {ModalModule} from './ui/shared/modal/modal.module';
+import {FuseConfigModule} from '../@fuse/services/config/config.module';
+import {PipeModule} from './ui/shared/pipe/pipe.module';
 
 @NgModule({
   declarations: [

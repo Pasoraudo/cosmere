@@ -1,4 +1,4 @@
-import {FuseNavigationItem} from '@fuse/components/navigation';
+import {FuseNavigationItem} from '../../../@fuse/components/navigation/navigation.types';
 
 export const wikiNavigation: FuseNavigationItem[] = [
   {
