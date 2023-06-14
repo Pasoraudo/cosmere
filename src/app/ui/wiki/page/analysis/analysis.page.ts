@@ -4,7 +4,7 @@ import {RelationshipApi} from '../../../../../domain/service/api/relationship.ap
 import {Relationship} from '../../../../../domain/model/relationship';
 import Graph, {UndirectedGraph} from 'graphology';
 import {characterIdsFromRelationships} from '../../../../../domain/function/network.helper';
-import {reject} from 'lodash';
+import {defer, reject} from 'lodash';
 import {pagerank} from 'graphology-metrics/centrality';
 import closenessCentrality from 'graphology-metrics/centrality/closeness';
 import eigenvectorCentrality from 'graphology-metrics/centrality/eigenvector';
@@ -44,7 +44,7 @@ export class AnalysisPage extends BasePage implements OnInit {
     this.subscribe(this.relationshipApi.cosmereRelationships(), relationships => this.onRelationshipsChanges(relationships));
     this.subscribe(this.configurationApi.configuration(), configuration => this.onConfigurationChanges(configuration));
 
-    this.relationshipApi.fetchAllCosmereRelationship();
+    defer(async () => await this.relationshipApi.fetchAllCosmereRelationship());
   }
 
   analyseNetwork(graph: Graph): void {

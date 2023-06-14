@@ -5,6 +5,7 @@ import {RelationshipStore} from '../../store/relationship.store';
 import {Relationship} from '../../model/relationship';
 import {cosmereBookIds} from '../../model/book';
 import {mergeArrays} from '../../function/array.helper';
+import {uniqBy} from 'lodash';
 
 @Injectable({
   providedIn: 'root',

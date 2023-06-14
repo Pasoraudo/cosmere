@@ -76,15 +76,19 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
     // @ts-ignore
     this.simulation = d3.forceSimulation(this.nodes) // @ts-ignore
       .force("link", d3.forceLink(this.characterLinks).distance(20).id(this.getId)) // @ts-ignore
-      .force("charge", d3.forceManyBody().strength(d => d.score * (-200)))
+      .force("charge", d3.forceManyBody().strength(d => d.score * (-100)))
       .force("center", d3.forceCenter(this.width / 2, this.height / 2))// @ts-ignore
       .force("radius", d3.forceCollide(d => d.score + 20))
       .force('cluster', this.cluster(this.nodes))
       .on("tick", () => {
         this.link.attr("d", this.linkArc);
         this.node.attr("transform", d => `translate(${d.x}, ${d.y})`);
-        delay(200);
+        delay(10000);
       });
+
+    setTimeout(() => {
+      this.simulation.stop();
+    }, 10000);
   }
 
   createSvg() {
@@ -141,8 +145,8 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
       .attr("stroke-linejoin", "round")
       .selectAll("g")
       .data(this.nodes)
-      .join("g")
-      .call(this.drag(this.simulation));
+      .join("g");
+      //.call(this.drag(this.simulation));
 
     this.node
       .append("circle")

@@ -12,9 +12,9 @@ import {CharacterApi} from '../../../../../domain/service/api/character.api';
 import {RelationshipApi} from '../../../../../domain/service/api/relationship.api';
 import {defer} from 'lodash';
 import {wikiNavigation} from '../../../../layout/navigation/wiki-navigation';
-import {FuseNavigationItem} from '../../../../../@fuse/components/navigation';
 import {UndirectedGraph} from 'graphology';
 import louvain from 'graphology-communities-louvain';
+import {FuseNavigationItem} from '../../../../../@fuse/components/navigation/navigation.types';
 
 @Component({
   selector: 'home',
