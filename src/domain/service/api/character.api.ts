@@ -21,7 +21,7 @@ export class CharacterApi {
 
   async fetchAllCosmereCharacter(): Promise<void> {
     const httpCharacters = await this.api.get('characters') as Character[];
-    const cosmereCharacters = httpCharacters.filter(character => cosmerePlanets().includes(character.planet))
+    const cosmereCharacters = httpCharacters.filter(character => character.universe === 'Cosmere');
     this.store.saveAllCharacters(cosmereCharacters);
   }
 
@@ -35,7 +35,7 @@ export class CharacterApi {
 
   cosmereCharacters(): Observable<Character[]> {
     return this.store.characters$.pipe(map(characters =>
-      characters.filter(character => cosmerePlanets().includes(character.planet))
+      characters.filter(character => character.universe === 'Cosmere')
     ));
   }
 }

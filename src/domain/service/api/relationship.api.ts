@@ -5,7 +5,6 @@ import {RelationshipStore} from '../../store/relationship.store';
 import {Relationship} from '../../model/relationship';
 import {cosmereBookIds} from '../../model/book';
 import {mergeArrays} from '../../function/array.helper';
-import {uniqBy} from 'lodash';
 
 @Injectable({
   providedIn: 'root',
@@ -26,14 +25,22 @@ export class RelationshipApi {
   }
 
   async fetchAllCosmereRelationship(): Promise<void> {
-    let relationships = [];
+    const promises = [];
     for (const bookId of cosmereBookIds()) {
-      try {
-        relationships = mergeArrays(relationships, await this.api.get('relationships-' + bookId) as Relationship[]);
-      } catch (e) {
-      }
+      promises.push(
+        this.api
+          .get('relationships-' + bookId)
+          .then((response) => response as Relationship[])
+          .catch((error) => {
+          })
+      );
     }
-    this.store.saveAllRelationship(relationships);
+    const relationships = await Promise.all(promises) as Relationship[][];
+    let relationshipsMerged = [];
+    relationships.forEach(relationship => relationshipsMerged = mergeArrays(relationshipsMerged, relationship))
+    console.log(relationships)
+    console.log(relationshipsMerged)
+    this.store.saveAllRelationship(relationshipsMerged);
   }
 
   syncAllRelationship(): Relationship[] {

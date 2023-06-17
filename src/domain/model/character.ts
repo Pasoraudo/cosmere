@@ -11,4 +11,8 @@ export interface Character extends Entity {
   planet?: string;
 
   description?: string;
+
+  universe: string;
+
+  ethnicity?: string;
 }
