@@ -77,7 +77,7 @@ export class AnalysisPage extends BasePage implements OnInit {
         y: eigenvectorNormalized.find(c => c.label === node).value,
         z: degreeCentralityNormalized.find(c => c.label === node).value,
       }
-    }).filter(p => p.x >= 0.1 && p.y > 0.1);
+    }).filter(p => p.x > 0.2 && p.y > 0.2);
   }
 
   onRelationshipsChanges(relationships: Relationship[]): void {

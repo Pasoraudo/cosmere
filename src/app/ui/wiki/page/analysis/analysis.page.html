@@ -39,7 +39,7 @@
       <fuse-card class="p-6">
         <div class="flex flex-col">
           <div class="text-xl mb-5">Protagonismo</div>
-          <chart-3d class="flex flex-auto w-full" [data]="pagerankEigenvectorAndDegreeCentrality"></chart-3d>
+          <chart-3d class="flex flex-auto w-full" [data]="pagerankEigenvectorAndDegreeCentrality" [xLabel]="'pagerank'" [yLabel]="'eigenvector'"></chart-3d>
         </div>
       </fuse-card>
     </div>

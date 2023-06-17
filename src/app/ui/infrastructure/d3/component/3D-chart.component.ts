@@ -188,7 +188,7 @@ export class Chart3DComponent extends BaseComponent implements AfterViewInit, On
 
     this.svg.append("g")
       .attr("font-family", "sans-serif")
-      .attr("font-size", 20)
+      .attr("font-size", 15)
       .attr("stroke-linejoin", "round")
       .attr("stroke-linecap", "round")
       .selectAll("text")
