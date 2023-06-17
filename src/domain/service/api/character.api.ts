@@ -3,8 +3,6 @@ import {Character} from '../../model/character';
 import {ApiClient} from '../network/api.client';
 import {CharacterStore} from '../../store/character.store';
 import {map, Observable} from 'rxjs';
-import {cosmereBookIds} from '../../model/book';
-import {intersection} from 'lodash-es';
 import {cosmerePlanets} from '../../model/planet';
 
 @Injectable({

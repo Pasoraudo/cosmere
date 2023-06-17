@@ -3,8 +3,8 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {firstValueFrom, throwError} from 'rxjs';
 import {RouteGenerator} from './route-generator.service';
 import {catchError} from 'rxjs/operators';
-import {environment} from 'environments/environment';
 import {keys} from 'lodash';
+import {environment} from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
