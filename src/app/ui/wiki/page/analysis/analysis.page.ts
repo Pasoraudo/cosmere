@@ -32,6 +32,7 @@ export class AnalysisPage extends BasePage implements OnInit {
   betweennessCosmere: BarChartItem[];
   closenessCosmere: BarChartItem[];
   degreeCentralityCosmere: BarChartItem[];
+  pageRankNormalized: BarChartItem[];
 
   pagerankEigenvectorAndDegreeCentrality: Chart3DItem[] = [];
   configuration: Configuration = newConfiguration();
@@ -66,14 +67,14 @@ export class AnalysisPage extends BasePage implements OnInit {
     const degreeCentralityCosmere = degreeCentrality(graph);
     this.degreeCentralityCosmere = mapToBarChartItemArray(degreeCentralityCosmere);
 
-    const pageRankNormalized = normalizeBarChartItems(this.pagerankCosmere);
+    this.pageRankNormalized = normalizeBarChartItems(this.pagerankCosmere);
     const eigenvectorNormalized = normalizeBarChartItems(this.eigenvectorCosmere);
     const degreeCentralityNormalized = normalizeBarChartItems(this.degreeCentralityCosmere);
 
     this.pagerankEigenvectorAndDegreeCentrality = nodes.map(node => {
       return {
         label: node,
-        x: pageRankNormalized.find(c => c.label === node).value,
+        x: this.pageRankNormalized.find(c => c.label === node).value,
         y: eigenvectorNormalized.find(c => c.label === node).value,
         z: degreeCentralityNormalized.find(c => c.label === node).value,
       }
@@ -111,4 +112,6 @@ export class AnalysisPage extends BasePage implements OnInit {
     filteredRelationships.forEach(relationship => graph.addEdge(relationship.characterId1, relationship.characterId2));
     return graph;
   }
+
+  protected readonly normalizeBarChartItems = normalizeBarChartItems;
 }
