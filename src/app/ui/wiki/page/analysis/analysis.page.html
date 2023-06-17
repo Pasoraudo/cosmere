@@ -1,20 +1,27 @@
 <div class="inset-0 flex flex-col min-w-0 w-full h-screen">
   <configuration class="mr-6"></configuration>
   <div class="flex flex-col p-10">
-    <fuse-card class="flex flex-col p-10 grow">
-      <div class="text-xl mb-5">Lista de personajes más relevantes por PageRank</div>
-      <!--        <vertical-bar-chart class="w-full" [data]="pageRankNormalized"></vertical-bar-chart>-->
-      <div class="flex flex-row gap-10">
-        <div *ngFor="let columnNumber of [0,1,2,3,4,5,6,7,8]">
-          <div class="flex flex-col">
-            <div *ngFor="let character of pagerankCosmere; let pos = index">
-              <div class="mb-3" *ngIf="pos >= columnNumber * 10 && pos < columnNumber * 10  + 10">{{ pos + 1 }}
-                º {{ character.label }}</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </fuse-card>
+    <div class="flex flex-row mt-5 gap-5">
+      <fuse-card class="flex flex-col p-10 basis-1/2">
+        <div class="text-xl mb-5">Lista de personajes más relevantes por PageRank</div>
+        <vertical-bar-chart class="w-full" [data]="pageRankNormalized"></vertical-bar-chart>
+        <!--      <div class="flex flex-row gap-10">-->
+        <!--        <div *ngFor="let columnNumber of [0,1,2,3,4,5,6,7,8]">-->
+        <!--          <div class="flex flex-col">-->
+        <!--            <div *ngFor="let character of pagerankCosmere; let pos = index">-->
+        <!--              <div class="mb-3" *ngIf="pos >= columnNumber * 10 && pos < columnNumber * 10  + 10">{{ pos + 1 }}-->
+        <!--                º {{ character.label }}</div>-->
+        <!--            </div>-->
+        <!--          </div>-->
+        <!--        </div>-->
+        <!--      </div>-->
+      </fuse-card>
+      <fuse-card class="flex flex-col p-6 basis-1/2">
+        <div class="text-xl mb-5">Protagonismo</div>
+        <chart-3d class="flex flex-auto w-full" [data]="pagerankEigenvectorAndDegreeCentrality" [xLabel]="'pagerank'"
+                  [yLabel]="'eigenvector'"></chart-3d>
+      </fuse-card>
+    </div>
     <div class="flex flex-row mt-5 gap-5">
       <fuse-card class="flex flex-auto grow p-6">
         <div class="flex flex-col grow">
@@ -32,14 +39,6 @@
         <div class="flex flex-col grow">
           <div class="text-xl mb-5">Closeness</div>
           <bar-chart class="w-full" [data]="closenessCosmere"></bar-chart>
-        </div>
-      </fuse-card>
-    </div>
-    <div class="flex flex-row mt-5">
-      <fuse-card class="p-6">
-        <div class="flex flex-col">
-          <div class="text-xl mb-5">Protagonismo</div>
-          <chart-3d class="flex flex-auto w-full" [data]="pagerankEigenvectorAndDegreeCentrality" [xLabel]="'pagerank'" [yLabel]="'eigenvector'"></chart-3d>
         </div>
       </fuse-card>
     </div>

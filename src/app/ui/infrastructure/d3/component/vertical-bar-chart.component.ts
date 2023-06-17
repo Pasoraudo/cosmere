@@ -87,7 +87,6 @@ export class VerticalBarChartComponent extends BaseComponent implements AfterVie
     this.yScale = d3.scaleBand(this.yDomain, yRange).padding(this.config.gap);
     this.xAxis = d3.axisTop(this.xScale).ticks(this.config.width / 80, this.config.xFormat);
     this.yAxis = d3.axisLeft(this.yScale).tickSizeOuter(0);
-
   }
 
   createSvg(): void {
@@ -114,15 +113,16 @@ export class VerticalBarChartComponent extends BaseComponent implements AfterVie
         .attr("fill", "none")
         .attr("text-anchor", "end"));
 
-    this.svg.append("g")
-      .attr("fill", "red")
+    const bars = this.svg.append("g")
+      //.attr("fill", "red")
       .selectAll("rect")
       .data(I)
       .join("rect")
       .attr("x", this.xScale(0))
       .attr("y", i => this.yScale(this.Y[i]))
-      .attr("width", i => this.xScale(this.X[i]) - this.xScale(0))
+      .attr("width", 0)
       .attr("height", this.yScale.bandwidth());
+
 
     this.svg.append("g")
       .attr("fill", this.config.titleColor)
@@ -145,6 +145,24 @@ export class VerticalBarChartComponent extends BaseComponent implements AfterVie
     this.svg.append("g")
       .attr("transform", `translate(${this.config.margin.left},0)`)
       .call(this.yAxis);
+
+    console.log('a', bars)
+    bars
+      .transition()
+      .style('fill', (d, i) => this.getBarColor(i))
+      .duration(this.config.animationDuration)
+      .delay((d, i) => i * this.config.animationDuration / 3)
+      .attr('height', this.yScale.bandwidth())
+      .attr('width', (d, i) => {
+        return  this.X[i] < 0 ? this.xScale(this.X[i]) + this.xScale(0) :  this.xScale(0) + this.xScale(this.X[i]);
+      });
+  }
+
+  private getBarColor(i: number, change: number = 0) {
+    const red = (210 + change).toString()
+    const green = ((10 + 20 * i) + change).toString()
+    const blue = ((220 - 20 * i) + change).toString()
+    return `rgb(${red}, ${green}, ${blue})`
   }
 }
 
