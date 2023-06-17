@@ -38,8 +38,6 @@ export class RelationshipApi {
     const relationships = await Promise.all(promises) as Relationship[][];
     let relationshipsMerged = [];
     relationships.forEach(relationship => relationshipsMerged = mergeArrays(relationshipsMerged, relationship))
-    console.log(relationships)
-    console.log(relationshipsMerged)
     this.store.saveAllRelationship(relationshipsMerged);
   }
 
