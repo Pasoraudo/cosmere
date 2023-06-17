@@ -46,9 +46,9 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
     });
     this.subscribe(this.configurationApi.configuration(), (configuration) => this.onConfigurationChanges(configuration));
 
-    defer(() => {
-      this.characterApi.fetchAllCosmereCharacter();
-      this.relationshipApi.fetchAllCosmereRelationship();
+    defer(async () => {
+      await this.characterApi.fetchAllCosmereCharacter();
+      await this.relationshipApi.fetchAllCosmereRelationship();
     });
   }
 
