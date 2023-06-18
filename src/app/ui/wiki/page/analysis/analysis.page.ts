@@ -23,6 +23,10 @@ import {
   calculateClusteringCoefficient,
   calculateEccentricityCoefficient,
 } from '../../../../function/graphology.helper';
+import {Character} from '../../../../../domain/model/character';
+import {CharacterApi} from '../../../../../domain/service/api/character.api';
+import {isEmpty} from 'rxjs';
+import {byId} from '../../../../../domain/function/search.helper';
 
 @Component({
   selector: 'network',
@@ -31,6 +35,7 @@ import {
 })
 export class AnalysisPage extends BasePage implements OnInit {
   relationships: Relationship[];
+  characters: Character[];
   pagerankCosmere: BarChartItem[];
   eigenvectorCosmere: BarChartItem[];
   betweennessCosmere: BarChartItem[];
@@ -41,15 +46,19 @@ export class AnalysisPage extends BasePage implements OnInit {
   pagerankEigenvectorAndDegreeCentrality: Chart3DItem[] = [];
   configuration: Configuration = newConfiguration();
 
-  constructor(private relationshipApi: RelationshipApi, private configurationApi: ConfigurationApi) {
+  constructor(private relationshipApi: RelationshipApi, private characterApi: CharacterApi, private configurationApi: ConfigurationApi) {
     super();
   }
 
   ngOnInit(): void {
     this.subscribe(this.relationshipApi.cosmereRelationships(), relationships => this.onRelationshipsChanges(relationships));
+    this.subscribe(this.characterApi.cosmereCharacters(), characters => this.onCharactersChanges(characters));
     this.subscribe(this.configurationApi.configuration(), configuration => this.onConfigurationChanges(configuration));
 
-    defer(async () => await this.relationshipApi.fetchAllCosmereRelationship());
+    defer(async () => {
+      await this.relationshipApi.fetchAllCosmereRelationship();
+      await this.characterApi.fetchAllCosmereCharacter();
+    });
   }
 
   analyseNetwork(graph: Graph): void {
@@ -94,6 +103,11 @@ export class AnalysisPage extends BasePage implements OnInit {
     this.analyseNetwork(this.graph());
   }
 
+  onCharactersChanges(characters: Character[]): void {
+    this.characters = characters;
+    this.analyseNetwork(this.graph());
+  }
+
   onConfigurationChanges(configuration: Configuration): void {
     this.configuration = configuration;
     this.analyseNetwork(this.graph());
@@ -116,8 +130,22 @@ export class AnalysisPage extends BasePage implements OnInit {
     const filteredRelationships = this.filterRelationships(this.relationships);
     const graph = new UndirectedGraph();
     const characterIds: string[] = characterIdsFromRelationships(filteredRelationships);
-    characterIds.forEach(characterId => graph.addNode(characterId));
-    filteredRelationships.forEach(relationship => graph.addEdge(relationship.characterId1, relationship.characterId2));
+    characterIds.forEach(characterId => graph.addNode(this.getCharacterName(characterId)));
+    filteredRelationships.forEach(relationship =>
+      graph.addEdge(this.getCharacterName(relationship.characterId1), this.getCharacterName(relationship.characterId2)));
     return graph;
+  }
+
+  getCharacterName(id: string): string {
+    if (this.characters.length === 0)
+      return id;
+
+    const character = byId(id, this.characters);
+    if (!character)
+      return id;
+    if (!character.name || character.name === '')
+      return id;
+
+    return character.name;
   }
 }
