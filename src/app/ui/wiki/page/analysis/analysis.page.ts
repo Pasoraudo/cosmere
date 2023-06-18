@@ -130,8 +130,14 @@ export class AnalysisPage extends BasePage implements OnInit {
     const graph = new UndirectedGraph();
     const characterIds: string[] = characterIdsFromRelationships(filteredRelationships);
     characterIds.forEach(characterId => graph.addNode(this.getCharacterName(characterId)));
-    filteredRelationships.forEach(relationship =>
-      graph.addEdge(this.getCharacterName(relationship.characterId1), this.getCharacterName(relationship.characterId2)));
+    filteredRelationships.forEach(relationship => {
+      if (graph.hasEdge(this.getCharacterName(relationship.characterId1), this.getCharacterName(relationship.characterId2)))
+        return;
+
+      graph.addEdge(this.getCharacterName(relationship.characterId1), this.getCharacterName(relationship.characterId2));
+    });
+
+
     return graph;
   }
 
