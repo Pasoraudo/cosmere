@@ -24,7 +24,7 @@ export class VerticalBarChartComponent extends BaseComponent implements AfterVie
     width: 640,
     margin: {
       top: 30,
-      left: 70,
+      left: 100,
       right: 5,
       bottom: 0
     },
@@ -153,7 +153,7 @@ export class VerticalBarChartComponent extends BaseComponent implements AfterVie
       .delay((d, i) => i * this.config.animationDuration / 3)
       .attr('height', this.yScale.bandwidth())
       .attr('width', (d, i) => {
-        return  this.X[i] < 0 ? this.xScale(this.X[i]) + this.xScale(0) :  this.xScale(0) + this.xScale(this.X[i]);
+        return this.xScale(this.X[i]) - this.config.margin.left;
       });
   }
 
