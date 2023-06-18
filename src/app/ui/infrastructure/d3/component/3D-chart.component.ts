@@ -49,13 +49,13 @@ export class Chart3DComponent extends BaseComponent implements AfterViewInit, On
       strokeColor: "white",
     },
     domain: {
-      x: [0, 1],
-      y: [0, 1]
+      x: [0.3, 1],
+      y: [0.3, 1]
     },
     padding: 10,
     animationDuration: 300,
     ticksInterval: 10,
-    color: d3.interpolateViridis
+    color: d3.interpolateCool
   };
 
   id: string = uuid();
@@ -184,7 +184,8 @@ export class Chart3DComponent extends BaseComponent implements AfterViewInit, On
       .attr("cx", i => this.xScale(this.X[i]))
       .attr("cy", i => this.yScale(this.Y[i]))// @ts-ignore
       .attr("fill", i => this.color(this.Z[i]))
-      .attr("r", this.config.dot.radius);
+      .attr("r", this.config.dot.radius)
+      .attr("opacity", 0.5);
 
     this.svg.append("g")
       .attr("font-family", "sans-serif")
