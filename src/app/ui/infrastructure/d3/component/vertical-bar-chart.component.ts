@@ -146,7 +146,6 @@ export class VerticalBarChartComponent extends BaseComponent implements AfterVie
       .attr("transform", `translate(${this.config.margin.left},0)`)
       .call(this.yAxis);
 
-    console.log('a', bars)
     bars
       .transition()
       .style('fill', (d, i) => this.getBarColor(i))

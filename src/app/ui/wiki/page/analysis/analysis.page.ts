@@ -18,6 +18,8 @@ import {Chart3DItem} from '../../../infrastructure/d3/component/3D-chart.compone
 import {degreeCentrality} from 'graphology-metrics/centrality/degree';
 import {Configuration, newConfiguration} from '../../../../../domain/model/configuration';
 import {ConfigurationApi} from '../../../../../domain/service/api/configuration.api';
+import {largestConnectedComponentSubgraph} from 'graphology-components';
+import {calculateClusteringCoefficient, calculateEccentricityCoefficient} from '../../../../function/graphology.helper';
 
 
 @Component({
@@ -49,6 +51,7 @@ export class AnalysisPage extends BasePage implements OnInit {
   }
 
   analyseNetwork(graph: Graph): void {
+    const largestConnectedComponent = largestConnectedComponentSubgraph(graph);
     const nodes: string[] = graph.nodes();
 
     const pagerankCosmere = pagerank(graph, {getEdgeWeight: undefined, maxIterations: 300});
@@ -79,6 +82,9 @@ export class AnalysisPage extends BasePage implements OnInit {
         z: degreeCentralityNormalized.find(c => c.label === node).value,
       }
     }).filter(p => p.x > 0.2 && p.y > 0.2);
+
+    console.log('calculateClusteringCoefficient', calculateClusteringCoefficient(largestConnectedComponent));
+    console.log('calculateEccentricityCoefficient', calculateEccentricityCoefficient(largestConnectedComponent));
   }
 
   onRelationshipsChanges(relationships: Relationship[]): void {
@@ -112,6 +118,4 @@ export class AnalysisPage extends BasePage implements OnInit {
     filteredRelationships.forEach(relationship => graph.addEdge(relationship.characterId1, relationship.characterId2));
     return graph;
   }
-
-  protected readonly normalizeBarChartItems = normalizeBarChartItems;
 }
