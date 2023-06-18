@@ -1,9 +1,11 @@
 import {Component, OnDestroy, OnInit, ViewEncapsulation} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Subject, takeUntil} from 'rxjs';
-import {FuseMediaWatcherService} from '@fuse/services/media-watcher';
-import {FuseNavigationItem, FuseNavigationService, FuseVerticalNavigationComponent} from '@fuse/components/navigation';
 import {wikiNavigation} from '../../../navigation/wiki-navigation';
+import {FuseNavigationItem} from '../../../../../@fuse/components/navigation/navigation.types';
+import {FuseMediaWatcherService} from '../../../../../@fuse/services/media-watcher/media-watcher.service';
+import {FuseNavigationService} from '../../../../../@fuse/components/navigation/navigation.service';
+import {FuseVerticalNavigationComponent} from '../../../../../@fuse/components/navigation/vertical/vertical.component';
 
 @Component({
   selector: 'classic-layout',

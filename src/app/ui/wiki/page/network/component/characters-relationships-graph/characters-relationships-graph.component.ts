@@ -58,7 +58,11 @@ export class CharactersRelationshipsGraphComponent extends BaseComponent impleme
     const graph = new UndirectedGraph();
     const characterIds: string[] = characterIdsFromRelationships(this.relationships);
     characterIds.forEach(characterId => graph.addNode(characterId));
-    this.filterRelationships(this.relationships).forEach(relationship => graph.addEdge(relationship.characterId1, relationship.characterId2));
+    this.filterRelationships(this.relationships).forEach(relationship => {
+      if (graph.hasEdge(relationship.characterId1, relationship.characterId2))
+        return;
+      graph.addEdge(relationship.characterId1, relationship.characterId2);
+    });
     const communities = louvain(graph, {rng: seedrandom('1231312'), resolution: 2});
     this.nodes = charactersToD3Nodes(this.filterCharacters(this.characters), this.filterRelationships(this.relationships))
       .filter(node => this.edges.map(edge => edge.source).includes(node.id) || this.edges.map(edge => edge.target).includes(node.id));

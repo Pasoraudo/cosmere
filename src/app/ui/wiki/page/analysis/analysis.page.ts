@@ -84,7 +84,6 @@ export class AnalysisPage extends BasePage implements OnInit {
     this.pageRankNormalized = normalizeBarChartItems(this.pagerankCosmere);
     const eigenvectorNormalized = normalizeBarChartItems(this.eigenvectorCosmere);
     const degreeCentralityNormalized = normalizeBarChartItems(this.degreeCentralityCosmere);
-
     this.pagerankEigenvectorAndDegreeCentrality = nodes.map(node => {
       return {
         label: node,
