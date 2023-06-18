@@ -19,8 +19,10 @@ import {degreeCentrality} from 'graphology-metrics/centrality/degree';
 import {Configuration, newConfiguration} from '../../../../../domain/model/configuration';
 import {ConfigurationApi} from '../../../../../domain/service/api/configuration.api';
 import {largestConnectedComponentSubgraph} from 'graphology-components';
-import {calculateClusteringCoefficient, calculateEccentricityCoefficient} from '../../../../function/graphology.helper';
-
+import {
+  calculateClusteringCoefficient,
+  calculateEccentricityCoefficient,
+} from '../../../../function/graphology.helper';
 
 @Component({
   selector: 'network',
