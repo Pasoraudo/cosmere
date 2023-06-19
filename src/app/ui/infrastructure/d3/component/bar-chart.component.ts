@@ -23,7 +23,7 @@ export class BarChartComponent extends BaseComponent implements AfterViewInit, O
     width: 600,
     margin: {
       top: 10,
-      left: 40,
+      left: 70,
       right: 10,
       bottom: 20
     },

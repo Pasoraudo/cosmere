@@ -24,7 +24,7 @@ export class VerticalBarChartComponent extends BaseComponent implements AfterVie
     width: 640,
     margin: {
       top: 30,
-      left: 100,
+      left: 150,
       right: 5,
       bottom: 0
     },

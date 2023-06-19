@@ -7,7 +7,7 @@
         "planet": "Taldain",
         "aliases": [],
         "titles": [
-            "Lord General[1]"
+            "Lord General "
         ],
         "universe": "Cosmere",
         "ethnicity": "Daysider"
@@ -535,7 +535,7 @@
         "planet": "Scadrial",
         "aliases": [],
         "titles": [
-            "Alendi the Conqueror[1][2]"
+            "Alendi the Conqueror  "
         ],
         "universe": "Cosmere",
         "ethnicity": ""
@@ -660,7 +660,7 @@
         "planet": "Nalthis",
         "aliases": [],
         "titles": [
-            "Goddess of Matrons and Families[1]"
+            "Goddess of Matrons and Families "
         ],
         "universe": "Cosmere",
         "ethnicity": ""
@@ -1033,7 +1033,7 @@
         "aliases": [],
         "titles": [
             "King of Fadrex City",
-            "The Last Obligator[2]"
+            "The Last Obligator "
         ],
         "universe": "Cosmere",
         "ethnicity": "Noble"
@@ -1423,7 +1423,7 @@
         "bookIds": [],
         "planet": "Scadrial",
         "aliases": [
-            "Herr[1]"
+            "Herr "
         ],
         "titles": [
             "Ruin"
@@ -2483,7 +2483,7 @@
         "titles": [
             "Blushweaver the Beautiful",
             "Blushweaver the Honest",
-            "Goddess of Honesty and Interpersonal Relations[2]"
+            "Goddess of Honesty and Interpersonal Relations "
         ],
         "universe": "Cosmere",
         "ethnicity": ""
@@ -3318,12 +3318,12 @@
         "aliases": [
             "Chana",
             "Chanaranach",
-            "Chan-a-rach[2]"
+            "Chan-a-rach "
         ],
         "titles": [
             "Herald of the Almighty",
             "Patron of the Dustbringers",
-            "Herald of the Common Man[1]"
+            "Herald of the Common Man "
         ],
         "universe": "Cosmere",
         "ethnicity": ""
@@ -3617,7 +3617,7 @@
         "planet": "Scadrial",
         "aliases": [
             "Clubs",
-            "Uncle Crusty[1]"
+            "Uncle Crusty "
         ],
         "titles": [],
         "universe": "Cosmere",
@@ -4267,7 +4267,7 @@
         "titles": [
             "Highprince of Alethkar (formerly)",
             "Highprince of War (formerly)",
-            "King of Urithiru[2][3]"
+            "King of Urithiru  "
         ],
         "universe": "Cosmere",
         "ethnicity": ""
@@ -4323,7 +4323,7 @@
         "bookIds": [],
         "planet": "Roshar",
         "aliases": [
-            "Dandos the Oilsworn[2]"
+            "Dandos the Oilsworn "
         ],
         "titles": [],
         "universe": "Cosmere",
@@ -4517,7 +4517,7 @@
         "planet": "Earth (Reckoners)",
         "aliases": [],
         "titles": [
-            "Steelslayer[1]"
+            "Steelslayer "
         ],
         "universe": "",
         "ethnicity": ""
@@ -5344,7 +5344,7 @@
         "bookIds": [],
         "planet": "Scadrial",
         "aliases": [
-            "Delton[3]"
+            "Delton "
         ],
         "titles": [],
         "universe": "Cosmere",
@@ -6171,7 +6171,7 @@
         "planet": "Roshar",
         "aliases": [],
         "titles": [
-            "Vyre (He Who Quiets) (formerly)[1][2]"
+            "Vyre (He Who Quiets) (formerly)  "
         ],
         "universe": "Cosmere",
         "ethnicity": ""
@@ -6239,7 +6239,7 @@
         "planet": "Scadrial",
         "aliases": [],
         "titles": [
-            "King of the Central Dominance (formerly)[1]High Emperor of the New Empire[2]Last Emperor[3]"
+            "King of the Central Dominance (formerly) High Emperor of the New Empire Last Emperor "
         ],
         "universe": "Cosmere",
         "ethnicity": "Noble"
@@ -6861,7 +6861,7 @@
         "bookIds": [],
         "planet": "Scadrial",
         "aliases": [
-            "Fats[1]"
+            "Fats "
         ],
         "titles": [],
         "universe": "Cosmere",
@@ -7837,7 +7837,7 @@
         "aliases": [],
         "titles": [
             "King of Alethkar",
-            "Gavilar the Majestic[4]"
+            "Gavilar the Majestic "
         ],
         "universe": "Cosmere",
         "ethnicity": ""
@@ -7949,7 +7949,7 @@
         "planet": "Taldain",
         "aliases": [],
         "titles": [
-            "Lord Farmer[1]"
+            "Lord Farmer "
         ],
         "universe": "Cosmere",
         "ethnicity": "Daysider"
@@ -8072,11 +8072,11 @@
         "planet": "Taldain",
         "aliases": [
             "Gevin",
-            "Nilto[1]"
+            "Nilto "
         ],
         "titles": [
             "Prince of Elis",
-            "Lord Beggar[1]"
+            "Lord Beggar "
         ],
         "universe": "Cosmere",
         "ethnicity": "Darksider"
@@ -9290,7 +9290,7 @@
         "planet": "Roshar",
         "aliases": [],
         "titles": [
-            "Captain in Yeddaw Guard[1]"
+            "Captain in Yeddaw Guard "
         ],
         "universe": "Cosmere",
         "ethnicity": ""
@@ -9428,7 +9428,7 @@
         "planet": "Taldain",
         "aliases": [],
         "titles": [
-            "Lady Judge[1]"
+            "Lady Judge "
         ],
         "universe": "Cosmere",
         "ethnicity": "Daysider"
@@ -9529,7 +9529,7 @@
         "planet": "Taldain",
         "aliases": [],
         "titles": [
-            "Lord Merchant[1]"
+            "Lord Merchant "
         ],
         "universe": "Cosmere",
         "ethnicity": ""
@@ -9589,8 +9589,8 @@
         ],
         "titles": [
             "Your Normalness",
-            "[1] Unexalted One Who Is Not King",
-            "[2] Unexalted One[2]"
+            "  Unexalted One Who Is Not King",
+            "  Unexalted One "
         ],
         "universe": "Cytoverse",
         "ethnicity": ""
@@ -9939,7 +9939,7 @@
         "bookIds": [],
         "planet": "Detritus",
         "aliases": [
-            "Callsign: Hurl[2]"
+            "Callsign: Hurl "
         ],
         "titles": [],
         "universe": "Cytoverse",
@@ -10225,7 +10225,7 @@
             "The Dark One's Bane",
             "The Destined One of Light's Kingdoms",
             "The Hero of the Burning Night",
-            "The White Wizard[1]"
+            "The White Wizard "
         ],
         "universe": "",
         "ethnicity": ""
@@ -10852,7 +10852,7 @@
         "planet": "Scadrial",
         "aliases": [],
         "titles": [
-            "King of the Northern Dominance[2]"
+            "King of the Northern Dominance "
         ],
         "universe": "Cosmere",
         "ethnicity": "Noble"
@@ -11694,7 +11694,7 @@
         "aliases": [],
         "titles": [
             "Admiral of the Fleet of the DDF (formerly)",
-            "[1] Callsign: Ironsides"
+            "  Callsign: Ironsides"
         ],
         "universe": "Cytoverse",
         "ethnicity": ""
@@ -11856,14 +11856,14 @@
             "Kelek",
             "Kellai",
             "Stormfather",
-            "[3] Restares[1]",
-            "Kelek'Elin[1]"
+            "  Restares ",
+            "Kelek'Elin "
         ],
         "titles": [
             "Herald of the Almighty",
             "Patron of the Willshapers",
             "the High Judge",
-            "[1] the Holy One[2]"
+            "  the Holy One "
         ],
         "universe": "Cosmere",
         "ethnicity": ""
@@ -12290,7 +12290,7 @@
             "Survivor of Hathsin",
             "Sovereign",
             "Lord of Scars",
-            "[3][4] Thaidakar[3][5]",
+            "   Thaidakar  ",
             "others"
         ],
         "universe": "Cosmere",
@@ -12326,7 +12326,7 @@
         "planet": "Taldain",
         "aliases": [],
         "titles": [
-            "Lord Mastrell[1]"
+            "Lord Mastrell "
         ],
         "universe": "Cosmere",
         "ethnicity": "Daysider"
@@ -12747,12 +12747,12 @@
         "planet": "Roshar",
         "aliases": [
             "Koravari",
-            "[2] Slammer[3]"
+            "  Slammer "
         ],
         "titles": [
             "Cultivation",
             "Mother of the World",
-            "[1] She Who Brings the Dews at Dawn[2]"
+            "  She Who Brings the Dews at Dawn "
         ],
         "universe": "Cosmere",
         "ethnicity": ""
@@ -13479,7 +13479,7 @@
             "Mist Spirit",
             "Fuzz",
             "Terr",
-            "[1] Frue[2]"
+            "  Frue "
         ],
         "titles": [
             "Preservation"
@@ -13573,7 +13573,7 @@
         "bookIds": [],
         "planet": "Roshar",
         "aliases": [
-            "Kharat[1]"
+            "Kharat "
         ],
         "titles": [],
         "universe": "Cosmere",
@@ -14977,8 +14977,8 @@
         "bookIds": [],
         "planet": "Scadrial",
         "aliases": [
-            "Ironeyes[4]",
-            "Death[5]"
+            "Ironeyes ",
+            "Death "
         ],
         "titles": [],
         "universe": "Cosmere",
@@ -15160,7 +15160,7 @@
         "aliases": [],
         "titles": [
             "Admiral of the Fleet of the DDF",
-            "[1] Callsign: Mongrel"
+            "  Callsign: Mongrel"
         ],
         "universe": "Cytoverse",
         "ethnicity": ""
@@ -16067,7 +16067,7 @@
         "bookIds": [],
         "planet": "Roshar",
         "aliases": [
-            "Gobby[2]"
+            "Gobby "
         ],
         "titles": [],
         "universe": "Cosmere",
@@ -16592,7 +16592,7 @@
         "planet": "Roshar",
         "aliases": [],
         "titles": [
-            "Queen mother of AlethkarQueen of Urithiru[3]Queen consort of Alethkar (former)The Mother of Machines[4]Queen Blackthorn[5]Voice of Lights[6]"
+            "Queen mother of AlethkarQueen of Urithiru Queen consort of Alethkar (former)The Mother of Machines Queen Blackthorn Voice of Lights[6]"
         ],
         "universe": "Cosmere",
         "ethnicity": "Alethi"
@@ -16627,7 +16627,7 @@
         "planet": "Threnody",
         "aliases": [
             "Nazh",
-            "the Haunted Man[1][2][3]"
+            "the Haunted Man   "
         ],
         "titles": [],
         "universe": "Cosmere",
@@ -16798,7 +16798,7 @@
         "bookIds": [],
         "planet": "Scadrial",
         "aliases": [
-            "Nicki Savage[2]"
+            "Nicki Savage "
         ],
         "titles": [],
         "universe": "Cosmere",
@@ -17901,13 +17901,13 @@
         "bookIds": [],
         "planet": "Unknown",
         "aliases": [
-            "TwinSoul[2]",
-            "Shri Prasanva[3]",
-            "Pras[4]"
+            "TwinSoul ",
+            "Shri Prasanva ",
+            "Pras "
         ],
         "titles": [
             "Grand Aetherbound of the twelve kingdoms",
-            "Raj of the Coriander Court[1]"
+            "Raj of the Coriander Court "
         ],
         "universe": "Cosmere",
         "ethnicity": ""
@@ -18058,7 +18058,7 @@
         "planet": "Taldain",
         "aliases": [],
         "titles": [
-            "Lord General[2]"
+            "Lord General "
         ],
         "universe": "Cosmere",
         "ethnicity": "Daysider"
@@ -18287,7 +18287,7 @@
             "Lord Ruler",
             "Sliver of Infinity",
             "the Father",
-            "First Emperor[4]"
+            "First Emperor "
         ],
         "universe": "Cosmere",
         "ethnicity": ""
@@ -18321,8 +18321,8 @@
         "bookIds": [],
         "planet": "Roshar",
         "aliases": [
-            "Nun Raylisi[2]",
-            "Rasan[3]"
+            "Nun Raylisi ",
+            "Rasan "
         ],
         "titles": [
             "Odium (formerly)"
@@ -18699,7 +18699,7 @@
         "planet": "Roshar",
         "aliases": [],
         "titles": [
-            "Son of Thorns[3]"
+            "Son of Thorns "
         ],
         "universe": "Cosmere",
         "ethnicity": ""
@@ -18985,7 +18985,7 @@
         "planet": "Sel",
         "aliases": [],
         "titles": [
-            "The Sorceress[1]"
+            "The Sorceress "
         ],
         "universe": "Cosmere",
         "ethnicity": ""
@@ -19819,7 +19819,7 @@
             "Rabzeen",
             "The Anamnesor",
             "Master Vaht",
-            "[1] Holy First Witness",
+            "  Holy First Witness",
             "Chief Ambassador of the New Empire",
             "Harmony",
             "God"
@@ -20113,7 +20113,7 @@
         "bookIds": [],
         "planet": "Roshar",
         "aliases": [
-            "Shush-daughter-God[1]",
+            "Shush-daughter-God ",
             "Ash",
             "Epan",
             "Pom"
@@ -20148,9 +20148,9 @@
             "Veil",
             "Radiant",
             "Swiftspren",
-            "[4] Knife",
+            "  Knife",
             "Kishi",
-            "[5] Formless",
+            "  Formless",
             "[6] Unulukuak'kina'autu'atai[7]"
         ],
         "titles": [],
@@ -21062,11 +21062,11 @@
         "bookIds": [],
         "planet": "Detritus",
         "aliases": [
-            "Alanik[2]"
+            "Alanik "
         ],
         "titles": [
             "Callsign: Spin",
-            "Hero of Alta Second[1]"
+            "Hero of Alta Second "
         ],
         "universe": "Cytoverse",
         "ethnicity": ""
@@ -21335,7 +21335,7 @@
         "titles": [
             "Lightsong the Bold",
             "Lord of Heroes",
-            "Lightsong the Brave[2]",
+            "Lightsong the Brave ",
             "God of Bravery"
         ],
         "universe": "Cosmere",
@@ -21349,7 +21349,7 @@
         "planet": "Earth (Legion)",
         "aliases": [],
         "titles": [
-            "Legion[1]"
+            "Legion "
         ],
         "universe": "",
         "ethnicity": ""
@@ -21441,7 +21441,7 @@
         "planet": "Detritus",
         "aliases": [],
         "titles": [
-            "Vice Admiral (formerly)[1]"
+            "Vice Admiral (formerly) "
         ],
         "universe": "Cytoverse",
         "ethnicity": ""
@@ -21470,8 +21470,8 @@
         "titles": [
             "Rider of Storms",
             "Storm Rider",
-            "[4] God of Storms",
-            "[5] Spren of Storms",
+            "  God of Storms",
+            "  Spren of Storms",
             "[6] Father of Storms[7]"
         ],
         "universe": "Cosmere",
@@ -21619,7 +21619,7 @@
         "titles": [
             "God King of Hallandren",
             "Susebron the Grand",
-            "Immortal Majesty[1]",
+            "Immortal Majesty ",
             "His Excellent Grace"
         ],
         "universe": "Cosmere",
@@ -21853,7 +21853,7 @@
         "bookIds": [],
         "planet": "Taldain",
         "aliases": [
-            "Sharezan[1]"
+            "Sharezan "
         ],
         "titles": [],
         "universe": "Cosmere",
@@ -22058,7 +22058,7 @@
         "aliases": [
             "The Almighty",
             "Elithanathile",
-            "[3] Tavast[4]"
+            "  Tavast "
         ],
         "titles": [
             "Honor"
@@ -22122,7 +22122,7 @@
         "titles": [
             "King of Kharbranth (former)",
             "King of Jah Keved (former)",
-            "[1] Odium"
+            "  Odium"
         ],
         "universe": "Cosmere",
         "ethnicity": ""
@@ -23059,7 +23059,7 @@
         "planet": "Scadrial",
         "aliases": [
             "Mother of Terris",
-            "Miss Imposing[1]"
+            "Miss Imposing "
         ],
         "titles": [],
         "universe": "Cosmere",
@@ -23074,7 +23074,7 @@
         "aliases": [],
         "titles": [],
         "universe": "Cosmere",
-        "ethnicity": "Terris, Noble[2]"
+        "ethnicity": "Terris, Noble "
     },
     {
         "id": "Tiqqa",
@@ -23506,7 +23506,7 @@
         "bookIds": [],
         "planet": "Lumar",
         "aliases": [
-            "Glorf[1]"
+            "Glorf "
         ],
         "titles": [],
         "universe": "Cosmere",
@@ -23839,7 +23839,7 @@
         "aliases": [],
         "titles": [],
         "universe": "Cytoverse",
-        "ethnicity": "Yeongian[1]"
+        "ethnicity": "Yeongian "
     },
     {
         "id": "Ulba",
@@ -24345,7 +24345,7 @@
             "Zahel",
             "Kalad the Usurper",
             "Talaxin",
-            "Tax[1]"
+            "Tax "
         ],
         "titles": [
             "Strifelover",
@@ -24569,7 +24569,7 @@
         "planet": "Roshar",
         "aliases": [],
         "titles": [
-            "The Last Listener[1]Voice of Lady Leshwi[1]Voice of the Lady of Wishes (former)[2]Voice of Odium (former)[3]"
+            "The Last Listener Voice of Lady Leshwi Voice of the Lady of Wishes (former) Voice of Odium (former) "
         ],
         "universe": "Cosmere",
         "ethnicity": ""
@@ -24739,7 +24739,7 @@
         "planet": "Taldain",
         "aliases": [],
         "titles": [
-            "Lord Merchant[2]"
+            "Lord Merchant "
         ],
         "universe": "Cosmere",
         "ethnicity": "Kerztian"
@@ -25059,9 +25059,9 @@
         "planet": "Sel",
         "aliases": [
             "Shaizan",
-            "[1] Moonlight",
+            "  Moonlight",
             "Kim",
-            "[2] Shay-I[3]"
+            "  Shay-I "
         ],
         "titles": [],
         "universe": "Cosmere",
@@ -25190,7 +25190,7 @@
         "bookIds": [],
         "planet": "Sel",
         "aliases": [
-            "Weedfingers[1]"
+            "Weedfingers "
         ],
         "titles": [],
         "universe": "Cosmere",
@@ -25216,7 +25216,7 @@
         "aliases": [],
         "titles": [],
         "universe": "Cosmere",
-        "ethnicity": "Skaa[2]"
+        "ethnicity": "Skaa "
     },
     {
         "id": "Wellid",
@@ -25653,7 +25653,7 @@
             "King of Azir",
             "Lord of the Bronze Palace",
             "Prime Aqasix",
-            "grand minister and emissary of Yaezir[1]"
+            "grand minister and emissary of Yaezir "
         ],
         "universe": "Cosmere",
         "ethnicity": ""
@@ -25966,7 +25966,7 @@
             "Zahel",
             "Kalad the Usurper",
             "Talaxin",
-            "Tax[1]"
+            "Tax "
         ],
         "titles": [
             "Strifelover",
@@ -26019,7 +26019,7 @@
         "planet": "Detritus",
         "aliases": [],
         "titles": [
-            "Callsign: Chaser[1]The Coward of Alta[2]"
+            "Callsign: Chaser The Coward of Alta "
         ],
         "universe": "Cytoverse",
         "ethnicity": ""

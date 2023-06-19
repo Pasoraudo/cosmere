@@ -25,7 +25,6 @@ import {
 } from '../../../../function/graphology.helper';
 import {Character} from '../../../../../domain/model/character';
 import {CharacterApi} from '../../../../../domain/service/api/character.api';
-import {isEmpty} from 'rxjs';
 import {byId} from '../../../../../domain/function/search.helper';
 
 @Component({
