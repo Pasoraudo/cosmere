@@ -1,1 +1,1138 @@
-[{"id": "Fatren:Sev:mistborn3", "characterId1": "Fatren", "characterId2": "Sev", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Druffel:Fatren:mistborn3", "characterId1": "Druffel", "characterId2": "Fatren", "type": "", "numInteractions": "2", "bookId": "mistborn3"}, {"id": "Elend_Venture:Fatren:mistborn3", "characterId1": "Elend_Venture", "characterId2": "Fatren", "type": "", "numInteractions": "19", "bookId": "mistborn3"}, {"id": "Elend_Venture:Vin:mistborn3", "characterId1": "Elend_Venture", "characterId2": "Vin", "type": "", "numInteractions": "147", "bookId": "mistborn3"}, {"id": "Edgard_Ladrian:Sazed:mistborn3", "characterId1": "Edgard_Ladrian", "characterId2": "Sazed", "type": "", "numInteractions": "90", "bookId": "mistborn3"}, {"id": "Elend_Venture:Sazed:mistborn3", "characterId1": "Elend_Venture", "characterId2": "Sazed", "type": "", "numInteractions": "30", "bookId": "mistborn3"}, {"id": "Marsh:Sazed:mistborn3", "characterId1": "Marsh", "characterId2": "Sazed", "type": "", "numInteractions": "4", "bookId": "mistborn3"}, {"id": "Sazed:Vin:mistborn3", "characterId1": "Sazed", "characterId2": "Vin", "type": "", "numInteractions": "25", "bookId": "mistborn3"}, {"id": "Fatren:Vin:mistborn3", "characterId1": "Fatren", "characterId2": "Vin", "type": "", "numInteractions": "7", "bookId": "mistborn3"}, {"id": "Kelsier:Vin:mistborn3", "characterId1": "Kelsier", "characterId2": "Vin", "type": "", "numInteractions": "17", "bookId": "mistborn3"}, {"id": "Elend_Venture:Kelsier:mistborn3", "characterId1": "Elend_Venture", "characterId2": "Kelsier", "type": "", "numInteractions": "4", "bookId": "mistborn3"}, {"id": "Kwaan:Sazed:mistborn3", "characterId1": "Kwaan", "characterId2": "Sazed", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "TenSoon:VarSell:mistborn3", "characterId1": "TenSoon", "characterId2": "VarSell", "type": "", "numInteractions": "2", "bookId": "mistborn3"}, {"id": "Demoux:Fatren:mistborn3", "characterId1": "Demoux", "characterId2": "Fatren", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Demoux:Elend_Venture:mistborn3", "characterId1": "Demoux", "characterId2": "Elend_Venture", "type": "", "numInteractions": "46", "bookId": "mistborn3"}, {"id": "Demoux:Edgard_Ladrian:mistborn3", "characterId1": "Demoux", "characterId2": "Edgard_Ladrian", "type": "", "numInteractions": "3", "bookId": "mistborn3"}, {"id": "Demoux:Sazed:mistborn3", "characterId1": "Demoux", "characterId2": "Sazed", "type": "", "numInteractions": "2", "bookId": "mistborn3"}, {"id": "Cett_(coach_owner):Demoux:mistborn3", "characterId1": "Cett_(coach_owner)", "characterId2": "Demoux", "type": "", "numInteractions": "6", "bookId": "mistborn3"}, {"id": "Demoux:Vin:mistborn3", "characterId1": "Demoux", "characterId2": "Vin", "type": "", "numInteractions": "7", "bookId": "mistborn3"}, {"id": "Elend_Venture:Hammond:mistborn3", "characterId1": "Elend_Venture", "characterId2": "Hammond", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Elend_Venture:Rashek:mistborn3", "characterId1": "Elend_Venture", "characterId2": "Rashek", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Kelsier:Mare:mistborn3", "characterId1": "Kelsier", "characterId2": "Mare", "type": "", "numInteractions": "6", "bookId": "mistborn3"}, {"id": "Edgard_Ladrian:Kelsier:mistborn3", "characterId1": "Edgard_Ladrian", "characterId2": "Kelsier", "type": "", "numInteractions": "5", "bookId": "mistborn3"}, {"id": "Kelsier:Sazed:mistborn3", "characterId1": "Kelsier", "characterId2": "Sazed", "type": "", "numInteractions": "6", "bookId": "mistborn3"}, {"id": "Goradel:Sazed:mistborn3", "characterId1": "Goradel", "characterId2": "Sazed", "type": "", "numInteractions": "10", "bookId": "mistborn3"}, {"id": "Allrianne_Cett:Edgard_Ladrian:mistborn3", "characterId1": "Allrianne_Cett", "characterId2": "Edgard_Ladrian", "type": "", "numInteractions": "30", "bookId": "mistborn3"}, {"id": "Allrianne_Cett:Sazed:mistborn3", "characterId1": "Allrianne_Cett", "characterId2": "Sazed", "type": "", "numInteractions": "15", "bookId": "mistborn3"}, {"id": "Edgard_Ladrian:Goradel:mistborn3", "characterId1": "Edgard_Ladrian", "characterId2": "Goradel", "type": "", "numInteractions": "10", "bookId": "mistborn3"}, {"id": "TenSoon:Zane_Venture:mistborn3", "characterId1": "TenSoon", "characterId2": "Zane_Venture", "type": "", "numInteractions": "4", "bookId": "mistborn3"}, {"id": "Vin:Zane_Venture:mistborn3", "characterId1": "Vin", "characterId2": "Zane_Venture", "type": "", "numInteractions": "9", "bookId": "mistborn3"}, {"id": "TenSoon:Vin:mistborn3", "characterId1": "TenSoon", "characterId2": "Vin", "type": "", "numInteractions": "4", "bookId": "mistborn3"}, {"id": "KanPaar:Zane_Venture:mistborn3", "characterId1": "KanPaar", "characterId2": "Zane_Venture", "type": "", "numInteractions": "2", "bookId": "mistborn3"}, {"id": "KanPaar:TenSoon:mistborn3", "characterId1": "KanPaar", "characterId2": "TenSoon", "type": "", "numInteractions": "12", "bookId": "mistborn3"}, {"id": "Cladent:Dockson:mistborn3", "characterId1": "Cladent", "characterId2": "Dockson", "type": "", "numInteractions": "2", "bookId": "mistborn3"}, {"id": "Edgard_Ladrian:Elend_Venture:mistborn3", "characterId1": "Edgard_Ladrian", "characterId2": "Elend_Venture", "type": "", "numInteractions": "3", "bookId": "mistborn3"}, {"id": "Cett_(coach_owner):Elend_Venture:mistborn3", "characterId1": "Cett_(coach_owner)", "characterId2": "Elend_Venture", "type": "", "numInteractions": "34", "bookId": "mistborn3"}, {"id": "Allrianne_Cett:Cett_(coach_owner):mistborn3", "characterId1": "Allrianne_Cett", "characterId2": "Cett_(coach_owner)", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Cett_(coach_owner):Edgard_Ladrian:mistborn3", "characterId1": "Cett_(coach_owner)", "characterId2": "Edgard_Ladrian", "type": "", "numInteractions": "3", "bookId": "mistborn3"}, {"id": "Reen:Vin:mistborn3", "characterId1": "Reen", "characterId2": "Vin", "type": "", "numInteractions": "7", "bookId": "mistborn3"}, {"id": "Cett_(coach_owner):Gneorndin_Cett:mistborn3", "characterId1": "Cett_(coach_owner)", "characterId2": "Gneorndin_Cett", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Elend_Venture:Janarle:mistborn3", "characterId1": "Elend_Venture", "characterId2": "Janarle", "type": "", "numInteractions": "3", "bookId": "mistborn3"}, {"id": "Janarle:Straff_Venture:mistborn3", "characterId1": "Janarle", "characterId2": "Straff_Venture", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Elend_Venture:Straff_Venture:mistborn3", "characterId1": "Elend_Venture", "characterId2": "Straff_Venture", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Cett_(coach_owner):Janarle:mistborn3", "characterId1": "Cett_(coach_owner)", "characterId2": "Janarle", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Cett_(coach_owner):Cladent:mistborn3", "characterId1": "Cett_(coach_owner)", "characterId2": "Cladent", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Ati:Marsh:mistborn3", "characterId1": "Ati", "characterId2": "Marsh", "type": "", "numInteractions": "14", "bookId": "mistborn3"}, {"id": "Kelsier:Marsh:mistborn3", "characterId1": "Kelsier", "characterId2": "Marsh", "type": "", "numInteractions": "8", "bookId": "mistborn3"}, {"id": "Mare:Marsh:mistborn3", "characterId1": "Mare", "characterId2": "Marsh", "type": "", "numInteractions": "2", "bookId": "mistborn3"}, {"id": "Cladent:Kelsier:mistborn3", "characterId1": "Cladent", "characterId2": "Kelsier", "type": "", "numInteractions": "2", "bookId": "mistborn3"}, {"id": "Kelsier:Spook:mistborn3", "characterId1": "Kelsier", "characterId2": "Spook", "type": "", "numInteractions": "17", "bookId": "mistborn3"}, {"id": "Cladent:Spook:mistborn3", "characterId1": "Cladent", "characterId2": "Spook", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Spook:Vin:mistborn3", "characterId1": "Spook", "characterId2": "Vin", "type": "", "numInteractions": "3", "bookId": "mistborn3"}, {"id": "Elend_Venture:Spook:mistborn3", "characterId1": "Elend_Venture", "characterId2": "Spook", "type": "", "numInteractions": "3", "bookId": "mistborn3"}, {"id": "Olid:Quellion:mistborn3", "characterId1": "Olid", "characterId2": "Quellion", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Dockson:Edgard_Ladrian:mistborn3", "characterId1": "Dockson", "characterId2": "Edgard_Ladrian", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Human:Vin:mistborn3", "characterId1": "Human", "characterId2": "Vin", "type": "", "numInteractions": "6", "bookId": "mistborn3"}, {"id": "Durn:Spook:mistborn3", "characterId1": "Durn", "characterId2": "Spook", "type": "", "numInteractions": "17", "bookId": "mistborn3"}, {"id": "Beldre:Durn:mistborn3", "characterId1": "Beldre", "characterId2": "Durn", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Beldre:Spook:mistborn3", "characterId1": "Beldre", "characterId2": "Spook", "type": "", "numInteractions": "29", "bookId": "mistborn3"}, {"id": "Durn:Kelsier:mistborn3", "characterId1": "Durn", "characterId2": "Kelsier", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Quellion:Spook:mistborn3", "characterId1": "Quellion", "characterId2": "Spook", "type": "", "numInteractions": "24", "bookId": "mistborn3"}, {"id": "Demoux:Kelsier:mistborn3", "characterId1": "Demoux", "characterId2": "Kelsier", "type": "", "numInteractions": "2", "bookId": "mistborn3"}, {"id": "MeLaan:TenSoon:mistborn3", "characterId1": "MeLaan", "characterId2": "TenSoon", "type": "", "numInteractions": "3", "bookId": "mistborn3"}, {"id": "Ati:MeLaan:mistborn3", "characterId1": "Ati", "characterId2": "MeLaan", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Alendi:Rashek:mistborn3", "characterId1": "Alendi", "characterId2": "Rashek", "type": "", "numInteractions": "7", "bookId": "mistborn3"}, {"id": "Alendi:Vin:mistborn3", "characterId1": "Alendi", "characterId2": "Vin", "type": "", "numInteractions": "2", "bookId": "mistborn3"}, {"id": "Sazed:TenSoon:mistborn3", "characterId1": "Sazed", "characterId2": "TenSoon", "type": "", "numInteractions": "4", "bookId": "mistborn3"}, {"id": "Elend_Venture:TenSoon:mistborn3", "characterId1": "Elend_Venture", "characterId2": "TenSoon", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Ati:Sazed:mistborn3", "characterId1": "Ati", "characterId2": "Sazed", "type": "", "numInteractions": "7", "bookId": "mistborn3"}, {"id": "Ati:Vin:mistborn3", "characterId1": "Ati", "characterId2": "Vin", "type": "", "numInteractions": "38", "bookId": "mistborn3"}, {"id": "Elend_Venture:Noorden:mistborn3", "characterId1": "Elend_Venture", "characterId2": "Noorden", "type": "", "numInteractions": "5", "bookId": "mistborn3"}, {"id": "Noorden:Vin:mistborn3", "characterId1": "Noorden", "characterId2": "Vin", "type": "", "numInteractions": "3", "bookId": "mistborn3"}, {"id": "Sazed:Vedlew:mistborn3", "characterId1": "Sazed", "characterId2": "Vedlew", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Margel:Spook:mistborn3", "characterId1": "Margel", "characterId2": "Spook", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Ati:Kelsier:mistborn3", "characterId1": "Ati", "characterId2": "Kelsier", "type": "", "numInteractions": "3", "bookId": "mistborn3"}, {"id": "Cett_(coach_owner):Vin:mistborn3", "characterId1": "Cett_(coach_owner)", "characterId2": "Vin", "type": "", "numInteractions": "6", "bookId": "mistborn3"}, {"id": "Felt:Spook:mistborn3", "characterId1": "Felt", "characterId2": "Spook", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Cett_(coach_owner):Slowswift:mistborn3", "characterId1": "Cett_(coach_owner)", "characterId2": "Slowswift", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Cett_(coach_owner):Hoid:mistborn3", "characterId1": "Cett_(coach_owner)", "characterId2": "Hoid", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Slowswift:Vin:mistborn3", "characterId1": "Slowswift", "characterId2": "Vin", "type": "", "numInteractions": "2", "bookId": "mistborn3"}, {"id": "Elend_Venture:Jastes_Lekal:mistborn3", "characterId1": "Elend_Venture", "characterId2": "Jastes_Lekal", "type": "", "numInteractions": "3", "bookId": "mistborn3"}, {"id": "Allrianne_Cett:Goradel:mistborn3", "characterId1": "Allrianne_Cett", "characterId2": "Goradel", "type": "", "numInteractions": "2", "bookId": "mistborn3"}, {"id": "Quellion:Sazed:mistborn3", "characterId1": "Quellion", "characterId2": "Sazed", "type": "", "numInteractions": "11", "bookId": "mistborn3"}, {"id": "Elend_Venture:Quellion:mistborn3", "characterId1": "Elend_Venture", "characterId2": "Quellion", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Ashweather_Cett:Straff_Venture:mistborn3", "characterId1": "Ashweather_Cett", "characterId2": "Straff_Venture", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Edgard_Ladrian:Quellion:mistborn3", "characterId1": "Edgard_Ladrian", "characterId2": "Quellion", "type": "", "numInteractions": "9", "bookId": "mistborn3"}, {"id": "Edgard_Ladrian:Spook:mistborn3", "characterId1": "Edgard_Ladrian", "characterId2": "Spook", "type": "", "numInteractions": "30", "bookId": "mistborn3"}, {"id": "Sazed:Spook:mistborn3", "characterId1": "Sazed", "characterId2": "Spook", "type": "", "numInteractions": "54", "bookId": "mistborn3"}, {"id": "Allrianne_Cett:Spook:mistborn3", "characterId1": "Allrianne_Cett", "characterId2": "Spook", "type": "", "numInteractions": "3", "bookId": "mistborn3"}, {"id": "Cett_(coach_owner):Sazed:mistborn3", "characterId1": "Cett_(coach_owner)", "characterId2": "Sazed", "type": "", "numInteractions": "2", "bookId": "mistborn3"}, {"id": "Elend_Venture:Tindwyl_Ladrian:mistborn3", "characterId1": "Elend_Venture", "characterId2": "Tindwyl_Ladrian", "type": "", "numInteractions": "3", "bookId": "mistborn3"}, {"id": "Aradan_Yomen:Vin:mistborn3", "characterId1": "Aradan_Yomen", "characterId2": "Vin", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Aradan_Yomen:Elend_Venture:mistborn3", "characterId1": "Aradan_Yomen", "characterId2": "Elend_Venture", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Elend_Venture:Telden_Hasting:mistborn3", "characterId1": "Elend_Venture", "characterId2": "Telden_Hasting", "type": "", "numInteractions": "12", "bookId": "mistborn3"}, {"id": "El:Telden_Hasting:mistborn3", "characterId1": "El", "characterId2": "Telden_Hasting", "type": "", "numInteractions": "3", "bookId": "mistborn3"}, {"id": "El:Elend_Venture:mistborn3", "characterId1": "El", "characterId2": "Elend_Venture", "type": "", "numInteractions": "2", "bookId": "mistborn3"}, {"id": "Edgard_Ladrian:Vin:mistborn3", "characterId1": "Edgard_Ladrian", "characterId2": "Vin", "type": "", "numInteractions": "2", "bookId": "mistborn3"}, {"id": "Telden_Hasting:Vin:mistborn3", "characterId1": "Telden_Hasting", "characterId2": "Vin", "type": "", "numInteractions": "5", "bookId": "mistborn3"}, {"id": "Elend_Venture:Urdree:mistborn3", "characterId1": "Elend_Venture", "characterId2": "Urdree", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Durn:Edgard_Ladrian:mistborn3", "characterId1": "Durn", "characterId2": "Edgard_Ladrian", "type": "", "numInteractions": "2", "bookId": "mistborn3"}, {"id": "Kelsier:Quellion:mistborn3", "characterId1": "Kelsier", "characterId2": "Quellion", "type": "", "numInteractions": "5", "bookId": "mistborn3"}, {"id": "Durn:Mailey:mistborn3", "characterId1": "Durn", "characterId2": "Mailey", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Cett_(coach_owner):Tindwyl_Ladrian:mistborn3", "characterId1": "Cett_(coach_owner)", "characterId2": "Tindwyl_Ladrian", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Elend_Venture:Human:mistborn3", "characterId1": "Elend_Venture", "characterId2": "Human", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Franson:Spook:mistborn3", "characterId1": "Franson", "characterId2": "Spook", "type": "", "numInteractions": "3", "bookId": "mistborn3"}, {"id": "Cett_(coach_owner):Noorden:mistborn3", "characterId1": "Cett_(coach_owner)", "characterId2": "Noorden", "type": "", "numInteractions": "2", "bookId": "mistborn3"}, {"id": "Demoux:Noorden:mistborn3", "characterId1": "Demoux", "characterId2": "Noorden", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Marsh:Vin:mistborn3", "characterId1": "Marsh", "characterId2": "Vin", "type": "", "numInteractions": "13", "bookId": "mistborn3"}, {"id": "Conrad:Demoux:mistborn3", "characterId1": "Conrad", "characterId2": "Demoux", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Elend_Venture:Reen:mistborn3", "characterId1": "Elend_Venture", "characterId2": "Reen", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Edgard_Ladrian:Reen:mistborn3", "characterId1": "Edgard_Ladrian", "characterId2": "Reen", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Beldre:Quellion:mistborn3", "characterId1": "Beldre", "characterId2": "Quellion", "type": "", "numInteractions": "3", "bookId": "mistborn3"}, {"id": "Ati:Reen:mistborn3", "characterId1": "Ati", "characterId2": "Reen", "type": "", "numInteractions": "6", "bookId": "mistborn3"}, {"id": "Ati:Zane_Venture:mistborn3", "characterId1": "Ati", "characterId2": "Zane_Venture", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Alendi:Ati:mistborn3", "characterId1": "Alendi", "characterId2": "Ati", "type": "", "numInteractions": "2", "bookId": "mistborn3"}, {"id": "Ati:Rashek:mistborn3", "characterId1": "Ati", "characterId2": "Rashek", "type": "", "numInteractions": "3", "bookId": "mistborn3"}, {"id": "Rashek:Vin:mistborn3", "characterId1": "Rashek", "characterId2": "Vin", "type": "", "numInteractions": "2", "bookId": "mistborn3"}, {"id": "Goradel:Spook:mistborn3", "characterId1": "Goradel", "characterId2": "Spook", "type": "", "numInteractions": "7", "bookId": "mistborn3"}, {"id": "Beldre:Edgard_Ladrian:mistborn3", "characterId1": "Beldre", "characterId2": "Edgard_Ladrian", "type": "", "numInteractions": "4", "bookId": "mistborn3"}, {"id": "Kelsier:OreSeur:mistborn3", "characterId1": "Kelsier", "characterId2": "OreSeur", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Kelsier:TenSoon:mistborn3", "characterId1": "Kelsier", "characterId2": "TenSoon", "type": "", "numInteractions": "2", "bookId": "mistborn3"}, {"id": "OreSeur:TenSoon:mistborn3", "characterId1": "OreSeur", "characterId2": "TenSoon", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Jaston:Wellen:mistborn3", "characterId1": "Jaston", "characterId2": "Wellen", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Skiff:Wellen:mistborn3", "characterId1": "Skiff", "characterId2": "Wellen", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Jaston:Skiff:mistborn3", "characterId1": "Jaston", "characterId2": "Skiff", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Beldre:Sazed:mistborn3", "characterId1": "Beldre", "characterId2": "Sazed", "type": "", "numInteractions": "4", "bookId": "mistborn3"}, {"id": "Goradel:Quellion:mistborn3", "characterId1": "Goradel", "characterId2": "Quellion", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Durn:Quellion:mistborn3", "characterId1": "Durn", "characterId2": "Quellion", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Beldre:Kelsier:mistborn3", "characterId1": "Beldre", "characterId2": "Kelsier", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Edgard_Ladrian:TenSoon:mistborn3", "characterId1": "Edgard_Ladrian", "characterId2": "TenSoon", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Sazed:Tindwyl_Ladrian:mistborn3", "characterId1": "Sazed", "characterId2": "Tindwyl_Ladrian", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Alendi:Kwaan:mistborn3", "characterId1": "Alendi", "characterId2": "Kwaan", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Ati:Edgard_Ladrian:mistborn3", "characterId1": "Ati", "characterId2": "Edgard_Ladrian", "type": "", "numInteractions": "2", "bookId": "mistborn3"}, {"id": "Ati:Kwaan:mistborn3", "characterId1": "Ati", "characterId2": "Kwaan", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Edgard_Ladrian:Kwaan:mistborn3", "characterId1": "Edgard_Ladrian", "characterId2": "Kwaan", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Ati:Elend_Venture:mistborn3", "characterId1": "Ati", "characterId2": "Elend_Venture", "type": "", "numInteractions": "9", "bookId": "mistborn3"}, {"id": "Goradel:Vin:mistborn3", "characterId1": "Goradel", "characterId2": "Vin", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Elend_Venture:Marsh:mistborn3", "characterId1": "Elend_Venture", "characterId2": "Marsh", "type": "", "numInteractions": "15", "bookId": "mistborn3"}, {"id": "Ati:Quellion:mistborn3", "characterId1": "Ati", "characterId2": "Quellion", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Haddek:Sazed:mistborn3", "characterId1": "Haddek", "characterId2": "Sazed", "type": "", "numInteractions": "4", "bookId": "mistborn3"}, {"id": "Haddek:Vin:mistborn3", "characterId1": "Haddek", "characterId2": "Vin", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "KanPaar:Sazed:mistborn3", "characterId1": "KanPaar", "characterId2": "Sazed", "type": "", "numInteractions": "4", "bookId": "mistborn3"}, {"id": "Haddek:Rashek:mistborn3", "characterId1": "Haddek", "characterId2": "Rashek", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Haddek:KanPaar:mistborn3", "characterId1": "Haddek", "characterId2": "KanPaar", "type": "", "numInteractions": "3", "bookId": "mistborn3"}, {"id": "Tindwyl_Ladrian:Vin:mistborn3", "characterId1": "Tindwyl_Ladrian", "characterId2": "Vin", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "KanPaar:MeLaan:mistborn3", "characterId1": "KanPaar", "characterId2": "MeLaan", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "FhorKood:TenSoon:mistborn3", "characterId1": "FhorKood", "characterId2": "TenSoon", "type": "", "numInteractions": "2", "bookId": "mistborn3"}, {"id": "FhorKood:MeLaan:mistborn3", "characterId1": "FhorKood", "characterId2": "MeLaan", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Ati:KanPaar:mistborn3", "characterId1": "Ati", "characterId2": "KanPaar", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "KanPaar:Vin:mistborn3", "characterId1": "KanPaar", "characterId2": "Vin", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "MeLaan:Sazed:mistborn3", "characterId1": "MeLaan", "characterId2": "Sazed", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Aslydin:Demoux:mistborn3", "characterId1": "Aslydin", "characterId2": "Demoux", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Mare:Sazed:mistborn3", "characterId1": "Mare", "characterId2": "Sazed", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Mare:Vin:mistborn3", "characterId1": "Mare", "characterId2": "Vin", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Allrianne_Cett:Beldre:mistborn3", "characterId1": "Allrianne_Cett", "characterId2": "Beldre", "type": "", "numInteractions": "1", "bookId": "mistborn3"}, {"id": "Demoux:Spook:mistborn3", "characterId1": "Demoux", "characterId2": "Spook", "type": "", "numInteractions": "1", "bookId": "mistborn3"}]
+[
+  {
+    "id": "Fatren:Sev:mistborn3",
+    "characterId1": "Fatren",
+    "characterId2": "Sev",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Druffel:Fatren:mistborn3",
+    "characterId1": "Druffel",
+    "characterId2": "Fatren",
+    "type": "",
+    "numInteractions": "2",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Elend_Venture:Fatren:mistborn3",
+    "characterId1": "Elend_Venture",
+    "characterId2": "Fatren",
+    "type": "",
+    "numInteractions": "19",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Elend_Venture:Vin:mistborn3",
+    "characterId1": "Elend_Venture",
+    "characterId2": "Vin",
+    "type": "",
+    "numInteractions": "147",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Edgard_Ladrian:Sazed:mistborn3",
+    "characterId1": "Edgard_Ladrian",
+    "characterId2": "Sazed",
+    "type": "",
+    "numInteractions": "90",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Elend_Venture:Sazed:mistborn3",
+    "characterId1": "Elend_Venture",
+    "characterId2": "Sazed",
+    "type": "",
+    "numInteractions": "30",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Marsh:Sazed:mistborn3",
+    "characterId1": "Marsh",
+    "characterId2": "Sazed",
+    "type": "",
+    "numInteractions": "4",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Sazed:Vin:mistborn3",
+    "characterId1": "Sazed",
+    "characterId2": "Vin",
+    "type": "",
+    "numInteractions": "25",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Fatren:Vin:mistborn3",
+    "characterId1": "Fatren",
+    "characterId2": "Vin",
+    "type": "",
+    "numInteractions": "7",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Elend_Venture:Kelsier:mistborn3",
+    "characterId1": "Elend_Venture",
+    "characterId2": "Kelsier",
+    "type": "",
+    "numInteractions": "4",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Kelsier:Vin:mistborn3",
+    "characterId1": "Kelsier",
+    "characterId2": "Vin",
+    "type": "",
+    "numInteractions": "17",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Kwaan:Sazed:mistborn3",
+    "characterId1": "Kwaan",
+    "characterId2": "Sazed",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "TenSoon:VarSell:mistborn3",
+    "characterId1": "TenSoon",
+    "characterId2": "VarSell",
+    "type": "",
+    "numInteractions": "2",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Demoux:Fatren:mistborn3",
+    "characterId1": "Demoux",
+    "characterId2": "Fatren",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Demoux:Elend_Venture:mistborn3",
+    "characterId1": "Demoux",
+    "characterId2": "Elend_Venture",
+    "type": "",
+    "numInteractions": "46",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Demoux:Sazed:mistborn3",
+    "characterId1": "Demoux",
+    "characterId2": "Sazed",
+    "type": "",
+    "numInteractions": "2",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Demoux:Edgard_Ladrian:mistborn3",
+    "characterId1": "Demoux",
+    "characterId2": "Edgard_Ladrian",
+    "type": "",
+    "numInteractions": "3",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Demoux:Vin:mistborn3",
+    "characterId1": "Demoux",
+    "characterId2": "Vin",
+    "type": "",
+    "numInteractions": "7",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Elend_Venture:Hammond:mistborn3",
+    "characterId1": "Elend_Venture",
+    "characterId2": "Hammond",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Elend_Venture:Rashek:mistborn3",
+    "characterId1": "Elend_Venture",
+    "characterId2": "Rashek",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Kelsier:Mare:mistborn3",
+    "characterId1": "Kelsier",
+    "characterId2": "Mare",
+    "type": "",
+    "numInteractions": "6",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Kelsier:Sazed:mistborn3",
+    "characterId1": "Kelsier",
+    "characterId2": "Sazed",
+    "type": "",
+    "numInteractions": "6",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Edgard_Ladrian:Kelsier:mistborn3",
+    "characterId1": "Edgard_Ladrian",
+    "characterId2": "Kelsier",
+    "type": "",
+    "numInteractions": "5",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Goradel:Sazed:mistborn3",
+    "characterId1": "Goradel",
+    "characterId2": "Sazed",
+    "type": "",
+    "numInteractions": "10",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Allrianne_Cett:Edgard_Ladrian:mistborn3",
+    "characterId1": "Allrianne_Cett",
+    "characterId2": "Edgard_Ladrian",
+    "type": "",
+    "numInteractions": "30",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Allrianne_Cett:Sazed:mistborn3",
+    "characterId1": "Allrianne_Cett",
+    "characterId2": "Sazed",
+    "type": "",
+    "numInteractions": "15",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Edgard_Ladrian:Goradel:mistborn3",
+    "characterId1": "Edgard_Ladrian",
+    "characterId2": "Goradel",
+    "type": "",
+    "numInteractions": "10",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Vin:Zane_Venture:mistborn3",
+    "characterId1": "Vin",
+    "characterId2": "Zane_Venture",
+    "type": "",
+    "numInteractions": "9",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "TenSoon:Vin:mistborn3",
+    "characterId1": "TenSoon",
+    "characterId2": "Vin",
+    "type": "",
+    "numInteractions": "4",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "TenSoon:Zane_Venture:mistborn3",
+    "characterId1": "TenSoon",
+    "characterId2": "Zane_Venture",
+    "type": "",
+    "numInteractions": "4",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "KanPaar:Zane_Venture:mistborn3",
+    "characterId1": "KanPaar",
+    "characterId2": "Zane_Venture",
+    "type": "",
+    "numInteractions": "2",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "KanPaar:TenSoon:mistborn3",
+    "characterId1": "KanPaar",
+    "characterId2": "TenSoon",
+    "type": "",
+    "numInteractions": "12",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Cladent:Dockson:mistborn3",
+    "characterId1": "Cladent",
+    "characterId2": "Dockson",
+    "type": "",
+    "numInteractions": "2",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Edgard_Ladrian:Elend_Venture:mistborn3",
+    "characterId1": "Edgard_Ladrian",
+    "characterId2": "Elend_Venture",
+    "type": "",
+    "numInteractions": "3",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Reen:Vin:mistborn3",
+    "characterId1": "Reen",
+    "characterId2": "Vin",
+    "type": "",
+    "numInteractions": "7",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Elend_Venture:Janarle:mistborn3",
+    "characterId1": "Elend_Venture",
+    "characterId2": "Janarle",
+    "type": "",
+    "numInteractions": "3",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Janarle:Straff_Venture:mistborn3",
+    "characterId1": "Janarle",
+    "characterId2": "Straff_Venture",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Elend_Venture:Straff_Venture:mistborn3",
+    "characterId1": "Elend_Venture",
+    "characterId2": "Straff_Venture",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Ati:Marsh:mistborn3",
+    "characterId1": "Ati",
+    "characterId2": "Marsh",
+    "type": "",
+    "numInteractions": "14",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Mare:Marsh:mistborn3",
+    "characterId1": "Mare",
+    "characterId2": "Marsh",
+    "type": "",
+    "numInteractions": "2",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Kelsier:Marsh:mistborn3",
+    "characterId1": "Kelsier",
+    "characterId2": "Marsh",
+    "type": "",
+    "numInteractions": "8",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Cladent:Spook:mistborn3",
+    "characterId1": "Cladent",
+    "characterId2": "Spook",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Kelsier:Spook:mistborn3",
+    "characterId1": "Kelsier",
+    "characterId2": "Spook",
+    "type": "",
+    "numInteractions": "17",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Cladent:Kelsier:mistborn3",
+    "characterId1": "Cladent",
+    "characterId2": "Kelsier",
+    "type": "",
+    "numInteractions": "2",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Elend_Venture:Spook:mistborn3",
+    "characterId1": "Elend_Venture",
+    "characterId2": "Spook",
+    "type": "",
+    "numInteractions": "3",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Spook:Vin:mistborn3",
+    "characterId1": "Spook",
+    "characterId2": "Vin",
+    "type": "",
+    "numInteractions": "3",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Olid:Quellion:mistborn3",
+    "characterId1": "Olid",
+    "characterId2": "Quellion",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Dockson:Edgard_Ladrian:mistborn3",
+    "characterId1": "Dockson",
+    "characterId2": "Edgard_Ladrian",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Human:Vin:mistborn3",
+    "characterId1": "Human",
+    "characterId2": "Vin",
+    "type": "",
+    "numInteractions": "6",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Durn:Spook:mistborn3",
+    "characterId1": "Durn",
+    "characterId2": "Spook",
+    "type": "",
+    "numInteractions": "17",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Beldre:Spook:mistborn3",
+    "characterId1": "Beldre",
+    "characterId2": "Spook",
+    "type": "",
+    "numInteractions": "29",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Beldre:Durn:mistborn3",
+    "characterId1": "Beldre",
+    "characterId2": "Durn",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Durn:Kelsier:mistborn3",
+    "characterId1": "Durn",
+    "characterId2": "Kelsier",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Quellion:Spook:mistborn3",
+    "characterId1": "Quellion",
+    "characterId2": "Spook",
+    "type": "",
+    "numInteractions": "24",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Demoux:Kelsier:mistborn3",
+    "characterId1": "Demoux",
+    "characterId2": "Kelsier",
+    "type": "",
+    "numInteractions": "2",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "MeLaan:TenSoon:mistborn3",
+    "characterId1": "MeLaan",
+    "characterId2": "TenSoon",
+    "type": "",
+    "numInteractions": "3",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Ati:MeLaan:mistborn3",
+    "characterId1": "Ati",
+    "characterId2": "MeLaan",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Alendi:Rashek:mistborn3",
+    "characterId1": "Alendi",
+    "characterId2": "Rashek",
+    "type": "",
+    "numInteractions": "7",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Alendi:Vin:mistborn3",
+    "characterId1": "Alendi",
+    "characterId2": "Vin",
+    "type": "",
+    "numInteractions": "2",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Sazed:TenSoon:mistborn3",
+    "characterId1": "Sazed",
+    "characterId2": "TenSoon",
+    "type": "",
+    "numInteractions": "4",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Elend_Venture:TenSoon:mistborn3",
+    "characterId1": "Elend_Venture",
+    "characterId2": "TenSoon",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Ati:Sazed:mistborn3",
+    "characterId1": "Ati",
+    "characterId2": "Sazed",
+    "type": "",
+    "numInteractions": "7",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Ati:Vin:mistborn3",
+    "characterId1": "Ati",
+    "characterId2": "Vin",
+    "type": "",
+    "numInteractions": "38",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Elend_Venture:Noorden:mistborn3",
+    "characterId1": "Elend_Venture",
+    "characterId2": "Noorden",
+    "type": "",
+    "numInteractions": "5",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Noorden:Vin:mistborn3",
+    "characterId1": "Noorden",
+    "characterId2": "Vin",
+    "type": "",
+    "numInteractions": "3",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Sazed:Vedlew:mistborn3",
+    "characterId1": "Sazed",
+    "characterId2": "Vedlew",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Margel:Spook:mistborn3",
+    "characterId1": "Margel",
+    "characterId2": "Spook",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Ati:Kelsier:mistborn3",
+    "characterId1": "Ati",
+    "characterId2": "Kelsier",
+    "type": "",
+    "numInteractions": "3",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Felt:Spook:mistborn3",
+    "characterId1": "Felt",
+    "characterId2": "Spook",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Slowswift:Vin:mistborn3",
+    "characterId1": "Slowswift",
+    "characterId2": "Vin",
+    "type": "",
+    "numInteractions": "2",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Elend_Venture:Jastes_Lekal:mistborn3",
+    "characterId1": "Elend_Venture",
+    "characterId2": "Jastes_Lekal",
+    "type": "",
+    "numInteractions": "3",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Allrianne_Cett:Goradel:mistborn3",
+    "characterId1": "Allrianne_Cett",
+    "characterId2": "Goradel",
+    "type": "",
+    "numInteractions": "2",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Quellion:Sazed:mistborn3",
+    "characterId1": "Quellion",
+    "characterId2": "Sazed",
+    "type": "",
+    "numInteractions": "11",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Elend_Venture:Quellion:mistborn3",
+    "characterId1": "Elend_Venture",
+    "characterId2": "Quellion",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Ashweather_Cett:Straff_Venture:mistborn3",
+    "characterId1": "Ashweather_Cett",
+    "characterId2": "Straff_Venture",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Edgard_Ladrian:Quellion:mistborn3",
+    "characterId1": "Edgard_Ladrian",
+    "characterId2": "Quellion",
+    "type": "",
+    "numInteractions": "9",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Edgard_Ladrian:Spook:mistborn3",
+    "characterId1": "Edgard_Ladrian",
+    "characterId2": "Spook",
+    "type": "",
+    "numInteractions": "30",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Sazed:Spook:mistborn3",
+    "characterId1": "Sazed",
+    "characterId2": "Spook",
+    "type": "",
+    "numInteractions": "54",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Allrianne_Cett:Spook:mistborn3",
+    "characterId1": "Allrianne_Cett",
+    "characterId2": "Spook",
+    "type": "",
+    "numInteractions": "3",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Elend_Venture:Tindwyl_Ladrian:mistborn3",
+    "characterId1": "Elend_Venture",
+    "characterId2": "Tindwyl_Ladrian",
+    "type": "",
+    "numInteractions": "3",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Aradan_Yomen:Elend_Venture:mistborn3",
+    "characterId1": "Aradan_Yomen",
+    "characterId2": "Elend_Venture",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Aradan_Yomen:Vin:mistborn3",
+    "characterId1": "Aradan_Yomen",
+    "characterId2": "Vin",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Elend_Venture:Telden_Hasting:mistborn3",
+    "characterId1": "Elend_Venture",
+    "characterId2": "Telden_Hasting",
+    "type": "",
+    "numInteractions": "12",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Edgard_Ladrian:Vin:mistborn3",
+    "characterId1": "Edgard_Ladrian",
+    "characterId2": "Vin",
+    "type": "",
+    "numInteractions": "2",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Telden_Hasting:Vin:mistborn3",
+    "characterId1": "Telden_Hasting",
+    "characterId2": "Vin",
+    "type": "",
+    "numInteractions": "5",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Elend_Venture:Urdree:mistborn3",
+    "characterId1": "Elend_Venture",
+    "characterId2": "Urdree",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Durn:Edgard_Ladrian:mistborn3",
+    "characterId1": "Durn",
+    "characterId2": "Edgard_Ladrian",
+    "type": "",
+    "numInteractions": "2",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Kelsier:Quellion:mistborn3",
+    "characterId1": "Kelsier",
+    "characterId2": "Quellion",
+    "type": "",
+    "numInteractions": "5",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Durn:Mailey:mistborn3",
+    "characterId1": "Durn",
+    "characterId2": "Mailey",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Elend_Venture:Human:mistborn3",
+    "characterId1": "Elend_Venture",
+    "characterId2": "Human",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Franson:Spook:mistborn3",
+    "characterId1": "Franson",
+    "characterId2": "Spook",
+    "type": "",
+    "numInteractions": "3",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Demoux:Noorden:mistborn3",
+    "characterId1": "Demoux",
+    "characterId2": "Noorden",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Marsh:Vin:mistborn3",
+    "characterId1": "Marsh",
+    "characterId2": "Vin",
+    "type": "",
+    "numInteractions": "13",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Conrad:Demoux:mistborn3",
+    "characterId1": "Conrad",
+    "characterId2": "Demoux",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Elend_Venture:Reen:mistborn3",
+    "characterId1": "Elend_Venture",
+    "characterId2": "Reen",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Edgard_Ladrian:Reen:mistborn3",
+    "characterId1": "Edgard_Ladrian",
+    "characterId2": "Reen",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Beldre:Quellion:mistborn3",
+    "characterId1": "Beldre",
+    "characterId2": "Quellion",
+    "type": "",
+    "numInteractions": "3",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Ati:Reen:mistborn3",
+    "characterId1": "Ati",
+    "characterId2": "Reen",
+    "type": "",
+    "numInteractions": "6",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Ati:Zane_Venture:mistborn3",
+    "characterId1": "Ati",
+    "characterId2": "Zane_Venture",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Ati:Rashek:mistborn3",
+    "characterId1": "Ati",
+    "characterId2": "Rashek",
+    "type": "",
+    "numInteractions": "3",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Alendi:Ati:mistborn3",
+    "characterId1": "Alendi",
+    "characterId2": "Ati",
+    "type": "",
+    "numInteractions": "2",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Rashek:Vin:mistborn3",
+    "characterId1": "Rashek",
+    "characterId2": "Vin",
+    "type": "",
+    "numInteractions": "2",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Goradel:Spook:mistborn3",
+    "characterId1": "Goradel",
+    "characterId2": "Spook",
+    "type": "",
+    "numInteractions": "7",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Beldre:Edgard_Ladrian:mistborn3",
+    "characterId1": "Beldre",
+    "characterId2": "Edgard_Ladrian",
+    "type": "",
+    "numInteractions": "4",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Kelsier:OreSeur:mistborn3",
+    "characterId1": "Kelsier",
+    "characterId2": "OreSeur",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "OreSeur:TenSoon:mistborn3",
+    "characterId1": "OreSeur",
+    "characterId2": "TenSoon",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Kelsier:TenSoon:mistborn3",
+    "characterId1": "Kelsier",
+    "characterId2": "TenSoon",
+    "type": "",
+    "numInteractions": "2",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Jaston:Skiff:mistborn3",
+    "characterId1": "Jaston",
+    "characterId2": "Skiff",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Jaston:Wellen:mistborn3",
+    "characterId1": "Jaston",
+    "characterId2": "Wellen",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Skiff:Wellen:mistborn3",
+    "characterId1": "Skiff",
+    "characterId2": "Wellen",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Beldre:Sazed:mistborn3",
+    "characterId1": "Beldre",
+    "characterId2": "Sazed",
+    "type": "",
+    "numInteractions": "4",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Goradel:Quellion:mistborn3",
+    "characterId1": "Goradel",
+    "characterId2": "Quellion",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Durn:Quellion:mistborn3",
+    "characterId1": "Durn",
+    "characterId2": "Quellion",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Beldre:Kelsier:mistborn3",
+    "characterId1": "Beldre",
+    "characterId2": "Kelsier",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Edgard_Ladrian:TenSoon:mistborn3",
+    "characterId1": "Edgard_Ladrian",
+    "characterId2": "TenSoon",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Sazed:Tindwyl_Ladrian:mistborn3",
+    "characterId1": "Sazed",
+    "characterId2": "Tindwyl_Ladrian",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Alendi:Kwaan:mistborn3",
+    "characterId1": "Alendi",
+    "characterId2": "Kwaan",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Ati:Edgard_Ladrian:mistborn3",
+    "characterId1": "Ati",
+    "characterId2": "Edgard_Ladrian",
+    "type": "",
+    "numInteractions": "2",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Ati:Kwaan:mistborn3",
+    "characterId1": "Ati",
+    "characterId2": "Kwaan",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Edgard_Ladrian:Kwaan:mistborn3",
+    "characterId1": "Edgard_Ladrian",
+    "characterId2": "Kwaan",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Ati:Elend_Venture:mistborn3",
+    "characterId1": "Ati",
+    "characterId2": "Elend_Venture",
+    "type": "",
+    "numInteractions": "9",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Goradel:Vin:mistborn3",
+    "characterId1": "Goradel",
+    "characterId2": "Vin",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Elend_Venture:Marsh:mistborn3",
+    "characterId1": "Elend_Venture",
+    "characterId2": "Marsh",
+    "type": "",
+    "numInteractions": "15",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Ati:Quellion:mistborn3",
+    "characterId1": "Ati",
+    "characterId2": "Quellion",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Haddek:Sazed:mistborn3",
+    "characterId1": "Haddek",
+    "characterId2": "Sazed",
+    "type": "",
+    "numInteractions": "4",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Haddek:Vin:mistborn3",
+    "characterId1": "Haddek",
+    "characterId2": "Vin",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "KanPaar:Sazed:mistborn3",
+    "characterId1": "KanPaar",
+    "characterId2": "Sazed",
+    "type": "",
+    "numInteractions": "4",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Haddek:Rashek:mistborn3",
+    "characterId1": "Haddek",
+    "characterId2": "Rashek",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Haddek:KanPaar:mistborn3",
+    "characterId1": "Haddek",
+    "characterId2": "KanPaar",
+    "type": "",
+    "numInteractions": "3",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Tindwyl_Ladrian:Vin:mistborn3",
+    "characterId1": "Tindwyl_Ladrian",
+    "characterId2": "Vin",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "KanPaar:MeLaan:mistborn3",
+    "characterId1": "KanPaar",
+    "characterId2": "MeLaan",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "FhorKood:TenSoon:mistborn3",
+    "characterId1": "FhorKood",
+    "characterId2": "TenSoon",
+    "type": "",
+    "numInteractions": "2",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "FhorKood:MeLaan:mistborn3",
+    "characterId1": "FhorKood",
+    "characterId2": "MeLaan",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Ati:KanPaar:mistborn3",
+    "characterId1": "Ati",
+    "characterId2": "KanPaar",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "KanPaar:Vin:mistborn3",
+    "characterId1": "KanPaar",
+    "characterId2": "Vin",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "MeLaan:Sazed:mistborn3",
+    "characterId1": "MeLaan",
+    "characterId2": "Sazed",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Aslydin:Demoux:mistborn3",
+    "characterId1": "Aslydin",
+    "characterId2": "Demoux",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Mare:Sazed:mistborn3",
+    "characterId1": "Mare",
+    "characterId2": "Sazed",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Mare:Vin:mistborn3",
+    "characterId1": "Mare",
+    "characterId2": "Vin",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Allrianne_Cett:Beldre:mistborn3",
+    "characterId1": "Allrianne_Cett",
+    "characterId2": "Beldre",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Demoux:Spook:mistborn3",
+    "characterId1": "Demoux",
+    "characterId2": "Spook",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  },
+  {
+    "id": "Hoid:Vin:mistborn3",
+    "characterId1": "Hoid",
+    "characterId2": "Vin",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
+  }
+]
