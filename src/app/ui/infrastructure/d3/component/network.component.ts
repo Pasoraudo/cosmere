@@ -162,7 +162,7 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
       .style("fill", d => this.color(d.group));
 
     this.node.append("text")
-      .text(d => d.label)
+      .text(d => d.label !== '' ? d.label : d.id)
       .style("font-size", "1rem")
       .style("color", "white")
       .style("text-anchor", "middle")
