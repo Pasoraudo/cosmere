@@ -1134,5 +1134,13 @@
     "type": "",
     "numInteractions": "1",
     "bookId": "mistborn3"
+  },
+  {
+    "id": "Ati:Spook:mistborn3",
+    "characterId1": "Ati",
+    "characterId2": "Spook",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn3"
   }
 ]

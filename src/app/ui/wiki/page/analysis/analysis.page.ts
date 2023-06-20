@@ -62,22 +62,22 @@ export class AnalysisPage extends BasePage implements OnInit {
 
   analyseNetwork(graph: Graph): void {
     const largestConnectedComponent = largestConnectedComponentSubgraph(graph);
-    const nodes: string[] = graph.nodes();
+    const nodes: string[] = largestConnectedComponent.nodes();
 
-    const pagerankCosmere = pagerank(graph, {getEdgeWeight: undefined, maxIterations: 300});
+    const pagerankCosmere = pagerank(largestConnectedComponent, {getEdgeWeight: undefined, maxIterations: 300});
     this.pagerankCosmere = mapToBarChartItemArray(pagerankCosmere);
 
-    const betweennessCosmere = betweennessCentrality(graph);
+    const betweennessCosmere = betweennessCentrality(largestConnectedComponent);
     this.betweennessCosmere = mapToBarChartItemArray(betweennessCosmere);
 
-    const closenessCosmere = closenessCentrality(graph);
+    const closenessCosmere = closenessCentrality(largestConnectedComponent);
     this.closenessCosmere = mapToBarChartItemArray(closenessCosmere);
     this.closenessCosmere = reject(this.closenessCosmere, e => e.value === 1);
 
-    const eigenvectorCosmere = eigenvectorCentrality(graph, {maxIterations: 200});
+    const eigenvectorCosmere = eigenvectorCentrality(largestConnectedComponent, {maxIterations: 200});
     this.eigenvectorCosmere = mapToBarChartItemArray(eigenvectorCosmere);
 
-    const degreeCentralityCosmere = degreeCentrality(graph);
+    const degreeCentralityCosmere = degreeCentrality(largestConnectedComponent);
     this.degreeCentralityCosmere = mapToBarChartItemArray(degreeCentralityCosmere);
 
     this.pageRankNormalized = normalizeBarChartItems(this.pagerankCosmere);

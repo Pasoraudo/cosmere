@@ -34,7 +34,7 @@ export class Chart3DComponent extends BaseComponent implements AfterViewInit, On
     margin: {
       top: 20,
       left: 40,
-      right: 30,
+      right: 50,
       bottom: 30
     },
     inset: {
