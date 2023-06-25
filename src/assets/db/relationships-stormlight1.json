@@ -72,6 +72,14 @@
     "bookId": "stormlight1"
   },
   {
+    "id": "Tien:Tvlakv:stormlight1",
+    "characterId1": "Tien",
+    "characterId2": "Tvlakv",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "stormlight1"
+  },
+  {
     "id": "Dallet:Tien:stormlight1",
     "characterId1": "Dallet",
     "characterId2": "Tien",
@@ -82,14 +90,6 @@
   {
     "id": "Dallet:Tvlakv:stormlight1",
     "characterId1": "Dallet",
-    "characterId2": "Tvlakv",
-    "type": "",
-    "numInteractions": "1",
-    "bookId": "stormlight1"
-  },
-  {
-    "id": "Tien:Tvlakv:stormlight1",
-    "characterId1": "Tien",
     "characterId2": "Tvlakv",
     "type": "",
     "numInteractions": "1",
@@ -192,19 +192,19 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Syasikk:Yustara:stormlight1",
-    "characterId1": "Syasikk",
-    "characterId2": "Yustara",
+    "id": "Gabrathin:Manaline:stormlight1",
+    "characterId1": "Gabrathin",
+    "characterId2": "Manaline",
     "type": "",
-    "numInteractions": "1",
+    "numInteractions": "3",
     "bookId": "stormlight1"
   },
   {
-    "id": "Manaline:Yustara:stormlight1",
-    "characterId1": "Manaline",
-    "characterId2": "Yustara",
+    "id": "Gabrathin:Syasikk:stormlight1",
+    "characterId1": "Gabrathin",
+    "characterId2": "Syasikk",
     "type": "",
-    "numInteractions": "3",
+    "numInteractions": "1",
     "bookId": "stormlight1"
   },
   {
@@ -224,19 +224,19 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Gabrathin:Syasikk:stormlight1",
-    "characterId1": "Gabrathin",
-    "characterId2": "Syasikk",
+    "id": "Manaline:Yustara:stormlight1",
+    "characterId1": "Manaline",
+    "characterId2": "Yustara",
     "type": "",
-    "numInteractions": "1",
+    "numInteractions": "3",
     "bookId": "stormlight1"
   },
   {
-    "id": "Gabrathin:Manaline:stormlight1",
-    "characterId1": "Gabrathin",
-    "characterId2": "Manaline",
+    "id": "Syasikk:Yustara:stormlight1",
+    "characterId1": "Syasikk",
+    "characterId2": "Yustara",
     "type": "",
-    "numInteractions": "3",
+    "numInteractions": "1",
     "bookId": "stormlight1"
   },
   {
@@ -256,35 +256,11 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Jasnah_Kholin:Vedel:stormlight1",
-    "characterId1": "Jasnah_Kholin",
-    "characterId2": "Vedel",
-    "type": "",
-    "numInteractions": "6",
-    "bookId": "stormlight1"
-  },
-  {
-    "id": "Shallan_Davar:Vedel:stormlight1",
-    "characterId1": "Shallan_Davar",
-    "characterId2": "Vedel",
-    "type": "",
-    "numInteractions": "6",
-    "bookId": "stormlight1"
-  },
-  {
     "id": "Kabsal:Vedel:stormlight1",
     "characterId1": "Kabsal",
     "characterId2": "Vedel",
     "type": "",
     "numInteractions": "6",
-    "bookId": "stormlight1"
-  },
-  {
-    "id": "Jasnah_Kholin:Kabsal:stormlight1",
-    "characterId1": "Jasnah_Kholin",
-    "characterId2": "Kabsal",
-    "type": "",
-    "numInteractions": "22",
     "bookId": "stormlight1"
   },
   {
@@ -296,6 +272,30 @@
     "bookId": "stormlight1"
   },
   {
+    "id": "Jasnah_Kholin:Kabsal:stormlight1",
+    "characterId1": "Jasnah_Kholin",
+    "characterId2": "Kabsal",
+    "type": "",
+    "numInteractions": "22",
+    "bookId": "stormlight1"
+  },
+  {
+    "id": "Shallan_Davar:Vedel:stormlight1",
+    "characterId1": "Shallan_Davar",
+    "characterId2": "Vedel",
+    "type": "",
+    "numInteractions": "6",
+    "bookId": "stormlight1"
+  },
+  {
+    "id": "Jasnah_Kholin:Vedel:stormlight1",
+    "characterId1": "Jasnah_Kholin",
+    "characterId2": "Vedel",
+    "type": "",
+    "numInteractions": "6",
+    "bookId": "stormlight1"
+  },
+  {
     "id": "Danlan_Morakotha:Jasnah_Kholin:stormlight1",
     "characterId1": "Danlan_Morakotha",
     "characterId2": "Jasnah_Kholin",
@@ -304,9 +304,9 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Placini:Yustara:stormlight1",
-    "characterId1": "Placini",
-    "characterId2": "Yustara",
+    "id": "Gabrathin:Placini:stormlight1",
+    "characterId1": "Gabrathin",
+    "characterId2": "Placini",
     "type": "",
     "numInteractions": "2",
     "bookId": "stormlight1"
@@ -320,9 +320,9 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Gabrathin:Placini:stormlight1",
-    "characterId1": "Gabrathin",
-    "characterId2": "Placini",
+    "id": "Placini:Yustara:stormlight1",
+    "characterId1": "Placini",
+    "characterId2": "Yustara",
     "type": "",
     "numInteractions": "2",
     "bookId": "stormlight1"
@@ -400,19 +400,11 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Jam_(caravaneer):Tien:stormlight1",
-    "characterId1": "Jam_(caravaneer)",
+    "id": "Lirin:Tien:stormlight1",
+    "characterId1": "Lirin",
     "characterId2": "Tien",
     "type": "",
-    "numInteractions": "5",
-    "bookId": "stormlight1"
-  },
-  {
-    "id": "Jam_(caravaneer):Kaladin:stormlight1",
-    "characterId1": "Jam_(caravaneer)",
-    "characterId2": "Kaladin",
-    "type": "",
-    "numInteractions": "6",
+    "numInteractions": "10",
     "bookId": "stormlight1"
   },
   {
@@ -424,11 +416,19 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Lirin:Tien:stormlight1",
-    "characterId1": "Lirin",
+    "id": "Jam_(caravaneer):Kaladin:stormlight1",
+    "characterId1": "Jam_(caravaneer)",
+    "characterId2": "Kaladin",
+    "type": "",
+    "numInteractions": "6",
+    "bookId": "stormlight1"
+  },
+  {
+    "id": "Jam_(caravaneer):Tien:stormlight1",
+    "characterId1": "Jam_(caravaneer)",
     "characterId2": "Tien",
     "type": "",
-    "numInteractions": "10",
+    "numInteractions": "5",
     "bookId": "stormlight1"
   },
   {
@@ -584,19 +584,19 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Janala_Lustow:Renarin_Kholin:stormlight1",
-    "characterId1": "Janala_Lustow",
-    "characterId2": "Renarin_Kholin",
-    "type": "",
-    "numInteractions": "6",
-    "bookId": "stormlight1"
-  },
-  {
     "id": "Adolin_Kholin:Janala_Lustow:stormlight1",
     "characterId1": "Adolin_Kholin",
     "characterId2": "Janala_Lustow",
     "type": "",
     "numInteractions": "17",
+    "bookId": "stormlight1"
+  },
+  {
+    "id": "Janala_Lustow:Renarin_Kholin:stormlight1",
+    "characterId1": "Janala_Lustow",
+    "characterId2": "Renarin_Kholin",
+    "type": "",
+    "numInteractions": "6",
     "bookId": "stormlight1"
   },
   {
@@ -632,9 +632,9 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Adolin_Kholin:Lomard:stormlight1",
+    "id": "Adolin_Kholin:Vartian:stormlight1",
     "characterId1": "Adolin_Kholin",
-    "characterId2": "Lomard",
+    "characterId2": "Vartian",
     "type": "",
     "numInteractions": "1",
     "bookId": "stormlight1"
@@ -648,24 +648,24 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Adolin_Kholin:Vartian:stormlight1",
+    "id": "Adolin_Kholin:Lomard:stormlight1",
     "characterId1": "Adolin_Kholin",
-    "characterId2": "Vartian",
+    "characterId2": "Lomard",
     "type": "",
     "numInteractions": "1",
     "bookId": "stormlight1"
   },
   {
-    "id": "Renarin_Kholin:Rilla:stormlight1",
-    "characterId1": "Renarin_Kholin",
+    "id": "Adolin_Kholin:Rilla:stormlight1",
+    "characterId1": "Adolin_Kholin",
     "characterId2": "Rilla",
     "type": "",
     "numInteractions": "5",
     "bookId": "stormlight1"
   },
   {
-    "id": "Adolin_Kholin:Rilla:stormlight1",
-    "characterId1": "Adolin_Kholin",
+    "id": "Renarin_Kholin:Rilla:stormlight1",
+    "characterId1": "Renarin_Kholin",
     "characterId2": "Rilla",
     "type": "",
     "numInteractions": "5",
@@ -680,19 +680,19 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Dalinar_Kholin:Gavilar_Kholin:stormlight1",
-    "characterId1": "Dalinar_Kholin",
-    "characterId2": "Gavilar_Kholin",
-    "type": "",
-    "numInteractions": "14",
-    "bookId": "stormlight1"
-  },
-  {
     "id": "Adolin_Kholin:Gavilar_Kholin:stormlight1",
     "characterId1": "Adolin_Kholin",
     "characterId2": "Gavilar_Kholin",
     "type": "",
     "numInteractions": "3",
+    "bookId": "stormlight1"
+  },
+  {
+    "id": "Dalinar_Kholin:Gavilar_Kholin:stormlight1",
+    "characterId1": "Dalinar_Kholin",
+    "characterId2": "Gavilar_Kholin",
+    "type": "",
+    "numInteractions": "14",
     "bookId": "stormlight1"
   },
   {
@@ -736,14 +736,6 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Adolin_Kholin:Jasnah_Kholin:stormlight1",
-    "characterId1": "Adolin_Kholin",
-    "characterId2": "Jasnah_Kholin",
-    "type": "",
-    "numInteractions": "2",
-    "bookId": "stormlight1"
-  },
-  {
     "id": "Jasnah_Kholin:Navani_Kholin:stormlight1",
     "characterId1": "Jasnah_Kholin",
     "characterId2": "Navani_Kholin",
@@ -752,11 +744,11 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Gavilar_Kholin:Navani_Kholin:stormlight1",
-    "characterId1": "Gavilar_Kholin",
-    "characterId2": "Navani_Kholin",
+    "id": "Adolin_Kholin:Jasnah_Kholin:stormlight1",
+    "characterId1": "Adolin_Kholin",
+    "characterId2": "Jasnah_Kholin",
     "type": "",
-    "numInteractions": "9",
+    "numInteractions": "2",
     "bookId": "stormlight1"
   },
   {
@@ -768,11 +760,19 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Adolin_Kholin:Navani_Kholin:stormlight1",
-    "characterId1": "Adolin_Kholin",
+    "id": "Gavilar_Kholin:Navani_Kholin:stormlight1",
+    "characterId1": "Gavilar_Kholin",
     "characterId2": "Navani_Kholin",
     "type": "",
-    "numInteractions": "27",
+    "numInteractions": "9",
+    "bookId": "stormlight1"
+  },
+  {
+    "id": "Elhokar_Kholin:Navani_Kholin:stormlight1",
+    "characterId1": "Elhokar_Kholin",
+    "characterId2": "Navani_Kholin",
+    "type": "",
+    "numInteractions": "4",
     "bookId": "stormlight1"
   },
   {
@@ -784,11 +784,11 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Elhokar_Kholin:Navani_Kholin:stormlight1",
-    "characterId1": "Elhokar_Kholin",
+    "id": "Adolin_Kholin:Navani_Kholin:stormlight1",
+    "characterId1": "Adolin_Kholin",
     "characterId2": "Navani_Kholin",
     "type": "",
-    "numInteractions": "4",
+    "numInteractions": "27",
     "bookId": "stormlight1"
   },
   {
@@ -840,6 +840,14 @@
     "bookId": "stormlight1"
   },
   {
+    "id": "Kaladin:Narm:stormlight1",
+    "characterId1": "Kaladin",
+    "characterId2": "Narm",
+    "type": "",
+    "numInteractions": "6",
+    "bookId": "stormlight1"
+  },
+  {
     "id": "Dunny:Narm:stormlight1",
     "characterId1": "Dunny",
     "characterId2": "Narm",
@@ -853,14 +861,6 @@
     "characterId2": "Kaladin",
     "type": "",
     "numInteractions": "27",
-    "bookId": "stormlight1"
-  },
-  {
-    "id": "Kaladin:Narm:stormlight1",
-    "characterId1": "Kaladin",
-    "characterId2": "Narm",
-    "type": "",
-    "numInteractions": "6",
     "bookId": "stormlight1"
   },
   {
@@ -904,19 +904,19 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Rock_(junior):Teft:stormlight1",
-    "characterId1": "Rock_(junior)",
-    "characterId2": "Teft",
-    "type": "",
-    "numInteractions": "83",
-    "bookId": "stormlight1"
-  },
-  {
     "id": "Kaladin:Rock_(junior):stormlight1",
     "characterId1": "Kaladin",
     "characterId2": "Rock_(junior)",
     "type": "",
     "numInteractions": "171",
+    "bookId": "stormlight1"
+  },
+  {
+    "id": "Rock_(junior):Teft:stormlight1",
+    "characterId1": "Rock_(junior)",
+    "characterId2": "Teft",
+    "type": "",
+    "numInteractions": "83",
     "bookId": "stormlight1"
   },
   {
@@ -936,14 +936,6 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Hoid:Roion:stormlight1",
-    "characterId1": "Hoid",
-    "characterId2": "Roion",
-    "type": "",
-    "numInteractions": "1",
-    "bookId": "stormlight1"
-  },
-  {
     "id": "Bethab:Hoid:stormlight1",
     "characterId1": "Bethab",
     "characterId2": "Hoid",
@@ -960,6 +952,22 @@
     "bookId": "stormlight1"
   },
   {
+    "id": "Hoid:Roion:stormlight1",
+    "characterId1": "Hoid",
+    "characterId2": "Roion",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "stormlight1"
+  },
+  {
+    "id": "Bethab:Talata:stormlight1",
+    "characterId1": "Bethab",
+    "characterId2": "Talata",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "stormlight1"
+  },
+  {
     "id": "Bethab:Roion:stormlight1",
     "characterId1": "Bethab",
     "characterId2": "Roion",
@@ -970,14 +978,6 @@
   {
     "id": "Roion:Talata:stormlight1",
     "characterId1": "Roion",
-    "characterId2": "Talata",
-    "type": "",
-    "numInteractions": "1",
-    "bookId": "stormlight1"
-  },
-  {
-    "id": "Bethab:Talata:stormlight1",
-    "characterId1": "Bethab",
     "characterId2": "Talata",
     "type": "",
     "numInteractions": "1",
@@ -1016,19 +1016,19 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Mord:Tift:stormlight1",
+    "id": "Mord:Naget:stormlight1",
     "characterId1": "Mord",
-    "characterId2": "Tift",
+    "characterId2": "Naget",
     "type": "",
     "numInteractions": "1",
     "bookId": "stormlight1"
   },
   {
-    "id": "Khav:Tift:stormlight1",
+    "id": "Khav:Naget:stormlight1",
     "characterId1": "Khav",
-    "characterId2": "Tift",
+    "characterId2": "Naget",
     "type": "",
-    "numInteractions": "2",
+    "numInteractions": "1",
     "bookId": "stormlight1"
   },
   {
@@ -1048,19 +1048,19 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Mord:Naget:stormlight1",
+    "id": "Mord:Tift:stormlight1",
     "characterId1": "Mord",
-    "characterId2": "Naget",
+    "characterId2": "Tift",
     "type": "",
     "numInteractions": "1",
     "bookId": "stormlight1"
   },
   {
-    "id": "Khav:Naget:stormlight1",
+    "id": "Khav:Tift:stormlight1",
     "characterId1": "Khav",
-    "characterId2": "Naget",
+    "characterId2": "Tift",
     "type": "",
-    "numInteractions": "1",
+    "numInteractions": "2",
     "bookId": "stormlight1"
   },
   {
@@ -1069,6 +1069,14 @@
     "characterId2": "Kaladin",
     "type": "",
     "numInteractions": "13",
+    "bookId": "stormlight1"
+  },
+  {
+    "id": "Jost:Laral_Roshone:stormlight1",
+    "characterId1": "Jost",
+    "characterId2": "Laral_Roshone",
+    "type": "",
+    "numInteractions": "2",
     "bookId": "stormlight1"
   },
   {
@@ -1083,14 +1091,6 @@
     "id": "Laral_Roshone:Tarn:stormlight1",
     "characterId1": "Laral_Roshone",
     "characterId2": "Tarn",
-    "type": "",
-    "numInteractions": "2",
-    "bookId": "stormlight1"
-  },
-  {
-    "id": "Jost:Laral_Roshone:stormlight1",
-    "characterId1": "Jost",
-    "characterId2": "Laral_Roshone",
     "type": "",
     "numInteractions": "2",
     "bookId": "stormlight1"
@@ -1112,14 +1112,6 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Dunny:Yake:stormlight1",
-    "characterId1": "Dunny",
-    "characterId2": "Yake",
-    "type": "",
-    "numInteractions": "1",
-    "bookId": "stormlight1"
-  },
-  {
     "id": "Malop:Yake:stormlight1",
     "characterId1": "Malop",
     "characterId2": "Yake",
@@ -1136,6 +1128,14 @@
     "bookId": "stormlight1"
   },
   {
+    "id": "Dunny:Yake:stormlight1",
+    "characterId1": "Dunny",
+    "characterId2": "Yake",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "stormlight1"
+  },
+  {
     "id": "Drehy:Teft:stormlight1",
     "characterId1": "Drehy",
     "characterId2": "Teft",
@@ -1144,16 +1144,16 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Leyten:Murk:stormlight1",
-    "characterId1": "Leyten",
+    "id": "Kaladin:Murk:stormlight1",
+    "characterId1": "Kaladin",
     "characterId2": "Murk",
     "type": "",
     "numInteractions": "2",
     "bookId": "stormlight1"
   },
   {
-    "id": "Kaladin:Murk:stormlight1",
-    "characterId1": "Kaladin",
+    "id": "Leyten:Murk:stormlight1",
+    "characterId1": "Leyten",
     "characterId2": "Murk",
     "type": "",
     "numInteractions": "2",
@@ -1168,16 +1168,16 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Corl:Leyten:stormlight1",
-    "characterId1": "Corl",
+    "id": "Adis:Leyten:stormlight1",
+    "characterId1": "Adis",
     "characterId2": "Leyten",
     "type": "",
     "numInteractions": "1",
     "bookId": "stormlight1"
   },
   {
-    "id": "Adis:Leyten:stormlight1",
-    "characterId1": "Adis",
+    "id": "Corl:Leyten:stormlight1",
+    "characterId1": "Corl",
     "characterId2": "Leyten",
     "type": "",
     "numInteractions": "1",
@@ -1208,16 +1208,16 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Leyten:Teft:stormlight1",
-    "characterId1": "Leyten",
+    "id": "Murk:Teft:stormlight1",
+    "characterId1": "Murk",
     "characterId2": "Teft",
     "type": "",
     "numInteractions": "1",
     "bookId": "stormlight1"
   },
   {
-    "id": "Murk:Teft:stormlight1",
-    "characterId1": "Murk",
+    "id": "Leyten:Teft:stormlight1",
+    "characterId1": "Leyten",
     "characterId2": "Teft",
     "type": "",
     "numInteractions": "1",
@@ -1232,17 +1232,17 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Dunny:Gadol:stormlight1",
-    "characterId1": "Dunny",
-    "characterId2": "Gadol",
+    "id": "Gadol:Narm:stormlight1",
+    "characterId1": "Gadol",
+    "characterId2": "Narm",
     "type": "",
     "numInteractions": "3",
     "bookId": "stormlight1"
   },
   {
-    "id": "Gadol:Narm:stormlight1",
-    "characterId1": "Gadol",
-    "characterId2": "Narm",
+    "id": "Dunny:Gadol:stormlight1",
+    "characterId1": "Dunny",
+    "characterId2": "Gadol",
     "type": "",
     "numInteractions": "3",
     "bookId": "stormlight1"
@@ -1296,6 +1296,14 @@
     "bookId": "stormlight1"
   },
   {
+    "id": "Adolin_Kholin:Avaran:stormlight1",
+    "characterId1": "Adolin_Kholin",
+    "characterId2": "Avaran",
+    "type": "",
+    "numInteractions": "9",
+    "bookId": "stormlight1"
+  },
+  {
     "id": "Avaran:Elhokar_Kholin:stormlight1",
     "characterId1": "Avaran",
     "characterId2": "Elhokar_Kholin",
@@ -1309,14 +1317,6 @@
     "characterId2": "Yis",
     "type": "",
     "numInteractions": "7",
-    "bookId": "stormlight1"
-  },
-  {
-    "id": "Adolin_Kholin:Avaran:stormlight1",
-    "characterId1": "Adolin_Kholin",
-    "characterId2": "Avaran",
-    "type": "",
-    "numInteractions": "9",
     "bookId": "stormlight1"
   },
   {
@@ -1336,9 +1336,25 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Marks_(Roshar):Tibon:stormlight1",
-    "characterId1": "Marks_(Roshar)",
+    "id": "Falksi:Tibon:stormlight1",
+    "characterId1": "Falksi",
     "characterId2": "Tibon",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "stormlight1"
+  },
+  {
+    "id": "Falksi:Janala_Lustow:stormlight1",
+    "characterId1": "Falksi",
+    "characterId2": "Janala_Lustow",
+    "type": "",
+    "numInteractions": "2",
+    "bookId": "stormlight1"
+  },
+  {
+    "id": "Falksi:Marksman:stormlight1",
+    "characterId1": "Falksi",
+    "characterId2": "Marksman",
     "type": "",
     "numInteractions": "1",
     "bookId": "stormlight1"
@@ -1352,35 +1368,19 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Falksi:Tibon:stormlight1",
-    "characterId1": "Falksi",
+    "id": "Marksman:Tibon:stormlight1",
+    "characterId1": "Marksman",
     "characterId2": "Tibon",
     "type": "",
     "numInteractions": "1",
     "bookId": "stormlight1"
   },
   {
-    "id": "Janala_Lustow:Marks_(Roshar):stormlight1",
+    "id": "Janala_Lustow:Marksman:stormlight1",
     "characterId1": "Janala_Lustow",
-    "characterId2": "Marks_(Roshar)",
+    "characterId2": "Marksman",
     "type": "",
     "numInteractions": "1",
-    "bookId": "stormlight1"
-  },
-  {
-    "id": "Falksi:Marks_(Roshar):stormlight1",
-    "characterId1": "Falksi",
-    "characterId2": "Marks_(Roshar)",
-    "type": "",
-    "numInteractions": "1",
-    "bookId": "stormlight1"
-  },
-  {
-    "id": "Falksi:Janala_Lustow:stormlight1",
-    "characterId1": "Falksi",
-    "characterId2": "Janala_Lustow",
-    "type": "",
-    "numInteractions": "2",
     "bookId": "stormlight1"
   },
   {
@@ -1400,19 +1400,19 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Adolin_Kholin:Teshav_Khal:stormlight1",
-    "characterId1": "Adolin_Kholin",
-    "characterId2": "Teshav_Khal",
-    "type": "",
-    "numInteractions": "1",
-    "bookId": "stormlight1"
-  },
-  {
     "id": "Resi:Teshav_Khal:stormlight1",
     "characterId1": "Resi",
     "characterId2": "Teshav_Khal",
     "type": "",
     "numInteractions": "7",
+    "bookId": "stormlight1"
+  },
+  {
+    "id": "Adolin_Kholin:Teshav_Khal:stormlight1",
+    "characterId1": "Adolin_Kholin",
+    "characterId2": "Teshav_Khal",
+    "type": "",
+    "numInteractions": "1",
     "bookId": "stormlight1"
   },
   {
@@ -1464,17 +1464,17 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Dalinar_Kholin:Elthebar:stormlight1",
-    "characterId1": "Dalinar_Kholin",
-    "characterId2": "Elthebar",
+    "id": "Elthebar:Renarin_Kholin:stormlight1",
+    "characterId1": "Elthebar",
+    "characterId2": "Renarin_Kholin",
     "type": "",
     "numInteractions": "2",
     "bookId": "stormlight1"
   },
   {
-    "id": "Elthebar:Renarin_Kholin:stormlight1",
-    "characterId1": "Elthebar",
-    "characterId2": "Renarin_Kholin",
+    "id": "Dalinar_Kholin:Elthebar:stormlight1",
+    "characterId1": "Dalinar_Kholin",
+    "characterId2": "Elthebar",
     "type": "",
     "numInteractions": "2",
     "bookId": "stormlight1"
@@ -1560,8 +1560,8 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Koolf:Sigzil:stormlight1",
-    "characterId1": "Koolf",
+    "id": "Peet:Sigzil:stormlight1",
+    "characterId1": "Peet",
     "characterId2": "Sigzil",
     "type": "",
     "numInteractions": "1",
@@ -1576,19 +1576,11 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Peet:Sigzil:stormlight1",
-    "characterId1": "Peet",
+    "id": "Koolf:Sigzil:stormlight1",
+    "characterId1": "Koolf",
     "characterId2": "Sigzil",
     "type": "",
     "numInteractions": "1",
-    "bookId": "stormlight1"
-  },
-  {
-    "id": "Dabbid:Leyten:stormlight1",
-    "characterId1": "Dabbid",
-    "characterId2": "Leyten",
-    "type": "",
-    "numInteractions": "2",
     "bookId": "stormlight1"
   },
   {
@@ -1597,6 +1589,14 @@
     "characterId2": "Leyten",
     "type": "",
     "numInteractions": "3",
+    "bookId": "stormlight1"
+  },
+  {
+    "id": "Dabbid:Leyten:stormlight1",
+    "characterId1": "Dabbid",
+    "characterId2": "Leyten",
+    "type": "",
+    "numInteractions": "2",
     "bookId": "stormlight1"
   },
   {
@@ -1688,17 +1688,17 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Dunny:Jaks:stormlight1",
-    "characterId1": "Dunny",
-    "characterId2": "Jaks",
+    "id": "Jaks:Kaladin:stormlight1",
+    "characterId1": "Jaks",
+    "characterId2": "Kaladin",
     "type": "",
     "numInteractions": "1",
     "bookId": "stormlight1"
   },
   {
-    "id": "Jaks:Kaladin:stormlight1",
-    "characterId1": "Jaks",
-    "characterId2": "Kaladin",
+    "id": "Dunny:Jaks:stormlight1",
+    "characterId1": "Dunny",
+    "characterId2": "Jaks",
     "type": "",
     "numInteractions": "1",
     "bookId": "stormlight1"
@@ -1896,17 +1896,17 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Resi:Rock_(junior):stormlight1",
-    "characterId1": "Resi",
-    "characterId2": "Rock_(junior)",
+    "id": "Kaladin:Resi:stormlight1",
+    "characterId1": "Kaladin",
+    "characterId2": "Resi",
     "type": "",
     "numInteractions": "1",
     "bookId": "stormlight1"
   },
   {
-    "id": "Kaladin:Resi:stormlight1",
-    "characterId1": "Kaladin",
-    "characterId2": "Resi",
+    "id": "Resi:Rock_(junior):stormlight1",
+    "characterId1": "Resi",
+    "characterId2": "Rock_(junior)",
     "type": "",
     "numInteractions": "1",
     "bookId": "stormlight1"
@@ -1936,19 +1936,19 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Dalinar_Kholin:Havrom:stormlight1",
-    "characterId1": "Dalinar_Kholin",
-    "characterId2": "Havrom",
-    "type": "",
-    "numInteractions": "7",
-    "bookId": "stormlight1"
-  },
-  {
     "id": "Adolin_Kholin:Havrom:stormlight1",
     "characterId1": "Adolin_Kholin",
     "characterId2": "Havrom",
     "type": "",
     "numInteractions": "6",
+    "bookId": "stormlight1"
+  },
+  {
+    "id": "Dalinar_Kholin:Havrom:stormlight1",
+    "characterId1": "Dalinar_Kholin",
+    "characterId2": "Havrom",
+    "type": "",
+    "numInteractions": "7",
     "bookId": "stormlight1"
   },
   {
@@ -2152,14 +2152,6 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Rock_(junior):Skar:stormlight1",
-    "characterId1": "Rock_(junior)",
-    "characterId2": "Skar",
-    "type": "",
-    "numInteractions": "13",
-    "bookId": "stormlight1"
-  },
-  {
     "id": "Moash:Teft:stormlight1",
     "characterId1": "Moash",
     "characterId2": "Teft",
@@ -2168,19 +2160,27 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Skar:Teft:stormlight1",
-    "characterId1": "Skar",
-    "characterId2": "Teft",
-    "type": "",
-    "numInteractions": "26",
-    "bookId": "stormlight1"
-  },
-  {
     "id": "Moash:Skar:stormlight1",
     "characterId1": "Moash",
     "characterId2": "Skar",
     "type": "",
     "numInteractions": "31",
+    "bookId": "stormlight1"
+  },
+  {
+    "id": "Rock_(junior):Skar:stormlight1",
+    "characterId1": "Rock_(junior)",
+    "characterId2": "Skar",
+    "type": "",
+    "numInteractions": "13",
+    "bookId": "stormlight1"
+  },
+  {
+    "id": "Skar:Teft:stormlight1",
+    "characterId1": "Skar",
+    "characterId2": "Teft",
+    "type": "",
+    "numInteractions": "26",
     "bookId": "stormlight1"
   },
   {
@@ -2296,17 +2296,17 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Moash:Treff:stormlight1",
-    "characterId1": "Moash",
-    "characterId2": "Treff",
+    "id": "Idolir:Moash:stormlight1",
+    "characterId1": "Idolir",
+    "characterId2": "Moash",
     "type": "",
     "numInteractions": "2",
     "bookId": "stormlight1"
   },
   {
-    "id": "Idolir:Moash:stormlight1",
-    "characterId1": "Idolir",
-    "characterId2": "Moash",
+    "id": "Moash:Treff:stormlight1",
+    "characterId1": "Moash",
+    "characterId2": "Treff",
     "type": "",
     "numInteractions": "2",
     "bookId": "stormlight1"
@@ -2344,9 +2344,9 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Maps:Teft:stormlight1",
+    "id": "Maps:Skar:stormlight1",
     "characterId1": "Maps",
-    "characterId2": "Teft",
+    "characterId2": "Skar",
     "type": "",
     "numInteractions": "5",
     "bookId": "stormlight1"
@@ -2360,9 +2360,9 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Maps:Skar:stormlight1",
+    "id": "Maps:Teft:stormlight1",
     "characterId1": "Maps",
-    "characterId2": "Skar",
+    "characterId2": "Teft",
     "type": "",
     "numInteractions": "5",
     "bookId": "stormlight1"
@@ -2392,16 +2392,16 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Dunny:Peet:stormlight1",
-    "characterId1": "Dunny",
+    "id": "Kaladin:Peet:stormlight1",
+    "characterId1": "Kaladin",
     "characterId2": "Peet",
     "type": "",
     "numInteractions": "1",
     "bookId": "stormlight1"
   },
   {
-    "id": "Kaladin:Peet:stormlight1",
-    "characterId1": "Kaladin",
+    "id": "Dunny:Peet:stormlight1",
+    "characterId1": "Dunny",
     "characterId2": "Peet",
     "type": "",
     "numInteractions": "1",
@@ -2440,14 +2440,6 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Alaxia:Callins_Geffenry:stormlight1",
-    "characterId1": "Alaxia",
-    "characterId2": "Callins_Geffenry",
-    "type": "",
-    "numInteractions": "3",
-    "bookId": "stormlight1"
-  },
-  {
     "id": "Callins_Geffenry:Resi:stormlight1",
     "characterId1": "Callins_Geffenry",
     "characterId2": "Resi",
@@ -2459,6 +2451,14 @@
     "id": "Alaxia:Resi:stormlight1",
     "characterId1": "Alaxia",
     "characterId2": "Resi",
+    "type": "",
+    "numInteractions": "3",
+    "bookId": "stormlight1"
+  },
+  {
+    "id": "Alaxia:Callins_Geffenry:stormlight1",
+    "characterId1": "Alaxia",
+    "characterId2": "Callins_Geffenry",
     "type": "",
     "numInteractions": "3",
     "bookId": "stormlight1"
@@ -2480,33 +2480,17 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Habrin:Loats:stormlight1",
-    "characterId1": "Habrin",
+    "id": "Jorna:Loats:stormlight1",
+    "characterId1": "Jorna",
     "characterId2": "Loats",
     "type": "",
     "numInteractions": "2",
     "bookId": "stormlight1"
   },
   {
-    "id": "Arafik:Habrin:stormlight1",
-    "characterId1": "Arafik",
-    "characterId2": "Habrin",
-    "type": "",
-    "numInteractions": "2",
-    "bookId": "stormlight1"
-  },
-  {
-    "id": "Alaxia:Habrin:stormlight1",
-    "characterId1": "Alaxia",
-    "characterId2": "Habrin",
-    "type": "",
-    "numInteractions": "2",
-    "bookId": "stormlight1"
-  },
-  {
-    "id": "Habrin:Jorna:stormlight1",
+    "id": "Habrin:Loats:stormlight1",
     "characterId1": "Habrin",
-    "characterId2": "Jorna",
+    "characterId2": "Loats",
     "type": "",
     "numInteractions": "2",
     "bookId": "stormlight1"
@@ -2528,17 +2512,9 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Jorna:Loats:stormlight1",
-    "characterId1": "Jorna",
-    "characterId2": "Loats",
-    "type": "",
-    "numInteractions": "2",
-    "bookId": "stormlight1"
-  },
-  {
-    "id": "Alaxia:Arafik:stormlight1",
-    "characterId1": "Alaxia",
-    "characterId2": "Arafik",
+    "id": "Habrin:Jorna:stormlight1",
+    "characterId1": "Habrin",
+    "characterId2": "Jorna",
     "type": "",
     "numInteractions": "2",
     "bookId": "stormlight1"
@@ -2560,9 +2536,41 @@
     "bookId": "stormlight1"
   },
   {
+    "id": "Arafik:Habrin:stormlight1",
+    "characterId1": "Arafik",
+    "characterId2": "Habrin",
+    "type": "",
+    "numInteractions": "2",
+    "bookId": "stormlight1"
+  },
+  {
+    "id": "Alaxia:Habrin:stormlight1",
+    "characterId1": "Alaxia",
+    "characterId2": "Habrin",
+    "type": "",
+    "numInteractions": "2",
+    "bookId": "stormlight1"
+  },
+  {
+    "id": "Alaxia:Arafik:stormlight1",
+    "characterId1": "Alaxia",
+    "characterId2": "Arafik",
+    "type": "",
+    "numInteractions": "2",
+    "bookId": "stormlight1"
+  },
+  {
     "id": "Gavilar_Kholin:Shallan_Davar:stormlight1",
     "characterId1": "Gavilar_Kholin",
     "characterId2": "Shallan_Davar",
+    "type": "",
+    "numInteractions": "5",
+    "bookId": "stormlight1"
+  },
+  {
+    "id": "Shallan_Davar:Tifandor:stormlight1",
+    "characterId1": "Shallan_Davar",
+    "characterId2": "Tifandor",
     "type": "",
     "numInteractions": "5",
     "bookId": "stormlight1"
@@ -2573,14 +2581,6 @@
     "characterId2": "Tifandor",
     "type": "",
     "numInteractions": "6",
-    "bookId": "stormlight1"
-  },
-  {
-    "id": "Shallan_Davar:Tifandor:stormlight1",
-    "characterId1": "Shallan_Davar",
-    "characterId2": "Tifandor",
-    "type": "",
-    "numInteractions": "5",
     "bookId": "stormlight1"
   },
   {
@@ -2728,6 +2728,14 @@
     "bookId": "stormlight1"
   },
   {
+    "id": "Acis:Toorim:stormlight1",
+    "characterId1": "Acis",
+    "characterId2": "Toorim",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "stormlight1"
+  },
+  {
     "id": "Acis:Hamel:stormlight1",
     "characterId1": "Acis",
     "characterId2": "Hamel",
@@ -2739,14 +2747,6 @@
     "id": "Hamel:Kaladin:stormlight1",
     "characterId1": "Hamel",
     "characterId2": "Kaladin",
-    "type": "",
-    "numInteractions": "1",
-    "bookId": "stormlight1"
-  },
-  {
-    "id": "Acis:Toorim:stormlight1",
-    "characterId1": "Acis",
-    "characterId2": "Toorim",
     "type": "",
     "numInteractions": "1",
     "bookId": "stormlight1"
@@ -2824,19 +2824,19 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Drehy:Kaladin:stormlight1",
-    "characterId1": "Drehy",
-    "characterId2": "Kaladin",
-    "type": "",
-    "numInteractions": "22",
-    "bookId": "stormlight1"
-  },
-  {
     "id": "Drehy:Skar:stormlight1",
     "characterId1": "Drehy",
     "characterId2": "Skar",
     "type": "",
     "numInteractions": "14",
+    "bookId": "stormlight1"
+  },
+  {
+    "id": "Drehy:Kaladin:stormlight1",
+    "characterId1": "Drehy",
+    "characterId2": "Kaladin",
+    "type": "",
+    "numInteractions": "22",
     "bookId": "stormlight1"
   },
   {
@@ -2896,19 +2896,11 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Alabet:Kaladin:stormlight1",
+    "id": "Alabet:Hab:stormlight1",
     "characterId1": "Alabet",
-    "characterId2": "Kaladin",
+    "characterId2": "Hab",
     "type": "",
-    "numInteractions": "1",
-    "bookId": "stormlight1"
-  },
-  {
-    "id": "Hab:Kaladin:stormlight1",
-    "characterId1": "Hab",
-    "characterId2": "Kaladin",
-    "type": "",
-    "numInteractions": "1",
+    "numInteractions": "2",
     "bookId": "stormlight1"
   },
   {
@@ -2920,17 +2912,17 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Alabet:Hab:stormlight1",
-    "characterId1": "Alabet",
-    "characterId2": "Hab",
-    "type": "",
-    "numInteractions": "2",
-    "bookId": "stormlight1"
-  },
-  {
     "id": "Alabet:Coreb:stormlight1",
     "characterId1": "Alabet",
     "characterId2": "Coreb",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "stormlight1"
+  },
+  {
+    "id": "Alabet:Kaladin:stormlight1",
+    "characterId1": "Alabet",
+    "characterId2": "Kaladin",
     "type": "",
     "numInteractions": "1",
     "bookId": "stormlight1"
@@ -2944,17 +2936,25 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Coreb:Reesh:stormlight1",
+    "id": "Coreb:Hab:stormlight1",
     "characterId1": "Coreb",
-    "characterId2": "Reesh",
+    "characterId2": "Hab",
     "type": "",
     "numInteractions": "1",
     "bookId": "stormlight1"
   },
   {
-    "id": "Coreb:Hab:stormlight1",
+    "id": "Hab:Kaladin:stormlight1",
+    "characterId1": "Hab",
+    "characterId2": "Kaladin",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "stormlight1"
+  },
+  {
+    "id": "Coreb:Reesh:stormlight1",
     "characterId1": "Coreb",
-    "characterId2": "Hab",
+    "characterId2": "Reesh",
     "type": "",
     "numInteractions": "1",
     "bookId": "stormlight1"
@@ -3000,19 +3000,19 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Dabbid:Moash:stormlight1",
-    "characterId1": "Dabbid",
-    "characterId2": "Moash",
-    "type": "",
-    "numInteractions": "1",
-    "bookId": "stormlight1"
-  },
-  {
     "id": "Lopen:Moash:stormlight1",
     "characterId1": "Lopen",
     "characterId2": "Moash",
     "type": "",
     "numInteractions": "16",
+    "bookId": "stormlight1"
+  },
+  {
+    "id": "Dabbid:Moash:stormlight1",
+    "characterId1": "Dabbid",
+    "characterId2": "Moash",
+    "type": "",
+    "numInteractions": "1",
     "bookId": "stormlight1"
   },
   {
@@ -3072,19 +3072,19 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Dalinar_Kholin:Kaladin:stormlight1",
-    "characterId1": "Dalinar_Kholin",
-    "characterId2": "Kaladin",
-    "type": "",
-    "numInteractions": "20",
-    "bookId": "stormlight1"
-  },
-  {
     "id": "Dalinar_Kholin:Skar:stormlight1",
     "characterId1": "Dalinar_Kholin",
     "characterId2": "Skar",
     "type": "",
     "numInteractions": "4",
+    "bookId": "stormlight1"
+  },
+  {
+    "id": "Dalinar_Kholin:Kaladin:stormlight1",
+    "characterId1": "Dalinar_Kholin",
+    "characterId2": "Kaladin",
+    "type": "",
+    "numInteractions": "20",
     "bookId": "stormlight1"
   },
   {
@@ -3176,8 +3176,8 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Gaz:Skar:stormlight1",
-    "characterId1": "Gaz",
+    "id": "Rlain:Skar:stormlight1",
+    "characterId1": "Rlain",
     "characterId2": "Skar",
     "type": "",
     "numInteractions": "1",
@@ -3192,8 +3192,8 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Rlain:Skar:stormlight1",
-    "characterId1": "Rlain",
+    "id": "Gaz:Skar:stormlight1",
+    "characterId1": "Gaz",
     "characterId2": "Skar",
     "type": "",
     "numInteractions": "1",
@@ -3264,19 +3264,19 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Peet:Rock_(junior):stormlight1",
-    "characterId1": "Peet",
-    "characterId2": "Rock_(junior)",
-    "type": "",
-    "numInteractions": "2",
-    "bookId": "stormlight1"
-  },
-  {
     "id": "Moash:Peet:stormlight1",
     "characterId1": "Moash",
     "characterId2": "Peet",
     "type": "",
     "numInteractions": "1",
+    "bookId": "stormlight1"
+  },
+  {
+    "id": "Peet:Rock_(junior):stormlight1",
+    "characterId1": "Peet",
+    "characterId2": "Rock_(junior)",
+    "type": "",
+    "numInteractions": "2",
     "bookId": "stormlight1"
   },
   {
@@ -3296,14 +3296,6 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Aladar:Toral:stormlight1",
-    "characterId1": "Aladar",
-    "characterId2": "Toral",
-    "type": "",
-    "numInteractions": "1",
-    "bookId": "stormlight1"
-  },
-  {
     "id": "Aladar:Eshava:stormlight1",
     "characterId1": "Aladar",
     "characterId2": "Eshava",
@@ -3320,11 +3312,11 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Inkima:Jakamav:stormlight1",
-    "characterId1": "Inkima",
-    "characterId2": "Jakamav",
+    "id": "Aladar:Toral:stormlight1",
+    "characterId1": "Aladar",
+    "characterId2": "Toral",
     "type": "",
-    "numInteractions": "3",
+    "numInteractions": "1",
     "bookId": "stormlight1"
   },
   {
@@ -3333,6 +3325,14 @@
     "characterId2": "Inkima",
     "type": "",
     "numInteractions": "2",
+    "bookId": "stormlight1"
+  },
+  {
+    "id": "Inkima:Jakamav:stormlight1",
+    "characterId1": "Inkima",
+    "characterId2": "Jakamav",
+    "type": "",
+    "numInteractions": "3",
     "bookId": "stormlight1"
   },
   {
@@ -3448,17 +3448,17 @@
     "bookId": "stormlight1"
   },
   {
-    "id": "Dalinar_Kholin:Ilamar:stormlight1",
-    "characterId1": "Dalinar_Kholin",
-    "characterId2": "Ilamar",
+    "id": "Ilamar:Teleb:stormlight1",
+    "characterId1": "Ilamar",
+    "characterId2": "Teleb",
     "type": "",
     "numInteractions": "1",
     "bookId": "stormlight1"
   },
   {
-    "id": "Ilamar:Teleb:stormlight1",
-    "characterId1": "Ilamar",
-    "characterId2": "Teleb",
+    "id": "Dalinar_Kholin:Ilamar:stormlight1",
+    "characterId1": "Dalinar_Kholin",
+    "characterId2": "Ilamar",
     "type": "",
     "numInteractions": "1",
     "bookId": "stormlight1"
