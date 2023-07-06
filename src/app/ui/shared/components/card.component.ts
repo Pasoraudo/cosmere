@@ -6,7 +6,11 @@ import {BaseComponent} from './base.component';
   selector: 'app-card',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <!--    <mat-icon [color]="color" [ngClass]="'icon-size-'+size" [svgIcon]="svg()"></mat-icon>-->
+    <ng-container>
+      <div class="fuse-card-front">
+        <ng-content select="[fuseCardFront]"></ng-content>
+      </div>
+    </ng-container>
   `,
 })
 export class CardComponent extends BaseComponent {
