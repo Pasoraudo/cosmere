@@ -7,11 +7,9 @@ import {Relationship} from '../model/relationship';
 export interface RelationshipState {
   relationships: Relationship[];
 }
-
 const emptyState = (): RelationshipState => ({
   relationships: []
 });
-
 @Injectable({
   providedIn: 'root',
 })
