@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
-import {LayoutComponent} from 'app/layout/layout.component';
-import {ClassicLayoutModule} from 'app/layout/layouts/vertical/classic/classic.module';
-import {SharedModule} from 'app/ui/shared/components/shared.module';
+import {ClassicLayoutModule} from './layouts/vertical/classic/classic.module';
+import {LayoutComponent} from './layout.component';
+import {SharedModule} from '../ui/shared/components/shared.module';
 
 const layoutModules = [
     ClassicLayoutModule,

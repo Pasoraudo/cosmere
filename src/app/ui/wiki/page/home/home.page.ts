@@ -11,10 +11,8 @@ import {Relationship} from '../../../../../domain/model/relationship';
 import {CharacterApi} from '../../../../../domain/service/api/character.api';
 import {RelationshipApi} from '../../../../../domain/service/api/relationship.api';
 import {defer} from 'lodash';
-import {wikiNavigation} from '../../../../layout/navigation/wiki-navigation';
 import {UndirectedGraph} from 'graphology';
 import louvain from 'graphology-communities-louvain';
-import {FuseNavigationItem} from '../../../../../@fuse/components/navigation/navigation.types';
 
 @Component({
   selector: 'home',
@@ -22,7 +20,6 @@ import {FuseNavigationItem} from '../../../../../@fuse/components/navigation/nav
   encapsulation: ViewEncapsulation.None
 })
 export class HomePage extends BasePage implements OnInit {
-  navigation: FuseNavigationItem[] = wikiNavigation;
   nodes: D3Node[] = [];
   edges: D3Link[] = [];
   characters: Character[] = [];

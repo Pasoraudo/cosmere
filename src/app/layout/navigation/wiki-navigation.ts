@@ -1,6 +1,11 @@
-import {FuseNavigationItem} from '../../../@fuse/components/navigation/navigation.types';
-
-export const wikiNavigation: FuseNavigationItem[] = [
+export interface NavigationItem {
+  id: string;
+  title: string;
+  type: string;
+  icon: string;
+  link: string;
+}
+export const wikiNavigation: NavigationItem[] = [
   {
     id: 'home',
     title: 'Home',

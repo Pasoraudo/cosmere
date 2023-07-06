@@ -1,11 +1,8 @@
 import {Component, Inject, OnDestroy, OnInit, Renderer2, ViewEncapsulation} from '@angular/core';
 import {DOCUMENT} from '@angular/common';
 import {ActivatedRoute, Router} from '@angular/router';
-import {combineLatest, map, Subject, takeUntil} from 'rxjs';
-import {FuseConfigService} from '@fuse/services/config';
-import {FuseMediaWatcherService} from '@fuse/services/media-watcher';
-import {FUSE_VERSION} from '@fuse/version';
-import {AppConfig} from 'app/core/config/app.config';
+import {Subject} from 'rxjs';
+import {AppConfig} from '../../../core/config/app.config';
 
 @Component({
   selector: 'layout',
@@ -27,53 +24,14 @@ export class LayoutUserComponent implements OnInit, OnDestroy {
     private _activatedRoute: ActivatedRoute,
     @Inject(DOCUMENT) private _document: any,
     private _renderer2: Renderer2,
-    private _router: Router,
-    private _fuseConfigService: FuseConfigService,
-    private _fuseMediaWatcherService: FuseMediaWatcherService
+    private _router: Router
   ) {
   }
 
   ngOnInit(): void {
-    combineLatest([
-      this._fuseConfigService.config$,
-      this._fuseMediaWatcherService.onMediaQueryChange$(['(prefers-color-scheme: dark)', '(prefers-color-scheme: light)'])
-    ]).pipe(
-      takeUntil(this._unsubscribeAll),
-      map(([config, mql]) => {
-
-        const options = {
-          scheme: config.scheme,
-          theme: config.theme
-        };
-
-        // If the scheme is set to 'auto'...
-        if (config.scheme === 'auto') {
-          // Decide the scheme using the media query
-          options.scheme = mql.breakpoints['(prefers-color-scheme: dark)'] ? 'dark' : 'light';
-        }
-
-        return options;
-      })
-    ).subscribe((options) => {
-
-      this.scheme = options.scheme;
-      this.theme = options.theme;
-
-      this._updateScheme();
-      this._updateTheme();
-    });
-
-    this._fuseConfigService.config$
-      .pipe(takeUntil(this._unsubscribeAll))
-      .subscribe((config: AppConfig) => {
-        this.config = config;
-      });
-
-    this._renderer2.setAttribute(this._document.querySelector('[ng-version]'), 'fuse-version', FUSE_VERSION);
   }
 
   ngOnDestroy(): void {
-    // Unsubscribe from all subscriptions
     this._unsubscribeAll.next(null);
     this._unsubscribeAll.complete();
   }

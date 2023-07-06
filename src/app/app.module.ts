@@ -6,11 +6,9 @@ import {IonicModule, IonicRouteStrategy} from '@ionic/angular';
 
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
-import {FuseModule} from '../@fuse';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CoreModule} from './core/core.module';
 import {LayoutModule} from './layout/layout.module';
-import {appConfig} from './core/config/app.config';
 import {MarkdownModule} from 'ngx-markdown';
 import {DomainModule} from '../domain/domain.module';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
@@ -23,14 +21,12 @@ import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import {NgSelectModule} from '@ng-select/ng-select';
 import {JwtInterceptor} from '../domain/service/network/jwt.interceptor';
 import {ModalModule} from './ui/shared/modal/modal.module';
-import {FuseConfigModule} from '../@fuse/services/config/config.module';
 import {PipeModule} from './ui/shared/pipe/pipe.module';
 
 @NgModule({
   declarations: [
     AppComponent,
   ],
-  entryComponents: [],
   imports: [
     PipeModule,
     BrowserModule,
@@ -39,8 +35,6 @@ import {PipeModule} from './ui/shared/pipe/pipe.module';
     }),
     AppRoutingModule,
     BrowserAnimationsModule,
-    FuseModule,
-    FuseConfigModule.forRoot(appConfig),
     DomainModule,
 
     MatSnackBarModule,

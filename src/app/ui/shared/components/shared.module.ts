@@ -10,12 +10,17 @@ import {MatSelectModule} from '@angular/material/select';
 import {PipeModule} from '../pipe/pipe.module';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
-import {FuseCardModule} from '../../../../@fuse/components/card';
+import {CardComponent} from './card.component';
+import {NavigationComponent} from './navigation.component';
+import {LoadingBarComponent} from './loading-bar.component';
 
 @NgModule({
   declarations: [
     IconComponent,
-    ConfigurationComponent
+    ConfigurationComponent,
+    CardComponent,
+    NavigationComponent,
+    LoadingBarComponent
   ],
   imports: [
     CommonModule,
@@ -28,11 +33,13 @@ import {FuseCardModule} from '../../../../@fuse/components/card';
     PipeModule,
     MatMenuModule,
     MatButtonModule,
-    FuseCardModule,
   ],
   exports: [
     IconComponent,
-    ConfigurationComponent
+    ConfigurationComponent,
+    CardComponent,
+    NavigationComponent,
+    LoadingBarComponent
   ]
 })
 export class SharedModule {
