@@ -1,0 +1,38 @@
+<div class="flex flex-row gap-10">
+  <ng-container *ngIf="item.link">
+    <a class="fuse-horizontal-navigation-item"
+       [routerLink]="[item.link]"
+       [routerLinkActive]="'fuse-horizontal-navigation-item-active'">
+      <ng-container *ngTemplateOutlet="itemTemplate"></ng-container>
+    </a>
+  </ng-container>
+
+  <ng-container *ngIf="!item.link">
+    <div class="fuse-horizontal-navigation-item">
+      <ng-container *ngTemplateOutlet="itemTemplate"></ng-container>
+    </div>
+  </ng-container>
+</div>
+
+<ng-template #itemTemplate>
+  <ng-container *ngIf="item.icon">
+    <mat-icon
+      class="fuse-horizontal-navigation-item-icon"
+      [svgIcon]="item.icon"></mat-icon>
+  </ng-container>
+
+  <div class="fuse-horizontal-navigation-item-title-wrapper">
+    <div class="fuse-horizontal-navigation-item-title">
+            <span>
+                {{item.title}}
+            </span>
+    </div>
+    <ng-container *ngIf="item.subtitle">
+      <div class="fuse-horizontal-navigation-item-subtitle">
+                <span>
+                    {{item.subtitle}}
+                </span>
+      </div>
+    </ng-container>
+  </div>
+</ng-template>

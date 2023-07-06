@@ -2,8 +2,9 @@ export interface NavigationItem {
   id: string;
   title: string;
   type: string;
-  icon: string;
-  link: string;
+  icon?: string;
+  link?: string;
+  subtitle?: string;
 }
 export const wikiNavigation: NavigationItem[] = [
   {

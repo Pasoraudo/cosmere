@@ -1,6 +1,6 @@
 import {Component, OnDestroy, OnInit, ViewEncapsulation} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {Subject, takeUntil} from 'rxjs';
+import {Subject} from 'rxjs';
 import {NavigationItem, wikiNavigation} from '../../../navigation/wiki-navigation';
 
 @Component({

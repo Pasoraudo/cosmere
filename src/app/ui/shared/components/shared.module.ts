@@ -13,6 +13,9 @@ import {MatButtonModule} from '@angular/material/button';
 import {NavigationComponent} from './navigation.component';
 import {LoadingBarComponent} from './loading-bar.component';
 import {CardComponent} from './card.component';
+import {HorizontalNavigationComponent} from '../../../layout/navigation/horizontal.component';
+import {HorizontalNavigationBasicItemComponent} from '../../../layout/navigation/components/basic/basic.component';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,9 @@ import {CardComponent} from './card.component';
     ConfigurationComponent,
     CardComponent,
     NavigationComponent,
-    LoadingBarComponent
+    LoadingBarComponent,
+    HorizontalNavigationComponent,
+    HorizontalNavigationBasicItemComponent
   ],
   imports: [
     CommonModule,
@@ -33,13 +38,15 @@ import {CardComponent} from './card.component';
     PipeModule,
     MatMenuModule,
     MatButtonModule,
+    RouterModule,
   ],
   exports: [
     IconComponent,
     ConfigurationComponent,
     CardComponent,
     NavigationComponent,
-    LoadingBarComponent
+    LoadingBarComponent,
+    HorizontalNavigationComponent
   ]
 })
 export class SharedModule {
