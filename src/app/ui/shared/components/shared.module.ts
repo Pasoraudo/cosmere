@@ -10,9 +10,9 @@ import {MatSelectModule} from '@angular/material/select';
 import {PipeModule} from '../pipe/pipe.module';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
-import {CardComponent} from './card.component';
 import {NavigationComponent} from './navigation.component';
 import {LoadingBarComponent} from './loading-bar.component';
+import {CardComponent} from './card.component';
 
 @NgModule({
   declarations: [

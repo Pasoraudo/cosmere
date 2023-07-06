@@ -1,18 +1,25 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
-import {BaseComponent} from './base.component';
-
+import {Component, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'app-card',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None,
   template: `
     <ng-container>
-      <div class="fuse-card-front">
-        <ng-content select="[fuseCardFront]"></ng-content>
-      </div>
+      <ng-content></ng-content>
     </ng-container>
   `,
+  styles: [`
+    app-card {
+      position: relative;
+      display: flex;
+      overflow: hidden;
+      border: 1px solid #FF9500;
+      @apply rounded-2xl shadow bg-card;
+    }
+  `]
 })
-export class CardComponent extends BaseComponent {
+export class CardComponent {
 
+  constructor() {
+  }
 }
