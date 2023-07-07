@@ -49,18 +49,18 @@ export class AnalysisPage extends BasePage implements OnInit {
     super();
   }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
     this.subscribe(this.relationshipApi.cosmereRelationships(), relationships => this.onRelationshipsChanges(relationships));
     this.subscribe(this.characterApi.cosmereCharacters(), characters => this.onCharactersChanges(characters));
     this.subscribe(this.configurationApi.configuration(), configuration => this.onConfigurationChanges(configuration));
 
-    defer(async () => {
-      await this.relationshipApi.fetchAllCosmereRelationship();
-      await this.characterApi.fetchAllCosmereCharacter();
-    });
+    await this.relationshipApi.fetchAllCosmereRelationship();
+    await this.characterApi.fetchAllCosmereCharacter();
   }
 
-  analyseNetwork(graph: Graph): void {
+  async analyseNetwork(graph: Graph): Promise<void> {
+    //TODO
+    //Improve performance
     const largestConnectedComponent = largestConnectedComponentSubgraph(graph);
     const nodes: string[] = largestConnectedComponent.nodes();
 
@@ -96,19 +96,19 @@ export class AnalysisPage extends BasePage implements OnInit {
     console.log('calculateEccentricityCoefficient', calculateEccentricityCoefficient(largestConnectedComponent));
   }
 
-  onRelationshipsChanges(relationships: Relationship[]): void {
+  async onRelationshipsChanges(relationships: Relationship[]): Promise<void> {
     this.relationships = relationships;
-    this.analyseNetwork(this.graph());
+    await this.analyseNetwork(this.graph());
   }
 
-  onCharactersChanges(characters: Character[]): void {
+  async onCharactersChanges(characters: Character[]): Promise<void> {
     this.characters = characters;
-    this.analyseNetwork(this.graph());
+    await this.analyseNetwork(this.graph());
   }
 
-  onConfigurationChanges(configuration: Configuration): void {
+  async onConfigurationChanges(configuration: Configuration): Promise<void> {
     this.configuration = configuration;
-    this.analyseNetwork(this.graph());
+    await this.analyseNetwork(this.graph());
   }
 
   filterRelationships(relationships: Relationship[]): Relationship[] {
@@ -135,7 +135,6 @@ export class AnalysisPage extends BasePage implements OnInit {
 
       graph.addEdge(this.getCharacterName(relationship.characterId1), this.getCharacterName(relationship.characterId2));
     });
-
 
     return graph;
   }
