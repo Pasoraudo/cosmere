@@ -2,7 +2,7 @@
   <configuration class="mr-6"></configuration>
   <div class="flex flex-col p-10">
     <div class="flex flex-row mt-5 gap-5">
-      <fuse-card class="flex flex-col p-10 basis-1/2">
+      <app-card class="flex flex-col p-10 basis-1/2">
         <div class="text-xl mb-5">PageRank</div>
         <vertical-bar-chart class="w-full" [data]="pageRankNormalized"></vertical-bar-chart>
         <!--      <div class="flex flex-row gap-10">-->
@@ -15,32 +15,32 @@
         <!--          </div>-->
         <!--        </div>-->
         <!--      </div>-->
-      </fuse-card>
-      <fuse-card class="flex flex-col p-6 basis-1/2">
+      </app-card>
+      <app-card class="flex flex-col p-6 basis-1/2">
         <div class="text-xl mb-5">Fractal protagonism</div>
         <chart-3d class="flex flex-auto w-full" [data]="pagerankEigenvectorAndDegreeCentrality" [xLabel]="'pagerank'"
                   [yLabel]="'eigenvector'"></chart-3d>
-      </fuse-card>
+      </app-card>
     </div>
     <div class="flex flex-row mt-5 gap-5">
-      <fuse-card class="flex flex-auto grow p-6">
+      <app-card class="flex flex-auto grow p-6">
         <div class="flex flex-col grow">
           <div class="text-xl mb-5">Eigenvector</div>
           <bar-chart class="w-full" [data]="eigenvectorCosmere"></bar-chart>
         </div>
-      </fuse-card>
-      <fuse-card class="flex flex-auto grow p-6">
+      </app-card>
+      <app-card class="flex flex-auto grow p-6">
         <div class="flex flex-col grow">
           <div class="text-xl mb-5">Betweenness</div>
           <bar-chart class="w-full" [data]="betweennessCosmere"></bar-chart>
         </div>
-      </fuse-card>
-      <fuse-card class="flex flex-auto grow p-6">
+      </app-card>
+      <app-card class="flex flex-auto grow p-6">
         <div class="flex flex-col grow">
           <div class="text-xl mb-5">Closeness</div>
           <bar-chart class="w-full" [data]="closenessCosmere"></bar-chart>
         </div>
-      </fuse-card>
+      </app-card>
     </div>
   </div>
 </div>

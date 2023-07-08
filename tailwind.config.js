@@ -1,23 +1,13 @@
 const path = require('path');
 const colors = require('tailwindcss/colors');
 const defaultTheme = require('tailwindcss/defaultTheme');
-const generatePalette = require(path.resolve(__dirname, ('src/@fuse/tailwind/utils/generate-palette')));
+const generatePalette = require(path.resolve(__dirname, ('src/theme/tailwind/utils/generate-palette')));
 
-/**
- * Custom palettes
- *
- * Uses the generatePalette helper method to generate
- * Tailwind-like color palettes automatically
- */
 const customPalettes = {
   brand: generatePalette('#FF9500')
 };
 
-/**
- * Themes
- */
 const themes = {
-  // Default theme is required for theming system to work correctly
   'default': {
     primary: {
       ...colors.orange,
@@ -35,8 +25,6 @@ const themes = {
       500: colors.red['50']
     }
   },
-  // Rest of the themes will use the 'default' as the base theme
-  // and extend them with their given configuration
   'brand': {
     primary: customPalettes.brand
   },
@@ -60,9 +48,6 @@ const themes = {
   }
 };
 
-/**
- * Tailwind configuration
- */
 const config = {
   darkMode: 'class',
   content: ['./src/**/*.{html,scss,ts}'],
@@ -284,13 +269,10 @@ const config = {
     verticalAlign: false
   },
   plugins: [
+    require(path.resolve(__dirname, ('src/theme/tailwind/plugins/utilities'))),
+    require(path.resolve(__dirname, ('src/theme/tailwind/plugins/icon-size'))),
+    require(path.resolve(__dirname, ('src/theme/tailwind/plugins/theming')))({themes}),
 
-    // Fuse - Tailwind plugins
-    require(path.resolve(__dirname, ('src/@fuse/tailwind/plugins/utilities'))),
-    require(path.resolve(__dirname, ('src/@fuse/tailwind/plugins/icon-size'))),
-    require(path.resolve(__dirname, ('src/@fuse/tailwind/plugins/theming')))({themes}),
-
-    // Other third party and/or custom plugins
     require('@tailwindcss/typography')({modifiers: ['sm', 'lg']}),
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/line-clamp'),

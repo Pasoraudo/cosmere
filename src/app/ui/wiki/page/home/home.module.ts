@@ -8,8 +8,6 @@ import {SharedModule} from '../../../shared/components/shared.module';
 import {PipeModule} from '../../../shared/pipe/pipe.module';
 import {CdkScrollableModule, ScrollingModule} from '@angular/cdk/scrolling';
 import {D3Module} from '../../../infrastructure/d3/d3.module';
-import {FuseCardModule} from '../../../../../@fuse/components/card/card.module';
-import {FuseNavigationModule} from '../../../../../@fuse/components/navigation/navigation.module';
 
 @NgModule({
   declarations: [
@@ -20,12 +18,10 @@ import {FuseNavigationModule} from '../../../../../@fuse/components/navigation/n
     MatButtonModule,
     MatIconModule,
     SharedModule,
-    FuseCardModule,
     PipeModule,
     CdkScrollableModule,
     ScrollingModule,
     D3Module,
-    FuseNavigationModule,
   ]
 })
 export class HomeModule {

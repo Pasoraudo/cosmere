@@ -1,7 +1,7 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
-import { IconsModule } from 'app/core/icons/icons.module';
 import {TranslocoCoreModule} from './transloco/transloco.module';
 import {AuthModule} from './auth/auth.module';
+import {IconsModule} from './icons/icons.module';
 
 @NgModule({
     imports: [

@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {CharactersRelationshipsGraphComponent} from './characters-relationships-graph.component';
-import {FuseCardModule} from '../../../../../../../@fuse/components/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {CommonModule} from '@angular/common';
@@ -15,7 +14,6 @@ import {D3Module} from '../../../../../infrastructure/d3/d3.module';
     CharactersRelationshipsGraphComponent
   ],
   imports: [
-    FuseCardModule,
     MatFormFieldModule,
     MatSelectModule,
     CommonModule,

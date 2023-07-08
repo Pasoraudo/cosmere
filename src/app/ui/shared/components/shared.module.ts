@@ -10,12 +10,22 @@ import {MatSelectModule} from '@angular/material/select';
 import {PipeModule} from '../pipe/pipe.module';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
-import {FuseCardModule} from '../../../../@fuse/components/card';
+import {NavigationComponent} from './navigation.component';
+import {LoadingBarComponent} from './loading-bar.component';
+import {CardComponent} from './card.component';
+import {HorizontalNavigationComponent} from '../../../layout/navigation/horizontal.component';
+import {HorizontalNavigationBasicItemComponent} from '../../../layout/navigation/components/basic/basic.component';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
     IconComponent,
-    ConfigurationComponent
+    ConfigurationComponent,
+    CardComponent,
+    NavigationComponent,
+    LoadingBarComponent,
+    HorizontalNavigationComponent,
+    HorizontalNavigationBasicItemComponent
   ],
   imports: [
     CommonModule,
@@ -28,11 +38,15 @@ import {FuseCardModule} from '../../../../@fuse/components/card';
     PipeModule,
     MatMenuModule,
     MatButtonModule,
-    FuseCardModule,
+    RouterModule,
   ],
   exports: [
     IconComponent,
-    ConfigurationComponent
+    ConfigurationComponent,
+    CardComponent,
+    NavigationComponent,
+    LoadingBarComponent,
+    HorizontalNavigationComponent
   ]
 })
 export class SharedModule {

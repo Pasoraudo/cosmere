@@ -1,0 +1,11 @@
+<div class="flex flex-row justify-center">
+  <div class="fuse-horizontal-navigation-content-header">
+    <ng-content select="[fuseHorizontalNavigationContentHeader]"></ng-content>
+  </div>
+
+  <ng-container *ngFor="let item of navigation">
+      <ng-container *ngIf="item.type === 'basic'">
+        <app-horizontal-navigation-basic-item class="p-7" [item]="item"></app-horizontal-navigation-basic-item>
+      </ng-container>
+  </ng-container>
+</div>

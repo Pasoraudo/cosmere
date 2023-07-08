@@ -1,13 +1,11 @@
-<fuse-loading-bar></fuse-loading-bar>
+<app-loading-bar></app-loading-bar>
 
-<div class="inset-0 flex flex-col min-w-0  h-screen w-full overflow-y-scroll">
+<div class="inset-0 flex flex-col min-w-0  h-screen w-full overflow-y-scroll" style="background-color: #0d0d0d">
   <div class="flex flex-col w-full h-full">
-    <fuse-horizontal-navigation
-      [name]="'mainNavigation'"
+    <app-horizontal-navigation
       [navigation]="navigation"
       class="cosmere print:hidden justify-center">
-      <ng-container fuseVerticalNavigationContentHeader></ng-container>
-    </fuse-horizontal-navigation>
+    </app-horizontal-navigation>
 
     <div class="flex flex-col flex-auto w-full grow min-w-0">
       <!-- *ngIf="true" hack is required here for router-outlet to work correctly.
