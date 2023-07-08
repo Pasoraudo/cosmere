@@ -1,0 +1,770 @@
+[
+  {
+    "id": "Granite_Joe:Waxillium_Ladrian:mistborn5",
+    "characterId1": "Granite_Joe",
+    "characterId2": "Waxillium_Ladrian",
+    "type": "",
+    "numInteractions": "8",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Paalm:Waxillium_Ladrian:mistborn5",
+    "characterId1": "Paalm",
+    "characterId2": "Waxillium_Ladrian",
+    "type": "",
+    "numInteractions": "14",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Granite_Joe:Paalm:mistborn5",
+    "characterId1": "Granite_Joe",
+    "characterId2": "Paalm",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Flog:Winsting_Innate:mistborn5",
+    "characterId1": "Flog",
+    "characterId2": "Winsting_Innate",
+    "type": "",
+    "numInteractions": "9",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Dowser_Maline:Winsting_Innate:mistborn5",
+    "characterId1": "Dowser_Maline",
+    "characterId2": "Winsting_Innate",
+    "type": "",
+    "numInteractions": "6",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Dowser_Maline:Flog:mistborn5",
+    "characterId1": "Dowser_Maline",
+    "characterId2": "Flog",
+    "type": "",
+    "numInteractions": "3",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Hughes_Entrone:Winsting_Innate:mistborn5",
+    "characterId1": "Hughes_Entrone",
+    "characterId2": "Winsting_Innate",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Darm_(Mistborn):Dowser_Maline:mistborn5",
+    "characterId1": "Darm_(Mistborn)",
+    "characterId2": "Dowser_Maline",
+    "type": "",
+    "numInteractions": "2",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Boris_the_Third:Steris_Harms:mistborn5",
+    "characterId1": "Boris_the_Third",
+    "characterId2": "Steris_Harms",
+    "type": "",
+    "numInteractions": "5",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Boris_Junior:Steris_Harms:mistborn5",
+    "characterId1": "Boris_Junior",
+    "characterId2": "Steris_Harms",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Boris_Junior:Boris_the_Third:mistborn5",
+    "characterId1": "Boris_Junior",
+    "characterId2": "Boris_the_Third",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Ranette:Wayne:mistborn5",
+    "characterId1": "Ranette",
+    "characterId2": "Wayne",
+    "type": "",
+    "numInteractions": "13",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Steris_Harms:Waxillium_Ladrian:mistborn5",
+    "characterId1": "Steris_Harms",
+    "characterId2": "Waxillium_Ladrian",
+    "type": "",
+    "numInteractions": "13",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Ape_Manton:Dashir_boys:mistborn5",
+    "characterId1": "Ape_Manton",
+    "characterId2": "Dashir_boys",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Steris_Harms:Wayne:mistborn5",
+    "characterId1": "Steris_Harms",
+    "characterId2": "Wayne",
+    "type": "",
+    "numInteractions": "13",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Marasi_Colms:Steris_Harms:mistborn5",
+    "characterId1": "Marasi_Colms",
+    "characterId2": "Steris_Harms",
+    "type": "",
+    "numInteractions": "10",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Marasi_Colms:Waxillium_Ladrian:mistborn5",
+    "characterId1": "Marasi_Colms",
+    "characterId2": "Waxillium_Ladrian",
+    "type": "",
+    "numInteractions": "55",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Darriance:Wayne:mistborn5",
+    "characterId1": "Darriance",
+    "characterId2": "Wayne",
+    "type": "",
+    "numInteractions": "6",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Marasi_Colms:Marksman:mistborn5",
+    "characterId1": "Marasi_Colms",
+    "characterId2": "Marksman",
+    "type": "",
+    "numInteractions": "8",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Marksman:Reddi:mistborn5",
+    "characterId1": "Marksman",
+    "characterId2": "Reddi",
+    "type": "",
+    "numInteractions": "4",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Marasi_Colms:Reddi:mistborn5",
+    "characterId1": "Marasi_Colms",
+    "characterId2": "Reddi",
+    "type": "",
+    "numInteractions": "39",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Marasi_Colms:Wayne:mistborn5",
+    "characterId1": "Marasi_Colms",
+    "characterId2": "Wayne",
+    "type": "",
+    "numInteractions": "84",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Marksman:Wayne:mistborn5",
+    "characterId1": "Marksman",
+    "characterId2": "Wayne",
+    "type": "",
+    "numInteractions": "11",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Waxillium_Ladrian:Wayne:mistborn5",
+    "characterId1": "Waxillium_Ladrian",
+    "characterId2": "Wayne",
+    "type": "",
+    "numInteractions": "40",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Marksman:Waxillium_Ladrian:mistborn5",
+    "characterId1": "Marksman",
+    "characterId2": "Waxillium_Ladrian",
+    "type": "",
+    "numInteractions": "10",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Reddi:Waxillium_Ladrian:mistborn5",
+    "characterId1": "Reddi",
+    "characterId2": "Waxillium_Ladrian",
+    "type": "",
+    "numInteractions": "5",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Isabaline_Frellia:Marasi_Colms:mistborn5",
+    "characterId1": "Isabaline_Frellia",
+    "characterId2": "Marasi_Colms",
+    "type": "",
+    "numInteractions": "4",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Chip_Erikell:Marasi_Colms:mistborn5",
+    "characterId1": "Chip_Erikell",
+    "characterId2": "Marasi_Colms",
+    "type": "",
+    "numInteractions": "4",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Chip_Erikell:Isabaline_Frellia:mistborn5",
+    "characterId1": "Chip_Erikell",
+    "characterId2": "Isabaline_Frellia",
+    "type": "",
+    "numInteractions": "4",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Isabaline_Frellia:Waxillium_Ladrian:mistborn5",
+    "characterId1": "Isabaline_Frellia",
+    "characterId2": "Waxillium_Ladrian",
+    "type": "",
+    "numInteractions": "4",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Chip_Erikell:Waxillium_Ladrian:mistborn5",
+    "characterId1": "Chip_Erikell",
+    "characterId2": "Waxillium_Ladrian",
+    "type": "",
+    "numInteractions": "4",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Reddi:Winsting_Innate:mistborn5",
+    "characterId1": "Reddi",
+    "characterId2": "Winsting_Innate",
+    "type": "",
+    "numInteractions": "13",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Marasi_Colms:Winsting_Innate:mistborn5",
+    "characterId1": "Marasi_Colms",
+    "characterId2": "Winsting_Innate",
+    "type": "",
+    "numInteractions": "25",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Waxillium_Ladrian:Winsting_Innate:mistborn5",
+    "characterId1": "Waxillium_Ladrian",
+    "characterId2": "Winsting_Innate",
+    "type": "",
+    "numInteractions": "12",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Wayne:Winsting_Innate:mistborn5",
+    "characterId1": "Wayne",
+    "characterId2": "Winsting_Innate",
+    "type": "",
+    "numInteractions": "12",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Marasi_Colms:Tim_Vashin:mistborn5",
+    "characterId1": "Marasi_Colms",
+    "characterId2": "Tim_Vashin",
+    "type": "",
+    "numInteractions": "2",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Razal:Vwafendal:mistborn5",
+    "characterId1": "Razal",
+    "characterId2": "Vwafendal",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Red_Young:Wayne:mistborn5",
+    "characterId1": "Red_Young",
+    "characterId2": "Wayne",
+    "type": "",
+    "numInteractions": "4",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Dims:Wayne:mistborn5",
+    "characterId1": "Dims",
+    "characterId2": "Wayne",
+    "type": "",
+    "numInteractions": "9",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Allriandre_Durkel:Wayne:mistborn5",
+    "characterId1": "Allriandre_Durkel",
+    "characterId2": "Wayne",
+    "type": "",
+    "numInteractions": "5",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Edwarn_Ladrian:Hinston_Ladrian:mistborn5",
+    "characterId1": "Edwarn_Ladrian",
+    "characterId2": "Hinston_Ladrian",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Caberel:Marasi_Colms:mistborn5",
+    "characterId1": "Caberel",
+    "characterId2": "Marasi_Colms",
+    "type": "",
+    "numInteractions": "5",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Maindew:Marasi_Colms:mistborn5",
+    "characterId1": "Maindew",
+    "characterId2": "Marasi_Colms",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Jon_Deadfinger:Wayne:mistborn5",
+    "characterId1": "Jon_Deadfinger",
+    "characterId2": "Wayne",
+    "type": "",
+    "numInteractions": "4",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Javies:Marasi_Colms:mistborn5",
+    "characterId1": "Javies",
+    "characterId2": "Marasi_Colms",
+    "type": "",
+    "numInteractions": "2",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Idashwy:Winsting_Innate:mistborn5",
+    "characterId1": "Idashwy",
+    "characterId2": "Winsting_Innate",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Bloody_Tan:Paalm:mistborn5",
+    "characterId1": "Bloody_Tan",
+    "characterId2": "Paalm",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Darriance:Miles_Dagouter:mistborn5",
+    "characterId1": "Darriance",
+    "characterId2": "Miles_Dagouter",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Miles_Dagouter:Wayne:mistborn5",
+    "characterId1": "Miles_Dagouter",
+    "characterId2": "Wayne",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Darriance:Ranette:mistborn5",
+    "characterId1": "Darriance",
+    "characterId2": "Ranette",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Caberel:Reddi:mistborn5",
+    "characterId1": "Caberel",
+    "characterId2": "Reddi",
+    "type": "",
+    "numInteractions": "4",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Terri:Wayne:mistborn5",
+    "characterId1": "Terri",
+    "characterId2": "Wayne",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Marasi_Colms:Sazed:mistborn5",
+    "characterId1": "Marasi_Colms",
+    "characterId2": "Sazed",
+    "type": "",
+    "numInteractions": "8",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Rian_Strobe:Waxillium_Ladrian:mistborn5",
+    "characterId1": "Rian_Strobe",
+    "characterId2": "Waxillium_Ladrian",
+    "type": "",
+    "numInteractions": "3",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Edwarn_Ladrian:Waxillium_Ladrian:mistborn5",
+    "characterId1": "Edwarn_Ladrian",
+    "characterId2": "Waxillium_Ladrian",
+    "type": "",
+    "numInteractions": "9",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Edwarn_Ladrian:Nikolin:mistborn5",
+    "characterId1": "Edwarn_Ladrian",
+    "characterId2": "Nikolin",
+    "type": "",
+    "numInteractions": "6",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Nikolin:Waxillium_Ladrian:mistborn5",
+    "characterId1": "Nikolin",
+    "characterId2": "Waxillium_Ladrian",
+    "type": "",
+    "numInteractions": "6",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Paalm:Steris_Harms:mistborn5",
+    "characterId1": "Paalm",
+    "characterId2": "Steris_Harms",
+    "type": "",
+    "numInteractions": "2",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Hanlanaze:Marasi_Colms:mistborn5",
+    "characterId1": "Hanlanaze",
+    "characterId2": "Marasi_Colms",
+    "type": "",
+    "numInteractions": "4",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Hanlanaze:Wayne:mistborn5",
+    "characterId1": "Hanlanaze",
+    "characterId2": "Wayne",
+    "type": "",
+    "numInteractions": "3",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Rame_Maldor:Wayne:mistborn5",
+    "characterId1": "Rame_Maldor",
+    "characterId2": "Wayne",
+    "type": "",
+    "numInteractions": "3",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Sazed:Wayne:mistborn5",
+    "characterId1": "Sazed",
+    "characterId2": "Wayne",
+    "type": "",
+    "numInteractions": "5",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Paalm:Winsting_Innate:mistborn5",
+    "characterId1": "Paalm",
+    "characterId2": "Winsting_Innate",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Paalm:Wayne:mistborn5",
+    "characterId1": "Paalm",
+    "characterId2": "Wayne",
+    "type": "",
+    "numInteractions": "5",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "MeLaan:Paalm:mistborn5",
+    "characterId1": "MeLaan",
+    "characterId2": "Paalm",
+    "type": "",
+    "numInteractions": "10",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Jackstom_Harms:Wayne:mistborn5",
+    "characterId1": "Jackstom_Harms",
+    "characterId2": "Wayne",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Paalm:Sazed:mistborn5",
+    "characterId1": "Paalm",
+    "characterId2": "Sazed",
+    "type": "",
+    "numInteractions": "8",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Drim:Winsting_Innate:mistborn5",
+    "characterId1": "Drim",
+    "characterId2": "Winsting_Innate",
+    "type": "",
+    "numInteractions": "2",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Marasi_Colms:Paalm:mistborn5",
+    "characterId1": "Marasi_Colms",
+    "characterId2": "Paalm",
+    "type": "",
+    "numInteractions": "7",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "MeLaan:Wayne:mistborn5",
+    "characterId1": "MeLaan",
+    "characterId2": "Wayne",
+    "type": "",
+    "numInteractions": "64",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Marasi_Colms:MeLaan:mistborn5",
+    "characterId1": "Marasi_Colms",
+    "characterId2": "MeLaan",
+    "type": "",
+    "numInteractions": "55",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "MeLaan:Waxillium_Ladrian:mistborn5",
+    "characterId1": "MeLaan",
+    "characterId2": "Waxillium_Ladrian",
+    "type": "",
+    "numInteractions": "11",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Forgeron:Jone:mistborn5",
+    "characterId1": "Forgeron",
+    "characterId2": "Jone",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Marasi_Colms:Vin:mistborn5",
+    "characterId1": "Marasi_Colms",
+    "characterId2": "Vin",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Miklin:Reddi:mistborn5",
+    "characterId1": "Miklin",
+    "characterId2": "Reddi",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Marasi_Colms:Miklin:mistborn5",
+    "characterId1": "Marasi_Colms",
+    "characterId2": "Miklin",
+    "type": "",
+    "numInteractions": "3",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Marasi_Colms:Taudr:mistborn5",
+    "characterId1": "Marasi_Colms",
+    "characterId2": "Taudr",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Miklin:Waxillium_Ladrian:mistborn5",
+    "characterId1": "Miklin",
+    "characterId2": "Waxillium_Ladrian",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Johnst:MeLaan:mistborn5",
+    "characterId1": "Johnst",
+    "characterId2": "MeLaan",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "MeLaan:Sazed:mistborn5",
+    "characterId1": "MeLaan",
+    "characterId2": "Sazed",
+    "type": "",
+    "numInteractions": "6",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Drim:Paalm:mistborn5",
+    "characterId1": "Drim",
+    "characterId2": "Paalm",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Edwarn_Ladrian:Kelsier:mistborn5",
+    "characterId1": "Edwarn_Ladrian",
+    "characterId2": "Kelsier",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Edwarn_Ladrian:Sazed:mistborn5",
+    "characterId1": "Edwarn_Ladrian",
+    "characterId2": "Sazed",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Edwarn_Ladrian:Marasi_Colms:mistborn5",
+    "characterId1": "Edwarn_Ladrian",
+    "characterId2": "Marasi_Colms",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Ranette:Sazed:mistborn5",
+    "characterId1": "Ranette",
+    "characterId2": "Sazed",
+    "type": "",
+    "numInteractions": "3",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Misra:Wayne:mistborn5",
+    "characterId1": "Misra",
+    "characterId2": "Wayne",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Edgard_Ladrian:Hammond:mistborn5",
+    "characterId1": "Edgard_Ladrian",
+    "characterId2": "Hammond",
+    "type": "",
+    "numInteractions": "2",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Paalm:TenSoon:mistborn5",
+    "characterId1": "Paalm",
+    "characterId2": "TenSoon",
+    "type": "",
+    "numInteractions": "4",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Sazed:TenSoon:mistborn5",
+    "characterId1": "Sazed",
+    "characterId2": "TenSoon",
+    "type": "",
+    "numInteractions": "5",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Bloody_Tan:Sazed:mistborn5",
+    "characterId1": "Bloody_Tan",
+    "characterId2": "Sazed",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Handerwym:Mustaches:mistborn5",
+    "characterId1": "Handerwym",
+    "characterId2": "Mustaches",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Marksman:Paalm:mistborn5",
+    "characterId1": "Marksman",
+    "characterId2": "Paalm",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Hoid:Wayne:mistborn5",
+    "characterId1": "Hoid",
+    "characterId2": "Wayne",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Hoid:Waxillium_Ladrian:mistborn5",
+    "characterId1": "Hoid",
+    "characterId2": "Waxillium_Ladrian",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Hoid:Marasi_Colms:mistborn5",
+    "characterId1": "Hoid",
+    "characterId2": "Marasi_Colms",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  },
+  {
+    "id": "Hoid:Steris_Harms:mistborn5",
+    "characterId1": "Hoid",
+    "characterId2": "Steris_Harms",
+    "type": "",
+    "numInteractions": "1",
+    "bookId": "mistborn5"
+  }
+]
