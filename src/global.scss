@@ -9,11 +9,12 @@
  * https://ionicframework.com/docs/layout/global-stylesheets
  */
 
-@import "styles/modal";
 @import "styles/form";
-@import "styles/table";
 @import "styles/tooltip";
 @import "styles/divider";
+@import "styles/general";
+@import "styles/angular-material";
+
 
 /* Fonts */
 @import "theme/fonts/inter/inter.css";

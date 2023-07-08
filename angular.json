@@ -50,7 +50,6 @@
             "styles": [
               "src/styles/vendors.scss",
               "src/styles/styles.scss",
-              "src/styles/tailwind.scss",
               "src/theme/variables.scss",
               "src/global.scss"
             ],
