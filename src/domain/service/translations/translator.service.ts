@@ -11,8 +11,8 @@ export class Translator {
     staticTranslator.trans = this;
   }
 
-  public trans(key: string, params?: object): string {
-    return this.translator.translate(key, params, 'es');
+  public trans(key: string, params?: object, lang: string = 'en'): string {
+    return this.translator.translate(key, params, lang);
   }
 
 }

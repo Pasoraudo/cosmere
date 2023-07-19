@@ -15,24 +15,26 @@
 </div>
 
 <ng-template #itemTemplate>
-  <ng-container *ngIf="item.icon">
-    <mat-icon
-      class="fuse-horizontal-navigation-item-icon"
-      [svgIcon]="item.icon"></mat-icon>
-  </ng-container>
-
-  <div class="fuse-horizontal-navigation-item-title-wrapper">
-    <div class="fuse-horizontal-navigation-item-title">
-            <span>
-                {{item.title}}
-            </span>
-    </div>
-    <ng-container *ngIf="item.subtitle">
-      <div class="fuse-horizontal-navigation-item-subtitle">
-                <span>
-                    {{item.subtitle}}
-                </span>
-      </div>
+  <div class="flex flex-col">
+    <ng-container *ngIf="item.icon">
+      <mat-icon
+        class="fuse-horizontal-navigation-item-icon m-auto"
+        [svgIcon]="item.icon"></mat-icon>
     </ng-container>
+
+    <div class="fuse-horizontal-navigation-item-title-wrapper">
+      <div class="fuse-horizontal-navigation-item-title">
+            <span>
+                {{item.title | trans }}
+            </span>
+      </div>
+      <ng-container *ngIf="item.subtitle">
+        <div class="fuse-horizontal-navigation-item-subtitle">
+                <span>
+                    {{item.subtitle | trans }}
+                </span>
+        </div>
+      </ng-container>
+    </div>
   </div>
 </ng-template>

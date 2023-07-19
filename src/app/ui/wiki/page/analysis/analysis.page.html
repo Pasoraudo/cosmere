@@ -3,7 +3,12 @@
   <div class="flex flex-col p-10">
     <div class="flex flex-row mt-5 gap-5">
       <app-card class="flex flex-col p-10 basis-1/2">
-        <div class="text-xl mb-5">PageRank</div>
+        <div class="flex flex-row text-xl mb-5 justify-between">
+          <a href="https://en.wikipedia.org/wiki/PageRank" target="_blank">
+            <span>PageRank</span>
+          </a>
+          <app-icon icon="info" [tooltip]="'info.pagerank' | trans"></app-icon>
+        </div>
         <vertical-bar-chart class="w-full" [data]="pageRankNormalized"></vertical-bar-chart>
         <!--      <div class="flex flex-row gap-10">-->
         <!--        <div *ngFor="let columnNumber of [0,1,2,3,4,5,6,7,8]">-->
@@ -17,7 +22,13 @@
         <!--      </div>-->
       </app-card>
       <app-card class="flex flex-col p-6 basis-1/2">
-        <div class="text-xl mb-5">Fractal protagonism</div>
+        <div class="text-xl mb-5"></div>
+        <div class="flex flex-row text-xl mb-5 justify-between">
+          <a href="https://networkofthrones.wordpress.com/fractal-protagonists/#:~:text=Recently%2C%20writer%20Mike%20Carey%20used,scale%20you%20consider%20the%20storyline." target="_blank">
+            <span>Fractal protagonism</span>
+          </a>
+          <app-icon icon="info" [tooltip]="'info.fractal_protagonism' | trans"></app-icon>
+        </div>
         <chart-3d class="flex flex-auto w-full" [data]="pagerankEigenvectorAndDegreeCentrality" [xLabel]="'pagerank'"
                   [yLabel]="'eigenvector'"></chart-3d>
       </app-card>
@@ -25,19 +36,34 @@
     <div class="flex flex-row mt-5 gap-5">
       <app-card class="flex flex-auto grow p-6">
         <div class="flex flex-col grow">
-          <div class="text-xl mb-5">Eigenvector</div>
+          <div class="flex flex-row text-xl mb-5 justify-between">
+            <a href="https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors" target="_blank">
+              <span>Eigenvector</span>
+            </a>
+            <app-icon icon="info" [tooltip]="'info.eigenvector' | trans"></app-icon>
+          </div>
           <bar-chart class="w-full" [data]="eigenvectorCosmere"></bar-chart>
         </div>
       </app-card>
       <app-card class="flex flex-auto grow p-6">
         <div class="flex flex-col grow">
-          <div class="text-xl mb-5">Betweenness</div>
+          <div class="flex flex-row text-xl mb-5 justify-between">
+            <a href="https://en.wikipedia.org/wiki/Betweenness_centrality" target="_blank">
+              <span>Betweenness</span>
+            </a>
+            <app-icon icon="info" [tooltip]="'info.betweenness' | trans"></app-icon>
+          </div>
           <bar-chart class="w-full" [data]="betweennessCosmere"></bar-chart>
         </div>
       </app-card>
       <app-card class="flex flex-auto grow p-6">
         <div class="flex flex-col grow">
-          <div class="text-xl mb-5">Closeness</div>
+          <div class="flex flex-row text-xl mb-5 justify-between">
+            <a href="https://en.wikipedia.org/wiki/Closeness" target="_blank">
+              <span>Closeness</span>
+            </a>
+            <app-icon icon="info" [tooltip]="'info.closeness' | trans"></app-icon>
+          </div>
           <bar-chart class="w-full" [data]="closenessCosmere"></bar-chart>
         </div>
       </app-card>

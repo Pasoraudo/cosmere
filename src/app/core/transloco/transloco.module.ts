@@ -7,9 +7,9 @@ import {
   TranslocoService
 } from '@ngneat/transloco';
 import {APP_INITIALIZER, NgModule} from '@angular/core';
-import {environment} from 'environments/environment';
-import {TranslocoHttpLoader} from 'app/core/transloco/transloco.http-loader';
 import {firstValueFrom} from 'rxjs';
+import {environment} from '../../../environments/environment';
+import {TranslocoHttpLoader} from './transloco.http-loader';
 
 @NgModule({
   exports: [
@@ -29,8 +29,8 @@ import {firstValueFrom} from 'rxjs';
             label: 'English'
           }
         ],
-        defaultLang: 'es',
-        fallbackLang: 'es',
+        defaultLang: 'en',
+        fallbackLang: 'en',
         reRenderOnLangChange: true,
         prodMode: environment.production
       })

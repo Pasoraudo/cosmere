@@ -1,6 +1,7 @@
-import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
+import {AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, Input} from '@angular/core';
 import {BaseComponent} from './base.component';
 import {ThemePalette} from '@angular/material/core';
+import tippy from 'tippy.js';
 
 export type IconType = keyof typeof IconComponent.prototype.svgMappings;
 
@@ -11,19 +12,21 @@ export type IconType = keyof typeof IconComponent.prototype.svgMappings;
     <mat-icon [color]="color" [ngClass]="'icon-size-'+size" [svgIcon]="svg()"></mat-icon>
   `,
 })
-export class IconComponent extends BaseComponent {
+export class IconComponent extends BaseComponent implements AfterViewInit {
   @Input() color: ThemePalette;
   @Input() size: '1' | '2' | '3' | '4' | '5' | '8' | '10';
   @Input() icon: IconType;
+  @Input() tooltip: string;
 
-  constructor() {
+  constructor(public elementRef: ElementRef<HTMLElement>) {
     super();
   }
+
   svg() {
     return this.svgMappings[this.icon] || 'heroicons_outline:information-circle';
   }
 
-  svgMappings= {
+  svgMappings = {
     'exclamation': 'heroicons_outline:exclamation',
     'add-user': 'heroicons_solid:user-add',
     'refresh': 'heroicons_outline:refresh',
@@ -58,4 +61,15 @@ export class IconComponent extends BaseComponent {
     'calendar': 'heroicons_outline:calendar',
     'settings': 'feather:settings',
   };
+
+  ngAfterViewInit(): void {
+    if (!this.tooltip)
+      return;
+
+    tippy(this.elementRef.nativeElement.getElementsByTagName('mat-icon')[0], {
+      content: '<div class="p-2">' + this.tooltip + '</div>',
+      allowHTML: true,
+      maxWidth: 500,
+    });
+  }
 }

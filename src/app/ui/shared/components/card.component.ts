@@ -14,7 +14,8 @@ import {Component, ViewEncapsulation} from '@angular/core';
       display: flex;
       overflow: hidden;
       border: 1px solid #FF9500;
-      @apply rounded-2xl shadow bg-card;
+      background: #0C0C0C;
+      @apply rounded-2xl shadow;
     }
   `]
 })

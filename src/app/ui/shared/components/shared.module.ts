@@ -10,19 +10,18 @@ import {MatSelectModule} from '@angular/material/select';
 import {PipeModule} from '../pipe/pipe.module';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
-import {NavigationComponent} from './navigation.component';
 import {LoadingBarComponent} from './loading-bar.component';
 import {CardComponent} from './card.component';
 import {HorizontalNavigationComponent} from '../../../layout/navigation/horizontal.component';
 import {HorizontalNavigationBasicItemComponent} from '../../../layout/navigation/components/basic/basic.component';
 import {RouterModule} from '@angular/router';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
     IconComponent,
     ConfigurationComponent,
     CardComponent,
-    NavigationComponent,
     LoadingBarComponent,
     HorizontalNavigationComponent,
     HorizontalNavigationBasicItemComponent
@@ -39,12 +38,12 @@ import {RouterModule} from '@angular/router';
     MatMenuModule,
     MatButtonModule,
     RouterModule,
+    MatTooltipModule,
   ],
   exports: [
     IconComponent,
     ConfigurationComponent,
     CardComponent,
-    NavigationComponent,
     LoadingBarComponent,
     HorizontalNavigationComponent
   ]

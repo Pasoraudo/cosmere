@@ -16,14 +16,14 @@ export const wikiNavigation: NavigationItem[] = [
   },
   {
     id: 'network',
-    title: 'Red',
+    title: 'Network',
     type: 'basic',
     icon: 'heroicons_outline:users',
     link: '/wiki/network'
   },
   {
     id: 'analysis',
-    title: 'Análisis',
+    title: 'Analysis',
     type: 'basic',
     icon: 'heroicons_outline:chart-bar',
     link: '/wiki/analysis'
