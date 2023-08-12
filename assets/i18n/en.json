@@ -5,8 +5,23 @@
   "cancel": "cancel",
   "continue": "continue",
   "group.by": "group by",
+  "Home": "Home",
+  "Network": "Network",
+  "Analysis": "Analysis",
 
   "all.books": "Books: All",
+
+  "The Final Empire": "The Final Empire",
+  "The Well of Ascension": "The Well of Ascension",
+  "The Hero of Ages": "The Hero of Ages",
+  "The Alloy of Law": "The Alloy of Law",
+  "Shadows of Self": "Shadows of Self",
+  "The Bands of Mourning": "The Bands of Mourning",
+  "The Way of Kings": "The Way of Kings",
+  "Words of Radiance": "Words of Radiance",
+  "Oathbringer": "Oathbringer",
+  "Rhythm of War": "Rhythm of War",
+  "Warbreaker": "Warbreaker",
 
   "home.text.1": "Welcome to our Brandon Sanderson's Cosmere statistics website! Here you will find a unique platform to explore and analyze the relationships between characters in Brandon Sanderson's works. In addition to the detailed compilation of the most iconic characters in the Cosmere, you will be able to explore details about their personalities, abilities, backgrounds, and their role in the plot of the story. Our website is the perfect place for Sanderson fans who want to delve into the world of the Cosmere and discover new connections between characters and stories.",
   "home.text.2": "Using advanced data analysis techniques, we have created an interactive graph that shows the connections between characters and their popularity within the Cosmere universe. Our interactive graph not only displays the connections between characters but also offers a visualization of the timeline of each work and how characters intertwine throughout it. You'll see how a character's decisions and actions impact others in the plot.",
@@ -16,6 +31,8 @@
   "home.network.1": "Welcome to our website! Here you will find an intriguing interactive graph that represents the connections between the most iconic characters of this vast cosmos. Each node represents a character, while the arcs represent their interactions and relationships. Explore the complex networks of acquaintances, from the legendary Radiant Knights to the mysterious Elantrians and beyond. Immerse yourself in the depth of these Connections as you discover the network of intertwined stories that make the Cosmere such a captivating place. Embark on this journey and unravel the threads that unite these characters in this exciting interactive experience!",
   "home.analysis.1": "In our analysis section, you can delve into fascinating details extracted from the Cosmere graph. From this complex web of connections between characters, we have obtained valuable data such as pagerank, betweenness, closeness, and eigenvector. These indicators allow us to understand the importance and influence of each character in the universe created by Brandon Sanderson. Explore the key dynamics and relationships between characters through our graphical representations and discover how they intertwine in this fascinating literary universe. Immerse yourself in our analysis and uncover the hidden secrets behind the Cosmere's network of connections!",
   "home.me.1": "This is the result of a project made by and for Brandon Sanderson's fans. We hope that the information is of interest and allows you to expand your knowledge about this fantastic universe, although, of course, there is always another secret...",
+  "home.connections": "Connections",
+  "home.analysis": "Analysis",
 
   "info.pagerank": "Measures the popularity of a character.",
   "info.eigenvector": "Measures the relevance of a character in the stories of other characters.",
