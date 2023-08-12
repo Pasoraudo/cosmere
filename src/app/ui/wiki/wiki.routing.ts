@@ -2,6 +2,7 @@ import {Route} from '@angular/router';
 import {HomeModule} from './page/home/home.module';
 import {NetworkModule} from './page/network/network.module';
 import {AnalysisModule} from './page/analysis/analysis.module';
+import {GuideModule} from './page/guide/guide.module';
 
 export const wikiRouting: Route[] = [
   {
@@ -20,5 +21,9 @@ export const wikiRouting: Route[] = [
   {
     path: 'analysis',
     loadChildren: (): any => AnalysisModule
+  },
+  {
+    path: 'guide',
+    loadChildren: (): any => GuideModule
   },
 ];

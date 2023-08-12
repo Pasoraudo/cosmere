@@ -28,6 +28,13 @@ export const wikiNavigation: NavigationItem[] = [
     icon: 'heroicons_outline:chart-bar',
     link: '/wiki/analysis'
   },
+  {
+    id: 'guide',
+    title: 'Guide',
+    type: 'basic',
+    icon: 'heroicons_outline:book-open',
+    link: '/wiki/guide'
+  },
   // {
   //   id: 'info',
   //   title: 'Info',

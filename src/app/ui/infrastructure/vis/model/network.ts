@@ -36,3 +36,9 @@ export interface D3Link {
 
   group: string;
 }
+
+export interface D3Options {
+  zoom?: boolean,
+  edgeRadius?: number,
+  directed?: boolean
+}

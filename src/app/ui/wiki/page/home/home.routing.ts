@@ -1,5 +1,5 @@
 import {Route} from '@angular/router';
-import {HomePage} from 'app/ui/wiki/page/home/home.page';
+import {HomePage} from './home.page';
 
 export const homeRouting: Route[] = [
   {
