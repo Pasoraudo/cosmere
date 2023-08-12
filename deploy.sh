@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Ejecutar ng deploy.sh con base-href
-ng deploy.sh --base-href=/cosmere/
+ng deploy --base-href=/cosmere/
 
 # Agregar todos los cambios al área de preparación de Git
 git add -A
