@@ -33,15 +33,13 @@ export class Localstorage {
   async getObj<T>(key: string): Promise<T | null> {
     try {
       const json = await this.storage.get(key);
-
       return JSON.parse(json) as T;
-
     } catch (e) {
       return null;
     }
   }
 
-  async getany<T>(key: string): Promise<T | null> {
+  async getAny<T>(key: string): Promise<T | null> {
     try {
       const object = await this.storage.get(key);
 

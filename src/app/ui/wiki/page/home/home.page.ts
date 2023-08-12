@@ -13,6 +13,7 @@ import {RelationshipApi} from '../../../../../domain/service/api/relationship.ap
 import {defer} from 'lodash';
 import {UndirectedGraph} from 'graphology';
 import louvain from 'graphology-communities-louvain';
+import {AuthApi} from '../../../../../domain/service/api/auth.api';
 
 @Component({
   selector: 'home',
@@ -28,7 +29,7 @@ export class HomePage extends BasePage implements OnInit {
     zoom: false
   }
 
-  constructor(private characterApi: CharacterApi, private relationshipApi: RelationshipApi) {
+  constructor(private characterApi: CharacterApi, private relationshipApi: RelationshipApi, private authApi: AuthApi) {
     super();
   }
 

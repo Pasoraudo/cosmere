@@ -1,7 +1,7 @@
 import {Component, EventEmitter, OnDestroy, Output} from '@angular/core';
 import {Observable, Subscription} from 'rxjs';
 import {uuid} from '../../../../domain/function/uuid.helper';
-import {Alert} from 'domain/ionic/alert.ionic';
+import {Alert} from '../../../../domain/ionic/alert.ionic';
 
 export interface SubscriptionData {
   id: string;

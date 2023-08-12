@@ -16,6 +16,7 @@ import {HorizontalNavigationComponent} from '../../../layout/navigation/horizont
 import {HorizontalNavigationBasicItemComponent} from '../../../layout/navigation/components/basic/basic.component';
 import {RouterModule} from '@angular/router';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {FormModule} from './form/form.module';
 
 @NgModule({
   declarations: [
@@ -39,13 +40,15 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatButtonModule,
     RouterModule,
     MatTooltipModule,
+    FormModule
   ],
   exports: [
     IconComponent,
     ConfigurationComponent,
     CardComponent,
     LoadingBarComponent,
-    HorizontalNavigationComponent
+    HorizontalNavigationComponent,
+    FormModule
   ]
 })
 export class SharedModule {

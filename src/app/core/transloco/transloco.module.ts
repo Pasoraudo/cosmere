@@ -30,7 +30,7 @@ import {TranslocoHttpLoader} from './transloco.http-loader';
           }
         ],
         defaultLang: 'en',
-        fallbackLang: 'en',
+        fallbackLang: 'es',
         reRenderOnLangChange: true,
         prodMode: environment.production
       })
@@ -46,7 +46,19 @@ import {TranslocoHttpLoader} from './transloco.http-loader';
       deps: [TranslocoService],
       useFactory: (translocoService: TranslocoService): any => (): Promise<Translation> => {
         const defaultLang = translocoService.getDefaultLang();
+        const allLang = translocoService.getAvailableLangs();
+        allLang.forEach(lang => {
+          if (typeof lang === 'string') {
+            if (lang !== defaultLang)
+              firstValueFrom(translocoService.load(lang))
+          }
+          else {
+            if (lang.id !== defaultLang)
+              firstValueFrom(translocoService.load(lang.id))
+          }
+        })
         translocoService.setActiveLang(defaultLang);
+
         return firstValueFrom(translocoService.load(defaultLang));
       },
       multi: true

@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {TranslocoService} from '@ngneat/transloco';
+import {AuthApi} from '../api/auth.api';
 
 const staticTranslator: { trans: Translator | null } = {trans: null};
 
@@ -7,15 +8,19 @@ const staticTranslator: { trans: Translator | null } = {trans: null};
   providedIn: 'root',
 })
 export class Translator {
-  constructor(private translator: TranslocoService) {
+
+  constructor(private translator: TranslocoService, private authApi: AuthApi) {
     staticTranslator.trans = this;
   }
 
-  public trans(key: string, params?: object, lang: string = 'en'): string {
+  public trans(key: string, params?: object, lang?: string): string {
+    if (!lang) {
+      lang = this.authApi.syncMe().lang;
+    }
+
     return this.translator.translate(key, params, lang);
   }
-
 }
 
-export const trans = (key: string, params?: object): string => staticTranslator.trans.trans(key, params);
+export const trans = (key: string, params?: object, lang?: string): string => staticTranslator.trans.trans(key, params, lang);
 
