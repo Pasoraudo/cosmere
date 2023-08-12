@@ -18,7 +18,8 @@ export class GuidePage extends BasePage implements OnInit {
   books: Book[] = [];
   guides: Guide[] = [];
   options: D3Options = {
-    directed: true
+    directed: true,
+    drag: true
   }
   constructor(private bookApi: BookApi, private guideApi: GuideApi) {
     super();

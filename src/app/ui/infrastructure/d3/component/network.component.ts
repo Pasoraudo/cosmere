@@ -24,7 +24,8 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
   private defaultOptions: D3Options = {
     zoom: true,
     edgeRadius: 0,
-    directed: false
+    directed: false,
+    drag: false
   };
 
   id = uuid();
@@ -41,7 +42,7 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
     super();
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
+  ngOnChanges(): void {
     if (this.nodes.length > 0 && this.links.length > 0)
       this.create();
   }
@@ -155,8 +156,9 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
       .attr("stroke-linejoin", "round")
       .selectAll("g")
       .data(this.nodes)
-      .join("g")
-    //.call(this.drag(this.simulation));
+      .join("g");
+    if (this.options.drag)
+      this.node.call(this.drag(this.simulation));
 
     this.node
       .append("circle")
