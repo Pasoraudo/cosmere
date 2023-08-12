@@ -17,6 +17,9 @@ export class Translator {
     if (!lang) {
       lang = this.authApi.syncMe().lang;
     }
+    if (!lang) {
+      lang = this.translator.getDefaultLang();
+    }
 
     return this.translator.translate(key, params, lang);
   }
