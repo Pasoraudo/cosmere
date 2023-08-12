@@ -13,16 +13,11 @@ import {TranslocoService} from '@ngneat/transloco';
 })
 export class AppComponent implements OnInit {
 
-  constructor(private modal: Modal, private bootstrap: Bootstrap, private translocoService: TranslocoService, private authApi: AuthApi) {
+  constructor(private modal: Modal, private bootstrap: Bootstrap) {
   }
 
   ngOnInit(): void {
     this.bootstrap.bootstrap();
-
-    this.authApi.me().subscribe(me => {
-      this.translocoService.setActiveLang(me.lang);
-      console.log(me.lang);
-    });
     //this.openModal();
   }
 

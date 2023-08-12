@@ -4,6 +4,5 @@ export const cosmereBookIds = () => ['warbreaker', 'mistborn1', 'mistborn2', 'mi
   , 'stormlight1', 'stormlight2', 'stormlight3', 'stormlight4'];
 export interface Book extends Entity {
   title: string;
-
   href?: string;
 }
