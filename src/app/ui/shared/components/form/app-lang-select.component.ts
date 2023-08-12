@@ -29,7 +29,7 @@ export class AppLangSelectComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.control.setValue(this.authApi.syncMe().lang);
+    this.control.setValue(this.authApi.syncMe()?.lang);
   }
 
   languageChanged(lang: string): void {
