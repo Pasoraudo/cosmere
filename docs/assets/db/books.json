@@ -24,6 +24,10 @@
     "title": "The Bands of Mourning"
   },
   {
+    "id": "mistborn7",
+    "title": "The lost metal"
+  },
+  {
     "id": "stormlight1",
     "title": "The Way of Kings"
   },
@@ -42,6 +46,38 @@
   {
     "id": "warbreaker",
     "title": "Warbreaker"
+  },
+  {
+    "id": "elantris",
+    "title": "Elantris"
+  },
+  {
+    "id": "hope_of_elenatris",
+    "title": "The hope of elantris"
+  },
+  {
+    "id": "edgedancer",
+    "title": "Edgedancer"
+  },
+  {
+    "id": "dawnshard",
+    "title": "Dawnshard"
+  },
+  {
+    "id": "secret_history",
+    "title": "Secret history"
+  },
+  {
+    "id": "allomancer_jak",
+    "title": "Allomancer Jak and the Pits of Eltania"
+  },
+  {
+    "id": "eleventh_metal",
+    "title": "The Eleventh Metal"
+  },
+  {
+    "id": "ocaso",
+    "title": "Sixth of the Dusk"
   }
 ]
 
