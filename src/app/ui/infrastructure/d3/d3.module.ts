@@ -12,12 +12,13 @@ import {VerticalBarChartComponent} from './component/vertical-bar-chart.componen
     VerticalBarChartComponent
   ],
   imports: [],
-  exports: [
-    BarChartComponent,
-    D3NetworkComponent,
-    Chart3DComponent,
-    VerticalBarChartComponent
-  ]
+    exports: [
+        BarChartComponent,
+        D3NetworkComponent,
+        Chart3DComponent,
+        VerticalBarChartComponent,
+        D3NetworkComponent
+    ]
 })
 export class D3Module {
 }

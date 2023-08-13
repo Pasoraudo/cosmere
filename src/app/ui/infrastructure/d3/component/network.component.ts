@@ -7,7 +7,27 @@ import {delay} from 'rxjs';
 
 @Component({
   selector: 'd3-network',
-  template: '<div class="flex flex-1" id="{{ id }}-network"></div>',
+  template: `
+    <div class="svg-container w-full">
+      <div class="h-full w-full" id="{{ id }}-network"></div>
+    </div>
+  `
+  ,
+  styles: [`
+    .svg-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .svg-container svg {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  `],
 })
 export class D3NetworkComponent extends BaseComponent implements AfterViewInit, OnChanges {
   @Input()
@@ -55,6 +75,11 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
   create(): void {
     this.options = {...this.defaultOptions, ...this.options};
     this.element = document.getElementById(this.id + '-network');
+    console.log(this.element)
+    const boundingRect = this.element.getBoundingClientRect();
+    this.width = boundingRect.width;
+    this.height = boundingRect.height;
+    console.log(this.width, this.height)
     d3.select(this.element).selectChildren().remove();
 
     this.createCharacterLinks();
@@ -86,9 +111,9 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
       .on("tick", () => {
         this.link.attr("d", d => {
           return `
-            M${d.source.x},${d.source.y}
-            A${this.options.edgeRadius},${this.options.edgeRadius} 0 0,1 ${d.target.x},${d.target.y}
-          `;
+        M${d.source.x},${d.source.y}
+        A${this.options.edgeRadius},${this.options.edgeRadius} 0 0, 1 ${d.target.x},${d.target.y}
+        `;
         });
         this.node.attr("transform", d => `translate(${d.x}, ${d.y})`);
         delay(10000);
@@ -125,7 +150,7 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
       this.svg.append("defs").selectAll("marker")
         .data(this.groups)
         .join("marker")
-        .attr("id", d => `arrow-${d}`)
+        .attr("id", d => `arrow -${d}`)
         .attr("viewBox", "0 -5 10 10")
         .attr("refX", 20)
         .attr("refY", 0)
@@ -175,11 +200,11 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
       .style("dominant-baseline", "central");
   }
 
-  private getId(d) {
+  getId(d) {
     return d.id;
   }
 
-  private drag(simulation) {
+  drag(simulation) {
     function dragstarted(event, d) {
       if (!event.active) simulation.alphaTarget(0.3).restart();
       d.fx = d.x;
@@ -203,7 +228,7 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
       .on("end", dragended);
   }
 
-  private cluster(nodes) {
+  cluster(nodes) {
     const strength = 0.2; // Fuerza de agrupamiento
 
     function force(alpha) {
