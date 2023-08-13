@@ -19,21 +19,15 @@ export const D3NodeMaxScore: number = 60;
 
 export interface D3Node {
   id: string;
-
   label: string;
-
   group: string;
-
   score: number;
 }
 
 export interface D3Link {
   source: string;
-
   target: string;
-
   weight: number;
-
   group: string;
 }
 
@@ -42,4 +36,5 @@ export interface D3Options {
   edgeRadius?: number;
   directed?: boolean;
   drag?: boolean;
+  colors?: Record<string, string>;
 }

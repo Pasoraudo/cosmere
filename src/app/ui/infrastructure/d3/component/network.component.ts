@@ -51,7 +51,7 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
   id = uuid();
   private element: HTMLElement;
   private groups: string[] = [];
-  private color;
+  private color: d3.ScaleOrdinal<string, string, never>;
   private svg;
   private g;
   private simulation;
@@ -75,11 +75,9 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
   create(): void {
     this.options = {...this.defaultOptions, ...this.options};
     this.element = document.getElementById(this.id + '-network');
-    console.log(this.element)
     const boundingRect = this.element.getBoundingClientRect();
     this.width = boundingRect.width;
     this.height = boundingRect.height;
-    console.log(this.width, this.height)
     d3.select(this.element).selectChildren().remove();
 
     this.createCharacterLinks();
@@ -92,7 +90,10 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
 
   initializeColor(): void {
     this.groups = Array.from(new Set(this.characterLinks.map(graphEdge => graphEdge.group)));
-    this.color = d3.scaleOrdinal(this.groups, d3.schemeCategory10);
+    if (this.options.colors)
+      this.color = d3.scaleOrdinal(Object.keys(this.options.colors), Object.values(this.options.colors));
+    else
+      this.color = d3.scaleOrdinal(this.groups, d3.schemeCategory10);
   }
 
   createCharacterLinks(): void {
@@ -150,7 +151,7 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
       this.svg.append("defs").selectAll("marker")
         .data(this.groups)
         .join("marker")
-        .attr("id", d => `arrow -${d}`)
+        .attr("id", d => `arrow-${d}`)
         .attr("viewBox", "0 -5 10 10")
         .attr("refX", 20)
         .attr("refY", 0)

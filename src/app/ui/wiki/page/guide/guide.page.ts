@@ -4,23 +4,34 @@ import {GuideApi} from '../../../../../domain/service/api/guide.api';
 import {BookApi} from '../../../../../domain/service/api/book.api';
 import {D3Link, D3Node, D3Options} from '../../../infrastructure/vis/model/network';
 import {Book} from '../../../../../domain/model/book';
-import {Guide} from '../../../../../domain/model/guide';
+import {Guide, GuideRelationshipType, guideRelationshipTypes} from '../../../../../domain/model/guide';
 import {defer} from 'lodash';
 
 @Component({
   selector: 'network',
   templateUrl: './guide.page.html',
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  styles: [`
+    .square {
+      width: 20px;
+      height: 20px;
+      border: black;
+      border-radius: 6px;
+    }
+  `]
 })
 export class GuidePage extends BasePage implements OnInit {
   nodes: D3Node[] = [];
   edges: D3Link[] = [];
   books: Book[] = [];
   guides: Guide[] = [];
+  guideRelationshipTypes = guideRelationshipTypes();
   options: D3Options = {
     directed: true,
-    drag: true
+    drag: true,
+    colors: this.colors()
   }
+
   constructor(private bookApi: BookApi, private guideApi: GuideApi) {
     super();
   }
@@ -73,5 +84,14 @@ export class GuidePage extends BasePage implements OnInit {
   onGuidesChanged(guides: Guide[]) {
     this.guides = guides;
     this.regenerateNetworkParameters();
+  }
+
+  colors(): Record<GuideRelationshipType, string> {
+    return {
+      "highly_recommended": "#00A78E",
+      "recommended": "#FFC107",
+      "not_recommended": "#E53935",
+      "optional": "#9E9E9E",
+    };
   }
 }

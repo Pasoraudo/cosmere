@@ -6,7 +6,8 @@ export interface Guide extends Entity {
   description?: string;
 }
 
-export type GuideRelationshipType = "obligatory" | "highly_recommended" | "recommended" | "not_recommended" | "optional" | "";
+export type GuideRelationshipType = "highly_recommended" | "recommended" | "not_recommended" | "optional";
+export const guideRelationshipTypes = (): string[] => ["highly_recommended", "recommended", "not_recommended", "optional"];
 export interface GuideRelationship extends Entity {
   sourceId: string;
   targetId: string;

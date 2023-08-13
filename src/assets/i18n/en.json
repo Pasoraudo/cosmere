@@ -38,5 +38,10 @@
   "info.eigenvector": "Measures the relevance of a character in the stories of other characters.",
   "info.betweenness": "Measures the importance of a character as a connector between two other characters. If character A knows character B through character C, the betweenness of C increases.",
   "info.closeness": "Measures how close a character is to others. A high closeness value means they know many characters closely, while a low value indicates they are more isolated and do not personally know many characters.",
-  "info.fractal_protagonism": "Measures the degree of \"protagonism\" of a character. Combines measures of pagerank, betweenness, and degree.<br><br> -<b>Pagerank</b>: measure of the character’s agency.<br> -<b>Eigenvector</b>: measure of the character’s prestige.<br> -<b>Degree</b>: measure of the number of interactions.<br><br> The measure is based on the definition that a protagonist is a character who struggles, is compelled to act, and their choices advance the plot and determine the fate of those around them."
+  "info.fractal_protagonism": "Measures the degree of \"protagonism\" of a character. Combines measures of pagerank, betweenness, and degree.<br><br> -<b>Pagerank</b>: measure of the character’s agency.<br> -<b>Eigenvector</b>: measure of the character’s prestige.<br> -<b>Degree</b>: measure of the number of interactions.<br><br> The measure is based on the definition that a protagonist is a character who struggles, is compelled to act, and their choices advance the plot and determine the fate of those around them.",
+
+  "guide.highly_recommended": "Highly recommended",
+  "guide.recommended": "Recommended",
+  "guide.not_recommended": "Not recommended",
+  "guide.optional": "Optional"
 }
