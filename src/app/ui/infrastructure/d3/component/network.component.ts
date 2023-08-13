@@ -153,10 +153,10 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
         .join("marker")
         .attr("id", d => `arrow-${d}`)
         .attr("viewBox", "0 -5 10 10")
-        .attr("refX", 20)
+        .attr("refX", 30)
         .attr("refY", 0)
-        .attr("markerWidth", 6)
-        .attr("markerHeight", 6)
+        .attr("markerWidth", 10)
+        .attr("markerHeight", 10)
         .attr("orient", "auto")
         .append("path")
         .attr("fill", this.color)
@@ -230,7 +230,7 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
   }
 
   cluster(nodes) {
-    const strength = 0.2; // Fuerza de agrupamiento
+    const strength = 0.7; // Fuerza de agrupamiento
 
     function force(alpha) {
       for (const node of nodes) {

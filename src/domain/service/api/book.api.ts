@@ -9,7 +9,6 @@ import {Book} from '../../model/book';
 })
 export class BookApi {
 
-
   constructor(private readonly api: ApiClient, private readonly store: BookStore) {
   }
 

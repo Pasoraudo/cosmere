@@ -121,6 +121,34 @@
         "targetId": "stormlight4",
         "type": "optional",
         "observation": ""
+      },
+      {
+        "id": "2a0-8b1d-4d67-8950-9da5c019cc79",
+        "sourceId": "mistborn3",
+        "targetId": "mistborn4",
+        "type": "recommended",
+        "observation": ""
+      },
+      {
+        "id": "1a0-8b1d-4d67-8950-9da5c019cc79",
+        "sourceId": "mistborn4",
+        "targetId": "mistborn5",
+        "type": "recommended",
+        "observation": ""
+      },
+      {
+        "id": "2b1d-4d67-8950-9da5c019cc79",
+        "sourceId": "mistborn5",
+        "targetId": "mistborn6",
+        "type": "recommended",
+        "observation": ""
+      },
+      {
+        "id": "3-8b1d-4d67-8950-9da5c019cc79",
+        "sourceId": "mistborn6",
+        "targetId": "mistborn7",
+        "type": "recommended",
+        "observation": ""
       }
     ]
   }

@@ -5,7 +5,16 @@
 
   <div class="absolute bottom-0 right-0 z-50">
     <div class="z-50">
-      <app-card class="flex flex-col p-6 gap-5">
+      <app-card class="flex flex-col p-6 gap-5 rounded-none">
+        <mat-form-field floatLabel="always" class="w-full">
+          <mat-label class="text-white">{{"guide" | trans | titlecase}}</mat-label>
+          <mat-select [formControl]="guideControl">
+            <mat-option *ngFor="let guide of guides" [value]="guide.id">
+              {{ guide.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div class="text-xl">{{ 'guide.legend.title' | trans }}</div>
         <div *ngFor="let guideType of guideRelationshipTypes" class="flex flex-row">
           <div class="square mr-3" [style.background-color]="colors()[guideType]"></div>
           <div>{{ 'guide.' + guideType | trans }}</div>

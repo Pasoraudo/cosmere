@@ -6,6 +6,10 @@ import {D3Link, D3Node, D3Options} from '../../../infrastructure/vis/model/netwo
 import {Book} from '../../../../../domain/model/book';
 import {Guide, GuideRelationshipType, guideRelationshipTypes} from '../../../../../domain/model/guide';
 import {defer} from 'lodash';
+import {trans} from '../../../../../domain/service/translations/translator.service';
+import {FormControl} from '@angular/forms';
+import {SagaApi} from '../../../../../domain/service/api/saga.api';
+import {Saga} from '../../../../../domain/model/saga';
 
 @Component({
   selector: 'network',
@@ -25,14 +29,15 @@ export class GuidePage extends BasePage implements OnInit {
   edges: D3Link[] = [];
   books: Book[] = [];
   guides: Guide[] = [];
+  sagas: Saga[] = [];
   guideRelationshipTypes = guideRelationshipTypes();
   options: D3Options = {
     directed: true,
     drag: true,
     colors: this.colors()
   }
-
-  constructor(private bookApi: BookApi, private guideApi: GuideApi) {
+  guideControl: FormControl = new FormControl();
+  constructor(private bookApi: BookApi, private guideApi: GuideApi, private sagaApi: SagaApi) {
     super();
   }
 
@@ -40,13 +45,17 @@ export class GuidePage extends BasePage implements OnInit {
     this.subscribe(this.bookApi.allBooks(), books => {
       this.onBooksChanged(books);
     });
-    this.subscribe(this.guideApi.allGuides(), relationships => {
-      this.onGuidesChanged(relationships);
+    this.subscribe(this.guideApi.allGuides(), guides => {
+      this.onGuidesChanged(guides);
+    });
+    this.subscribe(this.sagaApi.allSagas(), sagas => {
+      this.onSagasChanged(sagas);
     });
 
     defer(async () => {
       await this.bookApi.fetchAllBooks();
       await this.guideApi.fetchAllGuides();
+      await this.sagaApi.fetchAllSagas();
     });
   }
 
@@ -56,14 +65,13 @@ export class GuidePage extends BasePage implements OnInit {
     if (this.books.length === 0)
       return;
 
-    console.log(this.guides)
     const guide: Guide = this.guides[0];
     this.nodes = this.books.map(book => {
       return {
         id: book.id,
-        label: book.title,
-        group: "",
-        score: 10,
+        label: trans(book.title),
+        group: this.getSagaFromBook(book),
+        score: 30,
       }
     })
     this.edges = guide.order.map(guideRelationship => {
@@ -76,14 +84,24 @@ export class GuidePage extends BasePage implements OnInit {
     });
   }
 
-  onBooksChanged(books: Book[]) {
+  onBooksChanged(books: Book[]): void {
     this.books = books;
     this.regenerateNetworkParameters();
   }
 
-  onGuidesChanged(guides: Guide[]) {
+  onGuidesChanged(guides: Guide[]): void {
     this.guides = guides;
+    this.guideControl.setValue(guides[0].id);
     this.regenerateNetworkParameters();
+  }
+
+  onSagasChanged(sagas: Saga[]): void {
+    this.sagas = sagas;
+    this.regenerateNetworkParameters();
+  }
+
+  getSagaFromBook(book: Book): string {
+    return this.sagas?.find(saga => saga.bookIds.includes(book.id))?.title ?? book.title
   }
 
   colors(): Record<GuideRelationshipType, string> {

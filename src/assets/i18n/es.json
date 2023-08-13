@@ -40,6 +40,7 @@
   "info.closeness": "Mide como de cercano es un personaje al resto. Un closeness alto significa que conoce a muchos personajes de cerca mientras que un valor bajo indica que está más aislado y no conoce muchos personajes personalmente.",
   "info.fractal_protagonism": "Mide el grado de \"protagonismo\" de un personaje. Junta la medida del pagerank, el betweenness y el grado.<br><br> <b>-Pagerank</b>: mide la capacidad de acción<br> <b>-Eigenvector</b>: mide el prestigio. <br> <b>-Grado</b>: mide el número de relaciones directas<br><br> La medida se basa en la definición de que un protagonista es un personaje que se ve obligado a actuar, sus elecciones impulsan la trama y determinan el destino de quienes les rodea.",
 
+  "guide.legend.title": "Leyenda",
   "guide.highly_recommended": "Altamente recomendado",
   "guide.recommended": "Recomendado",
   "guide.not_recommended": "No recomendado",
