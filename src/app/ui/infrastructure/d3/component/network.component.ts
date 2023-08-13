@@ -1,13 +1,33 @@
 import {AfterViewInit, Component, Input, OnChanges, SimpleChanges} from '@angular/core';
 import {BaseComponent} from '../../../shared/components/base.component';
 import * as d3 from 'd3';
-import {D3Link, D3Node} from '../../vis/model/network';
+import {D3Link, D3Node, D3Options} from '../../vis/model/network';
 import {uuid} from '../../../../../domain/function/uuid.helper';
 import {delay} from 'rxjs';
 
 @Component({
   selector: 'd3-network',
-  template: '<div class="flex flex-1" id="{{ id }}-network"></div>',
+  template: `
+    <div class="svg-container w-full">
+      <div class="h-full w-full" id="{{ id }}-network"></div>
+    </div>
+  `
+  ,
+  styles: [`
+    .svg-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .svg-container svg {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  `],
 })
 export class D3NetworkComponent extends BaseComponent implements AfterViewInit, OnChanges {
   @Input()
@@ -15,21 +35,24 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
   @Input()
   links: D3Link[] = [];
   @Input()
-  options: any;
+  options: D3Options;
   @Input()
   width: number = window.screen.availWidth;
   @Input()
   height: number = window.screen.availHeight;
   characterLinks: D3Link[] = [];
-  private defaultOptions: any = {
+  private defaultOptions: D3Options = {
     zoom: true,
-    edgeRadius: 0
+    edgeRadius: 0,
+    directed: false,
+    drag: false,
+    curveEdges: false
   };
 
   id = uuid();
   private element: HTMLElement;
   private groups: string[] = [];
-  private color;
+  private color: d3.ScaleOrdinal<string, string, never>;
   private svg;
   private g;
   private simulation;
@@ -40,7 +63,7 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
     super();
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
+  ngOnChanges(): void {
     if (this.nodes.length > 0 && this.links.length > 0)
       this.create();
   }
@@ -53,6 +76,9 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
   create(): void {
     this.options = {...this.defaultOptions, ...this.options};
     this.element = document.getElementById(this.id + '-network');
+    const boundingRect = this.element.getBoundingClientRect();
+    this.width = boundingRect.width;
+    this.height = boundingRect.height;
     d3.select(this.element).selectChildren().remove();
 
     this.createCharacterLinks();
@@ -65,7 +91,10 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
 
   initializeColor(): void {
     this.groups = Array.from(new Set(this.characterLinks.map(graphEdge => graphEdge.group)));
-    this.color = d3.scaleOrdinal(this.groups, d3.schemeCategory10);
+    if (this.options.colors)
+      this.color = d3.scaleOrdinal(Object.keys(this.options.colors), Object.values(this.options.colors));
+    else
+      this.color = d3.scaleOrdinal(this.groups, d3.schemeCategory10);
   }
 
   createCharacterLinks(): void {
@@ -82,12 +111,15 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
       .force("radius", d3.forceCollide(d => d.score + 20))
       .force('cluster', this.cluster(this.nodes))
       .on("tick", () => {
-        this.link.attr("d", d => {
-          return `
+        if (this.options.curveEdges)
+          this.link.attr("d", this.linkArc);
+        else
+          this.link.attr("d", d => {
+            return `
             M${d.source.x},${d.source.y}
-            A${this.options.edgeRadius},${this.options.edgeRadius} 0 0,1 ${d.target.x},${d.target.y}
-          `;
-        });
+            A${this.options.edgeRadius},${this.options.edgeRadius} 0 0, 1 ${d.target.x},${d.target.y}
+            `;
+          });
         this.node.attr("transform", d => `translate(${d.x}, ${d.y})`);
         delay(10000);
       });
@@ -119,19 +151,20 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
     this.svg.attr("width", this.width)
       .attr("height", this.height);
 
-    this.svg.append("defs").selectAll("marker")
-      .data(this.groups)
-      .join("marker")
-      .attr("id", d => `arrow-${d}`)
-      .attr("viewBox", "0 -5 10 10")
-      .attr("refX", 15)
-      .attr("refY", -0.5)
-      .attr("markerWidth", 6)
-      .attr("markerHeight", 6)
-      .attr("orient", "auto")
-      .append("path")
-      .attr("fill", this.color)
-      .attr("d", "M0,-5L10,0L0,5");
+    if (this.options.directed)
+      this.svg.append("defs").selectAll("marker")
+        .data(this.groups)
+        .join("marker")
+        .attr("id", d => `arrow-${d}`)
+        .attr("viewBox", "0 -5 10 10")
+        .attr("refX", 30)
+        .attr("refY", 0)
+        .attr("markerWidth", 10)
+        .attr("markerHeight", 10)
+        .attr("orient", "auto")
+        .append("path")
+        .attr("fill", this.color)
+        .attr("d", "M0,-5L10,0L0,5");
   }
 
   createLink(): void {
@@ -141,7 +174,9 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
       .selectAll("path")
       .data(this.characterLinks)
       .join("path")
-      .attr("stroke", d => this.color(d.group));
+      .attr("stroke", d => this.color(d.group))
+      .attr("marker-end", d => `url(${new URL(`#arrow-${d.group}`, location.toString())})`);
+
   }
 
   createNode() {
@@ -151,8 +186,9 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
       .attr("stroke-linejoin", "round")
       .selectAll("g")
       .data(this.nodes)
-      .join("g")
-      //.call(this.drag(this.simulation));
+      .join("g");
+    if (this.options.drag)
+      this.node.call(this.drag(this.simulation));
 
     this.node
       .append("circle")
@@ -169,11 +205,11 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
       .style("dominant-baseline", "central");
   }
 
-  private getId(d) {
+  getId(d) {
     return d.id;
   }
 
-  private drag(simulation) {
+  drag(simulation) {
     function dragstarted(event, d) {
       if (!event.active) simulation.alphaTarget(0.3).restart();
       d.fx = d.x;
@@ -197,8 +233,8 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
       .on("end", dragended);
   }
 
-  private cluster(nodes) {
-    const strength = 0.2; // Fuerza de agrupamiento
+  cluster(nodes) {
+    const strength = 0.7; // Fuerza de agrupamiento
 
     function force(alpha) {
       for (const node of nodes) {
@@ -211,6 +247,14 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
     }
 
     return force;
+  }
+
+  linkArc(d) {
+    const r = Math.hypot(d.target.x - d.source.x, d.target.y - d.source.y);
+    return `
+    M${d.source.x},${d.source.y}
+    A${r},${r} 0 0,1 ${d.target.x},${d.target.y}
+  `;
   }
 }
 

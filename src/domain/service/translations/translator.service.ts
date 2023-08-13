@@ -20,7 +20,6 @@ export class Translator {
     if (!lang) {
       lang = this.translator.getDefaultLang();
     }
-
     return this.translator.translate(key, params, lang);
   }
 }

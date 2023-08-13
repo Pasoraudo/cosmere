@@ -1,0 +1,316 @@
+[
+  {
+    "id": "0",
+    "name": "Canon guide",
+    "order": [
+      {
+        "id": "b98033ab-405b-4b99-bc86-79948e3e5211",
+        "sourceId": "elantris",
+        "targetId": "hope_of_elenatris",
+        "type": "optional",
+        "observation": ""
+      },
+      {
+        "id": "0ec68c15-4c81-42f5-88e0-7ebf16527c8c",
+        "sourceId": "elantris",
+        "targetId": "mistborn1",
+        "type": "recommended",
+        "observation": ""
+      },
+      {
+        "id": "a16a9069-4c0b-43c7-8742-199f72e101e3",
+        "sourceId": "mistborn1",
+        "targetId": "mistborn2",
+        "type": "recommended",
+        "observation": ""
+      },
+      {
+        "id": "f52f33bf-aa34-41ab-b21d-35fabb6a8a8d",
+        "sourceId": "mistborn1",
+        "targetId": "eleventh_metal",
+        "type": "optional",
+        "observation": ""
+      },
+      {
+        "id": "68d2d1a0-8b1d-4d67-8950-9da5c019cc79",
+        "sourceId": "mistborn2",
+        "targetId": "mistborn3",
+        "type": "recommended",
+        "observation": ""
+      },
+      {
+        "id": "acdd7da3-1e8c-4fa7-9e2b-1ecf1e4d3604",
+        "sourceId": "mistborn3",
+        "targetId": "warbreaker",
+        "type": "recommended",
+        "observation": ""
+      },
+      {
+        "id": "76f35888-8be1-4eab-bdbe-ecc59f3e51f6",
+        "sourceId": "warbreaker",
+        "targetId": "stormlight1",
+        "type": "recommended",
+        "observation": ""
+      },
+      {
+        "id": "8cc915ce-1e2e-42f6-80a3-81e60b20de68",
+        "sourceId": "stormlight1",
+        "targetId": "stormlight2",
+        "type": "recommended",
+        "observation": ""
+      },
+      {
+        "id": "36db3097-31a0-43fb-a256-1d84bc43f8d0",
+        "sourceId": "stormlight2",
+        "targetId": "stormlight3",
+        "type": "recommended",
+        "observation": ""
+      },
+      {
+        "id": "68da120d-6b44-4874-9d79-823ad578fe09",
+        "sourceId": "stormlight3",
+        "targetId": "stormlight4",
+        "type": "recommended",
+        "observation": ""
+      },
+      {
+        "id": "f5e9b8b2-860c-4d0b-8e4d-8e2495d9a006",
+        "sourceId": "mistborn4",
+        "targetId": "allomancer_jak",
+        "type": "optional",
+        "observation": ""
+      },
+      {
+        "id": "8a36d66d-5db1-442b-87df-b0723e8e4e0e",
+        "sourceId": "mistborn3",
+        "targetId": "secret_history",
+        "type": "optional",
+        "observation": ""
+      },
+      {
+        "id": "4fb15579-739c-4f39-81d5-6a2da576961c",
+        "sourceId": "mistborn6",
+        "targetId": "secret_history",
+        "type": "optional",
+        "observation": ""
+      },
+      {
+        "id": "f56158f1-142d-4f0d-810c-2c20bb3c9377",
+        "sourceId": "stormlight2",
+        "targetId": "edgedancer",
+        "type": "optional",
+        "observation": ""
+      },
+      {
+        "id": "3816c070-6ca7-4865-89bb-1e8a2998b308",
+        "sourceId": "edgedancer",
+        "targetId": "stormlight3",
+        "type": "optional",
+        "observation": ""
+      },
+      {
+        "id": "db65d049-5937-416c-bb88-8e8419a82721",
+        "sourceId": "stormlight3",
+        "targetId": "dawnshard",
+        "type": "optional",
+        "observation": ""
+      },
+      {
+        "id": "dd4c4cf1-6faa-42fb-9e26-965dade2ad11",
+        "sourceId": "dawnshard",
+        "targetId": "stormlight4",
+        "type": "optional",
+        "observation": ""
+      },
+      {
+        "id": "2a0-8b1d-4d67-8950-9da5c019cc79",
+        "sourceId": "mistborn3",
+        "targetId": "mistborn4",
+        "type": "recommended",
+        "observation": ""
+      },
+      {
+        "id": "1a0-8b1d-4d67-8950-9da5c019cc79",
+        "sourceId": "mistborn4",
+        "targetId": "mistborn5",
+        "type": "recommended",
+        "observation": ""
+      },
+      {
+        "id": "2b1d-4d67-8950-9da5c019cc79",
+        "sourceId": "mistborn5",
+        "targetId": "mistborn6",
+        "type": "recommended",
+        "observation": ""
+      },
+      {
+        "id": "3-8b1d-4d67-8950-9da5c019cc79",
+        "sourceId": "mistborn6",
+        "targetId": "mistborn7",
+        "type": "recommended",
+        "observation": ""
+      }
+    ]
+  },
+  {
+    "id": "1",
+    "name": "Mistborn start (recommended)",
+    "order": [
+      {
+        "id": "e84c3fa5-9f07-4b2c-85c1-7e3e16be6c71",
+        "sourceId": "mistborn1",
+        "targetId": "mistborn2",
+        "type": "recommended",
+        "observation": ""
+      },
+      {
+        "id": "1a92f7f4-6ebf-4c23-8b82-b4f130637f2e",
+        "sourceId": "mistborn2",
+        "targetId": "mistborn3",
+        "type": "recommended",
+        "observation": ""
+      },
+      {
+        "id": "42a7a3ea-81a3-4bf7-a063-01dbcc3614ce",
+        "sourceId": "mistborn3",
+        "targetId": "warbreaker",
+        "type": "recommended",
+        "observation": ""
+      },
+      {
+        "id": "42a7a3ea-81a3-4bf7-a063-01dbcc3614ce",
+        "sourceId": "mistborn3",
+        "targetId": "stormlight1",
+        "type": "not_recommended",
+        "observation": ""
+      },
+      {
+        "id": "42a7a3ea-81a3-4bf7-a063-01dbcc3614ce",
+        "sourceId": "mistborn3",
+        "targetId": "eleventh_metal",
+        "type": "optional",
+        "observation": ""
+      },
+      {
+        "id": "618327ed-1b05-4f28-9c7b-59a5e8c5c0ea",
+        "sourceId": "warbreaker",
+        "targetId": "stormlight1",
+        "type": "recommended",
+        "observation": ""
+      },
+      {
+        "id": "56f866ef-8674-4c7a-9a6f-305f1f4e9e3b",
+        "sourceId": "stormlight1",
+        "targetId": "stormlight2",
+        "type": "recommended",
+        "observation": ""
+      },
+      {
+        "id": "4d49b198-54fb-40f7-b15b-c6743f3f3a9a",
+        "sourceId": "stormlight2",
+        "targetId": "edgedancer",
+        "type": "highly_recommended",
+        "observation": ""
+      },
+      {
+        "id": "b898f8a3-bb64-4e4a-8ef9-1d6d2f733c3e",
+        "sourceId": "edgedancer",
+        "targetId": "stormlight3",
+        "type": "highly_recommended",
+        "observation": ""
+      },
+      {
+        "id": "7a87e4a4-9c3b-40ab-b7d1-0c6a51fe4c26",
+        "sourceId": "stormlight2",
+        "targetId": "stormlight3",
+        "type": "not_recommended",
+        "observation": ""
+      },
+      {
+        "id": "4d49b198-54fb-40f7-b15b-c6743f3f3a9a",
+        "sourceId": "stormlight3",
+        "targetId": "dawnshard",
+        "type": "highly_recommended",
+        "observation": ""
+      },
+      {
+        "id": "b898f8a3-bb64-4e4a-8ef9-1d6d2f733c3e",
+        "sourceId": "dawnshard",
+        "targetId": "stormlight4",
+        "type": "recommended",
+        "observation": ""
+      },
+      {
+        "id": "b898f8a3-bb64-4e4a-8ef9-1d6d2f733c3e",
+        "sourceId": "dawnshard",
+        "targetId": "elantris",
+        "type": "highly_recommended",
+        "observation": ""
+      },
+      {
+        "id": "b893131bb64-4e4a-8ef9-1d6d2f733c3e",
+        "sourceId": "elantris",
+        "targetId": "hope_of_elenatris",
+        "type": "optional",
+        "observation": ""
+      },
+      {
+        "id": "39f31234a9-9471f1b2864f",
+        "sourceId": "stormlight4",
+        "targetId": "mistborn4",
+        "type": "recommended",
+        "observation": ""
+      },
+      {
+        "id": "332146a5-94a9-9471f1b2864f",
+        "sourceId": "mistborn4",
+        "targetId": "mistborn5",
+        "type": "recommended",
+        "observation": ""
+      },
+      {
+        "id": "314d3-33d0-46a5-94a9-9471f1b2864f",
+        "sourceId": "mistborn5",
+        "targetId": "mistborn6",
+        "type": "recommended",
+        "observation": ""
+      },
+      {
+        "id": "314d3-33d0-46a5-94a9-9471f1b2864f",
+        "sourceId": "mistborn6",
+        "targetId": "secret_history",
+        "type": "highly_recommended",
+        "observation": ""
+      },
+      {
+        "id": "314d3-33d0-46a5-94a9-9471f1b2864f",
+        "sourceId": "secret_history",
+        "targetId": "mistborn7",
+        "type": "highly_recommended",
+        "observation": ""
+      },
+      {
+        "id": "314d3-33d0-46a5-94a9-9471f1b2864f",
+        "sourceId": "mistborn6",
+        "targetId": "mistborn7",
+        "type": "not_recommended",
+        "observation": ""
+      },
+      {
+        "id": "314d3-33d0-46a5-94a9-9471f1b2864f",
+        "sourceId": "stormlight1",
+        "targetId": "ocaso",
+        "type": "recommended",
+        "observation": ""
+      },
+      {
+        "id": "314d3-33d0-46a5-94a9-9471f1b2864f",
+        "sourceId": "ocaso",
+        "targetId": "stormlight2",
+        "type": "recommended",
+        "observation": ""
+      }
+    ]
+  }
+]
+

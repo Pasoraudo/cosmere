@@ -1,6 +1,7 @@
 import {D3Link, D3Node, D3NodeMaxScore, D3NodeMinScore} from '../../app/ui/infrastructure/vis/model/network';
 import {Relationship} from '../model/relationship';
 import {Character} from '../model/character';
+import {Entity} from '../model/shared.model';
 
 export const charactersToD3Nodes = (characters: Character[], relationships: Relationship[]): D3Node[] => {
   if (characters.length === 0)
@@ -70,4 +71,14 @@ export const characterScoresFromRelationships = (characters: Character[], relati
   }
 
   return normalizedScore;
+}
+
+
+export const entityToD3Link = (entity: Entity, source: string, target: string, group: string): D3Link => {
+  return {
+    source: entity[source],
+    target: entity[target],
+    weight: 1,
+    group: entity[group],
+  }
 }

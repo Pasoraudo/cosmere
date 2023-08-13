@@ -28,7 +28,6 @@ export class HomePage extends BasePage implements OnInit {
   networkOptions: any = {
     zoom: false
   }
-
   constructor(private characterApi: CharacterApi, private relationshipApi: RelationshipApi, private authApi: AuthApi) {
     super();
   }
