@@ -34,7 +34,8 @@ export class GuidePage extends BasePage implements OnInit {
   options: D3Options = {
     directed: true,
     drag: true,
-    colors: this.colors()
+    colors: this.colors(),
+    curveEdges: true
   }
   guideControl: FormControl = new FormControl();
   constructor(private bookApi: BookApi, private guideApi: GuideApi, private sagaApi: SagaApi) {
@@ -51,6 +52,7 @@ export class GuidePage extends BasePage implements OnInit {
     this.subscribe(this.sagaApi.allSagas(), sagas => {
       this.onSagasChanged(sagas);
     });
+    this.subscribe(this.guideControl.valueChanges, guideId => this.regenerateNetworkParameters());
 
     defer(async () => {
       await this.bookApi.fetchAllBooks();
@@ -64,8 +66,8 @@ export class GuidePage extends BasePage implements OnInit {
       return;
     if (this.books.length === 0)
       return;
-
-    const guide: Guide = this.guides[0];
+    console.log(this.guideControl.value)
+    const guide: Guide = this.guides.find(guide => guide.id === this.guideControl.value);
     this.nodes = this.books.map(book => {
       return {
         id: book.id,
@@ -91,7 +93,7 @@ export class GuidePage extends BasePage implements OnInit {
 
   onGuidesChanged(guides: Guide[]): void {
     this.guides = guides;
-    this.guideControl.setValue(guides[0].id);
+    this.guideControl.setValue(guides[1].id);
     this.regenerateNetworkParameters();
   }
 

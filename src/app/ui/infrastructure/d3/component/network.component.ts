@@ -45,7 +45,8 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
     zoom: true,
     edgeRadius: 0,
     directed: false,
-    drag: false
+    drag: false,
+    curveEdges: false
   };
 
   id = uuid();
@@ -110,12 +111,15 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
       .force("radius", d3.forceCollide(d => d.score + 20))
       .force('cluster', this.cluster(this.nodes))
       .on("tick", () => {
-        this.link.attr("d", d => {
-          return `
-        M${d.source.x},${d.source.y}
-        A${this.options.edgeRadius},${this.options.edgeRadius} 0 0, 1 ${d.target.x},${d.target.y}
-        `;
-        });
+        if (this.options.curveEdges)
+          this.link.attr("d", this.linkArc);
+        else
+          this.link.attr("d", d => {
+            return `
+            M${d.source.x},${d.source.y}
+            A${this.options.edgeRadius},${this.options.edgeRadius} 0 0, 1 ${d.target.x},${d.target.y}
+            `;
+          });
         this.node.attr("transform", d => `translate(${d.x}, ${d.y})`);
         delay(10000);
       });
@@ -243,6 +247,14 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
     }
 
     return force;
+  }
+
+  linkArc(d) {
+    const r = Math.hypot(d.target.x - d.source.x, d.target.y - d.source.y);
+    return `
+    M${d.source.x},${d.source.y}
+    A${r},${r} 0 0,1 ${d.target.x},${d.target.y}
+  `;
   }
 }
 

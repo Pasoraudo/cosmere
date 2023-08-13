@@ -37,4 +37,5 @@ export interface D3Options {
   directed?: boolean;
   drag?: boolean;
   colors?: Record<string, string>;
+  curveEdges?: boolean;
 }
