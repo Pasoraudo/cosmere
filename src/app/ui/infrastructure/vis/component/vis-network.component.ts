@@ -1,14 +1,4 @@
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  Input,
-  OnChanges,
-  OnInit,
-  SimpleChanges,
-  ViewChild,
-  ViewEncapsulation
-} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild, ViewEncapsulation} from '@angular/core';
 import {BaseComponent} from '../../../shared/components/base.component';
 import {DataSet, Network} from 'vis';
 import {GraphEdge, GraphNode} from '../model/network';
@@ -19,20 +9,20 @@ import {GraphEdge, GraphNode} from '../model/network';
   encapsulation: ViewEncapsulation.None
 })
 
-export class VisNetworkComponent extends BaseComponent implements OnInit, OnChanges, AfterViewInit {
+export class VisNetworkComponent extends BaseComponent implements OnChanges, AfterViewInit {
   @ViewChild('network') el: ElementRef;
   @Input()
   nodes: GraphNode[];
   @Input()
   edges: GraphEdge[];
   @Input()
-  options= {
+  options = {
     locale: 'es',
     physics: {
       enabled: true,
     },
     interaction: {
-      dragNodes: false,
+      dragNodes: true,
     },
     layout: {
       randomSeed: 5683756,
@@ -49,6 +39,9 @@ export class VisNetworkComponent extends BaseComponent implements OnInit, OnChan
           drawThreshold: 5
         },
       },
+      arrows: {
+        to: {enabled: true, scaleFactor: 1, type: "arrow"}
+      }
     }
   };
 
@@ -58,23 +51,32 @@ export class VisNetworkComponent extends BaseComponent implements OnInit, OnChan
     super();
   }
 
-  ngOnInit(): void {
-  }
-
-  ngOnChanges(changes: SimpleChanges) {
+  ngOnChanges() {
     this.setGraphData();
   }
 
   ngAfterViewInit() {
-    const nodes = new DataSet<any>(this.nodes);
-    const edges = new DataSet<any>(this.edges);
-    this.networkInstance = new Network(this.el.nativeElement, {nodes, edges}, {});
-    this.networkInstance.setOptions(this.options);
+    this.setGraphData();
   }
 
   setGraphData() {
+    if (!this.el?.nativeElement)
+      return;
     const nodes = new DataSet<any>(this.nodes);
-    const edges = new DataSet<any>(this.edges);
+    const edges = new DataSet<any>(this.edges.map(edge => {
+      return {
+        from: edge.source,
+        to: edge.target
+      }
+    }));
+    console.log(this.edges)
+    if (this.networkInstance)
+      this.networkInstance.destroy();
+
+
+    this.networkInstance = new Network(this.el.nativeElement, {nodes, edges}, {});
     this.networkInstance.setData({nodes: nodes, edges: edges});
+    this.networkInstance.setOptions(this.options);
+
   }
 }

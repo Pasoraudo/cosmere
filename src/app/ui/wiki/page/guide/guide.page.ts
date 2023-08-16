@@ -2,7 +2,7 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {BasePage} from '../../../shared/page/base.page';
 import {GuideApi} from '../../../../../domain/service/api/guide.api';
 import {BookApi} from '../../../../../domain/service/api/book.api';
-import {D3Link, D3Node, D3Options} from '../../../infrastructure/vis/model/network';
+import {D3Options, GraphEdge, GraphNode} from '../../../infrastructure/vis/model/network';
 import {Book} from '../../../../../domain/model/book';
 import {Guide, GuideRelationshipType, guideRelationshipTypes} from '../../../../../domain/model/guide';
 import {defer} from 'lodash';
@@ -25,8 +25,8 @@ import {Saga} from '../../../../../domain/model/saga';
   `]
 })
 export class GuidePage extends BasePage implements OnInit {
-  nodes: D3Node[] = [];
-  edges: D3Link[] = [];
+  nodes: GraphNode[] = [];
+  edges: GraphEdge[] = [];
   books: Book[] = [];
   guides: Guide[] = [];
   sagas: Saga[] = [];
@@ -38,6 +38,7 @@ export class GuidePage extends BasePage implements OnInit {
     curveEdges: true
   }
   guideControl: FormControl = new FormControl();
+
   constructor(private bookApi: BookApi, private guideApi: GuideApi, private sagaApi: SagaApi) {
     super();
   }
@@ -66,8 +67,8 @@ export class GuidePage extends BasePage implements OnInit {
       return;
     if (this.books.length === 0)
       return;
-    console.log(this.guideControl.value)
     const guide: Guide = this.guides.find(guide => guide.id === this.guideControl.value);
+
     this.nodes = this.books.map(book => {
       return {
         id: book.id,
@@ -81,7 +82,6 @@ export class GuidePage extends BasePage implements OnInit {
         source: guideRelationship.sourceId,
         target: guideRelationship.targetId,
         weight: 1,
-        group: guideRelationship.type,
       }
     });
   }
