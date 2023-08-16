@@ -1,5 +1,5 @@
-import _ from 'lodash';
 import {sortMap} from '../../../../../domain/function/array.helper';
+import * as _ from 'lodash';
 
 export interface BarChartItem {
   label: string;

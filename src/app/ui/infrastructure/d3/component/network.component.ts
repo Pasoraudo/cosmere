@@ -1,7 +1,7 @@
 import {AfterViewInit, Component, Input, OnChanges, SimpleChanges} from '@angular/core';
 import {BaseComponent} from '../../../shared/components/base.component';
 import * as d3 from 'd3';
-import {D3Link, D3Node, D3Options} from '../../vis/model/network';
+import {D3Link, D3Node, D3Options, GraphEdge, GraphNode} from '../../vis/model/network';
 import {uuid} from '../../../../../domain/function/uuid.helper';
 import {delay} from 'rxjs';
 
@@ -31,16 +31,16 @@ import {delay} from 'rxjs';
 })
 export class D3NetworkComponent extends BaseComponent implements AfterViewInit, OnChanges {
   @Input()
-  nodes: D3Node[] = []
+  nodes: GraphNode[] = []
   @Input()
-  links: D3Link[] = [];
+  edges: GraphEdge[] = [];
   @Input()
   options: D3Options;
   @Input()
   width: number = window.screen.availWidth;
   @Input()
   height: number = window.screen.availHeight;
-  characterLinks: D3Link[] = [];
+  characterLinks: GraphEdge[] = [];
   private defaultOptions: D3Options = {
     zoom: true,
     edgeRadius: 0,
@@ -64,12 +64,12 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
   }
 
   ngOnChanges(): void {
-    if (this.nodes.length > 0 && this.links.length > 0)
+    if (this.nodes.length > 0 && this.edges.length > 0)
       this.create();
   }
 
   ngAfterViewInit(): void {
-    if (this.nodes.length > 0 && this.links.length > 0)
+    if (this.nodes.length > 0 && this.edges.length > 0)
       this.create();
   }
 
@@ -99,7 +99,7 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
 
   createCharacterLinks(): void {
     const characters = this.nodes.map(c => c.id);
-    this.characterLinks = this.links.filter(link => characters.includes(link.source) && characters.includes(link.target))
+    this.characterLinks = this.edges.filter(link => characters.includes(link.source) && characters.includes(link.target))
   }
 
   createSimulation(): void {
@@ -158,7 +158,7 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
         .attr("id", d => `arrow-${d}`)
         .attr("viewBox", "0 -5 10 10")
         .attr("refX", 30)
-        .attr("refY", 0)
+        .attr("refY", -5)
         .attr("markerWidth", 10)
         .attr("markerHeight", 10)
         .attr("orient", "auto")
@@ -176,7 +176,6 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
       .join("path")
       .attr("stroke", d => this.color(d.group))
       .attr("marker-end", d => `url(${new URL(`#arrow-${d.group}`, location.toString())})`);
-
   }
 
   createNode() {

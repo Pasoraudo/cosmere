@@ -11,6 +11,7 @@ import {MatOptionModule} from '@angular/material/core';
 import {MatSelectModule} from '@angular/material/select';
 import {PipeModule} from '../../../shared/pipe/pipe.module';
 import {ReactiveFormsModule} from '@angular/forms';
+import {VisModule} from '../../../infrastructure/vis/vis.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {ReactiveFormsModule} from '@angular/forms';
         MatOptionModule,
         MatSelectModule,
         PipeModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        VisModule
     ]
 })
 export class GuideModule {

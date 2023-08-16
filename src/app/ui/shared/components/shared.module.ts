@@ -17,6 +17,7 @@ import {HorizontalNavigationBasicItemComponent} from '../../../layout/navigation
 import {RouterModule} from '@angular/router';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {FormModule} from './form/form.module';
+import {SigmaNetworkComponent} from '../../infrastructure/sigma/sigma-network.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {FormModule} from './form/form.module';
     CardComponent,
     LoadingBarComponent,
     HorizontalNavigationComponent,
-    HorizontalNavigationBasicItemComponent
+    HorizontalNavigationBasicItemComponent,
+    SigmaNetworkComponent
   ],
   imports: [
     CommonModule,
@@ -48,7 +50,8 @@ import {FormModule} from './form/form.module';
     CardComponent,
     LoadingBarComponent,
     HorizontalNavigationComponent,
-    FormModule
+    FormModule,
+    SigmaNetworkComponent
   ]
 })
 export class SharedModule {
