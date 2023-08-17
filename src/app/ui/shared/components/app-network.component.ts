@@ -73,11 +73,11 @@ export class AppNetworkComponent extends BaseComponent implements OnChanges, Aft
     let nodeColors = d3.scaleOrdinal(nodeGroups, d3.schemeCategory10.slice(0, nodeGroups.length));
     if (this.options?.nodeColors) {
       Object.entries(this.options.nodeColors).forEach(([key, value]) => {
-        const index = this.colors.node.domain().findIndex(group => group === key);
+        const index = nodeColors.domain().findIndex(group => group === key);
         if (index < 0)
           return;
 
-        const range = this.colors.node.range();
+        const range = nodeColors.range();
         range[index] = this.options.nodeColors[key];
         nodeColors.range(range);
       });
@@ -89,8 +89,8 @@ export class AppNetworkComponent extends BaseComponent implements OnChanges, Aft
       edgeColors = d3.scaleOrdinal(Object.keys(this.options.edgeColors), Object.values(this.options.edgeColors));
 
     this.colors = {
-      node: nodeColors,
-      edge: edgeColors
+      'node': nodeColors,
+      'edge': edgeColors
     };
   }
 }
