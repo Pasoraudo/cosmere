@@ -1,9 +1,9 @@
-import {D3Link, D3Node, D3NodeMaxScore, D3NodeMinScore} from '../../app/ui/infrastructure/vis/model/network';
+import {D3NodeMaxScore, D3NodeMinScore, GraphEdge, GraphNode} from '../../app/ui/infrastructure/vis/model/network';
 import {Relationship} from '../model/relationship';
 import {Character} from '../model/character';
 import {Entity} from '../model/shared.model';
 
-export const charactersToD3Nodes = (characters: Character[], relationships: Relationship[]): D3Node[] => {
+export const charactersToD3Nodes = (characters: Character[], relationships: Relationship[]): GraphNode[] => {
   if (characters.length === 0)
     return [];
   if (relationships.length === 0)
@@ -18,7 +18,7 @@ export const charactersToD3Nodes = (characters: Character[], relationships: Rela
   }));
 };
 
-export const relationshipsToLinks = (relationships: Relationship[]): D3Link[] => {
+export const relationshipsToLinks = (relationships: Relationship[]): GraphEdge[] => {
   const groupedEdges: Record<string, number> = {};
   for (const relationship of relationships) {
     const key = `${relationship.characterId1}-${relationship.characterId2}`;
@@ -28,7 +28,7 @@ export const relationshipsToLinks = (relationships: Relationship[]): D3Link[] =>
       groupedEdges[key] = 1;
     }
   }
-  let resultEdges: D3Link[] = [];
+  let resultEdges: GraphEdge[] = [];
 
   for (const key in groupedEdges) {
     const [source, target] = key.split('-');
@@ -74,7 +74,7 @@ export const characterScoresFromRelationships = (characters: Character[], relati
 }
 
 
-export const entityToD3Link = (entity: Entity, source: string, target: string, group: string): D3Link => {
+export const entityToD3Link = (entity: Entity, source: string, target: string, group: string): GraphEdge => {
   return {
     source: entity[source],
     target: entity[target],

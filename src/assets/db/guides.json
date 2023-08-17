@@ -157,6 +157,13 @@
     "name": "Mistborn start (recommended)",
     "order": [
       {
+        "id": "08493294264872482",
+        "sourceId": "start",
+        "targetId": "mistborn1",
+        "type": "start",
+        "observation": ""
+      },
+      {
         "id": "e84c3fa5-9f07-4b2c-85c1-7e3e16be6c71",
         "sourceId": "mistborn1",
         "targetId": "mistborn2",

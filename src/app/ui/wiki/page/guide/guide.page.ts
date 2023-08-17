@@ -2,7 +2,7 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {BasePage} from '../../../shared/page/base.page';
 import {GuideApi} from '../../../../../domain/service/api/guide.api';
 import {BookApi} from '../../../../../domain/service/api/book.api';
-import {D3Options, GraphEdge, GraphNode} from '../../../infrastructure/vis/model/network';
+import {GraphOptions, GraphEdge, GraphNode} from '../../../infrastructure/vis/model/network';
 import {Book} from '../../../../../domain/model/book';
 import {Guide, GuideRelationshipType, guideRelationshipTypes} from '../../../../../domain/model/guide';
 import {defer} from 'lodash';
@@ -31,11 +31,14 @@ export class GuidePage extends BasePage implements OnInit {
   guides: Guide[] = [];
   sagas: Saga[] = [];
   guideRelationshipTypes = guideRelationshipTypes();
-  options: D3Options = {
+  options: GraphOptions = {
     directed: true,
     drag: true,
-    colors: this.colors(),
-    curveEdges: true
+    nodeColors: this.nodeColors(),
+    edgeColors: this.edgeColors(),
+    curveEdges: true,
+    hover: false,
+    edgeWidth: 3,
   }
   guideControl: FormControl = new FormControl();
 
@@ -74,14 +77,22 @@ export class GuidePage extends BasePage implements OnInit {
         id: book.id,
         label: trans(book.title),
         group: this.getSagaFromBook(book),
-        score: 30,
+        score: 20,
       }
-    })
+    });
+    if (guide.order.find(edge => edge.type === 'start'))
+      this.nodes.push({
+        id: 'start',
+        label: trans('Start'),
+        group: 'start',
+        score: 20,
+      });
     this.edges = guide.order.map(guideRelationship => {
       return {
         source: guideRelationship.sourceId,
         target: guideRelationship.targetId,
         weight: 1,
+        group: guideRelationship.type
       }
     });
   }
@@ -106,12 +117,19 @@ export class GuidePage extends BasePage implements OnInit {
     return this.sagas?.find(saga => saga.bookIds.includes(book.id))?.title ?? book.title
   }
 
-  colors(): Record<GuideRelationshipType, string> {
+  edgeColors(): Record<GuideRelationshipType, string> {
     return {
       "highly_recommended": "#00A78E",
       "recommended": "#FFC107",
       "not_recommended": "#E53935",
       "optional": "#9E9E9E",
+      "start": "#FFFFFF"
+    };
+  }
+
+  nodeColors(): Record<string, string> {
+    return {
+      "start": "#FFFFFF"
     };
   }
 }

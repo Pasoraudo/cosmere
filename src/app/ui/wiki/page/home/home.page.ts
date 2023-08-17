@@ -1,6 +1,5 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {BasePage} from '../../../shared/page/base.page';
-import {D3Link, D3Node} from '../../../infrastructure/vis/model/network';
 import {
   characterIdsFromRelationships,
   charactersToD3Nodes,
@@ -14,6 +13,7 @@ import {defer} from 'lodash';
 import {UndirectedGraph} from 'graphology';
 import louvain from 'graphology-communities-louvain';
 import {AuthApi} from '../../../../../domain/service/api/auth.api';
+import {GraphEdge, GraphNode} from '../../../infrastructure/vis/model/network';
 
 @Component({
   selector: 'home',
@@ -21,12 +21,13 @@ import {AuthApi} from '../../../../../domain/service/api/auth.api';
   encapsulation: ViewEncapsulation.None
 })
 export class HomePage extends BasePage implements OnInit {
-  nodes: D3Node[] = [];
-  edges: D3Link[] = [];
+  nodes: GraphNode[] = [];
+  edges: GraphEdge[] = [];
   characters: Character[] = [];
   relationships: Relationship[] = [];
   networkOptions: any = {
-    zoom: false
+    zoom: false,
+    hover: false
   }
   constructor(private characterApi: CharacterApi, private relationshipApi: RelationshipApi, private authApi: AuthApi) {
     super();
@@ -44,9 +45,8 @@ export class HomePage extends BasePage implements OnInit {
     });
   }
 
-  generateNetworkParameters() {
+  generateNetworkParameters(): void {
     this.edges = relationshipsToLinks(this.relationships);
-
     const graph = new UndirectedGraph();
     const characterIds: string[] = characterIdsFromRelationships(this.relationships);
     characterIds.forEach(characterId => graph.addNode(characterId));
