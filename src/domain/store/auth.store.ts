@@ -24,11 +24,9 @@ export class AuthStore extends ComponentStore<AuthState> {
 
   constructor(private localStorage: Localstorage) {
     super(emptyState());
-    console.log('this.syncMe()',this.syncMe());
   }
 
   saveMe(auth: Auth): void {
-    console.log(auth);
     this.patchState(state => ({
       me: auth
     }));

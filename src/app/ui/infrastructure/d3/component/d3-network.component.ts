@@ -1,9 +1,9 @@
-import {AfterViewInit, Component, Input, OnChanges, SimpleChanges} from '@angular/core';
+import {AfterViewInit, Component, Input, OnChanges} from '@angular/core';
 import {BaseComponent} from '../../../shared/components/base.component';
 import * as d3 from 'd3';
-import {D3Link, D3Node, D3Options, GraphEdge, GraphNode} from '../../vis/model/network';
 import {uuid} from '../../../../../domain/function/uuid.helper';
 import {delay} from 'rxjs';
+import {GraphEdge, GraphNode, GraphOptions} from '../../vis/model/network';
 
 @Component({
   selector: 'd3-network',
@@ -35,19 +35,12 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
   @Input()
   edges: GraphEdge[] = [];
   @Input()
-  options: D3Options;
+  options: GraphOptions;
   @Input()
   width: number = window.screen.availWidth;
   @Input()
   height: number = window.screen.availHeight;
   characterLinks: GraphEdge[] = [];
-  private defaultOptions: D3Options = {
-    zoom: true,
-    edgeRadius: 0,
-    directed: false,
-    drag: false,
-    curveEdges: false
-  };
 
   id = uuid();
   private element: HTMLElement;
@@ -74,7 +67,6 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
   }
 
   create(): void {
-    this.options = {...this.defaultOptions, ...this.options};
     this.element = document.getElementById(this.id + '-network');
     const boundingRect = this.element.getBoundingClientRect();
     this.width = boundingRect.width;
@@ -91,8 +83,8 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
 
   initializeColor(): void {
     this.groups = Array.from(new Set(this.characterLinks.map(graphEdge => graphEdge.group)));
-    if (this.options.colors)
-      this.color = d3.scaleOrdinal(Object.keys(this.options.colors), Object.values(this.options.colors));
+    if (this.options.nodeColors)
+      this.color = d3.scaleOrdinal(Object.keys(this.options.nodeColors), Object.values(this.options.nodeColors));
     else
       this.color = d3.scaleOrdinal(this.groups, d3.schemeCategory10);
   }
@@ -117,7 +109,7 @@ export class D3NetworkComponent extends BaseComponent implements AfterViewInit, 
           this.link.attr("d", d => {
             return `
             M${d.source.x},${d.source.y}
-            A${this.options.edgeRadius},${this.options.edgeRadius} 0 0, 1 ${d.target.x},${d.target.y}
+            A${this.options.edgeWidth},${this.options.edgeWidth} 0 0, 1 ${d.target.x},${d.target.y}
             `;
           });
         this.node.attr("transform", d => `translate(${d.x}, ${d.y})`);

@@ -18,6 +18,8 @@ import {RouterModule} from '@angular/router';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {FormModule} from './form/form.module';
 import {SigmaNetworkComponent} from '../../infrastructure/sigma/sigma-network.component';
+import {AppNetworkComponent} from './app-network.component';
+import {D3Module} from '../../infrastructure/d3/d3.module';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import {SigmaNetworkComponent} from '../../infrastructure/sigma/sigma-network.co
     LoadingBarComponent,
     HorizontalNavigationComponent,
     HorizontalNavigationBasicItemComponent,
-    SigmaNetworkComponent
+    SigmaNetworkComponent,
+    AppNetworkComponent
   ],
   imports: [
     CommonModule,
@@ -42,7 +45,8 @@ import {SigmaNetworkComponent} from '../../infrastructure/sigma/sigma-network.co
     MatButtonModule,
     RouterModule,
     MatTooltipModule,
-    FormModule
+    FormModule,
+    D3Module
   ],
   exports: [
     IconComponent,
@@ -51,7 +55,8 @@ import {SigmaNetworkComponent} from '../../infrastructure/sigma/sigma-network.co
     LoadingBarComponent,
     HorizontalNavigationComponent,
     FormModule,
-    SigmaNetworkComponent
+    SigmaNetworkComponent,
+    AppNetworkComponent
   ]
 })
 export class SharedModule {

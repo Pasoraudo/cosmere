@@ -9,7 +9,7 @@ import {
     charactersToD3Nodes,
     relationshipsToLinks
 } from '../../../../../../../domain/function/network.helper';
-import {D3Link, D3Node, GraphEdge, GraphNode} from '../../../../../infrastructure/vis/model/network';
+import {GraphEdge, GraphNode} from '../../../../../infrastructure/vis/model/network';
 import {Character} from '../../../../../../../domain/model/character';
 import {Relationship} from '../../../../../../../domain/model/relationship';
 import {BookApi} from '../../../../../../../domain/service/api/book.api';

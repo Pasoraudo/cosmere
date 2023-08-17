@@ -1,7 +1,6 @@
 <div class="inset-0 flex flex-col min-w-0 w-full overflow-hidden">
-  <div class="flex flex-row h-full grow justify-center">
-<!--    <d3-network class="h-full w-full" [nodes]="nodes" [links]="edges" [options]="options"></d3-network>-->
-    <sigma-network class="w-full" [nodes]="nodes" [edges]="edges"></sigma-network>
+  <div class="flex flex-row h-full w-full grow justify-center">
+    <app-network class="h-full w-full" [nodes]="nodes" [edges]="edges" [options]="options"></app-network>
   </div>
 
   <div class="absolute bottom-0 right-0 z-50">
@@ -17,7 +16,7 @@
         </mat-form-field>
         <div class="text-xl">{{ 'guide.legend.title' | trans }}</div>
         <div *ngFor="let guideType of guideRelationshipTypes" class="flex flex-row">
-          <div class="square mr-3" [style.background-color]="colors()[guideType]"></div>
+          <div class="square mr-3" [style.background-color]="edgeColors()[guideType]"></div>
           <div>{{ 'guide.' + guideType | trans }}</div>
         </div>
       </app-card>

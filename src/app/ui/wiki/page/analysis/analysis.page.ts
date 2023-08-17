@@ -91,9 +91,6 @@ export class AnalysisPage extends BasePage implements OnInit {
         z: degreeCentralityNormalized.find(c => c.label === node).value,
       }
     }).filter(p => p.x > 0.3 && p.y > 0.3);
-
-    console.log('calculateClusteringCoefficient', calculateClusteringCoefficient(largestConnectedComponent));
-    console.log('calculateEccentricityCoefficient', calculateEccentricityCoefficient(largestConnectedComponent));
   }
 
   async onRelationshipsChanges(relationships: Relationship[]): Promise<void> {

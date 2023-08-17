@@ -69,7 +69,6 @@ export class VisNetworkComponent extends BaseComponent implements OnChanges, Aft
         to: edge.target
       }
     }));
-    console.log(this.edges)
     if (this.networkInstance)
       this.networkInstance.destroy();
 
