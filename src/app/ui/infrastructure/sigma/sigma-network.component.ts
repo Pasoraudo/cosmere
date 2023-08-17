@@ -5,7 +5,6 @@ import {
   Input,
   OnChanges,
   OnDestroy,
-  OnInit,
   ViewChild,
   ViewEncapsulation
 } from '@angular/core';

@@ -34,9 +34,9 @@ export class AppNetworkComponent extends BaseComponent implements OnChanges, Aft
   filteredNodes: GraphNode[];
   filteredEdges: GraphEdge[];
   colors: {
-    node?: d3.ScaleOrdinal<string, string, never>,
-    edge?: d3.ScaleOrdinal<string, string, never>
-  } = {};
+    node: d3.ScaleOrdinal<string, string, never>,
+    edge: d3.ScaleOrdinal<string, string, never>
+  };
 
   constructor() {
     super();
@@ -70,25 +70,27 @@ export class AppNetworkComponent extends BaseComponent implements OnChanges, Aft
 
   initializeColor(): void {
     const nodeGroups = Array.from(new Set(this.nodes.map(graphNode => graphNode.group)));
-    this.colors.node = d3.scaleOrdinal(nodeGroups, d3.schemeCategory10.slice(0, nodeGroups.length));
+    let nodeColors = d3.scaleOrdinal(nodeGroups, d3.schemeCategory10.slice(0, nodeGroups.length));
     if (this.options?.nodeColors) {
       Object.entries(this.options.nodeColors).forEach(([key, value]) => {
         const index = this.colors.node.domain().findIndex(group => group === key);
         if (index < 0)
           return;
+
         const range = this.colors.node.range();
         range[index] = this.options.nodeColors[key];
-        this.colors.node.range(range);
+        nodeColors.range(range);
       });
     }
-    console.log(this.colors.node.range())
-    console.log(this.colors.node.domain())
 
+    const edgeGroups = Array.from(new Set(this.edges.map(graphEdge => graphEdge.group)));
+    let edgeColors = d3.scaleOrdinal(edgeGroups, d3.schemeCategory10.slice(0, nodeGroups.length));
     if (this.options.edgeColors)
-      this.colors.edge = d3.scaleOrdinal(Object.keys(this.options.edgeColors), Object.values(this.options.edgeColors));
-    else {
-      const edgeGroups = Array.from(new Set(this.edges.map(graphEdge => graphEdge.group)));
-      this.colors.edge = d3.scaleOrdinal(edgeGroups, d3.schemeCategory10);
-    }
+      edgeColors = d3.scaleOrdinal(Object.keys(this.options.edgeColors), Object.values(this.options.edgeColors));
+
+    this.colors = {
+      node: nodeColors,
+      edge: edgeColors
+    };
   }
 }
