@@ -1,7 +1,7 @@
 import {Injectable, Signal} from '@angular/core';
 import {ApiClient} from '../network/api.client';
-import {BookStore} from '../../store/book.store';
-import {Book} from '../../model/book';
+import {BookStore} from '@store/book.store';
+import {Book} from '@model/book';
 
 @Injectable({
   providedIn: 'root',

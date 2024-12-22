@@ -10,17 +10,12 @@ import {SagaApi} from '@service/api/saga.api';
 import {Saga} from '@model/saga';
 import {GraphEdge, GraphNode, GraphOptions} from '@src/infrastructure/vis/model/network';
 import {Translator} from '@service/translations/translator.service';
-import {CpgGraphComponent} from '@app/shared/components/cpg-graph.component';
 
 @Component({
-  imports: [
-    CpgGraphComponent
-  ],
+  imports: [],
   template: `
-    <div class="inset-0 flex flex-col min-w-0 w-full overflow-hidden">
-      <div class="flex flex-row h-full w-full grow justify-center">
-        <cpg-graph class="h-full w-full" [nodes]="nodes" [edges]="edges" [options]="options"></cpg-graph>
-      </div>
+    <div class="flex h-full w-full">
+      <cpg-graph class="flex-grow h-full w-full" [nodes]="nodes" [edges]="edges" [options]="options"></cpg-graph>
     </div>
   `,
 })
@@ -62,7 +57,7 @@ export class GuidePage extends BasePage implements OnInit {
   }
 
   async ngOnInit() {
-    this.subscribe(this.guideControl.valueChanges, guideId => this.regenerateNetworkParameters());
+    this.subscribe(this.guideControl.valueChanges, () => this.regenerateNetworkParameters());
 
     defer(async () => {
       await this.bookApi.fetchAllBooks();

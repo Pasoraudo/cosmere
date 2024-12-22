@@ -10,6 +10,6 @@ export class RouteGenerator {
     if (!relativeUrl.startsWith('/'))
       relativeUrl = '/' + relativeUrl;
 
-    return 'public/assets/db' + relativeUrl + '.json';
+    return 'assets/db' + relativeUrl + '.json';
   }
 }
