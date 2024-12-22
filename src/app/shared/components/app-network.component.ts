@@ -3,7 +3,7 @@ import {BaseComponent} from './base.component';
 import {uniqBy, uniqWith} from 'lodash-es';
 import * as d3 from 'd3';
 import {SigmaNetworkComponent} from './graph/sigma-network.component';
-import {GraphEdge, GraphNode, GraphOptions} from '../../../infrastructure/vis/model/network';
+import {GraphEdge, GraphNode, GraphOptions} from '@src/infrastructure/vis/model/network';
 
 @Component({
   selector: 'app-network',
@@ -19,11 +19,11 @@ import {GraphEdge, GraphNode, GraphOptions} from '../../../infrastructure/vis/mo
 
 export class AppNetworkComponent extends BaseComponent implements OnChanges, AfterViewInit {
   @Input()
-  nodes: GraphNode[];
+  nodes!: GraphNode[];
   @Input()
-  edges: GraphEdge[];
+  edges!: GraphEdge[];
   @Input()
-  options: GraphOptions;
+  options!: GraphOptions;
 
   defaultOptions: GraphOptions = {
     zoom: true,
@@ -35,9 +35,9 @@ export class AppNetworkComponent extends BaseComponent implements OnChanges, Aft
     edgeWidth: 1,
   };
 
-  filteredNodes: GraphNode[];
-  filteredEdges: GraphEdge[];
-  colors: {
+  filteredNodes!: GraphNode[];
+  filteredEdges!: GraphEdge[];
+  colors!: {
     node: d3.ScaleOrdinal<string, string, never>,
     edge: d3.ScaleOrdinal<string, string, never>
   };
@@ -46,11 +46,13 @@ export class AppNetworkComponent extends BaseComponent implements OnChanges, Aft
     super();
   }
 
-  ngAfterViewInit(): void {
+  override onAfterViewInit(): void {
+    super.onAfterViewInit();
     this.setParameters();
   }
 
-  ngOnChanges(): void {
+  override onChanges(): void {
+    super.onChanges();
     this.setParameters();
   }
 
@@ -82,12 +84,12 @@ export class AppNetworkComponent extends BaseComponent implements OnChanges, Aft
           return;
 
         const range = nodeColors.range();
-        range[index] = this.options.nodeColors[key];
+        range[index] = this.options.nodeColors ? this.options.nodeColors[key] : '#000000';
         nodeColors.range(range);
       });
     }
 
-    const edgeGroups = Array.from(new Set(this.edges.map(graphEdge => graphEdge.group)));
+    const edgeGroups = Array.from(new Set(this.edges.map(graphEdge => graphEdge.group))).filter(e => e !== undefined);
     let edgeColors = d3.scaleOrdinal(edgeGroups, d3.schemeCategory10.slice(0, nodeGroups.length));
     if (this.options.edgeColors)
       edgeColors = d3.scaleOrdinal(Object.keys(this.options.edgeColors), Object.values(this.options.edgeColors));

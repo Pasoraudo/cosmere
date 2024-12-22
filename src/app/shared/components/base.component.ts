@@ -1,4 +1,4 @@
-import {Component, OnChanges, OnDestroy, OnInit, SimpleChanges,} from "@angular/core";
+import {AfterViewInit, Component, OnChanges, OnDestroy, OnInit, SimpleChanges,} from "@angular/core";
 import {uuid} from "@helper/uuid.helper";
 import {none} from "@helper/void.helper";
 import {Observable, Subscription} from "rxjs";
@@ -11,7 +11,8 @@ export interface SubscriptionData {
 @Component({
   template: "",
 })
-export abstract class BaseComponent implements OnDestroy, OnInit, OnChanges {
+export abstract class BaseComponent implements OnDestroy, OnInit, OnChanges, AfterViewInit {
+
   private subscriptionsData: SubscriptionData[] = [];
 
   ngOnDestroy(): void {
@@ -26,11 +27,19 @@ export abstract class BaseComponent implements OnDestroy, OnInit, OnChanges {
     this.onChanges(changes);
   }
 
+  ngAfterViewInit(): void {
+    this.onAfterViewInit();
+  }
+
   onInit(): void {
     none();
   }
 
   onChanges(_changes?: SimpleChanges): void {
+    none();
+  }
+
+  onAfterViewInit(): void {
     none();
   }
 

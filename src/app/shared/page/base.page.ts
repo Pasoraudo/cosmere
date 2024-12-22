@@ -1,6 +1,6 @@
 import {Component, OnDestroy} from '@angular/core';
 import {Observable, Subscription} from 'rxjs';
-import {uuid} from '../../../../domain/function/uuid.helper';
+import {uuid} from '@helper/uuid.helper';
 
 export interface SubscriptionData {
   id: string;
@@ -55,7 +55,7 @@ export class BasePage implements OnDestroy {
     return this.subscriptionsData.map(subscriptionData => subscriptionData.subscription);
   }
 
-  private subscriptionById(subscriptionId): Subscription | null {
+  private subscriptionById(subscriptionId: any): Subscription | undefined {
     const subscription = this.subscriptionsData.find(item => item.id === subscriptionId);
 
     return subscription?.subscription;

@@ -1,16 +1,16 @@
 import {Component, effect, OnInit} from '@angular/core';
-import {BasePage} from '../../../shared/page/base.page';
-import {GuideApi} from '../../../../domain/service/api/guide.api';
-import {BookApi} from '../../../../domain/service/api/book.api';
-import {Book} from '../../../../domain/model/book';
-import {Guide, GuideRelationshipType} from '../../../../domain/model/guide';
+import {BasePage} from '@app/shared/page/base.page';
+import {GuideApi} from '@service/api/guide.api';
+import {BookApi} from '@service/api/book.api';
+import {Book} from '@model/book';
+import {Guide, GuideRelationshipType} from '@model/guide';
 import {defer} from 'lodash';
-import {trans} from '../../../../domain/service/translations/translator.service';
 import {FormControl} from '@angular/forms';
-import {SagaApi} from '../../../../domain/service/api/saga.api';
-import {Saga} from '../../../../domain/model/saga';
-import {AppNetworkComponent} from '../../../shared/components/app-network.component';
-import {GraphEdge, GraphNode, GraphOptions} from '../../../../infrastructure/vis/model/network';
+import {SagaApi} from '@service/api/saga.api';
+import {Saga} from '@model/saga';
+import {AppNetworkComponent} from '@app/shared/components/app-network.component';
+import {GraphEdge, GraphNode, GraphOptions} from '@src/infrastructure/vis/model/network';
+import {Translator} from '@service/translations/translator.service';
 
 @Component({
   selector: 'network',
@@ -53,7 +53,8 @@ export class GuidePage extends BasePage implements OnInit {
 
   constructor(private readonly bookApi: BookApi,
               private readonly guideApi: GuideApi,
-              private readonly sagaApi: SagaApi
+              private readonly sagaApi: SagaApi,
+              private readonly translator: Translator,
   ) {
     super();
     effect(() => {
@@ -85,12 +86,14 @@ export class GuidePage extends BasePage implements OnInit {
       return;
     if (this.books.length === 0)
       return;
-    const guide: Guide = this.guides.find(guide => guide.id === this.guideControl.value);
+    const guide = this.guides.find(guide => guide.id === this.guideControl.value);
+    if (!guide)
+      return;
 
     this.nodes = this.books.map(book => {
       return {
         id: book.id,
-        label: trans(book.title),
+        label: this.translator.translate(book.title),
         group: this.getSagaFromBook(book),
         score: 20,
       }
@@ -98,7 +101,7 @@ export class GuidePage extends BasePage implements OnInit {
     if (guide.order.find(edge => edge.type === 'start'))
       this.nodes.push({
         id: 'start',
-        label: trans('Start'),
+        label: this.translator.translate('Start'),
         group: 'start',
         score: 20,
       });

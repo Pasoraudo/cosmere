@@ -1,15 +1,10 @@
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  Input,
-  OnChanges,
-  OnDestroy,
-  ViewChild,
-  ViewEncapsulation
-} from '@angular/core';
+import {Component, ElementRef, Input, ViewChild} from '@angular/core';
 import {GraphEdge, GraphNode, GraphOptions} from '@src/infrastructure/vis/model/network';
 import {BaseComponent} from '../base.component';
+import Sigma from 'sigma';
+import Graph from 'graphology';
+import d3, {Simulation, SimulationNodeDatum} from 'd3';
+import {EdgeDisplayData, NodeDisplayData} from 'sigma/types';
 
 
 interface State {
@@ -22,12 +17,12 @@ interface State {
 
 @Component({
   selector: 'sigma-network',
+  standalone: true,
   template: '<div class="w-full h-full flex" #network></div>',
-  encapsulation: ViewEncapsulation.None
 })
 
-export class SigmaNetworkComponent extends BaseComponent implements OnChanges, AfterViewInit, OnDestroy {
-  @ViewChild('network') el: ElementRef;
+export class SigmaNetworkComponent extends BaseComponent {
+  @ViewChild('network') el!: ElementRef;
   @Input()
   nodes!: GraphNode[];
   @Input()
@@ -40,31 +35,34 @@ export class SigmaNetworkComponent extends BaseComponent implements OnChanges, A
     edge: d3.ScaleOrdinal<string, string, never>
   };
 
-  sigma?: Sigma;
-  graph: Graph;
+  sigma!: Sigma;
+  graph!: Graph;
   state: State = {searchQuery: ""};
 
-  simulation: Simulation<any, any>;
+  simulation!: Simulation<any, any>;
 
   constructor() {
     super();
   }
 
-  ngOnChanges(): void {
+  override onChanges(): void {
+    super.onChanges();
     if (!this.el)
       return;
 
     this.renderGraph();
   }
 
-  ngAfterViewInit(): void {
+  override onAfterViewInit(): void {
+    super.onAfterViewInit();
     if (!this.el)
       return;
 
     this.renderGraph();
   }
 
-  ngOnDestroy(): void {
+  override onDestroy(): void {
+    super.onDestroy()
     this.destroyGraph();
   }
 
@@ -98,11 +96,11 @@ export class SigmaNetworkComponent extends BaseComponent implements OnChanges, A
     const edgeType = this.options.directed ? 'arrow' : 'line';
     this.edges.forEach(edge => {
         console.log(edge.group)
-        console.log(this.colors.edge(edge.group))
+        console.log(this.colors.edge(edge.group ?? ''))
         this.graph.addEdge(edge.source, edge.target, {
           size: this.options.edgeWidth,
           type: edgeType,
-          color: this.colors.edge(edge.group)
+          color: this.colors.edge(edge.group ?? '')
         });
       }
     );
@@ -113,7 +111,7 @@ export class SigmaNetworkComponent extends BaseComponent implements OnChanges, A
       node.x = 100 * Math.cos(angle);
       node.y = 100 * Math.cos(angle);
     });
-    circular.assign(this.graph)
+    // circular.assign(this.graph)
   }
 
   startSimulation(): void {
@@ -180,40 +178,43 @@ export class SigmaNetworkComponent extends BaseComponent implements OnChanges, A
     const clusterStrength = this.options.clusterRepulsion ? 1 : 0;
     const _this = this;
 
-    function force(alpha) {
-      const clusterCenters = {};
+    return force;
+
+    function force(alpha: any) {
+      const clusterCenters: Record<any, any> = {};
 
       _this.nodes.forEach(node => {
-        if (!clusterCenters[node.group]) {
-          clusterCenters[node.group] = {x: 0, y: 0, count: 0};
+        let clusterCenter = clusterCenters[node.group];
+        if (!clusterCenter) {
+          clusterCenter = {x: 0, y: 0, count: 0};
         }
 
-        clusterCenters[node.group].x += node.x;
-        clusterCenters[node.group].y += node.y;
-        clusterCenters[node.group].count += 1;
+        clusterCenter.x += node.x;
+        clusterCenter.y += node.y;
+        clusterCenter.count += 1;
       });
 
       _this.nodes.forEach(node => {
-        const cluster = clusterCenters[node.group];
-        if (cluster) {
-          const centerX = cluster.x / cluster.count;
-          const centerY = cluster.y / cluster.count;
+        if (!node.vx || !node.vy || !node.x || !node.y) return;
+
+        const clusterCenter = clusterCenters[node.group];
+        if (clusterCenter) {
+          const centerX = clusterCenter.x / clusterCenter.count;
+          const centerY = clusterCenter.y / clusterCenter.count;
           node.vx += (centerX - node.x) * alpha * clusterStrength;
           node.vy += (centerY - node.y) * alpha * clusterStrength;
         }
 
         const clusterNodes = _this.nodes.filter(d => d.group === node.group);
-        const x = clusterNodes.reduce((acc, curr) => acc + curr.x, 0) / clusterNodes.length;
-        const y = clusterNodes.reduce((acc, curr) => acc + curr.y, 0) / clusterNodes.length;
+        const x = clusterNodes.reduce((acc, curr) => acc + (curr?.x ?? 0), 0) / clusterNodes.length;
+        const y = clusterNodes.reduce((acc, curr) => acc + (curr?.y ?? 0), 0) / clusterNodes.length;
         node.vx += (x - node.x) * alpha * strength;
         node.vy += (y - node.y) * alpha * strength;
       });
     }
-
-    return force;
   }
 
-  getId(d) {
+  getId(d: any) {
     return d.id;
   }
 
@@ -229,7 +230,7 @@ export class SigmaNetworkComponent extends BaseComponent implements OnChanges, A
     this.sigma.refresh();
   }
 
-  clamp(value, min, max) {
+  clamp(value: any, min: any, max: any) {
     return Math.min(Math.max(value, min), max);
   }
 }
