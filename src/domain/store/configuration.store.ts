@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {isEqual} from 'lodash';
-import {Configuration, newConfiguration} from '@model/configuration';
+import {Configuration, defaultConfiguration} from '@model/configuration';
 import {patchState, signalStore, withState} from '@ngrx/signals';
 
 export interface ConfigurationState {
@@ -8,7 +8,7 @@ export interface ConfigurationState {
 }
 
 const emptyState = (): ConfigurationState => ({
-  configuration: newConfiguration()
+  configuration: defaultConfiguration()
 });
 
 @Injectable({

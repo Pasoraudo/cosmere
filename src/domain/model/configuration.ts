@@ -1,16 +1,14 @@
 import {Entity} from './shared.model';
-import {uuid} from '../function/uuid.helper';
+import {uuid} from '../helper/uuid.helper';
 
 export interface Configuration extends Entity {
   books: string[];
 }
 
-export const newConfiguration = (): Configuration => {
+export const defaultConfiguration = (): Configuration => {
   return {
     id: uuid(),
     books: []
   }
 }
 
-export const equalConfigurations = (a: Configuration, b: Configuration) => {
-}
