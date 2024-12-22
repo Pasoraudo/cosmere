@@ -8,20 +8,17 @@ import {defer} from 'lodash';
 import {FormControl} from '@angular/forms';
 import {SagaApi} from '@service/api/saga.api';
 import {Saga} from '@model/saga';
-import {AppNetworkComponent} from '@app/shared/components/app-network.component';
 import {GraphEdge, GraphNode, GraphOptions} from '@src/infrastructure/vis/model/network';
 import {Translator} from '@service/translations/translator.service';
 
 @Component({
   selector: 'network',
   standalone: true,
-  imports: [
-    AppNetworkComponent
-  ],
+  imports: [],
   template: `
     <div class="inset-0 flex flex-col min-w-0 w-full overflow-hidden">
       <div class="flex flex-row h-full w-full grow justify-center">
-        <app-network class="h-full w-full" [nodes]="nodes" [edges]="edges" [options]="options"></app-network>
+        <!--        <app-network class="h-full w-full" [nodes]="nodes" [edges]="edges" [options]="options"></app-network>-->
       </div>
     </div>
   `,
