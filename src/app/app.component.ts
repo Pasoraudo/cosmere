@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 import {CpgSimpleLayoutComponent} from './user/layout/cpg-simple-layout.component';
+import {BaseComponent} from '@app/shared/components/base.component';
 
 @Component({
   selector: 'app-root',
@@ -12,5 +13,5 @@ import {CpgSimpleLayoutComponent} from './user/layout/cpg-simple-layout.componen
     </div>
   `,
 })
-export class AppComponent {
+export class AppComponent extends BaseComponent {
 }

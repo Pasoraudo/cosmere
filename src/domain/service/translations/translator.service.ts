@@ -1,28 +1,47 @@
-import {Injectable} from '@angular/core';
-import {TranslocoService} from '@ngneat/transloco';
-import {AuthApi} from '../api/auth.api';
+import {Injectable, OnDestroy, Signal, signal} from "@angular/core";
+import {buildTranslationKey} from "@helper/trans.helper";
+import {TranslocoService} from "@jsverse/transloco";
+import {Observable, Subscription} from "rxjs";
+import {map} from "rxjs/operators";
 
 const staticTranslator: { trans: Translator | null } = {trans: null};
+export type TranslatorParams = object | undefined;
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
-export class Translator {
+export class Translator implements OnDestroy {
+  private readonly langChanges$: Observable<string>;
+  private readonly langLoaded$: Observable<string>;
+  private readonly langLoadedSubscription: Subscription;
+  private currentLang = signal(this.translator.getActiveLang());
 
-  constructor(private translator: TranslocoService, private authApi: AuthApi) {
+  constructor(private translator: TranslocoService) {
     staticTranslator.trans = this;
+    this.langChanges$ = translator.langChanges$;
+    this.langLoaded$ = translator.events$.pipe(
+      map(() => translator.getActiveLang()),
+    );
+    this.langLoadedSubscription = this.langLoaded$.subscribe((item) =>
+      this.currentLang.set(item),
+    );
   }
 
-  public trans(key: string, params?: object, lang?: string): string {
-    if (!lang) {
-      lang = this.authApi.syncMe()?.lang;
-    }
-    if (!lang) {
-      lang = this.translator.getDefaultLang();
-    }
-    return this.translator.translate(key, params, lang);
+  public activeLang(): Signal<string> {
+    return this.currentLang;
+  }
+
+  public translate(
+    key: string | string[],
+    params?: TranslatorParams,
+    lang?: string,
+  ): string {
+    const currentLang = lang ?? this.translator.getActiveLang();
+    const fullKey = Array.isArray(key) ? buildTranslationKey(...key) : key;
+    return this.translator.translate(fullKey, params, currentLang);
+  }
+
+  ngOnDestroy(): void {
+    this.langLoadedSubscription.unsubscribe();
   }
 }
-
-export const trans = (key: string, params?: object, lang?: string): string => staticTranslator.trans.trans(key, params, lang);
-

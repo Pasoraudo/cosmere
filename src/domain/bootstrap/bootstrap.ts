@@ -1,14 +1,13 @@
 import {Injectable} from '@angular/core';
 import {defaultAuth} from '../model/auth';
 import {defer} from 'lodash';
-import {Localstorage} from '../service/storage/localstorage';
-import {AUTH_NAMESPACE, AuthState, AuthStore} from '../store/auth.store';
+import {AuthStore} from '../store/auth.store';
 
 @Injectable({
   providedIn: 'root',
 })
 export class Bootstrap {
-  constructor(private authStore: AuthStore, private localStorage: Localstorage) {
+  constructor(private authStore: AuthStore) {
   }
 
   bootstrap(): void {
@@ -22,7 +21,7 @@ export class Bootstrap {
     if (this.authStore.syncMe())
       return;
 
-    const savedAuth = await this.localStorage.getAny<AuthState>(AUTH_NAMESPACE);
+    const savedAuth = await this.authStore.me();
     if (savedAuth)
       this.authStore.restore(savedAuth);
     else

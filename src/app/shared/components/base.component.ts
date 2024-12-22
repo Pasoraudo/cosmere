@@ -1,7 +1,7 @@
-import {Component, EventEmitter, OnDestroy, Output} from '@angular/core';
-import {Observable, Subscription} from 'rxjs';
-import {uuid} from '../../../../domain/function/uuid.helper';
-import {Alert} from '../../../../domain/ionic/alert.ionic';
+import {Component, OnChanges, OnDestroy, OnInit, SimpleChanges,} from "@angular/core";
+import {uuid} from "@helper/uuid.helper";
+import {none} from "@helper/void.helper";
+import {Observable, Subscription} from "rxjs";
 
 export interface SubscriptionData {
   id: string;
@@ -9,37 +9,44 @@ export interface SubscriptionData {
 }
 
 @Component({
-  template: ''
+  template: "",
 })
-export class BaseComponent implements OnDestroy {
-  @Output() exitNotSave = new EventEmitter<void>();
-  @Output() saveAndBack = new EventEmitter<void>();
-  @Output() saveAndNew = new EventEmitter<void>();
-
+export abstract class BaseComponent implements OnDestroy, OnInit, OnChanges {
   private subscriptionsData: SubscriptionData[] = [];
 
-
-  constructor() {
-  }
-
   ngOnDestroy(): void {
-    this.allSubscriptions().forEach((subscription) => {
-      subscription.unsubscribe();
-    });
-
     this.onDestroy();
   }
 
+  ngOnInit(): void {
+    this.onInit();
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    this.onChanges(changes);
+  }
+
+  onInit(): void {
+    none();
+  }
+
+  onChanges(_changes?: SimpleChanges): void {
+    none();
+  }
+
   onDestroy(): void {
+    none();
   }
 
   protected subscribe<T>(
     observable: Observable<T>,
     next?: (value: T) => void,
-    error?: (error: any) => void,
-    complete?: () => void
+    error?: (error: unknown) => void,
+    complete?: () => void,
   ): string {
     const id = uuid();
+
+    if (!observable) return id;
 
     this.subscriptionsData.push({
       id,
@@ -58,23 +65,21 @@ export class BaseComponent implements OnDestroy {
   }
 
   protected unsubscribeAll(): void {
-    this.subscriptionsData.forEach(subscription => subscription.subscription.unsubscribe());
+    this.subscriptionsData.forEach((subscription) =>
+      subscription.subscription.unsubscribe(),
+    );
   }
 
   protected allSubscriptions(): Subscription[] {
-    return this.subscriptionsData.map(subscriptionData => subscriptionData.subscription);
+    return this.subscriptionsData.map(
+      (subscriptionData) => subscriptionData.subscription,
+    );
   }
 
-  protected async showErrorSave(alert: Alert): Promise<void> {
-    await alert.present({
-      header: 'Error',
-      message: 'Ha ocurrido un error guardando',
-      buttons: ['OK']
-    });
-  }
-
-  private subscriptionById(subscriptionId): Subscription | null {
-    const subscription = this.subscriptionsData.find(item => item.id === subscriptionId);
+  private subscriptionById(subscriptionId: string): Subscription | undefined {
+    const subscription = this.subscriptionsData.find(
+      (item) => item.id === subscriptionId,
+    );
 
     return subscription?.subscription;
   }
