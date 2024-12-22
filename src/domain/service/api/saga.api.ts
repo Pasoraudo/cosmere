@@ -1,6 +1,5 @@
-import {Injectable} from '@angular/core';
+import {Injectable, Signal} from '@angular/core';
 import {ApiClient} from '../network/api.client';
-import {Observable} from 'rxjs';
 import {SagaStore} from '../../store/saga.store';
 import {Saga} from '../../model/saga';
 
@@ -17,11 +16,7 @@ export class SagaApi {
     this.store.saveAllSagas(httpSagas);
   }
 
-  syncAllSagas(): Saga[] {
-    return this.store.syncState().sagas;
-  }
-
-  allSagas(): Observable<Saga[]> {
-    return this.store.sagas$;
+  allSagas(): Signal<Saga[]> {
+    return this.store.sagas;
   }
 }

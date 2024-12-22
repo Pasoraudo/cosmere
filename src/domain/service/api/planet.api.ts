@@ -1,6 +1,5 @@
-import {Injectable} from '@angular/core';
+import {Injectable, Signal} from '@angular/core';
 import {ApiClient} from '../network/api.client';
-import {Observable} from 'rxjs';
 import {PlanetStore} from '../../store/planet.store';
 import {Planet} from '../../model/planet';
 
@@ -17,11 +16,7 @@ export class PlanetApi {
     this.store.saveAllPlanets(httpPlanets);
   }
 
-  syncAllPlanets(): Planet[] {
-    return this.store.syncState().planets;
-  }
-
-  allPlanets(): Observable<Planet[]> {
-    return this.store.planets$;
+  allPlanets(): Signal<Planet[]> {
+    return this.store.planets;
   }
 }

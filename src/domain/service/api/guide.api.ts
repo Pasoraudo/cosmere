@@ -1,8 +1,5 @@
-import {Injectable} from '@angular/core';
+import {Injectable, Signal} from '@angular/core';
 import {ApiClient} from '../network/api.client';
-import {Observable} from 'rxjs';
-import {PlanetStore} from '../../store/planet.store';
-import {Planet} from '../../model/planet';
 import {Guide} from '../../model/guide';
 import {GuideStore} from '../../store/guide.store';
 
@@ -19,11 +16,7 @@ export class GuideApi {
     this.store.saveAllGuides(httpGuides);
   }
 
-  syncAllGuides(): Guide[] {
-    return this.store.syncState().guides;
-  }
-
-  allGuides(): Observable<Guide[]> {
-    return this.store.guides$;
+  allGuides(): Signal<Guide[]> {
+    return this.store.guides;
   }
 }

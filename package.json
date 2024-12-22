@@ -20,6 +20,7 @@
     "@angular/router": "^19.0.0",
     "@jsverse/transloco": "^7.5.0",
     "@ngrx/signals": "^19.0.0",
+    "d3": "^7.9.0",
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
     "ng-zorro-antd": "^19.0.0",

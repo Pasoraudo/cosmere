@@ -1,6 +1,5 @@
-import {Injectable} from '@angular/core';
+import {Injectable, Signal} from '@angular/core';
 import {ApiClient} from '../network/api.client';
-import {map, Observable} from 'rxjs';
 import {RelationshipStore} from '../../store/relationship.store';
 import {Relationship} from '../../model/relationship';
 import {cosmereBookIds} from '../../model/book';
@@ -40,24 +39,8 @@ export class RelationshipApi {
     relationships.forEach(relationship => relationshipsMerged = mergeArrays(relationshipsMerged, relationship))
     this.store.saveAllRelationship(relationshipsMerged);
   }
-
-  syncAllRelationship(): Relationship[] {
-    return this.store.syncState().relationships;
-  }
-
-  allRelationship(): Observable<Relationship[]> {
-    return this.store.relationships$;
-  }
-
-  cosmereRelationships(): Observable<Relationship[]> {
-    return this.store.relationships$.pipe(map(relationships =>
-      relationships.filter(relationship => cosmereBookIds().includes(relationship.bookId))
-    ));
-  }
-
-  relationshipsByBook(bookId: string): Observable<Relationship[]> {
-    return this.store.relationships$.pipe(
-      map(relationships => relationships.filter(relationship => relationship?.bookId === bookId))
-    );
+  
+  allRelationship(): Signal<Relationship[]> {
+    return this.store.relationships;
   }
 }

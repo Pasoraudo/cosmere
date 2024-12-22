@@ -1,15 +1,12 @@
-import {Injectable} from '@angular/core';
+import {Injectable, Signal} from '@angular/core';
 import {Character} from '../../model/character';
 import {ApiClient} from '../network/api.client';
 import {CharacterStore} from '../../store/character.store';
-import {map, Observable} from 'rxjs';
-import {cosmerePlanets} from '../../model/planet';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CharacterApi {
-
 
   constructor(private readonly api: ApiClient, private readonly store: CharacterStore) {
   }
@@ -25,17 +22,7 @@ export class CharacterApi {
     this.store.saveAllCharacters(cosmereCharacters);
   }
 
-  syncAllCharacters(): Character[] {
-    return this.store.syncState().characters;
-  }
-
-  allCharacters(): Observable<Character[]> {
-    return this.store.characters$;
-  }
-
-  cosmereCharacters(): Observable<Character[]> {
-    return this.store.characters$.pipe(map(characters =>
-      characters.filter(character => character.universe === 'Cosmere')
-    ));
+  allCharacters(): Signal<Character[]> {
+    return this.store.characters;
   }
 }

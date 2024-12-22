@@ -5,7 +5,7 @@ help:
 		}' $(MAKEFILE_LIST)
 
 serve: ## Starts local development
-	ng serve
+	ng serve --open
 
 pretty: ## Runs biome format
 	npx @biomejs/biome format --write
