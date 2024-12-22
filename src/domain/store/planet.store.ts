@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
 import {isEqual} from 'lodash';
-import {mergeArrays} from '../function/array.helper';
-import {Planet} from '../model/planet';
-import {signalStore, withState} from '@ngrx/signals';
+import {equalPlanets, Planet} from '../model/planet';
+import {patchState, signalStore, withState} from '@ngrx/signals';
+import {mergeArrays} from '../helper/array.helper';
 
 export interface PlanetState {
   planets: Planet[];
@@ -21,11 +21,11 @@ export class PlanetStore extends signalStore(
 ) {
 
   saveAllPlanets(planets: Planet[]): void {
-    if (isEqual(this.get().planets, planets))
+    if (isEqual(this.planets(), planets))
       return;
 
-    this.patchState(state => ({
-      planets: mergeArrays(state.planets, planets)
-    }));
+    patchState(this, {
+      planets: mergeArrays(this.planets(), planets, equalPlanets)
+    });
   }
 }

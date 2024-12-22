@@ -8,14 +8,9 @@ import {
   ViewChild,
   ViewEncapsulation
 } from '@angular/core';
-import {GraphEdge, GraphNode, GraphOptions} from '../../../../infrastructure/vis/model/network';
-import {BaseComponent} from '../../shared/components/base.component';
-import Sigma from 'sigma';
-import Graph from 'graphology';
-import * as d3 from 'd3';
-import {Simulation, SimulationNodeDatum} from 'd3-force';
-import {circular} from 'graphology-layout';
-import {EdgeDisplayData, NodeDisplayData} from 'sigma/types';
+import {GraphEdge, GraphNode, GraphOptions} from '@src/infrastructure/vis/model/network';
+import {BaseComponent} from '../base.component';
+
 
 interface State {
   hoveredNode?: string;
@@ -34,13 +29,13 @@ interface State {
 export class SigmaNetworkComponent extends BaseComponent implements OnChanges, AfterViewInit, OnDestroy {
   @ViewChild('network') el: ElementRef;
   @Input()
-  nodes: GraphNode[];
+  nodes!: GraphNode[];
   @Input()
-  edges: GraphEdge[];
+  edges!: GraphEdge[];
   @Input()
-  options: GraphOptions;
+  options!: GraphOptions;
   @Input()
-  colors: {
+  colors!: {
     node: d3.ScaleOrdinal<string, string, never>,
     edge: d3.ScaleOrdinal<string, string, never>
   };

@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
-import {Character} from '../model/character';
+import {Character, equalCharacters} from '../model/character';
 import {isEqual} from 'lodash';
-import {mergeArrays} from '../function/array.helper';
-import {signalStore, withState} from '@ngrx/signals';
+import {patchState, signalStore, withState} from '@ngrx/signals';
+import {mergeArrays} from '@helper/array.helper';
 
 export interface CharacterState {
   characters: Character[];
@@ -21,11 +21,12 @@ export class CharacterStore extends signalStore(
 ) {
 
   saveAllCharacters(characters: Character[]): void {
-    if (isEqual(this.get().characters, characters))
+    const actualCharacters = this.characters();
+    if (isEqual(actualCharacters, characters))
       return;
 
-    this.patchState(state => ({
-      characters: mergeArrays(state.characters, characters)
-    }));
+    patchState(this, {
+      characters: mergeArrays(actualCharacters, characters, equalCharacters)
+    });
   }
 }

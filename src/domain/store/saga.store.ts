@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
 import {isEqual} from 'lodash';
-import {mergeArrays} from '../function/array.helper';
-import {Saga} from '../model/saga';
-import {signalStore, withState} from '@ngrx/signals';
+import {equalSagas, Saga} from '@model/saga';
+import {patchState, signalStore, withState} from '@ngrx/signals';
+import {mergeArrays} from '@helper/array.helper';
 
 export interface SagaState {
   sagas: Saga[];
@@ -21,11 +21,11 @@ export class SagaStore extends signalStore(
 ) {
 
   saveAllSagas(sagas: Saga[]): void {
-    if (isEqual(this.get().sagas, sagas))
+    if (isEqual(this.sagas(), sagas))
       return;
 
-    this.patchState(state => ({
-      sagas: mergeArrays(state.sagas, sagas)
-    }));
+    patchState(this, {
+      sagas: mergeArrays(this.sagas(), sagas, equalSagas)
+    });
   }
 }

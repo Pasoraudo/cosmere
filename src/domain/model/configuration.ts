@@ -11,3 +11,6 @@ export const newConfiguration = (): Configuration => {
     books: []
   }
 }
+
+export const equalConfigurations = (a: Configuration, b: Configuration) => {
+}

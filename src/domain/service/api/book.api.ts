@@ -16,10 +16,6 @@ export class BookApi {
     this.store.saveAllBooks(httpBooks);
   }
 
-  syncAllBooks(): Book[] {
-    return this.store.syncState().books;
-  }
-
   allBooks(): Signal<Book[]> {
     return this.store.books;
   }

@@ -1,8 +1,8 @@
 import {Injectable, OnDestroy, Signal, signal} from "@angular/core";
-import {buildTranslationKey} from "@helper/trans.helper";
 import {TranslocoService} from "@jsverse/transloco";
 import {Observable, Subscription} from "rxjs";
 import {map} from "rxjs/operators";
+import {buildTranslationKey} from '@helper/trans.helper';
 
 const staticTranslator: { trans: Translator | null } = {trans: null};
 export type TranslatorParams = object | undefined;

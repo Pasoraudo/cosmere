@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
 import {isEqual} from 'lodash';
-import {mergeArrays} from '../function/array.helper';
-import {Relationship} from '../model/relationship';
-import {signalStore, withState} from '@ngrx/signals';
+import {equalRelationships, Relationship} from '../model/relationship';
+import {patchState, signalStore, withState} from '@ngrx/signals';
+import {mergeArrays} from '../helper/array.helper';
 
 export interface RelationshipState {
   relationships: Relationship[];
@@ -21,10 +21,10 @@ export class RelationshipStore extends signalStore(
 ) {
 
   saveAllRelationship(relationships: Relationship[]): void {
-    if (isEqual(this.get().relationships, relationships))
+    if (isEqual(this.relationships(), relationships))
       return;
-    this.patchState(state => ({
-      relationships: mergeArrays(state.relationships, relationships)
-    }));
+    patchState(this, {
+      relationships: mergeArrays(this.relationships(), relationships, equalRelationships)
+    });
   }
 }

@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {isEqual} from 'lodash';
-import {Configuration, newConfiguration} from '../model/configuration';
-import {signalStore, withState} from '@ngrx/signals';
+import {Configuration, newConfiguration} from '@model/configuration';
+import {patchState, signalStore, withState} from '@ngrx/signals';
 
 export interface ConfigurationState {
   configuration: Configuration;
@@ -21,11 +21,12 @@ export class ConfigurationStore extends signalStore(
 
 
   saveConfiguration(configuration: Configuration): void {
-    if (isEqual(this.get().configuration, configuration))
+    const actualConfiguration = this.configuration();
+    if (isEqual(actualConfiguration, configuration))
       return;
 
-    this.patchState(state => ({
+    patchState(this, {
       configuration: configuration
-    }));
+    });
   }
 }

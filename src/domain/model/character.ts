@@ -16,3 +16,5 @@ export interface Character extends Entity {
 
   ethnicity?: string;
 }
+
+export const equalCharacters = (character1: Character, character2: Character): boolean => character1.id === character2.id;

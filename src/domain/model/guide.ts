@@ -15,3 +15,5 @@ export interface GuideRelationship extends Entity {
   type: GuideRelationshipType;
   observation?: string;
 }
+
+export const equalGuides = (guide1: Guide, guide2: Guide) => guide1.id === guide2.id;

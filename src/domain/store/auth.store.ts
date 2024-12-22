@@ -1,9 +1,9 @@
 import {Injectable} from '@angular/core';
-import {Auth} from '../model/auth';
-import {signalStore, withState} from '@ngrx/signals';
+import {Auth} from '@model/auth';
+import {patchState, signalStore, withState} from '@ngrx/signals';
 
 export interface AuthState {
-  me: Auth;
+  me: Auth | null;
 }
 
 const emptyState = (): AuthState => ({
@@ -19,10 +19,8 @@ export class AuthStore extends signalStore(
 ) {
 
   saveMe(auth: Auth): void {
-    this.patchState(state => ({
+    patchState(this, {
       me: auth
-    }));
-
-    this.snapshot();
+    });
   }
 }

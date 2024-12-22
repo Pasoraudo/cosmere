@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
 import {isEqual} from 'lodash';
-import {mergeArrays} from '../function/array.helper';
-import {Guide} from '../model/guide';
-import {signalStore, withState} from '@ngrx/signals';
+import {equalGuides, Guide} from '@model/guide';
+import {patchState, signalStore, withState} from '@ngrx/signals';
+import {mergeArrays} from '@helper/array.helper';
 
 export interface GuideState {
   guides: Guide[];
@@ -21,11 +21,12 @@ export class GuideStore extends signalStore(
 ) {
 
   saveAllGuides(planets: Guide[]): void {
-    if (isEqual(this.get().guides, planets))
+    const guides = this.guides();
+    if (isEqual(guides, planets))
       return;
 
-    this.patchState(state => ({
-      guides: mergeArrays(state.guides, planets)
-    }));
+    patchState(this, {
+      guides: mergeArrays(guides, planets, equalGuides),
+    });
   }
 }

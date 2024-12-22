@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
 import {isEqual} from 'lodash';
-import {mergeArrays} from '../function/array.helper';
-import {Book} from '../model/book';
-import {signalStore, withState} from '@ngrx/signals';
+import {Book, equalBooks} from '@model/book';
+import {patchState, signalStore, withState} from '@ngrx/signals';
+import {mergeArrays} from '@helper/array.helper';
 
 export interface BookState {
   books: Book[];
@@ -21,11 +21,12 @@ export class BookStore extends signalStore(
 ) {
 
   saveAllBooks(books: Book[]): void {
-    if (isEqual(this.get().books, books))
+    const actualBooks = this.books();
+    if (isEqual(actualBooks, books))
       return;
 
-    this.patchState(state => ({
-      books: mergeArrays(state.books, books)
-    }));
+    patchState(this, {
+      books: mergeArrays(actualBooks, books, equalBooks)
+    });
   }
 }
