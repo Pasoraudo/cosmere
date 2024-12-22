@@ -10,11 +10,14 @@ import {SagaApi} from '@service/api/saga.api';
 import {Saga} from '@model/saga';
 import {GraphEdge, GraphNode, GraphOptions} from '@src/infrastructure/vis/model/network';
 import {Translator} from '@service/translations/translator.service';
+import {CpgGraphComponent} from '@app/shared/components/cpg-graph.component';
 
 @Component({
-  imports: [],
+  imports: [
+    CpgGraphComponent
+  ],
   template: `
-    <div class="flex h-full w-full">
+    <div class="container mx-auto flex flex-col">
       <cpg-graph class="flex-grow h-full w-full" [nodes]="nodes" [edges]="edges" [options]="options"></cpg-graph>
     </div>
   `,
