@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Component} from '@angular/core';
+import {RouterOutlet} from '@angular/router';
+import {CpgSimpleLayoutComponent} from './user/layout/cpg-simple-layout.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  imports: [RouterOutlet, CpgSimpleLayoutComponent],
+  template: `
+    <div>
+      <cpg-simple-layout/>
+      <router-outlet/>
+    </div>
+  `,
 })
 export class AppComponent {
-  title = 'cosmere';
 }

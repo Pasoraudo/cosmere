@@ -1,0 +1,18 @@
+[
+  {
+    "id": "mistborn1",
+    "title": "Mistborn: Era 1",
+    "bookIds": ["mistborn1", "mistborn2", "mistborn3"]
+  },
+  {
+    "id": "mistborn2",
+    "title": "Mistborn: Era 2",
+    "bookIds": ["mistborn4", "mistborn5", "mistborn6", "mistborn7", "secret_history"]
+  },
+  {
+    "id": "stormlight",
+    "title": "The stormlight archive",
+    "bookIds": ["stormlight1", "stormlight2", "stormlight3", "stormlight4", "dawnshard", "edgedancer"]
+  }
+]
+
