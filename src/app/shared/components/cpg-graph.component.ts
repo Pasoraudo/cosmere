@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, Input, OnChanges, ViewEncapsulation} from '@angular/core';
+import {AfterViewInit, Component, Input, OnChanges} from '@angular/core';
 import {BaseComponent} from './base.component';
 import {uniqBy, uniqWith} from 'lodash-es';
 import * as d3 from 'd3';
@@ -6,18 +6,17 @@ import {SigmaNetworkComponent} from './graph/sigma-network.component';
 import {GraphEdge, GraphNode, GraphOptions} from '@src/infrastructure/vis/model/network';
 
 @Component({
-  selector: 'app-network',
+  selector: 'cpg-graph',
+  imports: [
+    SigmaNetworkComponent
+  ],
   template: `
     <sigma-network class="w-full relative" [nodes]="filteredNodes" [edges]="filteredEdges"
                    [options]="options" [colors]="colors"></sigma-network>
   `,
-  imports: [
-    SigmaNetworkComponent
-  ],
-  encapsulation: ViewEncapsulation.None
 })
 
-export class AppNetworkComponent extends BaseComponent implements OnChanges, AfterViewInit {
+export class CpgGraphComponent extends BaseComponent implements OnChanges, AfterViewInit {
   @Input()
   nodes!: GraphNode[];
   @Input()

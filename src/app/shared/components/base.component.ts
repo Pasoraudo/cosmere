@@ -9,7 +9,7 @@ export interface SubscriptionData {
 }
 
 @Component({
-  template: "",
+  template: ``,
 })
 export abstract class BaseComponent implements OnDestroy, OnInit, OnChanges, AfterViewInit {
 

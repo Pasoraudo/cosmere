@@ -3,7 +3,8 @@ import {GraphEdge, GraphNode, GraphOptions} from '@src/infrastructure/vis/model/
 import {BaseComponent} from '../base.component';
 import Sigma from 'sigma';
 import Graph from 'graphology';
-import d3, {Simulation, SimulationNodeDatum} from 'd3';
+import * as d3 from 'd3';
+import {Simulation, SimulationNodeDatum} from 'd3';
 import {EdgeDisplayData, NodeDisplayData} from 'sigma/types';
 
 

@@ -1,7 +1,7 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 
 @Component({
-  selector: 'app-card',
+  selector: 'cpg-card',
   encapsulation: ViewEncapsulation.None,
   template: `
     <ng-container>
@@ -19,7 +19,7 @@ import {Component, ViewEncapsulation} from '@angular/core';
     }
   `]
 })
-export class CardComponent {
+export class CpgCardComponent {
 
   constructor() {
   }
