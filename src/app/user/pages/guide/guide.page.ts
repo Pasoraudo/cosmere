@@ -110,6 +110,8 @@ export class GuidePage extends BasePage implements OnInit {
 
   onGuidesChanged(guides: Guide[]): void {
     this.guides = guides;
+    console.log('guides', guides)
+    if (!guides || guides.length === 0) return;
     this.guideControl.setValue(guides[1].id);
     this.regenerateNetworkParameters();
   }

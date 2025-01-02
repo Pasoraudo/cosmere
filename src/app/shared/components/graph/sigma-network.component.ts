@@ -19,7 +19,7 @@ interface State {
 @Component({
   selector: 'sigma-network',
   standalone: true,
-  template: '<div class="w-full h-full flex" #network></div>',
+  template: '<div class="w-full h-full flex" #network style="height: 700px"></div>',
 })
 
 export class SigmaNetworkComponent extends BaseComponent {
@@ -78,6 +78,8 @@ export class SigmaNetworkComponent extends BaseComponent {
     this.destroyGraph();
 
     this.createGraph();
+    if (!this.graph) return;
+    console.log('this.graph', this.graph);
     this.sigma = new Sigma(this.graph, this.el.nativeElement, {
       renderLabels: true,
       labelColor: {
@@ -96,8 +98,6 @@ export class SigmaNetworkComponent extends BaseComponent {
     );
     const edgeType = this.options.directed ? 'arrow' : 'line';
     this.edges.forEach(edge => {
-        console.log(edge.group)
-        console.log(this.colors.edge(edge.group ?? ''))
         this.graph.addEdge(edge.source, edge.target, {
           size: this.options.edgeWidth,
           type: edgeType,
@@ -111,7 +111,12 @@ export class SigmaNetworkComponent extends BaseComponent {
 
       node.x = 100 * Math.cos(angle);
       node.y = 100 * Math.cos(angle);
+
+      const graphNode = this.graph.findNode((nodeId, attributes) => nodeId === node.id);
+      this.graph.setNodeAttribute(graphNode, 'x', node.x);
+      this.graph.setNodeAttribute(graphNode, 'y', node.y);
     });
+    console.log('this.nodes', this.nodes);
     // circular.assign(this.graph)
   }
 

@@ -21,7 +21,7 @@
     "rules": {
       "recommended": true,
       "style": {
-        "useImportType": false
+        "useImportType": null
       }
     }
   },

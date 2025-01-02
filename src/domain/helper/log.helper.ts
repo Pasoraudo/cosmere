@@ -1,7 +1,5 @@
-export const logs: any[] = [];
+import {SafeAny} from './any.helper';
 
-export const log = (message?: any, ...optionalParams: any[]): void => {
-  console.log(message, ...optionalParams);
-
-  logs.push(message);
+export const log = (message?: SafeAny, ...params: SafeAny[]): void => {
+  console.log(message, ...params);
 };
