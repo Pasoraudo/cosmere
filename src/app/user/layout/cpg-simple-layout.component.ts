@@ -7,12 +7,11 @@ import {RouterOutlet} from '@angular/router';
   selector: 'cpg-simple-layout',
   imports: [NzLayoutComponent, NzContentComponent, NzFooterComponent, RouterOutlet],
   template: `
-    <nz-layout>
-      <!--  TODO    <nz-header>Header</nz-header>-->
-      <nz-content>
-        <router-outlet></router-outlet>
+    <nz-layout class="layout-wrapper">
+      <nz-content class="content">
+        <router-outlet class="content-router"></router-outlet>
       </nz-content>
-      <nz-footer>
+      <nz-footer class="footer">
         <div style="text-align: center;">
           <p>
             Open Source Project by
@@ -23,6 +22,21 @@ import {RouterOutlet} from '@angular/router';
       </nz-footer>
     </nz-layout>
   `,
+  styles: [`
+    .layout-wrapper {
+      min-height: 100vh; /* Altura mínima de toda la ventana */
+      display: flex;
+      flex-direction: column; /* Organiza en columna */
+    }
+
+    .content {
+      flex: 1; /* Ocupa el espacio restante dinámicamente */
+    }
+
+    .footer {
+      /* Sin altura fija: usa el tamaño del contenido del footer */
+    }
+  `]
 })
 export class CpgSimpleLayoutComponent extends BaseComponent {
   year = new Date().getFullYear();

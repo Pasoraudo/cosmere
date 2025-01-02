@@ -1,12 +1,12 @@
-import {Component, ElementRef, Input, ViewChild} from '@angular/core';
-import {GraphEdge, GraphNode, GraphOptions} from '@src/infrastructure/vis/model/network';
-import {BaseComponent} from '../base.component';
-import Sigma from 'sigma';
-import Graph from 'graphology';
-import * as d3 from 'd3';
-import {Simulation, SimulationNodeDatum} from 'd3';
-import {EdgeDisplayData, NodeDisplayData} from 'sigma/types';
-
+import {Component, ElementRef, HostListener, Input, ViewChild} from "@angular/core";
+import {SafeAny} from "@helper/any.helper";
+import {GraphEdge, GraphNode, GraphOptions,} from "@src/infrastructure/vis/model/network";
+import * as d3 from "d3";
+import {Simulation, SimulationNodeDatum} from "d3";
+import Graph from "graphology";
+import Sigma from "sigma";
+import {EdgeDisplayData, NodeDisplayData} from "sigma/types";
+import {BaseComponent} from "../base.component";
 
 interface State {
   hoveredNode?: string;
@@ -17,13 +17,14 @@ interface State {
 }
 
 @Component({
-  selector: 'sigma-network',
+  selector: "sigma-network",
   standalone: true,
-  template: '<div class="w-full h-full flex" #network style="height: 700px"></div>',
+  template: `
+    <div #network class="flex w-full h-full"></div>
+  `,
 })
-
 export class SigmaNetworkComponent extends BaseComponent {
-  @ViewChild('network') el!: ElementRef;
+  @ViewChild("network") el!: ElementRef;
   @Input()
   nodes!: GraphNode[];
   @Input()
@@ -32,15 +33,20 @@ export class SigmaNetworkComponent extends BaseComponent {
   options!: GraphOptions;
   @Input()
   colors!: {
-    node: d3.ScaleOrdinal<string, string, never>,
-    edge: d3.ScaleOrdinal<string, string, never>
+    node: d3.ScaleOrdinal<string, string, never>;
+    edge: d3.ScaleOrdinal<string, string, never>;
   };
+
+  @HostListener("window:resize", ["$event"])
+  onResize(): void {
+    this.updateElementSize();
+  }
 
   sigma!: Sigma;
   graph!: Graph;
   state: State = {searchQuery: ""};
 
-  simulation!: Simulation<any, any>;
+  simulation!: Simulation<SafeAny, SafeAny>;
 
   constructor() {
     super();
@@ -48,30 +54,26 @@ export class SigmaNetworkComponent extends BaseComponent {
 
   override onChanges(): void {
     super.onChanges();
-    if (!this.el)
-      return;
+    if (!this.el) return;
 
     this.renderGraph();
   }
 
   override onAfterViewInit(): void {
     super.onAfterViewInit();
-    if (!this.el)
-      return;
+    if (!this.el) return;
 
     this.renderGraph();
   }
 
   override onDestroy(): void {
-    super.onDestroy()
+    super.onDestroy();
     this.destroyGraph();
   }
 
   destroyGraph(): void {
-    if (this.sigma)
-      this.sigma.kill();
-    if (this.simulation)
-      this.simulation.stop();
+    if (this.sigma) this.sigma.kill();
+    if (this.simulation) this.simulation.stop();
   }
 
   renderGraph(): void {
@@ -79,56 +81,66 @@ export class SigmaNetworkComponent extends BaseComponent {
 
     this.createGraph();
     if (!this.graph) return;
-    console.log('this.graph', this.graph);
+    this.el.nativeElement.style.width = '100px';
+    this.el.nativeElement.style.height = '100px';
     this.sigma = new Sigma(this.graph, this.el.nativeElement, {
       renderLabels: true,
       labelColor: {
-        color: '#FFFFFF'
+        color: "#FFFFFF",
       },
     });
-    if (this.options.hover)
-      this.hoverNeighbors();
+    if (this.options.hover) this.hoverNeighbors();
     this.startSimulation();
   }
 
   createGraph(): void {
     this.graph = new Graph();
-    this.nodes.forEach(node =>
-      this.graph.addNode(node.id, {label: node.label, size: node.score, color: this.colors.node(node.group)})
+    this.nodes.forEach((node) =>
+      this.graph.addNode(node.id, {
+        label: node.label,
+        size: node.score,
+        color: this.colors.node(node.group),
+      }),
     );
-    const edgeType = this.options.directed ? 'arrow' : 'line';
-    this.edges.forEach(edge => {
-        this.graph.addEdge(edge.source, edge.target, {
-          size: this.options.edgeWidth,
-          type: edgeType,
-          color: this.colors.edge(edge.group ?? '')
-        });
-      }
-    );
+    const edgeType = this.options.directed ? "arrow" : "line";
+    this.edges.forEach((edge) => {
+      this.graph.addEdge(edge.source, edge.target, {
+        size: this.options.edgeWidth,
+        type: edgeType,
+        color: this.colors.edge(edge.group ?? ""),
+      });
+    });
 
-    this.nodes.forEach((node: any, i) => {
+    this.nodes.forEach((node: SafeAny, i) => {
       const angle = (i * 2 * Math.PI) / this.graph.order;
 
       node.x = 100 * Math.cos(angle);
       node.y = 100 * Math.cos(angle);
 
-      const graphNode = this.graph.findNode((nodeId, attributes) => nodeId === node.id);
-      this.graph.setNodeAttribute(graphNode, 'x', node.x);
-      this.graph.setNodeAttribute(graphNode, 'y', node.y);
+      const graphNode = this.graph.findNode((nodeId, _) => nodeId === node.id);
+      this.graph.setNodeAttribute(graphNode, "x", node.x);
+      this.graph.setNodeAttribute(graphNode, "y", node.y);
     });
-    console.log('this.nodes', this.nodes);
     // circular.assign(this.graph)
   }
 
   startSimulation(): void {
     const _this = this;
     const nodes: SimulationNodeDatum[] = this.nodes as SimulationNodeDatum[];
-    this.simulation = d3.forceSimulation(nodes)
-      .force("center", d3.forceCenter(0, 0).strength(0.1))// @ts-ignore
-      .force("charge", d3.forceManyBody().strength(d => d.score * (-100))) // @ts-ignore
+    this.simulation = d3
+      .forceSimulation(nodes)
+      .force("center", d3.forceCenter(0, 0).strength(0.1)) // @ts-ignore
+      .force(
+        "charge",
+        d3.forceManyBody().strength((d: SafeAny) => d.score * -100),
+      ) // @ts-ignore
       .force("link", d3.forceLink(this.edges).id(this.getId)) // @ts-ignore
-      .force('cluster', this.cluster()) // @ts-ignore
-      .force("radius", d3.forceCollide(d => d.score * 30))
+      .force("cluster", this.cluster()) // @ts-ignore
+      .force(
+        "radius",
+        // @ts-ignore
+        d3.forceCollide((d) => d.score * 30),
+      )
       .on("tick", () => {
         _this.graph.nodes().forEach((graphNode, i) => {
           const node: GraphNode = _this.nodes[i];
@@ -151,7 +163,11 @@ export class SigmaNetworkComponent extends BaseComponent {
     this.sigma.setSetting("nodeReducer", (node, data) => {
       const res: Partial<NodeDisplayData> = {...data};
 
-      if (this.state.hoveredNeighbors && !this.state.hoveredNeighbors.has(node) && this.state.hoveredNode !== node) {
+      if (
+        this.state.hoveredNeighbors &&
+        !this.state.hoveredNeighbors.has(node) &&
+        this.state.hoveredNode !== node
+      ) {
         res.label = "";
         res.size = 0;
         res.color = "none";
@@ -170,9 +186,16 @@ export class SigmaNetworkComponent extends BaseComponent {
 
     this.sigma.setSetting("edgeReducer", (edge, data) => {
       const res: Partial<EdgeDisplayData> = {...data};
-      if (this.state.hoveredNode && !this.graph.hasExtremity(edge, this.state.hoveredNode))
+      if (
+        this.state.hoveredNode &&
+        !this.graph.hasExtremity(edge, this.state.hoveredNode)
+      )
         res.hidden = true;
-      if (this.state.suggestions && (!this.state.suggestions.has(this.graph.source(edge)) || !this.state.suggestions.has(this.graph.target(edge))))
+      if (
+        this.state.suggestions &&
+        (!this.state.suggestions.has(this.graph.source(edge)) ||
+          !this.state.suggestions.has(this.graph.target(edge)))
+      )
         res.hidden = true;
 
       return res;
@@ -186,10 +209,10 @@ export class SigmaNetworkComponent extends BaseComponent {
 
     return force;
 
-    function force(alpha: any) {
-      const clusterCenters: Record<any, any> = {};
+    function force(alpha: SafeAny) {
+      const clusterCenters: Record<SafeAny, SafeAny> = {};
 
-      _this.nodes.forEach(node => {
+      _this.nodes.forEach((node) => {
         let clusterCenter = clusterCenters[node.group];
         if (!clusterCenter) {
           clusterCenter = {x: 0, y: 0, count: 0};
@@ -200,7 +223,7 @@ export class SigmaNetworkComponent extends BaseComponent {
         clusterCenter.count += 1;
       });
 
-      _this.nodes.forEach(node => {
+      _this.nodes.forEach((node) => {
         if (!node.vx || !node.vy || !node.x || !node.y) return;
 
         const clusterCenter = clusterCenters[node.group];
@@ -211,16 +234,20 @@ export class SigmaNetworkComponent extends BaseComponent {
           node.vy += (centerY - node.y) * alpha * clusterStrength;
         }
 
-        const clusterNodes = _this.nodes.filter(d => d.group === node.group);
-        const x = clusterNodes.reduce((acc, curr) => acc + (curr?.x ?? 0), 0) / clusterNodes.length;
-        const y = clusterNodes.reduce((acc, curr) => acc + (curr?.y ?? 0), 0) / clusterNodes.length;
+        const clusterNodes = _this.nodes.filter((d) => d.group === node.group);
+        const x =
+          clusterNodes.reduce((acc, curr) => acc + (curr?.x ?? 0), 0) /
+          clusterNodes.length;
+        const y =
+          clusterNodes.reduce((acc, curr) => acc + (curr?.y ?? 0), 0) /
+          clusterNodes.length;
         node.vx += (x - node.x) * alpha * strength;
         node.vy += (y - node.y) * alpha * strength;
       });
     }
   }
 
-  getId(d: any) {
+  getId(d: SafeAny) {
     return d.id;
   }
 
@@ -236,7 +263,15 @@ export class SigmaNetworkComponent extends BaseComponent {
     this.sigma.refresh();
   }
 
-  clamp(value: any, min: any, max: any) {
+  clamp(value: SafeAny, min: SafeAny, max: SafeAny) {
     return Math.min(Math.max(value, min), max);
+  }
+
+  private updateElementSize(): void {
+    if (this.el && this.el.nativeElement) {
+      const element = this.el.nativeElement as HTMLElement;
+      element.style.width = `${window.innerWidth}px`;
+      element.style.height = `${window.innerHeight}px`;
+    }
   }
 }
